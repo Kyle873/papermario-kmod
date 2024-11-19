@@ -296,6 +296,7 @@ void pause_items_draw_contents(MenuPanel* menu, s32 baseX, s32 baseY, s32 width,
         }
     }
 
+    /*
     draw_box(DRAW_FLAG_NO_CLIP, &gPauseWS_17, gPauseItemsCurrentTab == 0 ? baseX + 9 : baseX, baseY + 7, 0,
          91, 34, 255, gPauseItemsCurrentTab == 1 ? 128 : 0, 0, 0,
          0, 0, 0, 0, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, 0);
@@ -327,6 +328,7 @@ void pause_items_draw_contents(MenuPanel* menu, s32 baseX, s32 baseY, s32 width,
         opacity1 = 191;
     }
     draw_msg(msg, msgX, msgY, opacity1, MSG_PAL_WHITE, DRAW_MSG_STYLE_MENU);
+    */
 
     if (gPauseMenuCurrentTab == 3) {
          if (gPauseItemsLevel == 0) {
@@ -430,9 +432,9 @@ void pause_items_load_items(s32 invItems) {
 void pause_items_init(MenuPanel* panel) {
     s32 i;
 
-    gPauseItemsLevel = 0;
-    gPauseItemsCurrentTab = 0;
-    pause_items_load_items(FALSE);
+    gPauseItemsLevel = 1;
+    gPauseItemsCurrentTab = 1;
+    pause_items_load_items(gPauseItemsCurrentTab);
 
     for (i = 0; i < ARRAY_COUNT(gPauseItemsIconIDs); i++) {
         gPauseItemsIconIDs[i] = hud_element_create(gPauseItemsElements[i]);
@@ -560,13 +562,14 @@ void pause_items_handle_input(MenuPanel* panel) {
     }
 
     if (gPausePressedButtons & BUTTON_B) {
-        if (gPauseItemsLevel == 0) {
-            sfx_play_sound(SOUND_MENU_BACK);
-            gPauseMenuCurrentTab = 0;
-        } else {
-            sfx_play_sound(SOUND_MENU_BACK);
-            gPauseItemsLevel = 0;
-        }
+        sfx_play_sound(SOUND_MENU_BACK);
+        gPauseMenuCurrentTab = 0;
+    }
+
+    if (gPausePressedButtons & BUTTON_L) {
+        sfx_play_sound(SOUND_MENU_CHANGE_TAB);
+        gPauseItemsCurrentTab = gPauseItemsCurrentTab == 0 ? 1 : 0;
+        pause_items_load_items(gPauseItemsCurrentTab);
     }
 }
 
