@@ -11,6 +11,7 @@ const s32 MainMenuPosX    = 26;
 const s32 MainMenuPosY    = 60;
 
 const s32 RowHeight       = 15;
+const s32 TopRowY         = 2;
 const s32 BottomRowY      = 222;
 
 const s32 SubmenuPosX     = 140;
@@ -455,7 +456,8 @@ void dx_debug_menu_main() {
     }
     ArrowAnimOffset = cos_deg(DebugArrowPhase);
 
-    dx_debug_update_banner();
+    dx_debug_update_header();
+    dx_debug_update_footer();
 
     // check input for menu open/close
     if (DebugMenuState == DBM_NONE) {
@@ -1915,7 +1917,17 @@ b32 dx_debug_is_cheat_enabled(DebugCheat cheat) {
 // ----------------------------------------------------------------------------
 // banner info
 
-void dx_debug_update_banner() {
+void dx_debug_update_header() {
+    char fmtBuf[128];
+    s32 story = evt_get_variable(NULL, GB_StoryProgress) & 0xFF;
+
+    if (gGameStatus.context == CONTEXT_WORLD) {
+        sprintf(fmtBuf, "Story: %02X", story);
+        dx_debug_draw_ascii(fmtBuf, DefaultColor, 20, TopRowY);
+    }
+}
+
+void dx_debug_update_footer() {
     char fmtBuf[128];
     s32 effect;
 
