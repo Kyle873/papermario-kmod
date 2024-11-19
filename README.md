@@ -2,7 +2,7 @@
 
 This hack is based on the [papermario-dx decompilation](https://github.com/bates64/papermario-dx) fork, which provides a flexible, easy-to-use base for creating romhacks.
 
-## List of changes
+## List of Changes
 
 - Increased max level to 130, HP/FP limit to 250, and BP limit to 99
 - You will always gain at least 1 SP from an enemy even if there is a level gap

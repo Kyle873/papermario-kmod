@@ -37,16 +37,18 @@ enum {
 // second index for LevelUpStatTextIDs
 enum {
     LVL_UP_TITLE        = 0,
-    LVL_UP_CUR_TENS     = 1,
-    LVL_UP_CUR_ONES     = 2,
-    LVL_UP_ARROW        = 3,
-    LVL_UP_NEXT_TENS    = 4,
-    LVL_UP_NEXT_ONES    = 5,
-    LVL_UP_BONUS        = 6,
+    LVL_UP_CUR_HUND     = 1,
+    LVL_UP_CUR_TENS     = 2,
+    LVL_UP_CUR_ONES     = 3,
+    LVL_UP_ARROW        = 4,
+    LVL_UP_NEXT_HUND    = 5,
+    LVL_UP_NEXT_TENS    = 6,
+    LVL_UP_NEXT_ONES    = 7,
+    LVL_UP_BONUS        = 8,
 };
 
 BSS HudElemID LevelUpStatEmblemIDs[4];
-BSS HudElemID LevelUpStatTextIDs[3][7];
+BSS HudElemID LevelUpStatTextIDs[3][9];
 BSS HudElemID LevelUpSpotlightID;
 BSS HudElemID LevelUpSelectTextID;
 
@@ -485,6 +487,135 @@ EvtScript EVS_ShowLevelUp = {
     End
 };
 
+// If upgradeAmount == 0, assumed to be current stat, upgradeIndex is LVL_UP_FP for example
+s32 btl_draw_celebration_stat(s32 isMaxLevel, s32 number1, s32 upgradeAmount, s32 upgradeIndex, s32 xStartPos) {
+    s32 curNumberDigits, upgradedNumberDigits;
+    s32 hundredsDigit, tensDigit, onesDigit;
+    PlayerData* playerData = &gPlayerData;
+    s32 upgradeTextXPositions[] = { 0, 0, 0 };
+    s32 id;
+    s32 x, y = 0;
+    s32 xPosOffset = xStartPos;
+    s32 number2 = number1 + upgradeAmount;
+
+    hundredsDigit = (number1) / 100;
+    tensDigit = (number1 - hundredsDigit * 100) % 100 / 10;
+    onesDigit = number1 % 10;
+
+    // Draw only cur upgrade amount
+    if (isMaxLevel == 1) {
+        xPosOffset += 12; // Center value
+        hundredsDigit = (number1) / 100;
+        tensDigit = (number1 - hundredsDigit * 100) % 100 / 10;
+        onesDigit = number1 % 10;
+
+        if (number1 >= 100) {
+            id = LevelUpStatTextIDs[upgradeIndex][LVL_UP_NEXT_HUND];
+            hud_element_set_script(id, HES_LevelUpDigits[upgradeIndex][hundredsDigit]);
+            hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
+            hud_element_get_render_pos(id, &x, &y);
+            hud_element_set_render_pos(id, x + xPosOffset, y + 46);
+            xPosOffset += 7;
+        }
+
+        if (number1 >= 10) {
+            id = LevelUpStatTextIDs[upgradeIndex][LVL_UP_NEXT_TENS];
+            hud_element_set_script(id, HES_LevelUpDigits[upgradeIndex][tensDigit]);
+            hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
+            hud_element_get_render_pos(id, &x, &y);
+            hud_element_set_render_pos(id, x + xPosOffset, y + 46);
+            xPosOffset += 7;
+        }
+
+        id = LevelUpStatTextIDs[upgradeIndex][LVL_UP_NEXT_ONES];
+        hud_element_set_script(id, HES_LevelUpDigits[upgradeIndex][onesDigit]);
+        hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
+        hud_element_get_render_pos(id, &x, &y);
+        hud_element_set_render_pos(id, x + xPosOffset, y + 46);
+        xPosOffset += 7;
+        return xPosOffset;
+    }
+
+    if (number2 >= 100) {
+        xPosOffset -= 4;
+    }
+
+    if (number1 >= 100) {
+        id = LevelUpStatTextIDs[upgradeIndex][LVL_UP_CUR_HUND];
+        hud_element_set_script(id, level_up_small_digit_scripts[upgradeIndex][hundredsDigit]);
+        hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
+        hud_element_get_render_pos(id, &x, &y);
+        hud_element_set_render_pos(id, x + xPosOffset, y + 46);
+        xPosOffset += 6;
+    }
+
+    if (number1 >= 10) {
+        id = LevelUpStatTextIDs[upgradeIndex][LVL_UP_CUR_TENS];
+        hud_element_set_script(id, level_up_small_digit_scripts[upgradeIndex][tensDigit]);
+        hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
+        hud_element_get_render_pos(id, &x, &y);
+        hud_element_set_render_pos(id, x + xPosOffset, y + 46);
+        xPosOffset += 6;
+    }
+
+    id = LevelUpStatTextIDs[upgradeIndex][LVL_UP_CUR_ONES];
+    hud_element_set_script(id, level_up_small_digit_scripts[upgradeIndex][onesDigit]);
+    hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
+    hud_element_get_render_pos(id, &x, &y);
+    hud_element_set_render_pos(id, x + xPosOffset, y + 46);
+    xPosOffset += 6;
+
+    // Skip drawing arrow and next upgrade amount if max level
+    if (isMaxLevel == 1) {
+        return xPosOffset;
+    }
+
+    id = LevelUpStatTextIDs[upgradeIndex][LVL_UP_ARROW];
+    if (upgradeIndex == LVL_UP_FP) {
+        hud_element_set_script(id, &HES_level_up_small_green_arrow);
+    } else if (upgradeIndex == LVL_UP_HP) {
+        hud_element_set_script(id, &HES_level_up_small_red_arrow);
+    } else if (upgradeIndex == LVL_UP_BP) {
+        hud_element_set_script(id, &HES_level_up_small_blue_arrow);
+    }
+
+    hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
+    hud_element_get_render_pos(id, &x, &y);
+    hud_element_set_render_pos(id, x + xPosOffset, y + 46);
+    xPosOffset += 7;
+
+    hundredsDigit = (number2) / 100;
+    tensDigit = (number2 - hundredsDigit * 100) % 100 / 10;
+    onesDigit = number2 % 10;
+
+    if (number2 >= 100) {
+        id = LevelUpStatTextIDs[upgradeIndex][LVL_UP_NEXT_HUND];
+        hud_element_set_script(id, HES_LevelUpDigits[upgradeIndex][hundredsDigit]);
+        hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
+        hud_element_get_render_pos(id, &x, &y);
+        hud_element_set_render_pos(id, x + xPosOffset, y + 46);
+        xPosOffset += 7;
+    }
+
+    if (number2 >= 10) {
+        id = LevelUpStatTextIDs[upgradeIndex][LVL_UP_NEXT_TENS];
+        hud_element_set_script(id, HES_LevelUpDigits[upgradeIndex][tensDigit]);
+        hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
+        hud_element_get_render_pos(id, &x, &y);
+        hud_element_set_render_pos(id, x + xPosOffset, y + 46);
+        xPosOffset += 7;
+    }
+
+    id = LevelUpStatTextIDs[upgradeIndex][LVL_UP_NEXT_ONES];
+    hud_element_set_script(id, HES_LevelUpDigits[upgradeIndex][onesDigit]);
+    hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
+    hud_element_get_render_pos(id, &x, &y);
+    hud_element_set_render_pos(id, x + xPosOffset, y + 46);
+    xPosOffset += 7;
+
+    return xPosOffset;
+}
+
 void btl_state_update_celebration(void) {
     BattleStatus* battleStatus = &gBattleStatus;
     PlayerData* playerData = &gPlayerData;
@@ -500,9 +631,6 @@ void btl_state_update_celebration(void) {
     Evt* takeTurnScript;
     Evt* script;
 
-    s32 tensDigit;
-    s32 onesDigit;
-
     s32 deltaSP;
     s32 prevSP;
 
@@ -510,6 +638,9 @@ void btl_state_update_celebration(void) {
     s32 j;
 
     HudScript* new_var;
+
+    s32 xPosStart = 0;
+    s32 isMaxLevel = 0;
 
     switch (gBattleSubState) {
         case BTL_SUBSTATE_CELEBRATE_INIT:
@@ -723,65 +854,20 @@ void btl_state_update_celebration(void) {
                 CantLevelUpStat[MENU_FP] = FALSE;
                 CantLevelUpStat[MENU_BP] = FALSE;
 
-                if (playerData->hardMaxFP != MAX_FP) {
-                    // current FP
-                    tensDigit = playerData->curMaxFP / 10;
-                    onesDigit = playerData->curMaxFP % 10;
-                    id = LevelUpStatTextIDs[LVL_UP_FP][LVL_UP_CUR_TENS];
-                    hud_element_set_script(id, level_up_small_digit_scripts[LVL_UP_FP][tensDigit]);
-                    if (tensDigit != 0) {
-                        hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
-                    }
-                    hud_element_get_render_pos(id, &x, &y);
-                    hud_element_set_render_pos(id, x - 14, y + 46);
-
-                    id = LevelUpStatTextIDs[LVL_UP_FP][LVL_UP_CUR_ONES];
-                    hud_element_set_script(id, level_up_small_digit_scripts[LVL_UP_FP][onesDigit]);
-                    hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
-                    hud_element_get_render_pos(id, &x, &y);
-                    hud_element_set_render_pos(id, x - 8, y + 46);
-
-                    id = LevelUpStatTextIDs[LVL_UP_FP][LVL_UP_ARROW];
-                    hud_element_set_script(id, &HES_level_up_small_green_arrow);
-                    hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
-                    hud_element_get_render_pos(id, &x, &y);
-                    hud_element_set_render_pos(id, x - 3, y + 46);
-
-                    // upgraded FP
-                    tensDigit = (playerData->curMaxFP + 5) / 10;
-                    onesDigit = (playerData->curMaxFP + 5) % 10;
-                    id = LevelUpStatTextIDs[LVL_UP_FP][LVL_UP_NEXT_TENS];
-                    hud_element_set_script(id, HES_LevelUpDigits[LVL_UP_FP][tensDigit]);
-                    if (tensDigit != 0) {
-                        hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
-                    }
-                    hud_element_get_render_pos(id, &x, &y);
-                    hud_element_set_render_pos(id, x + 3, y + 46);
-
-                    id = LevelUpStatTextIDs[LVL_UP_FP][LVL_UP_NEXT_ONES];
-                    hud_element_set_script(id, HES_LevelUpDigits[LVL_UP_FP][onesDigit]);
-                    hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
-                    hud_element_get_render_pos(id, &x, &y);
-                    hud_element_set_render_pos(id, x + 10, y + 46);
-                } else {
-                    // upgraded FP only
-                    id = LevelUpStatTextIDs[LVL_UP_FP][LVL_UP_NEXT_TENS];
-                    tensDigit = playerData->curMaxFP / 10;
-                    onesDigit = playerData->curMaxFP % 10;
-                    hud_element_set_script(id, HES_LevelUpDigits[LVL_UP_FP][tensDigit]);
-                    if (tensDigit != 0) {
-                        hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
-                    }
-                    hud_element_get_render_pos(id, &x, &y);
-                    hud_element_set_render_pos(id, x - 6, y + 46);
-
-                    id = LevelUpStatTextIDs[LVL_UP_FP][LVL_UP_NEXT_ONES];
-                    hud_element_set_script(id, HES_LevelUpDigits[LVL_UP_FP][onesDigit]);
-                    hud_element_clear_flags(id, 2);
-                    hud_element_get_render_pos(id, &x, &y);
-                    hud_element_set_render_pos(id, x + 2, y + 46);
+                if (playerData->hardMaxFP >= MAX_FP) {
                     CantLevelUpStat[MENU_FP] = TRUE;
+                    isMaxLevel = 1;
                 }
+
+                if (playerData->curMaxFP >= 100) {
+                    xPosStart = -22;
+                } else if (playerData->curMaxFP >= 10) {
+                    xPosStart = -14;
+                } else {
+                    xPosStart = 0;
+                }
+
+                xPosStart = btl_draw_celebration_stat(isMaxLevel, playerData->hardMaxFP, 5, LVL_UP_FP, xPosStart);
 
                 if (is_ability_active(ABILITY_FP_PLUS)) {
                     id = LevelUpStatTextIDs[LVL_UP_FP][LVL_UP_BONUS];
@@ -793,66 +879,22 @@ void btl_state_update_celebration(void) {
                     hud_element_set_render_pos(id, x + 17, y + 46);
                 }
 
-                if (playerData->hardMaxHP != MAX_HP) {
-                    // current HP
-                    tensDigit = playerData->curMaxHP / 10;
-                    onesDigit = playerData->curMaxHP % 10;
+                isMaxLevel = 0;
 
-                    id = LevelUpStatTextIDs[LVL_UP_HP][LVL_UP_CUR_TENS];
-                    hud_element_set_script(id, level_up_small_digit_scripts[LVL_UP_HP][tensDigit]);
-                    if (tensDigit != 0) {
-                        hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
-                    }
-                    hud_element_get_render_pos(id, &x, &y);
-                    hud_element_set_render_pos(id, x - 14, y + 46);
-
-                    id = LevelUpStatTextIDs[LVL_UP_HP][LVL_UP_CUR_ONES];
-                    hud_element_set_script(id, level_up_small_digit_scripts[LVL_UP_HP][onesDigit]);
-                    hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
-                    hud_element_get_render_pos(id, &x, &y);
-                    hud_element_set_render_pos(id, x - 8, y + 46);
-
-                    id = LevelUpStatTextIDs[LVL_UP_HP][LVL_UP_ARROW];
-                    hud_element_set_script(id, &HES_level_up_small_red_arrow);
-                    hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
-                    hud_element_get_render_pos(id, &x, &y);
-                    hud_element_set_render_pos(id, x - 3, y + 46);
-
-                    tensDigit = (playerData->curMaxHP + 5) / 10;
-                    onesDigit = (playerData->curMaxHP + 5) % 10;
-
-                    id = LevelUpStatTextIDs[LVL_UP_HP][LVL_UP_NEXT_TENS];
-                    hud_element_set_script(id, HES_LevelUpDigits[LVL_UP_HP][tensDigit]);
-                    if (tensDigit != 0) {
-                        hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
-                    }
-                    hud_element_get_render_pos(id, &x, &y);
-                    hud_element_set_render_pos(id, x + 3, y + 46);
-
-                    id = LevelUpStatTextIDs[LVL_UP_HP][LVL_UP_NEXT_ONES];
-                    hud_element_set_script(id, HES_LevelUpDigits[LVL_UP_HP][onesDigit]);
-                    hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
-                    hud_element_get_render_pos(id, &x, &y);
-                    hud_element_set_render_pos(id, x + 10, y + 46);
-                } else {
-                    tensDigit = playerData->curMaxHP / 10;
-                    onesDigit = playerData->curMaxHP % 10;
-
-                    id = LevelUpStatTextIDs[LVL_UP_HP][LVL_UP_NEXT_TENS];
-                    hud_element_set_script(id, HES_LevelUpDigits[LVL_UP_HP][tensDigit]);
-                    if (tensDigit != 0) {
-                        hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
-                    }
-                    hud_element_get_render_pos(id, &x, &y);
-                    hud_element_set_render_pos(id, x - 6, y + 46);
-
-                    id = LevelUpStatTextIDs[LVL_UP_HP][LVL_UP_NEXT_ONES];
-                    hud_element_set_script(id, HES_LevelUpDigits[LVL_UP_HP][onesDigit]);
-                    hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
-                    hud_element_get_render_pos(id, &x, &y);
-                    hud_element_set_render_pos(id, x + 2, y + 46);
+                if (playerData->hardMaxHP >= MAX_HP) {
                     CantLevelUpStat[MENU_HP] = TRUE;
+                    isMaxLevel = 1;
                 }
+
+                if (playerData->curMaxHP >= 100) {
+                    xPosStart = -22;
+                } else if (playerData->curMaxHP >= 10) {
+                    xPosStart = -14;
+                } else {
+                    xPosStart = 0;
+                }
+
+                xPosStart = btl_draw_celebration_stat(isMaxLevel, playerData->hardMaxHP, 5, LVL_UP_HP, xPosStart);
 
                 if (is_ability_active(ABILITY_HP_PLUS)) {
                     id = LevelUpStatTextIDs[LVL_UP_HP][LVL_UP_BONUS];
@@ -864,60 +906,22 @@ void btl_state_update_celebration(void) {
                     hud_element_set_render_pos(id, x + 17, y + 46);
                 }
 
-                if (playerData->maxBP != MAX_BP) {
-                    tensDigit = playerData->maxBP / 10;
-                    onesDigit = playerData->maxBP % 10;
+                isMaxLevel = 0;
 
-                    id = LevelUpStatTextIDs[LVL_UP_BP][LVL_UP_CUR_TENS];
-                    hud_element_set_script(id, level_up_small_digit_scripts[LVL_UP_BP][tensDigit]);
-                    if (tensDigit != 0) {
-                        hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
-                    }
-                    hud_element_get_render_pos(id, &x, &y);
-                    hud_element_set_render_pos(id, x - 14, y + 46);
-
-                    id = LevelUpStatTextIDs[LVL_UP_BP][LVL_UP_CUR_ONES];
-                    hud_element_set_script(id, level_up_small_digit_scripts[LVL_UP_BP][onesDigit]);
-                    hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
-                    hud_element_get_render_pos(id, &x, &y);
-                    hud_element_set_render_pos(id, x - 8, y + 46);
-
-                    id = LevelUpStatTextIDs[LVL_UP_BP][LVL_UP_ARROW];
-                    hud_element_set_script(id, &HES_level_up_small_blue_arrow);
-                    hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
-                    hud_element_get_render_pos(id, &x, &y);
-                    hud_element_set_render_pos(id, x - 3, y + 46);
-
-                    tensDigit = (playerData->maxBP + 3) / 10;
-                    onesDigit = (playerData->maxBP + 3) % 10;
-
-                    id = LevelUpStatTextIDs[LVL_UP_BP][LVL_UP_NEXT_TENS];
-                    hud_element_set_script(id, HES_LevelUpDigits[LVL_UP_BP][tensDigit]);
-                    if (tensDigit != 0) {
-                        hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
-                    }
-                    hud_element_get_render_pos(id, &x, &y);
-                    hud_element_set_render_pos(id, x + 3, y + 46);
-
-                    id = LevelUpStatTextIDs[LVL_UP_BP][LVL_UP_NEXT_ONES];
-                    hud_element_set_script(id, HES_LevelUpDigits[LVL_UP_BP][onesDigit]);
-                    hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
-                    hud_element_get_render_pos(id, &x, &y);
-                    hud_element_set_render_pos(id, x + 10, y + 46);
-                } else {
-                    id = LevelUpStatTextIDs[LVL_UP_BP][LVL_UP_NEXT_TENS];
-                    hud_element_set_script(id, HES_LevelUpDigits[LVL_UP_BP][3]);
-                    hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
-                    hud_element_get_render_pos(id, &x, &y);
-                    hud_element_set_render_pos(id, x - 6, y + 46);
-
-                    id = LevelUpStatTextIDs[LVL_UP_BP][LVL_UP_NEXT_ONES];
-                    hud_element_set_script(id, HES_LevelUpDigits[LVL_UP_BP][0]);
-                    hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
-                    hud_element_get_render_pos(id, &x, &y);
-                    hud_element_set_render_pos(id, x + 2, y + 46);
+                if (playerData->maxBP >= MAX_BP) {
                     CantLevelUpStat[MENU_BP] = TRUE;
+                    isMaxLevel = 1;
                 }
+
+                if (playerData->maxBP >= 100) {
+                    xPosStart = -22;
+                } else if (playerData->maxBP >= 10) {
+                    xPosStart = -14;
+                } else {
+                    xPosStart = 0;
+                }
+
+                xPosStart = btl_draw_celebration_stat(isMaxLevel, playerData->maxBP, 3, LVL_UP_BP, xPosStart);
 
                 id = LevelUpSpotlightID = hud_element_create(&HES_ProjectorBeam);
                 hud_element_create_transform_B(id);
