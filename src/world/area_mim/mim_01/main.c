@@ -17,7 +17,7 @@ EvtScript N(EVS_BindExitTriggers) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_FOREVER_FOREST)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_MIM_01)
     EVT_SETUP_CAMERA_MIM()
     Set(GF_MAP_ForeverForest, TRUE)

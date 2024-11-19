@@ -190,8 +190,9 @@ EvtScript N(EVS_NpcInit_Franky) = {
 
 NpcData N(NpcData_JumpScareBoo) = {
     .id = NPC_JumpScareBoo,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 0,
+    .pos = { GEN_NPC_JUMP_SCARE_BOO_VEC },
+    .yaw = GEN_NPC_JUMP_SCARE_BOO_DIR,
+    .territory = GEN_NPC_JUMP_SCARE_BOO_TERRITORY,
     .settings = &N(NpcSettings_Boo),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_FLYING,
     .drops = NO_DROPS,
@@ -200,8 +201,9 @@ NpcData N(NpcData_JumpScareBoo) = {
 
 NpcData N(NpcData_TrafficBoo1) = {
     .id = NPC_TrafficBoo1,
-    .pos = { 523.0f, -139.0f, 193.0f },
-    .yaw = 0,
+    .pos = { GEN_NPC_TRAFFIC_BOO1_VEC },
+    .yaw = GEN_NPC_TRAFFIC_BOO1_DIR,
+    .territory = GEN_NPC_TRAFFIC_BOO1_TERRITORY,
     .init = &N(EVS_NpcInit_TrafficBoo1),
     .settings = &N(NpcSettings_Boo),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_FLYING,
@@ -211,8 +213,9 @@ NpcData N(NpcData_TrafficBoo1) = {
 
 NpcData N(NpcData_TrafficBoo2) = {
     .id = NPC_TrafficBoo2,
-    .pos = { 473.0f, -122.0f, 247.0f },
-    .yaw = 0,
+    .pos = { GEN_NPC_TRAFFIC_BOO2_VEC },
+    .yaw = GEN_NPC_TRAFFIC_BOO2_DIR,
+    .territory = GEN_NPC_TRAFFIC_BOO2_TERRITORY,
     .init = &N(EVS_NpcInit_TrafficBoo2),
     .settings = &N(NpcSettings_Boo),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_FLYING,
@@ -223,20 +226,9 @@ NpcData N(NpcData_TrafficBoo2) = {
 NpcData N(NpcData_Boos)[] = {
     {
         .id = NPC_UpstairsBoo,
-        .pos = { 422.0f, -200.0f, 112.0f },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 422, -200, 112 },
-                .wanderSize = { 30 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 422, -200, 112 },
-                .detectSize = { 30 },
-            }
-        },
+        .pos = { GEN_NPC_UPSTAIRS_BOO_VEC },
+        .yaw = GEN_NPC_UPSTAIRS_BOO_DIR,
+        .territory = GEN_NPC_UPSTAIRS_BOO_TERRITORY,
         .init = &N(EVS_NpcInit_UpstairsBoo),
         .settings = &N(NpcSettings_Boo_Wander),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_FLYING,
@@ -246,20 +238,9 @@ NpcData N(NpcData_Boos)[] = {
     },
     {
         .id = NPC_Franky,
-        .pos = { 397.0f, -410.0f, 352.0f },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 397, -410, 352 },
-                .wanderSize = { 80 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 397, -410, 352 },
-                .detectSize = { 80 },
-            }
-        },
+        .pos = { GEN_NPC_FRANKY_VEC },
+        .yaw = GEN_NPC_FRANKY_DIR,
+        .territory = GEN_NPC_FRANKY_TERRITORY,
         .init = &N(EVS_NpcInit_Franky),
         .settings = &N(NpcSettings_Boo_Wander),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_FLYING,

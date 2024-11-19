@@ -11,8 +11,8 @@ EvtScript N(EVS_SetupFlames) = {
 };
 
 BombTrigger N(BombPos_Wall) = {
-    .pos = { -569.0f, -520.0f, 207.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_1_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_1_RAD,
 };
 
 EvtScript N(EVS_OnBlast_Wall) = {

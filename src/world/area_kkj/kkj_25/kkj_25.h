@@ -2,6 +2,7 @@
 /// @brief Peach's Castle - Final Boss Arena (6F)
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

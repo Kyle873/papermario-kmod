@@ -47,8 +47,9 @@ EvtScript N(EVS_NpcInit_Yakkey) = {
 
 NpcData N(NpcData_TubbasHeart) = {
     .id = NPC_TubbasHeart,
-    .pos = { -23.0f, 75.0f, 31.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_TUBBAS_HEART_VEC },
+    .yaw = GEN_NPC_TUBBAS_HEART_DIR,
+    .territory = GEN_NPC_TUBBAS_HEART_TERRITORY,
     .init = &N(EVS_NpcInit_TubbasHeart),
     .settings = &N(NpcSettings_TubbasHeart),
     .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_KILL,
@@ -58,8 +59,9 @@ NpcData N(NpcData_TubbasHeart) = {
 
 NpcData N(NpcData_Yakkey) = {
     .id = NPC_Yakkey,
-    .pos = { 38.0f, 0.0f, 97.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_YAKKEY_VEC },
+    .yaw = GEN_NPC_YAKKEY_DIR,
+    .territory = GEN_NPC_YAKKEY_TERRITORY,
     .init = &N(EVS_NpcInit_Yakkey),
     .settings = &N(NpcSettings_Yakkey),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_FLYING,

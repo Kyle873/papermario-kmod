@@ -1,7 +1,7 @@
 #include "omo_04.h"
 
 EntryList N(Entrances) = {
-    [omo_04_ENTRY_0]    { -965.0,    0.0,    0.0,   90.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {

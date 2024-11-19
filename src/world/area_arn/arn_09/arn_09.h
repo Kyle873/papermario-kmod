@@ -2,6 +2,7 @@
 /// @brief Gusty Gulch - Windmill Tunnel Entry
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

@@ -1,13 +1,13 @@
 #include "tik_07.h"
 #include "entity.h"
 
-#define SUPER_BLOCK_MAPVAR MV_SuperBlock
-#define SUPER_BLOCK_GAMEFLAG GF_TIK07_SuperBlock
+#define SUPER_BLOCK_MAPVAR GEN_SUPER_BLOCK_1_VAR
+#define SUPER_BLOCK_GAMEFLAG GEN_SUPER_BLOCK_1_FLAG
 #include "world/common/entity/SuperBlock.inc.c"
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeItemEntity, ITEM_STAR_PIECE, 306, 90, -104, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_TIK07_Item_StarPiece)
-    EVT_MAKE_SUPER_BLOCK(820, 70, -5, 0)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
+    EVT_MAKE_SUPER_BLOCK(GEN_SUPER_BLOCK_1_PARAMS)
     Return
     End
 };

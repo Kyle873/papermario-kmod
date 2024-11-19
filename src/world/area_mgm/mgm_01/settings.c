@@ -1,7 +1,7 @@
 #include "mgm_01.h"
 
 EntryList N(Entrances) = {
-    [mgm_01_ENTRY_0]    {    0.0,  200.0,    0.0,   90.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {

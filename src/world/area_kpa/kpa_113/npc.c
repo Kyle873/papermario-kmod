@@ -4,20 +4,9 @@
 
 NpcData N(NpcData_BonyBeetle) = {
     .id = NPC_BonyBeetle,
-    .pos = { 100.0f, 0.0f, 83.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 100, 0, 83 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_RECT,
-            .detectPos  = { 65, 0, 100 },
-            .detectSize = { 260, 100 },
-        }
-    },
+    .pos = { GEN_NPC_BONY_BEETLE_VEC },
+    .yaw = GEN_NPC_BONY_BEETLE_DIR,
+    .territory = GEN_NPC_BONY_BEETLE_TERRITORY,
     .settings = &N(NpcSettings_BonyBeetle),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
     .drops = BONY_BEETLE_DROPS,

@@ -19,9 +19,9 @@ EvtScript N(EVS_OpenChest_LastStand) = {
 };
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_Chest), 95, 0, 0, 0, 0, MAKE_ENTITY_END)
-    Call(AssignChestFlag, GF_KKJ20_Chest_LastStand)
-    Call(AssignScript, Ref(N(EVS_OpenChest_LastStand)))
+    EVT_MAKE_ENTITY(Chest, GEN_CHEST_1_PARAMS)
+    Call(AssignChestFlag, GEN_CHEST_1_FLAG)
+    Call(AssignScript, Ref(GEN_CHEST_1_SCRIPT))
     Return
     End
 };

@@ -2,6 +2,7 @@
 /// @brief Flower Fields - (East) Petunia's Field
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

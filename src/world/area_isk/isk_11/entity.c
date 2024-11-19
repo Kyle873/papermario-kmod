@@ -4,7 +4,7 @@
 
 EvtScript N(EVS_MakeEntities) = {
     IfEq(GF_ISK11_UnlockedDoor, FALSE)
-        Call(MakeEntity, Ref(Entity_Padlock), 355, -460, 430, -40, MAKE_ENTITY_END)
+        EVT_MAKE_ENTITY(Padlock, GEN_PADLOCK_1_PARAMS)
         Set(MV_LockEntityID, LVar0)
     EndIf
     PlayEffect(EFFECT_FLAME, FX_FLAME_RED, -131, -453, 489, Float(0.3), LVar0)
@@ -16,7 +16,7 @@ EvtScript N(EVS_MakeEntities) = {
     PlayEffect(EFFECT_FLAME, FX_FLAME_RED, 131, -713, 489, Float(0.3), LVar0)
     PlayEffect(EFFECT_FLAME, FX_FLAME_RED, -44, -843, 505, Float(0.3), LVar0)
     PlayEffect(EFFECT_FLAME, FX_FLAME_RED, 131, -843, 489, Float(0.3), LVar0)
-    Call(MakeEntity, Ref(Entity_HeartBlock), -75, -720, 625, 0, MAKE_ENTITY_END)
+    EVT_MAKE_ENTITY(HeartBlock, GEN_HEART_BLOCK_1_PARAMS)
     Return
     End
 };

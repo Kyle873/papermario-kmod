@@ -19,22 +19,22 @@ EvtScript N(EVS_BindExitTriggers) = {
 };
 
 LavaReset N(SafeFloorColliders)[] = {
-    { .colliderID = COLLIDER_o129, .pos = { -500.0,    0.0,  -90.0 }},
-    { .colliderID = COLLIDER_o137, .pos = { -510.0,    0.0,    0.0 }},
-    { .colliderID = COLLIDER_o155, .pos = { -500.0,    0.0,  110.0 }},
-    { .colliderID = COLLIDER_o156, .pos = { -250.0,    0.0,  -90.0 }},
-    { .colliderID = COLLIDER_o140, .pos = { -240.0,    0.0,    0.0 }},
-    { .colliderID = COLLIDER_o157, .pos = { -250.0,    0.0,  110.0 }},
-    { .colliderID = COLLIDER_o151, .pos = {  -50.0,    0.0,   25.0 }},
-    { .colliderID = COLLIDER_o152, .pos = {   70.0,   60.0,  -95.0 }},
-    { .colliderID = COLLIDER_o153, .pos = {  410.0,   60.0,  -95.0 }},
-    { .colliderID = COLLIDER_o154, .pos = {  550.0,    0.0,   50.0 }},
-    { .colliderID = COLLIDER_o158, .pos = {  -50.0,    0.0,  110.0 }},
+    { .colliderID = COLLIDER_o129, .pos = { GEN_LAVA_RESET_O129_VEC }},
+    { .colliderID = COLLIDER_o137, .pos = { GEN_LAVA_RESET_O137_VEC }},
+    { .colliderID = COLLIDER_o155, .pos = { GEN_LAVA_RESET_O155_VEC }},
+    { .colliderID = COLLIDER_o156, .pos = { GEN_LAVA_RESET_O156_VEC }},
+    { .colliderID = COLLIDER_o140, .pos = { GEN_LAVA_RESET_O140_VEC }},
+    { .colliderID = COLLIDER_o157, .pos = { GEN_LAVA_RESET_O157_VEC }},
+    { .colliderID = COLLIDER_o151, .pos = { GEN_LAVA_RESET_O151_VEC }},
+    { .colliderID = COLLIDER_o152, .pos = { GEN_LAVA_RESET_O152_VEC }},
+    { .colliderID = COLLIDER_o153, .pos = { GEN_LAVA_RESET_O153_VEC }},
+    { .colliderID = COLLIDER_o154, .pos = { GEN_LAVA_RESET_O154_VEC }},
+    { .colliderID = COLLIDER_o158, .pos = { GEN_LAVA_RESET_O158_VEC }},
     { .colliderID = NO_COLLIDER }
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_FLOWER_FIELDS)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_DEFAULT(0, 0, 0)
     Call(MakeNpcs, FALSE, Ref(N(DefaultNPCs)))
@@ -58,10 +58,7 @@ EvtScript N(EVS_Main) = {
     Call(SetTexPanner, MODEL_o133, TEX_PANNER_1)
     Call(SetTexPanner, MODEL_o135, TEX_PANNER_1)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP(  140,    0,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    0,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     // vines scrolling right
@@ -78,10 +75,7 @@ EvtScript N(EVS_Main) = {
     Call(SetTexPanner, MODEL_o134, TEX_PANNER_2)
     Call(SetTexPanner, MODEL_o136, TEX_PANNER_2)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_2)
-        TEX_PAN_PARAMS_STEP( -200,    0,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    0,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_2
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Exec(N(EVS_SetupBubbles))

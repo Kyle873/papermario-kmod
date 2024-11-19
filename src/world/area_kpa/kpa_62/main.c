@@ -170,10 +170,7 @@ EvtScript N(EVS_EnterMap) = {
 
 EvtScript N(EVS_TexPan_Lava) = {
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_0)
-        TEX_PAN_PARAMS_STEP( -400,    0, -800,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    0,    1,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_0
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Call(SetTexPanner, MODEL_o1508, TEX_PANNER_0)
@@ -182,14 +179,14 @@ EvtScript N(EVS_TexPan_Lava) = {
 };
 
 LavaReset N(SafeFloorColliders)[] = {
-    { .colliderID = COLLIDER_o1559, .pos = { -455.0,  -15.0,   35.0 }},
-    { .colliderID = COLLIDER_o1560, .pos = { -545.0,   10.0,   15.0 }},
-    { .colliderID = COLLIDER_o1692, .pos = { -426.0,  -35.0,   70.0 }},
+    { .colliderID = COLLIDER_o1559, .pos = { GEN_LAVA_RESET_O1559_VEC }},
+    { .colliderID = COLLIDER_o1560, .pos = { GEN_LAVA_RESET_O1560_VEC }},
+    { .colliderID = COLLIDER_o1692, .pos = { GEN_LAVA_RESET_O1692_VEC }},
     { .colliderID = NO_COLLIDER }
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_BOWSERS_CASTLE)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
     Set(GF_MAP_BowsersCastle, TRUE)
@@ -217,5 +214,3 @@ EvtScript N(EVS_Main) = {
     Return
     End
 };
-
-

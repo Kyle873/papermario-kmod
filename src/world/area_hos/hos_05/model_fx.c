@@ -192,10 +192,7 @@ EvtScript N(EVS_Starship_Summon) = {
     Set(MV_Starship_PosY, 0)
     Exec(N(EVS_Starship_Update))
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_9)
-        TEX_PAN_PARAMS_STEP(  -90,   70,  -60,   90)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_9
         Exec(N(EVS_UpdateTexturePan_Starship))
     EndThread
     Call(SetTexPanner, MODEL_o646, TEX_PANNER_9)

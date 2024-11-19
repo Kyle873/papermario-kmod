@@ -36,8 +36,8 @@ ShakeTreeConfig N(ShakeTree_Tree1) = {
 };
 
 BombTrigger N(BombPos_Tree1) = {
-    .pos = { -285.0f, 0.0f, -360.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_1_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_1_RAD,
 };
 
 FoliageModelList N(Tree2_LeafModels)  = FOLIAGE_MODEL_LIST(MODEL_g36);
@@ -58,8 +58,8 @@ ShakeTreeConfig N(ShakeTree_Tree2) = {
 };
 
 BombTrigger N(BombPos_Tree2) = {
-    .pos = { 452.0f, 0.0f, -135.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_2_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_2_RAD,
 };
 
 EvtScript N(EVS_SetupTrees) = {

@@ -5,20 +5,9 @@
 NpcData N(NpcData_HammerBros)[] = {
     {
         .id = NPC_HammerBros,
-        .pos = { 100.0f, 0.0f, 120.0f },
-        .yaw = 90,
-        .territory = {
-            .wander = {
-                .isFlying = FALSE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 100, 0, 120 },
-                .wanderSize = { 30 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 100, 0, 120 },
-                .detectSize = { 200 },
-            }
-        },
+        .pos = { GEN_NPC_HAMMER_BROS_VEC },
+        .yaw = GEN_NPC_HAMMER_BROS_DIR,
+        .territory = GEN_NPC_HAMMER_BROS_TERRITORY,
         .settings = &N(NpcSettings_HammerBros_Wander),
         .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = HAMMER_BROS_DROPS,

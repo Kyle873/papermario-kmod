@@ -35,8 +35,8 @@ ShakeTreeConfig N(ShakeTree_Tree1) = {
 };
 
 BombTrigger N(BombPos_Tree1) = {
-    .pos = { 328.0f, 10.0f, -36.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_1_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_1_RAD,
 };
 
 EvtScript N(EVS_SetupFoliage) = {

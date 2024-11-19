@@ -592,9 +592,7 @@ EvtScript N(EVS_NpcInit_Raven) = {
 };
 
 Vec3f N(RaphaelWalkPath)[] = {
-    { -190.0,     0.0, -200.0 },
-    { -185.0,     0.0,  -95.0 },
-    { -180.0,     0.0,   10.0 },
+    GEN_PATH_1_PATH
 };
 
 EvtScript N(EVS_Scene_RaphaelComingThrough) = {
@@ -1214,10 +1212,7 @@ EvtScript N(EVS_PartnerFaceMisstar) = {
 };
 
 Vec3f N(MisstarDescentPath)[] = {
-    {  990.0,   210.0, -120.0 },
-    {  925.0,   115.0,  -80.0 },
-    {  860.0,    65.0,  -40.0 },
-    {  725.0,    10.0,    0.0 },
+    GEN_PATH_2_PATH
 };
 
 EvtScript N(EVS_Scene_Misstar) = {
@@ -1421,8 +1416,9 @@ EvtScript N(EVS_NpcInit_Misstar) = {
 NpcData N(NpcData_Kolorado)[] = {
     {
         .id = NPC_Kolorado_01,
-        .pos = { -100.0f, 0.0f, 10.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_KOLORADO_01_VEC },
+        .yaw = GEN_NPC_KOLORADO_01_DIR,
+        .territory = GEN_NPC_KOLORADO_01_TERRITORY,
         .init = &N(EVS_NpcInit_Kolorado_HeldCaptive),
         .settings = &N(NpcSettings_Kolorado),
         .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_SKIP_BATTLE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER | ENEMY_FLAG_IGNORE_TOUCH | ENEMY_FLAG_IGNORE_SPIN,
@@ -1432,8 +1428,9 @@ NpcData N(NpcData_Kolorado)[] = {
     },
     {
         .id = NPC_Kolorado_02,
-        .pos = { -100.0f, 0.0f, 10.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_KOLORADO_02_VEC },
+        .yaw = GEN_NPC_KOLORADO_02_DIR,
+        .territory = GEN_NPC_KOLORADO_02_TERRITORY,
         .init = &N(EVS_NpcInit_Kolorado_WaitingToExplore),
         .settings = &N(NpcSettings_Kolorado),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -1443,8 +1440,9 @@ NpcData N(NpcData_Kolorado)[] = {
     },
     {
         .id = NPC_ZiplineDummy1,
-        .pos = { -100.0f, 0.0f, 10.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_ZIPLINE_DUMMY1_VEC },
+        .yaw = GEN_NPC_ZIPLINE_DUMMY1_DIR,
+        .territory = GEN_NPC_ZIPLINE_DUMMY1_TERRITORY,
         .init = &N(EVS_NpcInit_ZiplineDummy),
         .settings = &N(NpcSettings_Dummy),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,
@@ -1454,8 +1452,9 @@ NpcData N(NpcData_Kolorado)[] = {
     },
     {
         .id = NPC_ZiplineDummy2,
-        .pos = { -100.0f, 0.0f, 10.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_ZIPLINE_DUMMY2_VEC },
+        .yaw = GEN_NPC_ZIPLINE_DUMMY2_DIR,
+        .territory = GEN_NPC_ZIPLINE_DUMMY2_TERRITORY,
         .init = &N(EVS_NpcInit_ZiplineDummy),
         .settings = &N(NpcSettings_Dummy),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,
@@ -1467,23 +1466,9 @@ NpcData N(NpcData_Kolorado)[] = {
 
 NpcData N(NpcData_SpearGuy) = {
     .id = NPC_SpearGuy,
-    .pos = { -70.0f, 0.0f, 10.0f },
-    .yaw = 270,
-    .territory = {
-        .patrol = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .numPoints  = 3,
-            .points  = {
-                { 368, 0, 190 },
-                { 411, 0, 190 },
-                { 396, 0, 239 },
-            },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -70, 0, 10 },
-            .detectSize = { 100 },
-        }
-    },
+    .pos = { GEN_NPC_SPEAR_GUY_VEC },
+    .yaw = GEN_NPC_SPEAR_GUY_DIR,
+    .territory = GEN_NPC_SPEAR_GUY_TERRITORY,
     .init = &N(EVS_NpcInit_SpearGuy),
     .settings = &N(NpcSettings_SpearGuy_Patrol),
     .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER | ENEMY_FLAG_NO_DROPS,
@@ -1494,8 +1479,9 @@ NpcData N(NpcData_SpearGuy) = {
 NpcData N(NpcData_RaphaelRaven)[] = {
     {
         .id = NPC_RaphaelRaven,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_RAPHAEL_RAVEN_VEC },
+        .yaw = GEN_NPC_RAPHAEL_RAVEN_DIR,
+        .territory = GEN_NPC_RAPHAEL_RAVEN_TERRITORY,
         .init = &N(EVS_NpcInit_RaphaelRaven),
         .settings = &N(NpcSettings_RaphaelRaven),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -1505,8 +1491,9 @@ NpcData N(NpcData_RaphaelRaven)[] = {
     },
     {
         .id = NPC_Raven_01,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_RAVEN_01_VEC },
+        .yaw = GEN_NPC_RAVEN_01_DIR,
+        .territory = GEN_NPC_RAVEN_01_TERRITORY,
         .init = &N(EVS_NpcInit_Raven),
         .settings = &N(NpcSettings_Raven),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION,
@@ -1516,8 +1503,9 @@ NpcData N(NpcData_RaphaelRaven)[] = {
     },
     {
         .id = NPC_Raven_02,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_RAVEN_02_VEC },
+        .yaw = GEN_NPC_RAVEN_02_DIR,
+        .territory = GEN_NPC_RAVEN_02_TERRITORY,
         .settings = &N(NpcSettings_Raven),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION,
         .drops = NO_DROPS,
@@ -1528,8 +1516,9 @@ NpcData N(NpcData_RaphaelRaven)[] = {
     },
     {
         .id = NPC_Raven_03,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_RAVEN_03_VEC },
+        .yaw = GEN_NPC_RAVEN_03_DIR,
+        .territory = GEN_NPC_RAVEN_03_TERRITORY,
         .settings = &N(NpcSettings_Raven),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION,
         .drops = NO_DROPS,
@@ -1538,8 +1527,9 @@ NpcData N(NpcData_RaphaelRaven)[] = {
     },
     {
         .id = NPC_Raven_04,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_RAVEN_04_VEC },
+        .yaw = GEN_NPC_RAVEN_04_DIR,
+        .territory = GEN_NPC_RAVEN_04_TERRITORY,
         .settings = &N(NpcSettings_Raven),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION,
         .drops = NO_DROPS,
@@ -1548,8 +1538,9 @@ NpcData N(NpcData_RaphaelRaven)[] = {
     },
     {
         .id = NPC_Raven_05,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_RAVEN_05_VEC },
+        .yaw = GEN_NPC_RAVEN_05_DIR,
+        .territory = GEN_NPC_RAVEN_05_TERRITORY,
         .settings = &N(NpcSettings_Raven),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION,
         .drops = NO_DROPS,
@@ -1560,8 +1551,9 @@ NpcData N(NpcData_RaphaelRaven)[] = {
 
 NpcData N(NpcData_Misstar) = {
     .id = NPC_Misstar,
-    .pos = { 1075.0f, 120.0f, 130.0f },
-    .yaw = 90,
+    .pos = { GEN_NPC_MISSTAR_VEC },
+    .yaw = GEN_NPC_MISSTAR_DIR,
+    .territory = GEN_NPC_MISSTAR_TERRITORY,
     .init = &N(EVS_NpcInit_Misstar),
     .settings = &N(NpcSettings_StarSpirit),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,

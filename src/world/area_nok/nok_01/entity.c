@@ -2,13 +2,13 @@
 #include "entity.h"
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_BrickBlock), 20, 60, 370, 0, MAKE_ENTITY_END)
+    EVT_MAKE_ENTITY(BrickBlock, GEN_BRICK_BLOCK_1_PARAMS)
     IfEq(GF_NOK01_RecoveredBlockShell, FALSE)
         Call(AssignScript, Ref(N(EVS_BreakBlock_DropShell)))
     EndIf
-    Call(MakeEntity, Ref(Entity_SavePoint), 425, 60, 125, 0, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_HiddenPanel), 150, 0, 350, 0, MODEL_o4, MAKE_ENTITY_END)
-    Call(AssignPanelFlag, GF_NOK01_HiddenPanel)
+    EVT_MAKE_ENTITY(SavePoint, GEN_SAVE_POINT_1_PARAMS)
+    EVT_MAKE_ENTITY(HiddenPanel, GEN_HIDDEN_PANEL_1_PARAMS)
+    Call(AssignPanelFlag, GEN_HIDDEN_PANEL_1_FLAG)
     Return
     End
 };

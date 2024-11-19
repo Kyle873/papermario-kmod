@@ -1,8 +1,7 @@
 #include "dgb_07.h"
 
 EntryList N(Entrances) = {
-    [dgb_07_ENTRY_0]    { -450.0,    0.0,  -40.0,    0.0 },
-    [dgb_07_ENTRY_1]    {  250.0,  190.0, -250.0,  180.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {

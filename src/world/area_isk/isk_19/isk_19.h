@@ -2,6 +2,7 @@
 /// @brief Dry Dry Ruins - Boss Antechamber
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

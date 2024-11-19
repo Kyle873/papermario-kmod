@@ -308,14 +308,14 @@ typedef struct PartnerData {
 typedef struct PlayerData {
     /* 0x000 */ s8 bootsLevel;
     /* 0x001 */ s8 hammerLevel;
-    /* 0x002 */ s8 curHP;
-    /* 0x003 */ s8 curMaxHP;
-    /* 0x004 */ s8 hardMaxHP;
-    /* 0x005 */ s8 curFP;
-    /* 0x006 */ s8 curMaxFP;
-    /* 0x007 */ s8 hardMaxFP;
-    /* 0x008 */ s8 maxBP;
-    /* 0x009 */ s8 level;
+    /* 0x002 */ u8 curHP;
+    /* 0x003 */ u8 curMaxHP;
+    /* 0x004 */ u8 hardMaxHP;
+    /* 0x005 */ u8 curFP;
+    /* 0x006 */ u8 curMaxFP;
+    /* 0x007 */ u8 hardMaxFP;
+    /* 0x008 */ u8 maxBP;
+    /* 0x009 */ u8 level;
     /* 0x00A */ b8 hasActionCommands;
     /* 0x00B */ char pad_00B;
     /* 0x00C */ s16 coins;
@@ -326,9 +326,9 @@ typedef struct PlayerData {
     /* 0x012 */ s8 curPartner;
     /* 0x013 */ char pad_013;
     /* 0x014 */ PartnerData partners[12];
-    /* 0x074 */ s16 keyItems[32];
+    /* 0x074 */ s16 keyItems[10];
     /* 0x0B4 */ s16 badges[128];
-    /* 0x1B4 */ s16 invItems[10];
+    /* 0x1B4 */ s16 invItems[32];
     /* 0x1C8 */ s16 storedItems[32];
     /* 0x208 */ s16 equippedBadges[64];
     /* 0x288 */ s8 unused_288;
@@ -668,8 +668,8 @@ typedef struct StatusBar {
     /* 0x3A */ b8 hidden;
     /* 0x3B */ b8 unk_3B;
     /* 0x3C */ b8 unk_3C;
-    /* 0x3D */ s8 displayHP;
-    /* 0x3E */ s8 displayFP;
+    /* 0x3D */ u8 displayHP;
+    /* 0x3E */ u8 displayFP;
     /* 0x3F */ char unk_3F;
     /* 0x40 */ s16 displayCoins;
     /* 0x42 */ s16 displayStarpoints;

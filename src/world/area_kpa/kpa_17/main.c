@@ -34,12 +34,12 @@ EvtScript N(EVS_EnterMap) = {
 };
 
 BombTrigger N(BombPos_Wall) = {
-    .pos = { 1186.0f, 30.0f, -562.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_1_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_1_RAD,
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_BOWSERS_CASTLE)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Set(AB_KPA17_Toad1_Dialogue, 0)
     Set(AB_KPA17_Toad2_Dialogue, 0)
     Set(AB_KPA17_Toad3_Dialogue, 0)

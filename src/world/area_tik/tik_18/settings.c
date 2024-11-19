@@ -1,8 +1,7 @@
 #include "tik_18.h"
 
 EntryList N(Entrances) = {
-    [tik_18_ENTRY_0]    { -220.0,  -10.0,    0.0,   90.0 },
-    [tik_18_ENTRY_1]    {  320.0,  -10.0,    0.0,  270.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {

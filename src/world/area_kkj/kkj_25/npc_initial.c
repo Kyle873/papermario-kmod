@@ -195,8 +195,9 @@ AnimID N(ExtraAnims_Twink)[] = {
 
 NpcData N(NpcData_Bowser) = {
     .id = NPC_Bowser_01,
-    .pos = { 0.0f, 0.0f, 0.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_BOWSER_01_VEC },
+    .yaw = GEN_NPC_BOWSER_01_DIR,
+    .territory = GEN_NPC_BOWSER_01_TERRITORY,
     .init = &N(EVS_NpcInit_Bowser),
     .settings = &N(NpcSettings_Bowser),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_NO_DROPS,
@@ -207,8 +208,9 @@ NpcData N(NpcData_Bowser) = {
 
 NpcData N(NpcData_Peach) = {
     .id = NPC_Peach_01,
-    .pos = { 0.0f, 0.0f, 0.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_PEACH_01_1_VEC },
+    .yaw = GEN_NPC_PEACH_01_1_DIR,
+    .territory = GEN_NPC_PEACH_01_1_TERRITORY,
     .init = &N(EVS_NpcInit_BattleKooper_01),
     .settings = &N(NpcSettings_Dummy),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_USE_PLAYER_SPRITE,
@@ -220,8 +222,9 @@ NpcData N(NpcData_Peach) = {
 NpcData N(NpcData_Kammy)[] = {
     {
         .id = NPC_Kammy_01,
-        .pos = { 0.0f, 0.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_KAMMY_01_VEC },
+        .yaw = GEN_NPC_KAMMY_01_DIR,
+        .territory = GEN_NPC_KAMMY_01_TERRITORY,
         .init = &N(EVS_NpcInit_Kammy_Broom),
         .settings = &N(NpcSettings_Kammy_Flying),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_NO_DROPS,
@@ -248,8 +251,9 @@ NpcData N(NpcData_Kammy)[] = {
     },
     {
         .id = NPC_Kammy_02,
-        .pos = { 0.0f, 0.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_KAMMY_02_VEC },
+        .yaw = GEN_NPC_KAMMY_02_DIR,
+        .territory = GEN_NPC_KAMMY_02_TERRITORY,
         .init = &N(EVS_NpcInit_Kammy),
         .settings = &N(NpcSettings_Kammy_Flying),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_NO_DROPS,
@@ -278,8 +282,9 @@ NpcData N(NpcData_Kammy)[] = {
 
 NpcData N(NpcData_Twink) = {
     .id = NPC_Twink_01,
-    .pos = { 0.0f, 0.0f, 0.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_TWINK_01_1_VEC },
+    .yaw = GEN_NPC_TWINK_01_1_DIR,
+    .territory = GEN_NPC_TWINK_01_1_TERRITORY,
     .init = &N(EVS_NpcInit_Twink),
     .settings = &N(NpcSettings_Dummy),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_NO_DROPS,

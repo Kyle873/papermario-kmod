@@ -80,8 +80,9 @@ EvtScript N(EVS_NpcInit_Sack) = {
 NpcData N(NpcData_Nomadimouse)[] = {
     {
         .id = NPC_Nomadimouse,
-        .pos = { 114.0f, 0.0f, -50.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_NOMADIMOUSE_VEC },
+        .yaw = GEN_NPC_NOMADIMOUSE_DIR,
+        .territory = GEN_NPC_NOMADIMOUSE_TERRITORY,
         .init = &N(EVS_NpcInit_Nomadimouse),
         .settings = &N(NpcSettings_Nomadimouse),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -108,8 +109,9 @@ NpcData N(NpcData_Nomadimouse)[] = {
     },
     {
         .id = NPC_Sack,
-        .pos = { 134.0f, 0.0f, -50.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_SACK_VEC },
+        .yaw = GEN_NPC_SACK_DIR,
+        .territory = GEN_NPC_SACK_TERRITORY,
         .init = &N(EVS_NpcInit_Sack),
         .settings = &N(NpcSettings_Nomadimouse),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,

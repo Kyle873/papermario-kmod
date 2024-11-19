@@ -2739,9 +2739,11 @@ API_CALLABLE(DropStarPoints) {
         ntd = ((enemyLevel - playerLevel) * 0.5f) * StarPointMultiplier[battleStatus->initialEnemyCount];
         ntd = (ntd + 50.0f) / 100.0f;
     }
+    if (ntd < 1.0f)
+        ntd = 1.0f;
     numToDrop = ntd;
 
-    if (playerData->level < 27) {
+    if (playerData->level < MAX_LEVEL) {
         s32 spawnMode;
         s32 i;
 

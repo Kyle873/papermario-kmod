@@ -2,6 +2,7 @@
 /// @brief Crystal Palace - P-Up, D-Down Hall
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

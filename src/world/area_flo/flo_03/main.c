@@ -19,7 +19,7 @@ EvtScript N(EVS_BindExitTriggers) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_FLOWER_FIELDS)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
     Set(AF_FLO_TreeDrop_RedBerry1, FALSE)
@@ -31,8 +31,8 @@ EvtScript N(EVS_Main) = {
     Exec(N(EVS_SetupFoliage))
     Exec(N(EVS_EmptyEntityHandler))
     Call(ModifyColliderFlags, MODIFY_COLLIDER_FLAGS_SET_SURFACE, COLLIDER_o160, SURFACE_TYPE_FLOWERS)
-    EVT_FLOWER_SPAWN_REGION( -145, -335,  182, -180, 0)
-    EVT_FLOWER_SPAWN_REGION(  200, -170,  310,  150, 0)
+    GEN_FLOWER_SPAWN_REGION(GEN_FLOWER_VOLUME_1_MIN_XZ, GEN_FLOWER_VOLUME_1_MAX_XZ, GEN_FLOWER_VOLUME_1_MIN_Y)
+    GEN_FLOWER_SPAWN_REGION(GEN_FLOWER_VOLUME_2_MIN_XZ, GEN_FLOWER_VOLUME_2_MAX_XZ, GEN_FLOWER_VOLUME_2_MIN_Y)
     Call(GetEntryID, LVar0)
     IfEq(LVar0, flo_03_ENTRY_2)
         Exec(N(EVS_Scene_SunReturns))

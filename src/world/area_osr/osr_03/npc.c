@@ -23,8 +23,9 @@ AnimID N(ExtraAnims_Kammy)[] = {
 
 NpcData N(NpcData_Kammy) = {
     .id = NPC_Kammy,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 90,
+    .pos = { GEN_NPC_KAMMY_VEC },
+    .yaw = GEN_NPC_KAMMY_DIR,
+    .territory = GEN_NPC_KAMMY_TERRITORY,
     .settings = &N(NpcSettings_Kammy),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = NO_DROPS,

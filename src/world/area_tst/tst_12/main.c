@@ -4,7 +4,7 @@
 extern EvtScript N(EVS_Main);
 
 EntryList N(Entrances) = {
-    [tst_12_ENTRY_0]    {  416.0,    0.0,   76.0,   90.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {
@@ -56,7 +56,7 @@ EvtScript N(D_80240050_B1D340) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_TESTING)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_DEFAULT(0, 0, 0)
     Call(ModifyColliderFlags, MODIFY_COLLIDER_FLAGS_SET_SURFACE, COLLIDER_o92, SURFACE_TYPE_FLOWERS)

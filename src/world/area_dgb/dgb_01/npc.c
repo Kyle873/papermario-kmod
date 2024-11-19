@@ -245,20 +245,9 @@ EvtScript N(EVS_NpcInit_Sentinel_04) = {
 
 NpcData N(NpcData_Sentinel_01) = {
     .id = NPC_Sentinel_01,
-    .pos = { -180.0f, 100.0f, 230.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -180, 100, 230 },
-            .wanderSize = { 35 },
-            .detectShape = SHAPE_RECT,
-            .detectPos  = { 0, 0, 0 },
-            .detectSize = { 450, 1000 },
-        }
-    },
+    .pos = { GEN_NPC_SENTINEL_01_VEC },
+    .yaw = GEN_NPC_SENTINEL_01_DIR,
+    .territory = GEN_NPC_SENTINEL_01_TERRITORY,
     .init = &N(EVS_NpcInit_Sentinel_01),
     .settings = &N(NpcSettings_Sentinel),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -268,20 +257,9 @@ NpcData N(NpcData_Sentinel_01) = {
 
 NpcData N(NpcData_Sentinel_02) = {
     .id = NPC_Sentinel_02,
-    .pos = { 180.0f, 100.0f, 230.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 180, 100, 230 },
-            .wanderSize = { 35 },
-            .detectShape = SHAPE_RECT,
-            .detectPos  = { 0, 0, 0 },
-            .detectSize = { 450, 1000 },
-        }
-    },
+    .pos = { GEN_NPC_SENTINEL_02_VEC },
+    .yaw = GEN_NPC_SENTINEL_02_DIR,
+    .territory = GEN_NPC_SENTINEL_02_TERRITORY,
     .init = &N(EVS_NpcInit_Sentinel_02),
     .settings = &N(NpcSettings_Sentinel),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -291,20 +269,9 @@ NpcData N(NpcData_Sentinel_02) = {
 
 NpcData N(NpcData_Sentinel_03) = {
     .id = NPC_Sentinel_03,
-    .pos = { -180.0f, 100.0f, -230.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -180, 100, -230 },
-            .wanderSize = { 35 },
-            .detectShape = SHAPE_RECT,
-            .detectPos  = { 0, 0, 0 },
-            .detectSize = { 450, 1000 },
-        }
-    },
+    .pos = { GEN_NPC_SENTINEL_03_VEC },
+    .yaw = GEN_NPC_SENTINEL_03_DIR,
+    .territory = GEN_NPC_SENTINEL_03_TERRITORY,
     .init = &N(EVS_NpcInit_Sentinel_03),
     .settings = &N(NpcSettings_Sentinel),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -314,20 +281,9 @@ NpcData N(NpcData_Sentinel_03) = {
 
 NpcData N(NpcData_Sentinel_04) = {
     .id = NPC_Sentinel_04,
-    .pos = { 180.0f, 100.0f, -230.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 180, 100, -230 },
-            .wanderSize = { 35 },
-            .detectShape = SHAPE_RECT,
-            .detectPos  = { 0, 0, 0 },
-            .detectSize = { 450, 1000 },
-        }
-    },
+    .pos = { GEN_NPC_SENTINEL_04_VEC },
+    .yaw = GEN_NPC_SENTINEL_04_DIR,
+    .territory = GEN_NPC_SENTINEL_04_TERRITORY,
     .init = &N(EVS_NpcInit_Sentinel_04),
     .settings = &N(NpcSettings_Sentinel),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -352,8 +308,9 @@ AnimID N(ExtraAnims_Tubba)[] = {
 
 NpcData N(NpcData_Tubba_Floor3) = {
     .id = NPC_Tubba,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
+    .pos = { GEN_NPC_TUBBA_VEC },
+    .yaw = GEN_NPC_TUBBA_DIR,
+    .territory = GEN_NPC_TUBBA_TERRITORY,
     .init = &N(EVS_NpcInit_Tubba_Floor3),
     .settings = &N(NpcSettings_TubbaBlubba),
     .flags = ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,
@@ -364,22 +321,9 @@ NpcData N(NpcData_Tubba_Floor3) = {
 
 NpcData N(NpcData_Tubba_Floor2) = {
     .id = NPC_Tubba,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
-    .territory = {
-        .patrol = {
-            .isFlying = FALSE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .numPoints  = 2,
-            .points  = {
-                { 320, 210, 0 },
-                { 370, 210, 0 },
-            },
-            .detectShape = SHAPE_RECT,
-            .detectPos  = { 350, 210, 0 },
-            .detectSize = { 1000, 250 },
-        }
-    },
+    .pos = { GEN_NPC_TUBBA_1_VEC },
+    .yaw = GEN_NPC_TUBBA_1_DIR,
+    .territory = GEN_NPC_TUBBA_1_TERRITORY,
     .init = &N(EVS_NpcInit_Tubba_Floor2),
     .settings = &N(NpcSettings_TubbaBlubba_Patrol),
     .flags = ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,
@@ -391,28 +335,9 @@ NpcData N(NpcData_Tubba_Floor2) = {
 
 NpcData N(NpcData_Tubba_Floor1) = {
     .id = NPC_Tubba,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
-    .territory = {
-        .patrol = {
-            .isFlying = FALSE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .numPoints  = 8,
-            .points  = {
-                { 156, 0, 187 },
-                { -36, 0, 290 },
-                { -159, 0, 50 },
-                { -80, 0, -218 },
-                { 66, 0, -362 },
-                { 196, 0, -268 },
-                { 280, 0, -124 },
-                { 250, 0, 100 },
-            },
-            .detectShape = SHAPE_RECT,
-            .detectPos  = { 250, 0, 100 },
-            .detectSize = { 1000, 250 },
-        }
-    },
+    .pos = { GEN_NPC_TUBBA_2_VEC },
+    .yaw = GEN_NPC_TUBBA_2_DIR,
+    .territory = GEN_NPC_TUBBA_2_TERRITORY,
     .init = &N(EVS_NpcInit_Tubba_Floor1),
     .settings = &N(NpcSettings_TubbaBlubba_Patrol),
     .flags = ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,

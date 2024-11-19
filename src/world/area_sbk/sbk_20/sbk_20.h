@@ -2,6 +2,7 @@
 /// @brief Dry Dry Desert - N1W3 Special Block
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

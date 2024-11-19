@@ -42,24 +42,15 @@ API_CALLABLE(N(AnimateFallingChestRot)) {
 }
 
 Vec3f N(ChestFlightArc)[] = {
-    {  -40.0,   330.0, -900.0 },
-    { -117.0,   420.0, -600.0 },
-    { -195.0,   465.0, -300.0 },
-    { -272.0,   465.0,    0.0 },
-    { -350.0,   325.0,  300.0 },
-    { -350.0,   250.0,  300.0 },
+    GEN_PATH_1_PATH
 };
 
 Vec3f N(ChestFallPath)[] = {
-    {   10.0,   130.0,  -20.0 },
-    {    5.0,    75.0,  -20.0 },
-    {    0.0,     0.0,  -20.0 },
+    GEN_PATH_2_PATH
 };
 
 Vec3f N(ChestBouncePath)[] = {
-    {    0.0,     0.0,  -20.0 },
-    {    0.0,    30.0,   -8.0 },
-    {    0.0,     0.0,    0.0 },
+    GEN_PATH_3_PATH
 };
 
 EvtScript N(EVS_Scene_TreasureChest) = {

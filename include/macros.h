@@ -90,6 +90,11 @@
 #define SP_PER_BAR 256
 #define SP_PER_SEG 32
 
+#define MAX_HP 250
+#define MAX_FP 250
+#define MAX_BP 99
+#define MAX_LEVEL ((MAX_HP / 5) + (MAX_FP / 5) + (MAX_BP / 3) - 3)
+
 #define SCREEN_WIDTH 320
 #define SCREEN_HEIGHT 240
 

@@ -2,13 +2,13 @@
 #include "effects.h"
 
 BombTrigger N(BombPos_UpperWall) = {
-    .pos = { -593.0f, -520.0f, 104.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_1_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_1_RAD,
 };
 
 BombTrigger N(BombPos_LowerWall) = {
-    .pos = { -569.0f, -780.0f, -99.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_2_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_2_RAD,
 };
 
 EvtScript N(EVS_OnBlast_UpperWall) = {

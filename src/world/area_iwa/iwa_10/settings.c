@@ -1,8 +1,7 @@
 #include "iwa_10.h"
 
 EntryList N(Entrances) = {
-    [iwa_10_ENTRY_0]    { -1250.0,   30.0,    0.0,   90.0 },
-    [iwa_10_ENTRY_1]    { -445.0,  215.0, -500.0,  270.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {

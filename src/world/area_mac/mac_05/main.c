@@ -129,7 +129,7 @@ EvtScript N(D_802448C4_856A34) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_TOAD_TOWN)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
     Switch(GB_StoryProgress)
@@ -165,10 +165,7 @@ EvtScript N(EVS_Main) = {
     Exec(N(D_8024457C_8566EC))
     Call(SetTexPanner, MODEL_kaimen, TEX_PANNER_1)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP(  100,  100,  -70,  -50)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Exec(N(D_80244648_8567B8))

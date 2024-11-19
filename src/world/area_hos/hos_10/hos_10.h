@@ -2,6 +2,7 @@
 /// @brief Shooting Star Summit - Ending Descent Scene
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

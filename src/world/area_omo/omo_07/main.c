@@ -9,7 +9,7 @@ EvtScript N(EVS_BindExitTriggers) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_SHY_GUYS_TOYBOX)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_DEFAULT(0, 0, 0)
     IfEq(GF_OMO07_SpawnedPeachChoice2, FALSE)
@@ -23,7 +23,7 @@ EvtScript N(EVS_Main) = {
                     Call(MakeNpcs, TRUE, Ref(N(HammerBrosAmbushNPCs)))
                 CaseEq(2)
                     Call(MakeNpcs, TRUE, Ref(N(DefaultNPCs)))
-                    Call(MakeItemEntity, ITEM_THUNDER_RAGE, 1080, 0, 0, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_OMO07_Item_ThunderRage)
+                    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
             EndSwitch
         Else
             Call(MakeNpcs, TRUE, Ref(N(DefaultNPCs)))

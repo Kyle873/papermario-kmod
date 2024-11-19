@@ -14,8 +14,9 @@ EvtScript N(EVS_NpcInit_TrafficBoo1) = {
 
 NpcData N(NpcData_TrafficBoo1) = {
     .id = NPC_TrafficBoo1,
-    .pos = { 523.0f, -139.0f, 193.0f },
-    .yaw = 0,
+    .pos = { GEN_NPC_TRAFFIC_BOO1_VEC },
+    .yaw = GEN_NPC_TRAFFIC_BOO1_DIR,
+    .territory = GEN_NPC_TRAFFIC_BOO1_TERRITORY,
     .init = &N(EVS_NpcInit_TrafficBoo1),
     .settings = &N(NpcSettings_Boo),
     .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -31,8 +32,9 @@ EvtScript N(EVS_NpcInit_TrafficBoo2) = {
 
 NpcData N(NpcData_TrafficBoo2) = {
     .id = NPC_TrafficBoo2,
-    .pos = { 473.0f, -122.0f, 247.0f },
-    .yaw = 0,
+    .pos = { GEN_NPC_TRAFFIC_BOO2_VEC },
+    .yaw = GEN_NPC_TRAFFIC_BOO2_DIR,
+    .territory = GEN_NPC_TRAFFIC_BOO2_TERRITORY,
     .init = &N(EVS_NpcInit_TrafficBoo2),
     .settings = &N(NpcSettings_Boo),
     .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -53,8 +55,9 @@ EvtScript N(EVS_NpcInit_GuardBoo) = {
 
 NpcData N(NpcData_GuardBoo) = {
     .id = NPC_GuardBoo,
-    .pos = { 168.0f, 0.0f, -161.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_GUARD_BOO_VEC },
+    .yaw = GEN_NPC_GUARD_BOO_DIR,
+    .territory = GEN_NPC_GUARD_BOO_TERRITORY,
     .init = &N(EVS_NpcInit_GuardBoo),
     .settings = &N(NpcSettings_Boo),
     .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,

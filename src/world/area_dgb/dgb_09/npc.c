@@ -11,20 +11,9 @@
 NpcData N(NpcData_Clubba_Wander)[] = {
     {
         .id = NPC_Clubba_Wander,
-        .pos = { -350.0f, 0.0f, 180.0f },
-        .yaw = 270,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { -350, 0, 180 },
-                .wanderSize = { 40 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 50 },
-                .detectSize = { 600, 250 },
-            }
-        },
+        .pos = { GEN_NPC_CLUBBA_WANDER_VEC },
+        .yaw = GEN_NPC_CLUBBA_WANDER_DIR,
+        .territory = GEN_NPC_CLUBBA_WANDER_TERRITORY,
         .settings = &N(NpcSettings_Clubba_Wander),
         .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = CLUBBA_DROPS,
@@ -48,20 +37,9 @@ EvtScript N(EVS_NpcInit_Clubba_Napping) = {
 NpcData N(NpcData_Clubba_Napping)[] = {
     {
         .id = NPC_Clubba_Napping,
-        .pos = { 310.0f, 0.0f, 88.0f },
-        .yaw = 270,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 310, 0, 88 },
-                .wanderSize = { 40 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 50 },
-                .detectSize = { 600, 250 },
-            }
-        },
+        .pos = { GEN_NPC_CLUBBA_NAPPING_VEC },
+        .yaw = GEN_NPC_CLUBBA_NAPPING_DIR,
+        .territory = GEN_NPC_CLUBBA_NAPPING_TERRITORY,
         .init = &N(EVS_NpcInit_Clubba_Napping),
         .settings = &N(NpcSettings_Clubba_Napping),
         .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -75,20 +53,9 @@ NpcData N(NpcData_Clubba_Napping)[] = {
 
 NpcData N(NpcData_Sentinel) = {
     .id = NPC_Sentinel,
-    .pos = { -20.0f, 100.0f, 180.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -20, 100, 180 },
-            .wanderSize = { 40 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -20, 100, 180 },
-            .detectSize = { 250 },
-        }
-    },
+    .pos = { GEN_NPC_SENTINEL_VEC },
+    .yaw = GEN_NPC_SENTINEL_DIR,
+    .territory = GEN_NPC_SENTINEL_TERRITORY,
     .settings = &N(NpcSettings_Sentinel),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION,
     .drops = NO_DROPS,

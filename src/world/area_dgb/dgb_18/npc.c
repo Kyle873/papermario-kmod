@@ -489,25 +489,9 @@ EvtScript N(EVS_NpcInit_Yakkey) = {
 
 NpcData N(NpcData_Tubba) = {
     .id = NPC_Tubba,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
-    .territory = {
-        .patrol = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .numPoints  = 5,
-            .points  = {
-                { 0, 0, 240 },
-                { 175, 0, 240 },
-                { 350, 0, 240 },
-                { 525, 0, 240 },
-                { 700, 0, 240 },
-            },
-            .detectShape = SHAPE_RECT,
-            .detectPos  = { 300, 0, 240 },
-            .detectSize = { 1000, 250 },
-        }
-    },
+    .pos = { GEN_NPC_TUBBA_VEC },
+    .yaw = GEN_NPC_TUBBA_DIR,
+    .territory = GEN_NPC_TUBBA_TERRITORY,
     .init = &N(EVS_NpcInit_Tubba),
     .settings = &N(NpcSettings_TubbaBlubba),
     .flags = ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_NO_DROPS,
@@ -517,8 +501,9 @@ NpcData N(NpcData_Tubba) = {
 
 NpcData N(NpcData_Yakkey) = {
     .id = NPC_Yakkey,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
+    .pos = { GEN_NPC_YAKKEY_VEC },
+    .yaw = GEN_NPC_YAKKEY_DIR,
+    .territory = GEN_NPC_YAKKEY_TERRITORY,
     .init = &N(EVS_NpcInit_Yakkey),
     .settings = &N(NpcSettings_Yakkey),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_FLYING,

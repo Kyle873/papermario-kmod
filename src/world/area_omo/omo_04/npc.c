@@ -88,8 +88,9 @@ EvtScript N(EVS_NpcInit_Kammy) = {
 
 NpcData N(NpcData_Goomba) = {
     .id = NPC_Goomba,
-    .pos = { 1100.0f, 0.0f, 0.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_GOOMBA_VEC },
+    .yaw = GEN_NPC_GOOMBA_DIR,
+    .territory = GEN_NPC_GOOMBA_TERRITORY,
     .init = &N(EVS_NpcInit_Goomba),
     .settings = &N(NpcSettings_Goomba),
     .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -99,8 +100,9 @@ NpcData N(NpcData_Goomba) = {
 
 NpcData N(NpcData_Clubba) = {
     .id = NPC_Clubba,
-    .pos = { 1100.0f, 0.0f, 0.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_CLUBBA_VEC },
+    .yaw = GEN_NPC_CLUBBA_DIR,
+    .territory = GEN_NPC_CLUBBA_TERRITORY,
     .init = &N(EVS_NpcInit_Clubba),
     .settings = &N(NpcSettings_Clubba),
     .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -110,20 +112,9 @@ NpcData N(NpcData_Clubba) = {
 
 NpcData N(NpcData_ShyGuy) = {
     .id = NPC_ShyGuy,
-    .pos = { -770.0f, 0.0f, 0.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -770, 0, 0 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -770, 0, 0 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_SHY_GUY_VEC },
+    .yaw = GEN_NPC_SHY_GUY_DIR,
+    .territory = GEN_NPC_SHY_GUY_TERRITORY,
     .settings = &N(NpcSettings_ShyGuy_Wander),
     .flags = ENEMY_FLAG_FLYING,
     .drops = SHY_GUY_DROPS,
@@ -133,20 +124,9 @@ NpcData N(NpcData_ShyGuy) = {
 
 NpcData N(NpcData_SkyGuy) = {
     .id = NPC_SkyGuy,
-    .pos = { -170.0f, 60.0f, 30.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -170, 60, 30 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -170, 60, 30 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_SKY_GUY_VEC },
+    .yaw = GEN_NPC_SKY_GUY_DIR,
+    .territory = GEN_NPC_SKY_GUY_TERRITORY,
     .settings = &N(NpcSettings_SkyGuy),
     .flags = ENEMY_FLAG_FLYING,
     .drops = SKY_GUY_DROPS,
@@ -166,8 +146,9 @@ AnimID N(ExtraAnims_Kammy)[] = {
 
 NpcData N(NpcData_Kammy) = {
     .id = NPC_Kammy,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 90,
+    .pos = { GEN_NPC_KAMMY_VEC },
+    .yaw = GEN_NPC_KAMMY_DIR,
+    .territory = GEN_NPC_KAMMY_TERRITORY,
     .init = &N(EVS_NpcInit_Kammy),
     .settings = &N(NpcSettings_Kammy_Flying),
     .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,

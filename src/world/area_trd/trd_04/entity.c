@@ -138,12 +138,12 @@ EvtScript N(EVS_DropSwitch) = {
 
 EvtScript N(EVS_MakeEntities) = {
     IfEq(GF_TRD04_UnlockedLowerDoor, FALSE)
-        Call(MakeEntity, Ref(Entity_Padlock), 265, 8, 90, -80, MAKE_ENTITY_END)
+        EVT_MAKE_ENTITY(Padlock, GEN_PADLOCK_1_PARAMS)
         Call(AssignScript, Ref(N(EVS_Padlock_LowerDoors)))
         Set(MV_Unk_01, LVar0)
     EndIf
     IfEq(GF_TRD04_UnlockedUpperDoor, FALSE)
-        Call(MakeEntity, Ref(Entity_Padlock), -265, 195, -55, 80, MAKE_ENTITY_END)
+        EVT_MAKE_ENTITY(Padlock, GEN_PADLOCK_2_PARAMS)
         Call(AssignScript, Ref(N(EVS_Padlock_UpperDoors)))
         Set(MV_Unk_00, LVar0)
     EndIf

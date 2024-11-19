@@ -2,6 +2,7 @@
 /// @brief Forever Forest - Tree Face (Bub-ulb)
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

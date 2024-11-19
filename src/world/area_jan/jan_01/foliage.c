@@ -11,8 +11,8 @@ ShakeTreeConfig N(ShakeTree_Tree1) = {
 };
 
 BombTrigger N(BombPos_Tree1) = {
-    .pos = { 160.0f, 0.0f, -287.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_1_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_1_RAD,
 };
 
 FoliageModelList N(Tree2_LeafModels)  = FOLIAGE_MODEL_LIST(MODEL_o85, MODEL_o86);
@@ -37,8 +37,8 @@ ShakeTreeConfig N(ShakeTree_Tree2) = {
 };
 
 BombTrigger N(BombPos_Tree2) = {
-    .pos = { -628.0f, 0.0f, -95.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_2_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_2_RAD,
 };
 
 FoliageModelList N(Tree3_LeafModels)  = FOLIAGE_MODEL_LIST(MODEL_o79, MODEL_o80);
@@ -63,8 +63,8 @@ ShakeTreeConfig N(ShakeTree_Tree3) = {
 };
 
 BombTrigger N(BombPos_Tree3) = {
-    .pos = { -391.0f, 0.0f, -135.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_3_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_3_RAD,
 };
 
 FoliageModelList N(Tree4_LeafModels)  = FOLIAGE_MODEL_LIST(MODEL_o82, MODEL_o83);
@@ -89,8 +89,8 @@ ShakeTreeConfig N(ShakeTree_Tree4) = {
 };
 
 BombTrigger N(BombPos_Tree4) = {
-    .pos = { -341.0f, 0.0f, -115.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_4_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_4_RAD,
 };
 
 FoliageModelList N(Tree5_LeafModels)  = FOLIAGE_MODEL_LIST(MODEL_o88, MODEL_o89);
@@ -115,8 +115,8 @@ ShakeTreeConfig N(ShakeTree_Tree5) = {
 };
 
 BombTrigger N(BombPos_Tree5) = {
-    .pos = { 68.0f, 0.0f, -155.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_5_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_5_RAD,
 };
 
 FoliageModelList N(Tree6_LeafModels)  = FOLIAGE_MODEL_LIST(MODEL_o104, MODEL_o105);
@@ -141,8 +141,8 @@ ShakeTreeConfig N(ShakeTree_Tree6) = {
 };
 
 BombTrigger N(BombPos_Tree6) = {
-    .pos = { 251.0f, 0.0f, -135.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_6_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_6_RAD,
 };
 
 FoliageModelList N(Tree7_LeafModels)  = FOLIAGE_MODEL_LIST(MODEL_o113, MODEL_o114);
@@ -186,8 +186,8 @@ ShakeTreeConfig N(ShakeTree_Tree7B) = {
 };
 
 BombTrigger N(BombPos_Tree7) = {
-    .pos = { 431.0f, 0.0f, -155.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_7_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_7_RAD,
 };
 
 EvtScript N(EVS_SetupFoliage) = {

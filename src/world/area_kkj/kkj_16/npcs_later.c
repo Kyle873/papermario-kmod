@@ -189,8 +189,9 @@ EvtScript N(EVS_NpcInit_HammerBros_03) = {
 NpcData N(NpcData_Minions)[] = {
     {
         .id = NPC_HammerBros_01,
-        .pos = { 0.0f, -500.0f, 0.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_HAMMER_BROS_01_VEC },
+        .yaw = GEN_NPC_HAMMER_BROS_01_DIR,
+        .territory = GEN_NPC_HAMMER_BROS_01_TERRITORY,
         .init = &N(EVS_NpcInit_HammerBros_01),
         .settings = &N(NpcSettings_HammerBros),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -200,8 +201,9 @@ NpcData N(NpcData_Minions)[] = {
     },
     {
         .id = NPC_HammerBros_02,
-        .pos = { 0.0f, -500.0f, 0.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_HAMMER_BROS_02_VEC },
+        .yaw = GEN_NPC_HAMMER_BROS_02_DIR,
+        .territory = GEN_NPC_HAMMER_BROS_02_TERRITORY,
         .init = &N(EVS_NpcInit_HammerBros_02),
         .settings = &N(NpcSettings_HammerBros),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -211,8 +213,9 @@ NpcData N(NpcData_Minions)[] = {
     },
     {
         .id = NPC_HammerBros_03,
-        .pos = { 0.0f, -500.0f, 0.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_HAMMER_BROS_03_VEC },
+        .yaw = GEN_NPC_HAMMER_BROS_03_DIR,
+        .territory = GEN_NPC_HAMMER_BROS_03_TERRITORY,
         .init = &N(EVS_NpcInit_HammerBros_03),
         .settings = &N(NpcSettings_HammerBros),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,

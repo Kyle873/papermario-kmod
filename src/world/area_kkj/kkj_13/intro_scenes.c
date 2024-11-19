@@ -140,19 +140,11 @@ API_CALLABLE(N(ShatterWindow)) {
 }
 
 Vec3f N(FlyThroughWindowPath)[] = {
-    {  450.0,   150.0, -300.0 },
-    {  550.0,   105.0, -180.0 },
-    {  650.0,    60.0,  -75.0 },
-    {  850.0,    90.0,    0.0 },
+    GEN_PATH_4_PATH
 };
 
 Vec3f N(PlayerThrownPath)[] = {
-    {  660.0,     0.0,   15.0 },
-    {  634.0,    60.0,  -83.0 },
-    {  608.0,    80.0, -150.0 },
-    {  582.0,    60.0, -233.0 },
-    {  556.0,     0.0, -315.0 },
-    {  530.0,   -60.0, -398.0 },
+    GEN_PATH_5_PATH
 };
 
 EvtScript N(EVS_FocusCam_Everyone) = {

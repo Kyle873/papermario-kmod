@@ -23,35 +23,19 @@ NpcSettings N(NpcSettings_Magikoopa) = {
 };
 
 Vec3f N(RetreatPath_Magikoopa)[] = {
-    {  -55.0,    15.0,   35.0 },
-    { -155.0,    35.0,   35.0 },
-    { -255.0,    75.0,   35.0 },
-    { -355.0,   155.0,   35.0 },
-    { -455.0,   315.0,   35.0 },
+    GEN_PATH_1_PATH
 };
 
 Vec3f N(RetreatPath_Lakitu_01)[] = {
-    {  -20.0,    15.0,   30.0 },
-    { -120.0,    35.0,   30.0 },
-    { -220.0,    75.0,   30.0 },
-    { -320.0,   155.0,   30.0 },
-    { -420.0,   315.0,   30.0 },
+    GEN_PATH_2_PATH
 };
 
 Vec3f N(RetreatPath_Lakitu_02)[] = {
-    {   65.0,    15.0,   30.0 },
-    {  -35.0,    35.0,   30.0 },
-    { -135.0,    75.0,   30.0 },
-    { -235.0,   155.0,   30.0 },
-    { -335.0,   315.0,   30.0 },
+    GEN_PATH_3_PATH
 };
 
 Vec3f N(RetreatPath_Lakitu_03)[] = {
-    {  120.0,    15.0,   30.0 },
-    {   20.0,    35.0,   30.0 },
-    {  -80.0,    75.0,   30.0 },
-    { -180.0,   155.0,   30.0 },
-    { -280.0,   315.0,   30.0 },
+    GEN_PATH_4_PATH
 };
 
 EvtScript N(EVS_Scene_LakilesterLikesBeingGood) = {
@@ -466,23 +450,23 @@ EvtScript N(EVS_BombReaction_Lakitu_03) = {
 };
 
 BombTrigger N(Npc_BombTrigger_01) = {
-    .pos = { 5.0f, 0.0f, -10.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_5_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_5_RAD,
 };
 
 BombTrigger N(Npc_BombTrigger_02) = {
-    .pos = { -5.0f, 0.0f, -20.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_6_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_6_RAD,
 };
 
 BombTrigger N(Npc_BombTrigger_03) = {
-    .pos = { 50.0f, 0.0f, -10.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_7_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_7_RAD,
 };
 
 BombTrigger N(Npc_BombTrigger_04) = {
-    .pos = { 105.0f, 0.0f, -10.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_8_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_8_RAD,
 };
 
 EvtScript N(EVS_SetupMachineDamageReactions) = {
@@ -601,8 +585,9 @@ EvtScript N(EVS_NpcInit_Lakitu_03) = {
 NpcData N(NpcData_MachineGang)[] = {
     {
         .id = NPC_Lakitu_01,
-        .pos = { 0.0f, 15.0f, 60.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_LAKITU_01_VEC },
+        .yaw = GEN_NPC_LAKITU_01_DIR,
+        .territory = GEN_NPC_LAKITU_01_TERRITORY,
         .init = &N(EVS_NpcInit_Lakitu_01),
         .settings = &N(NpcSettings_Lakitu),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -612,8 +597,9 @@ NpcData N(NpcData_MachineGang)[] = {
     },
     {
         .id = NPC_Lakitu_02,
-        .pos = { 65.0f, 15.0f, 60.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_LAKITU_02_VEC },
+        .yaw = GEN_NPC_LAKITU_02_DIR,
+        .territory = GEN_NPC_LAKITU_02_TERRITORY,
         .init = &N(EVS_NpcInit_Lakitu_02),
         .settings = &N(NpcSettings_Lakitu),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -623,8 +609,9 @@ NpcData N(NpcData_MachineGang)[] = {
     },
     {
         .id = NPC_Lakitu_03,
-        .pos = { 135.0f, 15.0f, 35.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_LAKITU_03_VEC },
+        .yaw = GEN_NPC_LAKITU_03_DIR,
+        .territory = GEN_NPC_LAKITU_03_TERRITORY,
         .init = &N(EVS_NpcInit_Lakitu_03),
         .settings = &N(NpcSettings_Lakitu),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -634,8 +621,9 @@ NpcData N(NpcData_MachineGang)[] = {
     },
     {
         .id = NPC_Magikoopa,
-        .pos = { -60.0f, 0.0f, 50.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_MAGIKOOPA_VEC },
+        .yaw = GEN_NPC_MAGIKOOPA_DIR,
+        .territory = GEN_NPC_MAGIKOOPA_TERRITORY,
         .init = &N(EVS_NpcInit_Magikoopa),
         .settings = &N(NpcSettings_Magikoopa),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -645,8 +633,9 @@ NpcData N(NpcData_MachineGang)[] = {
     },
     {
         .id = NPC_FlyingMagikoopa,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_FLYING_MAGIKOOPA_VEC },
+        .yaw = GEN_NPC_FLYING_MAGIKOOPA_DIR,
+        .territory = GEN_NPC_FLYING_MAGIKOOPA_TERRITORY,
         .init = &N(EVS_NpcInit_FlyingMagikoopa),
         .settings = &N(NpcSettings_Magikoopa),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,

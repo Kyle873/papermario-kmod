@@ -255,8 +255,9 @@ EvtScript N(EVS_NpcInit_JrTroopa) = {
 
 NpcData N(NpcData_Bootler) = {
     .id = NPC_Bootler,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
+    .pos = { GEN_NPC_BOOTLER_VEC },
+    .yaw = GEN_NPC_BOOTLER_DIR,
+    .territory = GEN_NPC_BOOTLER_TERRITORY,
     .init = &N(EVS_NpcInit_Bootler),
     .settings = &N(NpcSettings_Bootler),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_FLYING,
@@ -283,8 +284,9 @@ NpcData N(NpcData_Bootler) = {
 
 NpcData N(NpcData_JrTroopa) = {
     .id = NPC_JrTroopa,
-    .pos = { 0.0f, 0.0f, 0.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_JR_TROOPA_VEC },
+    .yaw = GEN_NPC_JR_TROOPA_DIR,
+    .territory = GEN_NPC_JR_TROOPA_TERRITORY,
     .init = &N(EVS_NpcInit_JrTroopa),
     .settings = &N(NpcSettings_JrTroopa),
     .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,

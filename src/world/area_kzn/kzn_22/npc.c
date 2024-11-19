@@ -85,36 +85,15 @@ EvtScript N(EVS_NpcInit_Kolorado) = {
 };
 
 Vec3f N(FlightPath1)[] = {
-    { 300.0, 178.0, 120.0 },
-    { 320.0, 170.0, 165.0 },
-    { 340.0, 162.0, 200.0 },
-    { 385.0, 155.0, 240.0 },
-    { 435.0, 160.0, 255.0 },
-    { 450.0, 165.0, 225.0 },
-    { 440.0, 172.0, 195.0 },
+    GEN_PATH_1_PATH
 };
 
 Vec3f N(FlightPath2)[] = {
-    { 445.0, 180.00, 120.0 },
-    { 405.0, 190.00,  80.0 },
-    { 360.0, 195.00,  70.0 },
-    { 340.0, 200.00,  90.0 },
-    { 315.0, 190.00, 110.0 },
-    { 295.0, 180.00, 180.0 },
-    { 270.0, 175.00, 230.0 },
-    { 255.0, 170.00, 210.0 },
+    GEN_PATH_2_PATH
 };
 
 Vec3f N(FlightPath3)[] = {
-    { 255.0, 171.0, 175.0 },
-    { 260.0, 173.0, 160.0 },
-    { 270.0, 175.0, 150.0 },
-    { 290.0, 178.0, 142.0 },
-    { 304.0, 182.0, 135.0 },
-    { 330.0, 185.0, 145.0 },
-    { 350.0, 190.0, 155.0 },
-    { 368.0, 235.0, 170.0 },
-    { 368.0, 295.0, 170.0 },
+    GEN_PATH_3_PATH
 };
 
 EvtScript N(EVS_ControlCamera) = {
@@ -264,8 +243,9 @@ EvtScript N(EVS_NpcInit_Misstar) = {
 
 NpcData N(NpcData_Kolorado) = {
     .id = NPC_Kolorado,
-    .pos = { 445.0f, 150.0f, 175.0f },
-    .yaw = 90,
+    .pos = { GEN_NPC_KOLORADO_VEC },
+    .yaw = GEN_NPC_KOLORADO_DIR,
+    .territory = GEN_NPC_KOLORADO_TERRITORY,
     .init = &N(EVS_NpcInit_Kolorado),
     .settings = &N(NpcSettings_Kolorado),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_RAYCAST_TO_INTERACT | ENEMY_FLAG_SKIP_BATTLE,
@@ -276,8 +256,9 @@ NpcData N(NpcData_Kolorado) = {
 
 NpcData N(NpcData_Misstar) = {
     .id = NPC_Misstar,
-    .pos = { 285.0f, 160.0f, 80.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_MISSTAR_VEC },
+    .yaw = GEN_NPC_MISSTAR_DIR,
+    .territory = GEN_NPC_MISSTAR_TERRITORY,
     .init = &N(EVS_NpcInit_Misstar),
     .settings = &N(NpcSettings_StarSpirit),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_RAYCAST_TO_INTERACT | ENEMY_FLAG_SKIP_BATTLE,

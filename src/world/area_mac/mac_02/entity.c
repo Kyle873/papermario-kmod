@@ -51,16 +51,16 @@ EvtScript N(EVS_MakeEntities) = {
     Call(GetEntryID, LVar0)
     IfEq(LVar0, mac_02_ENTRY_5)
         IfEq(GF_MAC02_UnlockedHouse, FALSE)
-            Call(MakeEntity, Ref(Entity_Padlock), -470, 30, -155, 180, MAKE_ENTITY_END)
+            EVT_MAKE_ENTITY(Padlock, GEN_PADLOCK_1_PARAMS)
             Set(MV_BlueHouseLockEntityID, LVar0)
             BindPadlock(Ref(N(EVS_ChooseItem_OddKey)), TRIGGER_WALL_PRESS_A, EVT_ENTITY_INDEX(0), Ref(N(ItemList_OddKey)), 0, 1)
         EndIf
     EndIf
-    Call(MakeItemEntity, ITEM_ODD_KEY, -412, 20, -320, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_MAC02_Item_OddKey)
-    Call(MakeEntity, Ref(Entity_HiddenPanel), 400, 0, 100, 0, MODEL_o236, MAKE_ENTITY_END)
-    Call(AssignPanelFlag, GF_MAC02_HiddenPanel)
-    Call(MakeEntity, Ref(Entity_Signpost), -375, 0, 190, 0, MAKE_ENTITY_END)
-    Call(AssignScript, Ref(N(EVS_ReadSign)))
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
+    EVT_MAKE_ENTITY(HiddenPanel, GEN_HIDDEN_PANEL_1_PARAMS)
+    Call(AssignPanelFlag, GEN_HIDDEN_PANEL_1_FLAG)
+    EVT_MAKE_ENTITY(Signpost, GEN_SIGNPOST_1_PARAMS)
+    Call(AssignScript, Ref(GEN_SIGNPOST_1_SCRIPT))
     BindTrigger(Ref(N(EVS_OnInspect_StreetSign)), TRIGGER_WALL_PRESS_A, COLLIDER_sign, 1, 0)
     Return
     End

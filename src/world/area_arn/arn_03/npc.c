@@ -372,22 +372,9 @@ EvtScript N(EVS_NpcInit_Boo_05) = {
 
 NpcData N(NpcData_Boo_01) = {
     .id = NPC_Boo_01,
-    .pos = { 36.0f, 185.0f, 140.0f },
-    .yaw = 90,
-    .territory = {
-        .patrol = {
-            .isFlying = FALSE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .numPoints  = 2,
-            .points  = {
-                { 36, 10, 185 },
-                { 56, 10, 185 },
-            },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 479, 215, 198 },
-            .detectSize = { 150 },
-        }
-    },
+    .pos = { GEN_NPC_BOO_01_VEC },
+    .yaw = GEN_NPC_BOO_01_DIR,
+    .territory = GEN_NPC_BOO_01_TERRITORY,
     .init = &N(EVS_NpcInit_Boo_01),
     .settings = &N(NpcSettings_Boo_Patrol),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION,
@@ -398,8 +385,9 @@ NpcData N(NpcData_Boo_01) = {
 
 NpcData N(NpcData_Boo_02) = {
     .id = NPC_Boo_02,
-    .pos = { 209.0f, 185.0f, 217.0f },
-    .yaw = 90,
+    .pos = { GEN_NPC_BOO_02_VEC },
+    .yaw = GEN_NPC_BOO_02_DIR,
+    .territory = GEN_NPC_BOO_02_TERRITORY,
     .init = &N(EVS_NpcInit_Boo_02),
     .settings = &N(NpcSettings_Boo),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION,
@@ -410,22 +398,9 @@ NpcData N(NpcData_Boo_02) = {
 
 NpcData N(NpcData_Boo_03) = {
     .id = NPC_Boo_03,
-    .pos = { 379.0f, 186.0f, 186.0f },
-    .yaw = 90,
-    .territory = {
-        .patrol = {
-            .isFlying = FALSE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .numPoints  = 2,
-            .points  = {
-                { 379, 10, 186 },
-                { 399, 10, 186 },
-            },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 479, 215, 198 },
-            .detectSize = { 150 },
-        }
-    },
+    .pos = { GEN_NPC_BOO_03_VEC },
+    .yaw = GEN_NPC_BOO_03_DIR,
+    .territory = GEN_NPC_BOO_03_TERRITORY,
     .init = &N(EVS_NpcInit_Boo_03),
     .settings = &N(NpcSettings_Boo_Patrol),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION,
@@ -436,8 +411,9 @@ NpcData N(NpcData_Boo_03) = {
 
 NpcData N(NpcData_Boo_04) = {
     .id = NPC_Boo_04,
-    .pos = { 544.0f, 235.0f, 128.0f },
-    .yaw = 90,
+    .pos = { GEN_NPC_BOO_04_VEC },
+    .yaw = GEN_NPC_BOO_04_DIR,
+    .territory = GEN_NPC_BOO_04_TERRITORY,
     .init = &N(EVS_NpcInit_Boo_04),
     .settings = &N(NpcSettings_Boo),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION,
@@ -448,8 +424,9 @@ NpcData N(NpcData_Boo_04) = {
 
 NpcData N(NpcData_Boo_05) = {
     .id = NPC_Boo_05,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 90,
+    .pos = { GEN_NPC_BOO_05_VEC },
+    .yaw = GEN_NPC_BOO_05_DIR,
+    .territory = GEN_NPC_BOO_05_TERRITORY,
     .init = &N(EVS_NpcInit_Boo_05),
     .settings = &N(NpcSettings_Boo),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION,
@@ -512,8 +489,9 @@ EvtScript N(EVS_NpcInit_Boo_09) = {
 NpcData N(NpcData_Boo_06)[] = {
     {
         .id = NPC_Boo_06,
-        .pos = { 36.0f, 277.0f, 140.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_BOO_06_VEC },
+        .yaw = GEN_NPC_BOO_06_DIR,
+        .territory = GEN_NPC_BOO_06_TERRITORY,
         .init = &N(EVS_NpcInit_Boo_06),
         .settings = &N(NpcSettings_Boo),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -522,8 +500,9 @@ NpcData N(NpcData_Boo_06)[] = {
     },
     {
         .id = NPC_Boo_07,
-        .pos = { 180.0f, 285.0f, 182.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_BOO_07_VEC },
+        .yaw = GEN_NPC_BOO_07_DIR,
+        .territory = GEN_NPC_BOO_07_TERRITORY,
         .init = &N(EVS_NpcInit_Boo_07),
         .settings = &N(NpcSettings_Boo),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -532,8 +511,9 @@ NpcData N(NpcData_Boo_06)[] = {
     },
     {
         .id = NPC_Boo_08,
-        .pos = { 349.0f, 286.0f, 152.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_BOO_08_VEC },
+        .yaw = GEN_NPC_BOO_08_DIR,
+        .territory = GEN_NPC_BOO_08_TERRITORY,
         .init = &N(EVS_NpcInit_Boo_08),
         .settings = &N(NpcSettings_Boo),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -542,8 +522,9 @@ NpcData N(NpcData_Boo_06)[] = {
     },
     {
         .id = NPC_Boo_09,
-        .pos = { 490.0f, 324.0f, 128.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_BOO_09_VEC },
+        .yaw = GEN_NPC_BOO_09_DIR,
+        .territory = GEN_NPC_BOO_09_TERRITORY,
         .init = &N(EVS_NpcInit_Boo_09),
         .settings = &N(NpcSettings_Boo),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,

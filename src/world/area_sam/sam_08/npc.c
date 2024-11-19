@@ -126,8 +126,9 @@ EvtScript N(EVS_NpcInit_Duplighost) = {
 NpcData N(NpcData_Ambush)[] = {
     {
         .id = NPC_Kooper_01A,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_KOOPER_01_A_VEC },
+        .yaw = GEN_NPC_KOOPER_01_A_DIR,
+        .territory = GEN_NPC_KOOPER_01_A_TERRITORY,
         .init = &N(EVS_NpcInit_TrueKooperA),
         .settings = &N(NpcSettings_Kooper),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER | ENEMY_FLAG_NO_DROPS,
@@ -153,8 +154,9 @@ NpcData N(NpcData_Ambush)[] = {
     },
     {
         .id = NPC_Kooper_02A,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_KOOPER_02_A_VEC },
+        .yaw = GEN_NPC_KOOPER_02_A_DIR,
+        .territory = GEN_NPC_KOOPER_02_A_TERRITORY,
         .init = &N(EVS_NpcInit_RealKooperA),
         .settings = &N(NpcSettings_Kooper),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER | ENEMY_FLAG_NO_DROPS,
@@ -180,8 +182,9 @@ NpcData N(NpcData_Ambush)[] = {
     },
     {
         .id = NPC_Duplighost,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_DUPLIGHOST_VEC },
+        .yaw = GEN_NPC_DUPLIGHOST_DIR,
+        .territory = GEN_NPC_DUPLIGHOST_TERRITORY,
         .init = &N(EVS_NpcInit_Duplighost),
         .settings = &N(NpcSettings_Duplighost),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER | ENEMY_FLAG_NO_DROPS,
@@ -254,8 +257,9 @@ EvtScript N(EVS_NpcInit_FakeKooperB) = {
 NpcData N(NpcData_Hittable)[] = {
     {
         .id = NPC_Kooper_01B,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_KOOPER_01_B_VEC },
+        .yaw = GEN_NPC_KOOPER_01_B_DIR,
+        .territory = GEN_NPC_KOOPER_01_B_TERRITORY,
         .init = &N(EVS_NpcInit_TrueKooperB),
         .settings = &N(NpcSettings_Kooper),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_HAS_NO_SPRITE | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_SKIP_BATTLE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER | ENEMY_FLAG_NO_DROPS | ENEMY_FLAG_IGNORE_TOUCH | ENEMY_FLAG_IGNORE_JUMP,
@@ -281,8 +285,9 @@ NpcData N(NpcData_Hittable)[] = {
     },
     {
         .id = NPC_Kooper_02B,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_KOOPER_02_B_VEC },
+        .yaw = GEN_NPC_KOOPER_02_B_DIR,
+        .territory = GEN_NPC_KOOPER_02_B_TERRITORY,
         .init = &N(EVS_NpcInit_FakeKooperB),
         .settings = &N(NpcSettings_Kooper),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_HAS_NO_SPRITE | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_SKIP_BATTLE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER | ENEMY_FLAG_NO_DROPS | ENEMY_FLAG_IGNORE_TOUCH | ENEMY_FLAG_IGNORE_JUMP,
@@ -311,20 +316,9 @@ NpcData N(NpcData_Hittable)[] = {
 NpcData N(NpcData_FrostClubba)[] = {
     {
         .id = NPC_Clubba_01,
-        .pos = { -450.0f, 0.0f, -90.0f },
-        .yaw = 270,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { -450, 0, -90 },
-                .wanderSize = { 30 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { -450, 0, -90 },
-                .detectSize = { 200 },
-            }
-        },
+        .pos = { GEN_NPC_CLUBBA_01_VEC },
+        .yaw = GEN_NPC_CLUBBA_01_DIR,
+        .territory = GEN_NPC_CLUBBA_01_TERRITORY,
         .settings = &N(NpcSettings_FrostClubba_Wander),
         .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
         .drops = FROST_CLUBBA_DROPS,

@@ -4,20 +4,9 @@
 
 NpcData N(NpcData_Pokey_01) = {
     .id = NPC_Pokey_01,
-    .pos = { -40.0f, 0.0f, 160.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -40, 0, 160 },
-            .wanderSize = { 100 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 0, 0, 0 },
-            .detectSize = { 1000 },
-        }
-    },
+    .pos = { GEN_NPC_POKEY_01_VEC },
+    .yaw = GEN_NPC_POKEY_01_DIR,
+    .territory = GEN_NPC_POKEY_01_TERRITORY,
     .settings = &N(NpcSettings_Pokey),
     .flags = ENEMY_FLAG_FLYING,
     .drops = POKEY_DROPS,
@@ -27,20 +16,9 @@ NpcData N(NpcData_Pokey_01) = {
 
 NpcData N(NpcData_Pokey_02) = {
     .id = NPC_Pokey_02,
-    .pos = { 245.0f, 0.0f, 75.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 245, 0, 75 },
-            .wanderSize = { 100 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 0, 0, 0 },
-            .detectSize = { 1000 },
-        }
-    },
+    .pos = { GEN_NPC_POKEY_02_VEC },
+    .yaw = GEN_NPC_POKEY_02_DIR,
+    .territory = GEN_NPC_POKEY_02_TERRITORY,
     .settings = &N(NpcSettings_Pokey),
     .flags = ENEMY_FLAG_FLYING,
     .drops = POKEY_DROPS,

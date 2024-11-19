@@ -160,10 +160,7 @@ API_CALLABLE(N(InitializeGetUp)) {
 }
 
 Vec3f N(FallPath)[] = {
-    {  0.0,         0.0,      0.0 },
-    {  8.600760,  -48.39987, -1.993566 },
-    { 24.998905,  -96.99983, -1.994021 },
-    { 51.399390, -143.39980,  1.006466 },
+    GEN_PATH_1_PATH
 };
 
 EvtScript N(EVS_PlayerFalling) = {

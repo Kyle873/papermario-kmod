@@ -5,20 +5,9 @@
 NpcData N(NpcData_Magikoopa)[] = {
     {
         .id = NPC_Magikoopa,
-        .pos = { -210.0f, 0.0f, 25.0f },
-        .yaw = 270,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { -210, 0, 25 },
-                .wanderSize = { 30, 10 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { -210, 0, 25 },
-                .detectSize = { 200 },
-            }
-        },
+        .pos = { GEN_NPC_MAGIKOOPA_VEC },
+        .yaw = GEN_NPC_MAGIKOOPA_DIR,
+        .territory = GEN_NPC_MAGIKOOPA_TERRITORY,
         .settings = &N(NpcSettings_Magikoopa),
         .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = MAGINO_DROPS,

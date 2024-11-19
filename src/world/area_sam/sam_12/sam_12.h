@@ -2,6 +2,7 @@
 /// @brief Mt Shiver - Merlar's Sanctuary
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

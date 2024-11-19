@@ -38,14 +38,14 @@ EvtScript N(EVS_UnlockPrompt_Door) = {
 
 EvtScript N(EVS_MakeEntities) = {
     IfEq(GF_KPA14_UnlockedDoor, FALSE)
-        Call(MakeEntity, Ref(Entity_Padlock), 1995, 40, -162, 270, MAKE_ENTITY_END)
+        EVT_MAKE_ENTITY(Padlock, GEN_PADLOCK_1_PARAMS)
         Set(MV_PadlockEntityID, LVar0)
         BindPadlock(Ref(N(EVS_UnlockPrompt_Door)), TRIGGER_WALL_PRESS_A, EVT_ENTITY_INDEX(0), Ref(N(KeyList_BowsersCastle)), 0, 1)
     Else
         BindTrigger(Ref(N(EVS_ExitDoor_kpa_01_0)), TRIGGER_WALL_PRESS_A, COLLIDER_deilitte, 1, 0)
     EndIf
-    Call(MakeItemEntity, ITEM_MYSTERY, 350, 30, -150, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_KPA14_Item_Mystery)
-    Call(MakeItemEntity, ITEM_THUNDER_RAGE, 800, 30, -150, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_KPA14_Item_ThunderRage)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_2_PARAMS)
     Return
     End
 };

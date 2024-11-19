@@ -308,8 +308,9 @@ EvtScript N(EVS_NpcInit_Parakarry) = {
 
 NpcData N(NpcData_Parakarry) = {
     .id = NPC_Parakarry,
-    .pos = { -610.0f, 230.0f, -485.0f },
-    .yaw = 0,
+    .pos = { GEN_NPC_PARAKARRY_VEC },
+    .yaw = GEN_NPC_PARAKARRY_DIR,
+    .territory = GEN_NPC_PARAKARRY_TERRITORY,
     .init = &N(EVS_NpcInit_Parakarry),
     .settings = &N(NpcSettings_Parakarry),
     .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,

@@ -124,8 +124,9 @@ EvtScript N(EVS_NpcInit_TrainToad) = {
 NpcData N(NpcData_TrainToads)[] = {
     {
         .id = NPC_Conductor,
-        .pos = { 170.0f, 50.0f, -115.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_CONDUCTOR_VEC },
+        .yaw = GEN_NPC_CONDUCTOR_DIR,
+        .territory = GEN_NPC_CONDUCTOR_TERRITORY,
         .init = &N(EVS_NpcInit_Conductor),
         .settings = &N(NpcSettings_TrainToad),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -135,8 +136,9 @@ NpcData N(NpcData_TrainToads)[] = {
     },
     {
         .id = NPC_TrainToad,
-        .pos = { 158.0f, 0.0f, 85.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_TRAIN_TOAD_VEC },
+        .yaw = GEN_NPC_TRAIN_TOAD_DIR,
+        .territory = GEN_NPC_TRAIN_TOAD_TERRITORY,
         .init = &N(EVS_NpcInit_TrainToad),
         .settings = &N(NpcSettings_TrainToad),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -149,8 +151,9 @@ NpcData N(NpcData_TrainToads)[] = {
 NpcData N(NpcData_Epilogue)[] = {
     {
         .id = NPC_Parakarry,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 90,
+        .pos = { GEN_NPC_PARAKARRY_VEC },
+        .yaw = GEN_NPC_PARAKARRY_DIR,
+        .territory = GEN_NPC_PARAKARRY_TERRITORY,
         .settings = &N(NpcSettings_Parakarry),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL,
         .drops = NO_DROPS,
@@ -158,8 +161,9 @@ NpcData N(NpcData_Epilogue)[] = {
     },
     {
         .id = NPC_Watt,
-        .pos = { 50.0f, 15.0f, 160.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_WATT_VEC },
+        .yaw = GEN_NPC_WATT_DIR,
+        .territory = GEN_NPC_WATT_TERRITORY,
         .settings = &N(NpcSettings_ShyGuy_Stationary),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL,
         .drops = NO_DROPS,
@@ -184,8 +188,9 @@ NpcData N(NpcData_Epilogue)[] = {
     },
     {
         .id = NPC_ShyGuy_01,
-        .pos = { 100.0f, 0.0f, 160.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_SHY_GUY_01_VEC },
+        .yaw = GEN_NPC_SHY_GUY_01_DIR,
+        .territory = GEN_NPC_SHY_GUY_01_TERRITORY,
         .settings = &N(NpcSettings_ShyGuy_Stationary),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL,
         .drops = NO_DROPS,
@@ -193,8 +198,9 @@ NpcData N(NpcData_Epilogue)[] = {
     },
     {
         .id = NPC_ShyGuy_02,
-        .pos = { 115.0f, 0.0f, 200.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_SHY_GUY_02_VEC },
+        .yaw = GEN_NPC_SHY_GUY_02_DIR,
+        .territory = GEN_NPC_SHY_GUY_02_TERRITORY,
         .settings = &N(NpcSettings_ShyGuy_Stationary),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL,
         .drops = NO_DROPS,
@@ -202,8 +208,9 @@ NpcData N(NpcData_Epilogue)[] = {
     },
     {
         .id = NPC_ShyGuy_03,
-        .pos = { 145.0f, 0.0f, 150.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_SHY_GUY_03_VEC },
+        .yaw = GEN_NPC_SHY_GUY_03_DIR,
+        .territory = GEN_NPC_SHY_GUY_03_TERRITORY,
         .settings = &N(NpcSettings_ShyGuy_Stationary),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL,
         .drops = NO_DROPS,

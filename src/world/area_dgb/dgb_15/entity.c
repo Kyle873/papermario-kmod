@@ -40,7 +40,7 @@ EvtScript N(EVS_OpenLockedDoor) = {
 
 EvtScript N(EVS_MakeEntities) = {
     IfEq(GF_DGB15_UnlockedUpperFoyer, FALSE)
-        Call(MakeEntity, Ref(Entity_Padlock), 130, 8, 175, -80, MAKE_ENTITY_END)
+        EVT_MAKE_ENTITY(Padlock, GEN_PADLOCK_1_PARAMS)
         Call(AssignScript, Ref(N(EVS_OpenLockedDoor)))
         Set(MV_PadlockEntityID, LVar0)
     EndIf

@@ -6,20 +6,9 @@
 
 NpcData N(NpcData_Sentinel) = {
     .id = NPC_Sentinel,
-    .pos = { 70.0f, -220.0f, 186.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = FALSE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_RECT,
-            .centerPos  = { 70, -220, 186 },
-            .wanderSize = { 15, 40 },
-            .detectShape = SHAPE_RECT,
-            .detectPos  = { 80, -220, 170 },
-            .detectSize = { 80, 150 },
-        }
-    },
+    .pos = { GEN_NPC_SENTINEL_VEC },
+    .yaw = GEN_NPC_SENTINEL_DIR,
+    .territory = GEN_NPC_SENTINEL_TERRITORY,
     .settings = &N(NpcSettings_Sentinel),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = NO_DROPS,

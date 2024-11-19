@@ -42,10 +42,7 @@ EvtScript N(EVS_BindExitTriggers) = {
 
 EvtScript N(EVS_TexPan_Lava) = {
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_0)
-        TEX_PAN_PARAMS_STEP( -400,    0, -800,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    0,    1,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_0
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Call(SetTexPanner, MODEL_o319, TEX_PANNER_0)
@@ -61,17 +58,17 @@ EvtScript N(EVS_TexPan_Lava) = {
 };
 
 LavaReset N(SafeFloorColliders)[] = {
-    { .colliderID = COLLIDER_o179, .pos = {  100.0,   30.0, -150.0 }},
-    { .colliderID = COLLIDER_o171, .pos = {  245.0,   30.0, -150.0 }},
-    { .colliderID = COLLIDER_o174, .pos = {  400.0,   30.0, -150.0 }},
-    { .colliderID = COLLIDER_o175, .pos = {  700.0,   30.0, -150.0 }},
-    { .colliderID = COLLIDER_o144, .pos = {  855.0,   30.0, -100.0 }},
-    { .colliderID = COLLIDER_o305, .pos = { 1445.0,   30.0, -135.0 }},
+    { .colliderID = COLLIDER_o179, .pos = { GEN_LAVA_RESET_O179_VEC }},
+    { .colliderID = COLLIDER_o171, .pos = { GEN_LAVA_RESET_O171_VEC }},
+    { .colliderID = COLLIDER_o174, .pos = { GEN_LAVA_RESET_O174_VEC }},
+    { .colliderID = COLLIDER_o175, .pos = { GEN_LAVA_RESET_O175_VEC }},
+    { .colliderID = COLLIDER_o144, .pos = { GEN_LAVA_RESET_O144_VEC }},
+    { .colliderID = COLLIDER_o305, .pos = { GEN_LAVA_RESET_O305_VEC }},
     { .colliderID = NO_COLLIDER }
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_BOWSERS_CASTLE)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_DEFAULT(0, 0, 0)
     IfEq(GF_KPA16_ShutOffLava, FALSE)

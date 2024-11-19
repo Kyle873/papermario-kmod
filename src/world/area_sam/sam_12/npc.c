@@ -12,8 +12,9 @@ EvtScript N(EVS_NpcInit_Merlar) = {
 
 NpcData N(NpcData_Merlar) = {
     .id = NPC_Merlar,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 180,
+    .pos = { GEN_NPC_MERLAR_VEC },
+    .yaw = GEN_NPC_MERLAR_DIR,
+    .territory = GEN_NPC_MERLAR_TERRITORY,
     .init = &N(EVS_NpcInit_Merlar),
     .settings = &N(NpcSettings_Merlar),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,

@@ -1,8 +1,8 @@
 #include "isk_10.h"
 #include "entity.h"
 
-#define SUPER_BLOCK_MAPVAR MV_SuperBlock
-#define SUPER_BLOCK_GAMEFLAG GF_ISK10_SuperBlock
+#define SUPER_BLOCK_MAPVAR GEN_SUPER_BLOCK_1_VAR
+#define SUPER_BLOCK_GAMEFLAG GEN_SUPER_BLOCK_1_FLAG
 #include "world/common/entity/SuperBlock.inc.c"
 
 API_CALLABLE(N(MonitorPlayerLastFloor)) {
@@ -47,12 +47,12 @@ EvtScript N(EVS_UseSpring) = {
 };
 
 EvtScript N(EVS_MakeEntities) = {
-    EVT_MAKE_SUPER_BLOCK(-550, -720, 0, 0)
+    EVT_MAKE_SUPER_BLOCK(GEN_SUPER_BLOCK_1_PARAMS)
     Thread
         Call(N(MonitorPlayerLastFloor))
     EndThread
-    Call(MakeEntity, Ref(Entity_ScriptSpring), -516, -780, -71, 0, MAKE_ENTITY_END)
-    Call(AssignScript, Ref(N(EVS_UseSpring)))
+    EVT_MAKE_ENTITY(ScriptSpring, GEN_SCRIPT_SPRING_1_PARAMS)
+    Call(AssignScript, Ref(GEN_SCRIPT_SPRING_1_SCRIPT))
     PlayEffect(EFFECT_FLAME, FX_FLAME_RED, -510, -453, 43, Float(0.3), LVar0)
     PlayEffect(EFFECT_FLAME, FX_FLAME_RED, -510, -713, 43, Float(0.3), LVar0)
     Return

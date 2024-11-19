@@ -1,21 +1,15 @@
 #include "omo_03.h"
 
 Vec3f N(FallPath)[] = {
-    { -170.0,   400.0, -196.0 },
-    { -100.0,   225.0, -196.0 },
-    {  -70.0,    45.0, -193.0 },
+    GEN_PATH_2_PATH
 };
 
 Vec3f N(FirstBouncePath)[] = {
-    {  -70.0,     0.0, -193.0 },
-    {   -7.0,   100.0, -191.0 },
-    {   54.0,    20.0, -189.0 },
+    GEN_PATH_3_PATH
 };
 
 Vec3f N(SecondBouncePath)[] = {
-    {   54.0,     0.0, -189.0 },
-    {   92.0,    55.0, -199.0 },
-    {  131.0,     0.0, -210.0 },
+    GEN_PATH_4_PATH
 };
 
 EvtScript N(EVS_Scene_TrainDropped) = {

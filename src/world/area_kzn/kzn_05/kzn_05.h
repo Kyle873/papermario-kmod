@@ -2,6 +2,7 @@
 /// @brief Mt Lavalava - Descent Toward Ultra Hammer
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

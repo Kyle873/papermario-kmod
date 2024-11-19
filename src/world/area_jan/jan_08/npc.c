@@ -144,20 +144,9 @@ EvtScript N(EVS_NpcInit_MBush_01) = {
 NpcData N(NpcData_SpearGuy)[] = {
     {
         .id = NPC_SpearGuy,
-        .pos = { 255.0f, 15.0f, -65.0f },
-        .yaw = 90,
-        .territory = {
-            .wander = {
-                .isFlying = FALSE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 255, 0, -65 },
-                .wanderSize = { 30 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 255, 0, -65 },
-                .detectSize = { 150 },
-            }
-        },
+        .pos = { GEN_NPC_SPEAR_GUY_VEC },
+        .yaw = GEN_NPC_SPEAR_GUY_DIR,
+        .territory = GEN_NPC_SPEAR_GUY_TERRITORY,
         .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION,
         .settings = &N(NpcSettings_SpearGuy_Wander),
         .drops = SPEAR_GUY_DROPS,
@@ -170,8 +159,9 @@ NpcData N(NpcData_SpearGuy)[] = {
 
 NpcData N(NpcData_HurtPlant) = {
     .id = NPC_HurtPlant,
-    .pos = { 400.0f, 0.0f, 235.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_HURT_PLANT_VEC },
+    .yaw = GEN_NPC_HURT_PLANT_DIR,
+    .territory = GEN_NPC_HURT_PLANT_TERRITORY,
     .settings = &N(NpcSettings_HurtPlant),
     .flags = HURT_PLANT_FLAGS,
     .drops = HURT_PLANT_DROPS,
@@ -182,8 +172,9 @@ NpcData N(NpcData_HurtPlant) = {
 
 NpcData N(NpcData_MBush_01) = {
     .id = NPC_MBush_01,
-    .pos = { -407.0f, 0.0f, -42.0f },
-    .yaw = 90,
+    .pos = { GEN_NPC_M_BUSH_01_VEC },
+    .yaw = GEN_NPC_M_BUSH_01_DIR,
+    .territory = GEN_NPC_M_BUSH_01_TERRITORY,
     .settings = &N(NpcSettings_MBush),
     .flags = MBUSH_FLAGS,
     .drops = MBUSH_DROPS,
@@ -194,8 +185,9 @@ NpcData N(NpcData_MBush_01) = {
 
 NpcData N(NpcData_MBush_02) = {
     .id = NPC_MBush_02,
-    .pos = { -120.0f, 0.0f, -395.0f },
-    .yaw = 90,
+    .pos = { GEN_NPC_M_BUSH_02_VEC },
+    .yaw = GEN_NPC_M_BUSH_02_DIR,
+    .territory = GEN_NPC_M_BUSH_02_TERRITORY,
     .settings = &N(NpcSettings_MBush),
     .flags = MBUSH_FLAGS,
     .drops = MBUSH_DROPS,
@@ -205,8 +197,9 @@ NpcData N(NpcData_MBush_02) = {
 
 NpcData N(NpcData_HeartPlant_01) = {
     .id = NPC_HeartPlant_01,
-    .pos = { -219.0f, 0.0f, 420.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_HEART_PLANT_01_VEC },
+    .yaw = GEN_NPC_HEART_PLANT_01_DIR,
+    .territory = GEN_NPC_HEART_PLANT_01_TERRITORY,
     .settings = &N(NpcSettings_HeartPlant),
     .flags = HEART_PLANT_FLAGS,
     .drops = NO_DROPS,
@@ -216,8 +209,9 @@ NpcData N(NpcData_HeartPlant_01) = {
 
 NpcData N(NpcData_HeartPlant_02) = {
     .id = NPC_HeartPlant_02,
-    .pos = { -157.0f, 0.0f, 452.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_HEART_PLANT_02_VEC },
+    .yaw = GEN_NPC_HEART_PLANT_02_DIR,
+    .territory = GEN_NPC_HEART_PLANT_02_TERRITORY,
     .settings = &N(NpcSettings_HeartPlant),
     .flags = HEART_PLANT_FLAGS,
     .drops = NO_DROPS,
@@ -227,8 +221,9 @@ NpcData N(NpcData_HeartPlant_02) = {
 
 NpcData N(NpcData_YoshiKid) = {
     .id = NPC_YoshiKid,
-    .pos = { -450.0f, 0.0f, -290.0f },
-    .yaw = 90,
+    .pos = { GEN_NPC_YOSHI_KID_VEC },
+    .yaw = GEN_NPC_YOSHI_KID_DIR,
+    .territory = GEN_NPC_YOSHI_KID_TERRITORY,
     .init = &N(EVS_NpcInit_YoshiKid),
     .settings = &N(NpcSettings_YoshiKid),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,

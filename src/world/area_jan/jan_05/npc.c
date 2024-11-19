@@ -222,8 +222,9 @@ EvtScript N(EVS_NpcInit_YoshiKid) = {
 
 NpcData N(NpcData_YoshiKid) = {
     .id = NPC_YoshiKid,
-    .pos = { -320.0f, 0.0f, 80.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_YOSHI_KID_VEC },
+    .yaw = GEN_NPC_YOSHI_KID_DIR,
+    .territory = GEN_NPC_YOSHI_KID_TERRITORY,
     .init = &N(EVS_NpcInit_YoshiKid),
     .settings = &N(NpcSettings_YoshiKid),
     .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -242,20 +243,9 @@ AnimID N(ExtraAnims_JungleFuzzy)[] = {
 
 NpcData N(NpcData_JungleFuzzy) = {
     .id = NPC_JungleFuzzy,
-    .pos = { 0.0f, 0.0f, 0.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 63, 0, -366 },
-            .wanderSize = { 50 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 63, 0, -366 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_JUNGLE_FUZZY_VEC },
+    .yaw = GEN_NPC_JUNGLE_FUZZY_DIR,
+    .territory = GEN_NPC_JUNGLE_FUZZY_TERRITORY,
     .init = &N(EVS_NpcInit_JungleFuzzy),
     .settings = &N(NpcSettings_JungleFuzzy_Wander),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -268,20 +258,9 @@ NpcData N(NpcData_JungleFuzzy) = {
 NpcData N(NpcData_SpearGuy)[] = {
     {
         .id = NPC_SpearGuy,
-        .pos = { 0.0f, 0.0f, 0.0f },
-        .yaw = 90,
-        .territory = {
-            .wander = {
-                .isFlying = FALSE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 0, 0, 0 },
-                .wanderSize = { 20 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 100 },
-            }
-        },
+        .pos = { GEN_NPC_SPEAR_GUY_VEC },
+        .yaw = GEN_NPC_SPEAR_GUY_DIR,
+        .territory = GEN_NPC_SPEAR_GUY_TERRITORY,
         .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .settings = &N(NpcSettings_SpearGuy_Wander),
         .drops = SPEAR_GUY_DROPS,
@@ -294,8 +273,9 @@ NpcData N(NpcData_SpearGuy)[] = {
 
 NpcData N(NpcData_HeartPlant) = {
     .id = NPC_HeartPlant,
-    .pos = { 430.0f, 0.0f, 205.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_HEART_PLANT_VEC },
+    .yaw = GEN_NPC_HEART_PLANT_DIR,
+    .territory = GEN_NPC_HEART_PLANT_TERRITORY,
     .settings = &N(NpcSettings_HeartPlant),
     .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_USE_INSPECT_ICON | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
     .drops = NO_DROPS,
@@ -305,8 +285,9 @@ NpcData N(NpcData_HeartPlant) = {
 
 NpcData N(NpcData_HurtPlant) = {
     .id = NPC_HurtPlant,
-    .pos = { 375.0f, 0.0f, 260.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_HURT_PLANT_VEC },
+    .yaw = GEN_NPC_HURT_PLANT_DIR,
+    .territory = GEN_NPC_HURT_PLANT_TERRITORY,
     .settings = &N(NpcSettings_HurtPlant),
     .flags = HURT_PLANT_FLAGS,
     .drops = HURT_PLANT_DROPS,
@@ -317,8 +298,9 @@ NpcData N(NpcData_HurtPlant) = {
 
 NpcData N(NpcData_MBush) = {
     .id = NPC_MBush,
-    .pos = { 400.0f, 0.0f, -75.0f },
-    .yaw = 90,
+    .pos = { GEN_NPC_M_BUSH_VEC },
+    .yaw = GEN_NPC_M_BUSH_DIR,
+    .territory = GEN_NPC_M_BUSH_TERRITORY,
     .settings = &N(NpcSettings_MBush),
     .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_USE_INSPECT_ICON | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
     .drops = MBUSH_DROPS,

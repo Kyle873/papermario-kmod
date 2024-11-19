@@ -21,16 +21,16 @@ EvtScript N(EVS_BreakFloor3) = {
 
 EvtScript N(EVS_MakeEntities) = {
     IfEq(GF_DGB10_BoardedFloor1, FALSE)
-        Call(MakeEntity, Ref(Entity_BoardedFloor), 500, 0, -100, 0, MAKE_ENTITY_END)
-        Call(AssignScript, Ref(N(EVS_BreakFloor1)))
+        EVT_MAKE_ENTITY(BoardedFloor, GEN_BOARDED_FLOOR_1_PARAMS)
+        Call(AssignScript, Ref(GEN_BOARDED_FLOOR_1_SCRIPT))
     EndIf
     IfEq(GF_DGB10_BoardedFloor2, FALSE)
-        Call(MakeEntity, Ref(Entity_BoardedFloor), 500, 0, -250, 0, MAKE_ENTITY_END)
-        Call(AssignScript, Ref(N(EVS_BreakFloor2)))
+        EVT_MAKE_ENTITY(BoardedFloor, GEN_BOARDED_FLOOR_2_PARAMS)
+        Call(AssignScript, Ref(GEN_BOARDED_FLOOR_2_SCRIPT))
     EndIf
     IfEq(GF_DGB10_BoardedFloor3, FALSE)
-        Call(MakeEntity, Ref(Entity_BoardedFloor), 375, 0, -250, 0, MAKE_ENTITY_END)
-        Call(AssignScript, Ref(N(EVS_BreakFloor3)))
+        EVT_MAKE_ENTITY(BoardedFloor, GEN_BOARDED_FLOOR_3_PARAMS)
+        Call(AssignScript, Ref(GEN_BOARDED_FLOOR_3_SCRIPT))
     EndIf
     Return
     End

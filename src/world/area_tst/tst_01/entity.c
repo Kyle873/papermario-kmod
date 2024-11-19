@@ -2,12 +2,12 @@
 #include "entity.h"
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_YellowBlock), 136, 80, 63, 0, ITEM_FLOWER_POINT, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_YellowBlock), 190, 0, 63, 0, ITEM_NONE, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_HiddenYellowBlock), 201, 60, -20, 0, ITEM_HEART, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_HiddenYellowBlock), 230, 60, -20, 0, ITEM_HEART, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_HiddenRedBlock), 258, 60, -20, 0, ITEM_FLOWER_POINT, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_RedBlock), 315, 60, 63, 0, ITEM_FLOWER_POINT, MAKE_ENTITY_END)
+    EVT_MAKE_ENTITY(YellowBlock, GEN_YELLOW_BLOCK_1_PARAMS)
+    EVT_MAKE_ENTITY(YellowBlock, GEN_YELLOW_BLOCK_2_PARAMS)
+    EVT_MAKE_ENTITY(HiddenYellowBlock, GEN_HIDDEN_YELLOW_BLOCK_1_PARAMS)
+    EVT_MAKE_ENTITY(HiddenYellowBlock, GEN_HIDDEN_YELLOW_BLOCK_2_PARAMS)
+    EVT_MAKE_ENTITY(HiddenRedBlock, GEN_HIDDEN_RED_BLOCK_1_PARAMS)
+    EVT_MAKE_ENTITY(RedBlock, GEN_RED_BLOCK_1_PARAMS)
     Return
     End
 };

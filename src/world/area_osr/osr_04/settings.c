@@ -1,7 +1,7 @@
 #include "osr_04.h"
 
 EntryList N(Entrances) = {
-    [osr_04_ENTRY_0]    {    0.0,    0.0,  604.0,    0.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {

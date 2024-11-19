@@ -2,6 +2,7 @@
 /// @brief Toad Town Tunnels - Block Puzzle Room (B2)
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

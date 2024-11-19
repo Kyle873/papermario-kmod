@@ -553,25 +553,8 @@ EvtScript N(EVS_ManageGeyserPlayerPhysics) = {
 };
 
 EvtScript N(EVS_SetupPuzzle) = {
-    Call(CreatePushBlockGrid, 0, 32, 12, -400, 0, -150, 0)
-    Call(SetPushBlock, 0,  7, 5, PUSH_GRID_BLOCK)
-    Call(SetPushBlock, 0, 13, 9, PUSH_GRID_BLOCK)
-    Call(SetPushBlock, 0, 16, 5, PUSH_GRID_BLOCK)
-    Call(SetPushBlock, 0, 21, 2, PUSH_GRID_BLOCK)
-    Call(SetPushBlock, 0, 22, 4, PUSH_GRID_BLOCK)
-    Call(SetPushBlock, 0, 26, 6, PUSH_GRID_BLOCK)
-    Call(SetPushBlock, 0, 27, 7, PUSH_GRID_BLOCK)
-    Call(FillPushBlockZ, 0, 0, 15, 19, PUSH_GRID_OBSTRUCTION)
-    Call(FillPushBlockZ, 0, 1, 15, 19, PUSH_GRID_OBSTRUCTION)
-    Call(FillPushBlockZ, 0, 2, 15, 19, PUSH_GRID_OBSTRUCTION)
-    Call(FillPushBlockZ, 0, 0, 0, 31, PUSH_GRID_OBSTRUCTION)
-    Call(FillPushBlockZ, 0, 1, 0, 14, PUSH_GRID_OBSTRUCTION)
-    Call(FillPushBlockZ, 0, 1, 20, 31, PUSH_GRID_OBSTRUCTION)
-    Call(FillPushBlockZ, 0, 2, 0, 2, PUSH_GRID_OBSTRUCTION)
-    Call(FillPushBlockZ, 0, 2, 10, 13, PUSH_GRID_OBSTRUCTION)
-    Call(FillPushBlockZ, 0, 2, 26, 31, PUSH_GRID_OBSTRUCTION)
-    Call(FillPushBlockZ, 0, 3, 0, 1, PUSH_GRID_OBSTRUCTION)
-    Call(FillPushBlockZ, 0, 3, 10, 13, PUSH_GRID_OBSTRUCTION)
+    Call(CreatePushBlockGrid, GEN_PUSH_BLOCKS_1_GRID_PARAMS)
+    GEN_PUSH_BLOCKS_1_GRID_CONTENT
     Exec(N(EVS_ManagePuzzle))
     Set(LVar0, MODEL_o72)
     Set(LVar1, 0)
@@ -618,10 +601,7 @@ EvtScript N(EVS_SetupPuzzle) = {
     Call(SetTexPanner, MODEL_o76, TEX_PANNER_1)
     Call(SetTexPanner, MODEL_o71, TEX_PANNER_1)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP(    0, -2000,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    0,     1,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,     0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Return

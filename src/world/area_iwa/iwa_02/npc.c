@@ -14,20 +14,9 @@
 
 NpcData N(NpcData_Cleft_01) = {
     .id = NPC_Cleft_01,
-    .pos = { 526.0f, 238.0f, 69.0f },
-    .yaw = 0,
-    .territory = {
-        .wander = {
-            .isFlying = FALSE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 526, 238, 69 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 526, 238, 69 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_CLEFT_01_VEC },
+    .yaw = GEN_NPC_CLEFT_01_DIR,
+    .territory = GEN_NPC_CLEFT_01_TERRITORY,
     .settings = &N(NpcSettings_Cleft),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_NO_SHADOW_RAYCAST,
     .drops = CLEFT_DROPS,
@@ -37,20 +26,9 @@ NpcData N(NpcData_Cleft_01) = {
 
 NpcData N(NpcData_Cleft_02) = {
     .id = NPC_Cleft_02,
-    .pos = { 450.0f, 50.0f, 215.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = FALSE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 450, 50, 215 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 450, 50, 215 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_CLEFT_02_VEC },
+    .yaw = GEN_NPC_CLEFT_02_DIR,
+    .territory = GEN_NPC_CLEFT_02_TERRITORY,
     .settings = &N(NpcSettings_Cleft),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_NO_SHADOW_RAYCAST,
     .drops = CLEFT_DROPS,
@@ -60,20 +38,9 @@ NpcData N(NpcData_Cleft_02) = {
 
 NpcData N(NpcData_Cleft_03) = {
     .id = NPC_Cleft_03,
-    .pos = { 90.0f, 0.0f, 160.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = FALSE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 90, 0, 160 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 90, 0, 160 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_CLEFT_03_VEC },
+    .yaw = GEN_NPC_CLEFT_03_DIR,
+    .territory = GEN_NPC_CLEFT_03_TERRITORY,
     .settings = &N(NpcSettings_Cleft),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_NO_SHADOW_RAYCAST,
     .drops = CLEFT_DROPS,
@@ -84,20 +51,9 @@ NpcData N(NpcData_Cleft_03) = {
 NpcData N(NpcData_MontyMole_01)[] = {
     {
         .id = NPC_MontyMole,
-        .pos = { 867.0f, 0.0f, 101.0f },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = FALSE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 867, 0, 101 },
-                .wanderSize = { 40 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 867, 0, 101 },
-                .detectSize = { 150 },
-            }
-        },
+        .pos = { GEN_NPC_MONTY_MOLE_VEC },
+        .yaw = GEN_NPC_MONTY_MOLE_DIR,
+        .territory = GEN_NPC_MONTY_MOLE_TERRITORY,
         .settings = &N(NpcSettings_MontyMole_WallAmbush),
         .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = MONTY_MOLE_DROPS,
@@ -106,20 +62,9 @@ NpcData N(NpcData_MontyMole_01)[] = {
     },
     {
         .id = NPC_MontyMole_Hole,
-        .pos = { 867.0f, 0.0f, 101.0f },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 0, 0, 0 },
-                .wanderSize = { 0 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 0 },
-            }
-        },
+        .pos = { GEN_NPC_MONTY_MOLE_HOLE_VEC },
+        .yaw = GEN_NPC_MONTY_MOLE_HOLE_DIR,
+        .territory = GEN_NPC_MONTY_MOLE_HOLE_TERRITORY,
         .settings = &N(NpcSettings_MontyMole_WallAmbush_Hole),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DISABLE_AI | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
@@ -187,8 +132,9 @@ EvtScript N(EVS_NpcInit_Bubulb) = {
 
 NpcData N(NpcData_Bubulb) = {
     .id = NPC_Bubulb,
-    .pos = { 1075.0f, 50.0f, 230.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_BUBULB_VEC },
+    .yaw = GEN_NPC_BUBULB_DIR,
+    .territory = GEN_NPC_BUBULB_TERRITORY,
     .init = &N(EVS_NpcInit_Bubulb),
     .settings = &N(NpcSettings_Bubulb),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_FLYING,

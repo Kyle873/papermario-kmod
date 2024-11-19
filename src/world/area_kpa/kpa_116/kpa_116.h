@@ -2,6 +2,7 @@
 /// @brief Bowser's Castle - Dead End Passage
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

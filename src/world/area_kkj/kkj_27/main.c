@@ -41,7 +41,7 @@ EvtScript N(D_80240778_B144E8) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_PEACHS_CASTLE)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_KKJ_27)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
     Exec(N(EVS_SetupRotatingWall))
@@ -49,20 +49,14 @@ EvtScript N(EVS_Main) = {
     Exec(N(D_80240778_B144E8))
     Call(SetTexPanner, MODEL_o207, TEX_PANNER_0)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_0)
-        TEX_PAN_PARAMS_STEP(    0,    0,   40,  900)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_0
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Call(SetModelCustomGfx, MODEL_o207, CUSTOM_GFX_0, ENV_TINT_UNCHANGED)
     Call(SetCustomGfx, CUSTOM_GFX_0, Ref(N(setup_gfx_candle_lights)), NULL)
     Call(SetTexPanner, MODEL_o209, TEX_PANNER_0)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_0)
-        TEX_PAN_PARAMS_STEP(    0,    0,   40,  900)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_0
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Call(SetModelCustomGfx, MODEL_o209, CUSTOM_GFX_0, ENV_TINT_UNCHANGED)

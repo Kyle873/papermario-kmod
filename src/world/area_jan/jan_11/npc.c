@@ -123,8 +123,9 @@ EvtScript N(EVS_NpcInit_YoshiKid) = {
 
 NpcData N(NpcData_YoshiKid) = {
     .id = NPC_YoshiKid,
-    .pos = { -450.0f, 0.0f, -160.0f },
-    .yaw = 90,
+    .pos = { GEN_NPC_YOSHI_KID_VEC },
+    .yaw = GEN_NPC_YOSHI_KID_DIR,
+    .territory = GEN_NPC_YOSHI_KID_TERRITORY,
     .init = &N(EVS_NpcInit_YoshiKid),
     .settings = &N(NpcSettings_YoshiKid),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,

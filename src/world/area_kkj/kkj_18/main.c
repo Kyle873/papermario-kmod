@@ -104,7 +104,7 @@ EvtScript N(EVS_EnterMap) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_PEACHS_CASTLE)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_DEFAULT(0, 0, 0)
     IfEq(GB_StoryProgress, STORY_CH4_BEGAN_PEACH_MISSION)
@@ -113,10 +113,7 @@ EvtScript N(EVS_Main) = {
     Exec(N(EVS_UpdateClockPendulum))
     Call(SetTexPanner, MODEL_o56, TEX_PANNER_0)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_0)
-        TEX_PAN_PARAMS_STEP(    0,    0,   40,  900)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_0
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Call(SetModelCustomGfx, MODEL_o56, CUSTOM_GFX_0, ENV_TINT_UNCHANGED)

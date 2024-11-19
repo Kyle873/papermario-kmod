@@ -8,25 +8,11 @@
 #include "world/common/npc/StarRod.inc.c"
 
 Vec3f N(FlightPath_TwinkStepForward)[] = {
-    {  -10.0,    40.0,   10.0 },
-    {   15.0,    33.0,   20.0 },
-    {   50.0,    30.0,   30.0 },
+    GEN_PATH_1_PATH
 };
 
 Vec3f N(FlightPath_TwinkDepart)[] = {
-    {   50.0,    30.0,   30.0 },
-    {   70.0,    45.0,   10.0 },
-    {   90.0,    60.0,   30.0 },
-    {   70.0,    75.0,   50.0 },
-    {   50.0,    90.0,   30.0 },
-    {   70.0,   105.0,   10.0 },
-    {   90.0,   120.0,   30.0 },
-    {   70.0,   135.0,   50.0 },
-    {   50.0,   150.0,   30.0 },
-    {   70.0,   165.0,   10.0 },
-    {   90.0,   180.0,   30.0 },
-    {   70.0,   195.0,   50.0 },
-    {   50.0,   210.0,   30.0 },
+    GEN_PATH_2_PATH
 };
 
 EvtScript N(EVS_StarSpirit_FlyAway) = {
@@ -531,8 +517,9 @@ AnimID N(ExtraAnims_Kalmar)[] = {
 NpcData N(NpcData_Spirits)[] = {
     {
         .id = NPC_Peach,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_PEACH_VEC },
+        .yaw = GEN_NPC_PEACH_DIR,
+        .territory = GEN_NPC_PEACH_TERRITORY,
         .init = &N(EVS_NpcInit_Peach),
         .settings = &N(NpcSettings_Peach),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_USE_PLAYER_SPRITE,
@@ -542,8 +529,9 @@ NpcData N(NpcData_Spirits)[] = {
     },
     {
         .id = NPC_Twink,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_TWINK_VEC },
+        .yaw = GEN_NPC_TWINK_DIR,
+        .territory = GEN_NPC_TWINK_TERRITORY,
         .init = &N(EVS_NpcInit_Twink),
         .settings = &N(NpcSettings_Twink),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -553,8 +541,9 @@ NpcData N(NpcData_Spirits)[] = {
     },
     {
         .id = NPC_Eldstar,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_ELDSTAR_VEC },
+        .yaw = GEN_NPC_ELDSTAR_DIR,
+        .territory = GEN_NPC_ELDSTAR_TERRITORY,
         .init = &N(EVS_NpcInit_Eldstar),
         .settings = &N(NpcSettings_StarSpirit),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -564,8 +553,9 @@ NpcData N(NpcData_Spirits)[] = {
     },
     {
         .id = NPC_Mamar,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_MAMAR_VEC },
+        .yaw = GEN_NPC_MAMAR_DIR,
+        .territory = GEN_NPC_MAMAR_TERRITORY,
         .init = &N(EVS_NpcInit_Mamar),
         .settings = &N(NpcSettings_StarSpirit),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -575,8 +565,9 @@ NpcData N(NpcData_Spirits)[] = {
     },
     {
         .id = NPC_Skolar,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 90,
+        .pos = { GEN_NPC_SKOLAR_VEC },
+        .yaw = GEN_NPC_SKOLAR_DIR,
+        .territory = GEN_NPC_SKOLAR_TERRITORY,
         .init = &N(EVS_NpcInit_Skolar),
         .settings = &N(NpcSettings_StarSpirit),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -586,8 +577,9 @@ NpcData N(NpcData_Spirits)[] = {
     },
     {
         .id = NPC_Muskular,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_MUSKULAR_VEC },
+        .yaw = GEN_NPC_MUSKULAR_DIR,
+        .territory = GEN_NPC_MUSKULAR_TERRITORY,
         .init = &N(EVS_NpcInit_Muskular),
         .settings = &N(NpcSettings_StarSpirit),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -597,8 +589,9 @@ NpcData N(NpcData_Spirits)[] = {
     },
     {
         .id = NPC_Misstar,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 90,
+        .pos = { GEN_NPC_MISSTAR_VEC },
+        .yaw = GEN_NPC_MISSTAR_DIR,
+        .territory = GEN_NPC_MISSTAR_TERRITORY,
         .init = &N(EVS_NpcInit_Misstar),
         .settings = &N(NpcSettings_StarSpirit),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -608,8 +601,9 @@ NpcData N(NpcData_Spirits)[] = {
     },
     {
         .id = NPC_Klevar,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_KLEVAR_VEC },
+        .yaw = GEN_NPC_KLEVAR_DIR,
+        .territory = GEN_NPC_KLEVAR_TERRITORY,
         .init = &N(EVS_NpcInit_Klevar),
         .settings = &N(NpcSettings_StarSpirit),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -619,8 +613,9 @@ NpcData N(NpcData_Spirits)[] = {
     },
     {
         .id = NPC_Kalmar,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 90,
+        .pos = { GEN_NPC_KALMAR_VEC },
+        .yaw = GEN_NPC_KALMAR_DIR,
+        .territory = GEN_NPC_KALMAR_TERRITORY,
         .init = &N(EVS_NpcInit_Kalmar),
         .settings = &N(NpcSettings_StarSpirit),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -630,8 +625,9 @@ NpcData N(NpcData_Spirits)[] = {
     },
     {
         .id = NPC_StarRod,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_STAR_ROD_VEC },
+        .yaw = GEN_NPC_STAR_ROD_DIR,
+        .territory = GEN_NPC_STAR_ROD_TERRITORY,
         .init = &N(EVS_NpcInit_StarRod),
         .settings = &N(NpcSettings_StarRod),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,

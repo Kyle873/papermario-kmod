@@ -47,7 +47,7 @@ EvtScript N(EVS_MakeEntities) = {
             Call(N(SetEntityPosition), MV_BlueSwitch, 90, -10, 100)
         EndIf
     EndIf
-    Call(MakeEntity, Ref(Entity_BlueWarpPipe), 95, -10, -88, 0, tik_08_ENTRY_4, Ref(N(EVS_GotoMap_jan_03_3)), EVT_INDEX_OF_GAME_FLAG(GF_TIK08_WarpPipe), MAKE_ENTITY_END)
+    EVT_MAKE_ENTITY(BlueWarpPipe, GEN_BLUE_WARP_PIPE_1_PARAMS)
     Return
     End
 };

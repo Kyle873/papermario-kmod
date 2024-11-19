@@ -17,10 +17,7 @@ EvtScript N(EVS_UpdateTexPan_Lava) = {
     SetGroup(EVT_GROUP_NEVER_PAUSE)
     Call(SetTexPanner, MODEL_yu, TEX_PANNER_1)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP( -700,  700,  200, -300)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Return
@@ -28,8 +25,8 @@ EvtScript N(EVS_UpdateTexPan_Lava) = {
 };
 
 LavaReset N(SafeFloorColliders)[] = {
-    { .colliderID = COLLIDER_o919, .pos = { -30.0, 125.0, -15.0 }},
-    { .colliderID = COLLIDER_o870, .pos = {  30.0, 150.0,   0.0 }},
+    { .colliderID = COLLIDER_o919, .pos = { GEN_LAVA_RESET_O919_VEC }},
+    { .colliderID = COLLIDER_o870, .pos = { GEN_LAVA_RESET_O870_VEC }},
     { .colliderID = NO_COLLIDER }
 };
 
@@ -148,8 +145,8 @@ EvtScript N(EVS_UpdateLavaWaves) = {
 };
 
 BombTrigger N(WeakWallBombTrigger) = {
-    .pos = { 175.0, 150.0, 15.0 },
-    .diameter = 0.0
+    .pos = { GEN_BOMB_POS_1_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_1_RAD,
 };
 
 EvtScript N(EVS_OnBreakWall) = {
@@ -164,7 +161,7 @@ EvtScript N(EVS_OnBreakWall) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_MT_LAVALAVA)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_KZN_20)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
     Call(MakeNpcs, TRUE, Ref(N(DefaultNPCs)))

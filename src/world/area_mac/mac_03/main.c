@@ -57,7 +57,7 @@ API_CALLABLE(N(GetClockHandAngles)) {
 }
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_TOAD_TOWN)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
 #if VERSION_PAL

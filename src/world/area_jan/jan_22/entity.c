@@ -8,10 +8,10 @@ EvtScript N(EVS_MakeEntities) = {
                 Wait(1)
                 Goto(0)
             EndIf
-        Call(MakeEntity, Ref(Entity_HeartBlock), 1075, 150, -50, 0, MAKE_ENTITY_END)
+        EVT_MAKE_ENTITY(HeartBlock, GEN_HEART_BLOCK_1_PARAMS)
     EndThread
-    Call(MakeItemEntity, ITEM_JAMMIN_JELLY, 340, 0, -75, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_JAN22_Item_JamminJelly)
-    Call(MakeEntity, Ref(Entity_PinkFlower), -107, 0, -97, -15, MAKE_ENTITY_END)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
+    EVT_MAKE_ENTITY(PinkFlower, GEN_PINK_FLOWER_1_PARAMS)
     Return
     End
 };

@@ -208,8 +208,9 @@ EvtScript N(EVS_NpcInit_ShyGuy_Jackpot) = {
 
 NpcData N(NpcData_Pokey) = {
     .id = NPC_Pokey,
-    .pos = { 1900.0f, 150.0f, -30.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_POKEY_VEC },
+    .yaw = GEN_NPC_POKEY_DIR,
+    .territory = GEN_NPC_POKEY_TERRITORY,
     .init = &N(EVS_NpcInit_Pokey),
     .settings = &N(NpcSettings_Pokey),
     .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -219,8 +220,9 @@ NpcData N(NpcData_Pokey) = {
 
 NpcData N(NpcData_Koopatrol) = {
     .id = NPC_Koopatrol,
-    .pos = { 1900.0f, 150.0f, -30.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_KOOPATROL_VEC },
+    .yaw = GEN_NPC_KOOPATROL_DIR,
+    .territory = GEN_NPC_KOOPATROL_TERRITORY,
     .init = &N(EVS_NpcInit_Koopatrol),
     .settings = &N(NpcSettings_Koopatrol_Stationary),
     .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -230,20 +232,9 @@ NpcData N(NpcData_Koopatrol) = {
 
 NpcData N(NpcData_ShyGuy_01) = {
     .id = NPC_ShyGuy_Jackpot1,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 460, 0, 50 },
-            .wanderSize = { 80 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 460, 0, 50 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_SHY_GUY_JACKPOT1_VEC },
+    .yaw = GEN_NPC_SHY_GUY_JACKPOT1_DIR,
+    .territory = GEN_NPC_SHY_GUY_JACKPOT1_TERRITORY,
     .init = &N(EVS_NpcInit_ShyGuy_Jackpot),
     .settings = &N(NpcSettings_ShyGuy_Wander),
     .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,
@@ -253,20 +244,9 @@ NpcData N(NpcData_ShyGuy_01) = {
 
 NpcData N(NpcData_ShyGuy_02) = {
     .id = NPC_ShyGuy_Jackpot2,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 497, 0, 50 },
-            .wanderSize = { 80 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 497, 0, 50 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_SHY_GUY_JACKPOT2_VEC },
+    .yaw = GEN_NPC_SHY_GUY_JACKPOT2_DIR,
+    .territory = GEN_NPC_SHY_GUY_JACKPOT2_TERRITORY,
     .init = &N(EVS_NpcInit_ShyGuy_Jackpot),
     .settings = &N(NpcSettings_ShyGuy_Wander),
     .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,
@@ -276,20 +256,9 @@ NpcData N(NpcData_ShyGuy_02) = {
 
 NpcData N(NpcData_ShyGuy_03) = {
     .id = NPC_ShyGuy_Jackpot3,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 535, 0, 50 },
-            .wanderSize = { 80 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 535, 0, 50 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_SHY_GUY_JACKPOT3_VEC },
+    .yaw = GEN_NPC_SHY_GUY_JACKPOT3_DIR,
+    .territory = GEN_NPC_SHY_GUY_JACKPOT3_TERRITORY,
     .init = &N(EVS_NpcInit_ShyGuy_Jackpot),
     .settings = &N(NpcSettings_ShyGuy_Wander),
     .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,
@@ -299,20 +268,9 @@ NpcData N(NpcData_ShyGuy_03) = {
 
 NpcData N(NpcData_ShyGuy_04) = {
     .id = NPC_ShyGuy_Jackpot4,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 573, 0, 50 },
-            .wanderSize = { 80 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 573, 0, 50 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_SHY_GUY_JACKPOT4_VEC },
+    .yaw = GEN_NPC_SHY_GUY_JACKPOT4_DIR,
+    .territory = GEN_NPC_SHY_GUY_JACKPOT4_TERRITORY,
     .init = &N(EVS_NpcInit_ShyGuy_Jackpot),
     .settings = &N(NpcSettings_ShyGuy_Wander),
     .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,
@@ -322,20 +280,9 @@ NpcData N(NpcData_ShyGuy_04) = {
 
 NpcData N(NpcData_ShyGuy_05) = {
     .id = NPC_ShyGuy_Jackpot5,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 610, 0, 50 },
-            .wanderSize = { 80 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 610, 0, 50 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_SHY_GUY_JACKPOT5_VEC },
+    .yaw = GEN_NPC_SHY_GUY_JACKPOT5_DIR,
+    .territory = GEN_NPC_SHY_GUY_JACKPOT5_TERRITORY,
     .init = &N(EVS_NpcInit_ShyGuy_Jackpot),
     .settings = &N(NpcSettings_ShyGuy_Wander),
     .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,
@@ -355,8 +302,9 @@ AnimID N(ExtraAnims_Kammy)[] = {
 
 NpcData N(NpcData_Kammy) = {
     .id = NPC_Kammy,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 90,
+    .pos = { GEN_NPC_KAMMY_VEC },
+    .yaw = GEN_NPC_KAMMY_DIR,
+    .territory = GEN_NPC_KAMMY_TERRITORY,
     .init = &N(EVS_NpcInit_Kammy),
     .settings = &N(NpcSettings_Kammy_Flying),
     .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -382,22 +330,9 @@ EvtScript N(EVS_ShyGuy_Thief) = {
 
 NpcData N(NpcData_ShyGuy_Thief) = {
     .id = NPC_ShyGuy_Thief,
-    .pos = { 155.0f, 10.0f, -96.0f },
-    .yaw = 270,
-    .territory = {
-        .patrol = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .numPoints  = 2,
-            .points  = {
-                { 155, 10, -96 },
-                { 90, 10, -96 },
-            },
-            .detectShape = SHAPE_RECT,
-            .detectPos  = { 135, 10, 0 },
-            .detectSize = { 105, 140 },
-        }
-    },
+    .pos = { GEN_NPC_SHY_GUY_THIEF_VEC },
+    .yaw = GEN_NPC_SHY_GUY_THIEF_DIR,
+    .territory = GEN_NPC_SHY_GUY_THIEF_TERRITORY,
     .init = &N(EVS_ShyGuy_Thief),
     .settings = &N(NpcSettings_ShyGuy_Patrol),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -410,20 +345,9 @@ NpcData N(NpcData_ShyGuy_Thief) = {
 NpcData N(NpcData_SpyGuy)[] = {
     {
         .id = NPC_SpyGuy,
-        .pos = { 850.0f, 0.0f, 0.0f },
-        .yaw = 270,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 850, 0, 0 },
-                .wanderSize = { 30 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 850, 0, 0 },
-                .detectSize = { 200 },
-            }
-        },
+        .pos = { GEN_NPC_SPY_GUY_VEC },
+        .yaw = GEN_NPC_SPY_GUY_DIR,
+        .territory = GEN_NPC_SPY_GUY_TERRITORY,
         .settings = &N(NpcSettings_SpyGuy),
         .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = SPY_GUY_DROPS,

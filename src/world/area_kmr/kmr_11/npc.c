@@ -294,20 +294,9 @@ NpcSettings N(NpcSettings_Kammy) = {
 NpcData N(NpcData_Enemies)[] = {
     {
         .id = NPC_BlueGoombaBro,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
-        .territory = {
-            .wander = {
-                .isFlying = FALSE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 0, 0, 0 },
-                .wanderSize = { 100 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 100 },
-            }
-        },
+        .pos = { GEN_NPC_BLUE_GOOMBA_BRO_VEC },
+        .yaw = GEN_NPC_BLUE_GOOMBA_BRO_DIR,
+        .territory = GEN_NPC_BLUE_GOOMBA_BRO_TERRITORY,
         .init = &N(EVS_NpcInit_GoombaBros_01),
         .settings = &N(NpcSettings_GoombaBros_Guard),
         .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_NO_DROPS,
@@ -333,20 +322,9 @@ NpcData N(NpcData_Enemies)[] = {
     },
     {
         .id = NPC_RedGoombaBro,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = FALSE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 0, 0, 0 },
-                .wanderSize = { 100 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 100 },
-            }
-        },
+        .pos = { GEN_NPC_RED_GOOMBA_BRO_VEC },
+        .yaw = GEN_NPC_RED_GOOMBA_BRO_DIR,
+        .territory = GEN_NPC_RED_GOOMBA_BRO_TERRITORY,
         .init = &N(EVS_NpcInit_GoombaBros_02),
         .settings = &N(NpcSettings_GoombaBros_Guard),
         .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_NO_DROPS,
@@ -372,20 +350,9 @@ NpcData N(NpcData_Enemies)[] = {
     },
     {
         .id = NPC_GoombaKing,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = FALSE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 0, 0, 0 },
-                .wanderSize = { 100 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 100 },
-            }
-        },
+        .pos = { GEN_NPC_GOOMBA_KING_VEC },
+        .yaw = GEN_NPC_GOOMBA_KING_DIR,
+        .territory = GEN_NPC_GOOMBA_KING_TERRITORY,
         .init = &N(EVS_NpcInit_GoombaKing),
         .settings = &N(NpcSettings_GoombaBros_Guard),
         .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_NO_DROPS,
@@ -413,8 +380,9 @@ NpcData N(NpcData_Enemies)[] = {
 
 NpcData N(NpcData_Kammy) = {
     .id = NPC_Kammy,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 100,
+    .pos = { GEN_NPC_KAMMY_VEC },
+    .yaw = GEN_NPC_KAMMY_DIR,
+    .territory = GEN_NPC_KAMMY_TERRITORY,
     .initVarCount = 1,
     .initVar = { .value = 0 },
     .settings = &N(NpcSettings_Kammy),

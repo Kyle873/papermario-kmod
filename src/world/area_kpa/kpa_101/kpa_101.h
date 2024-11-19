@@ -2,6 +2,7 @@
 /// @brief Bowser's Castle - Ultra Shroom Room
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

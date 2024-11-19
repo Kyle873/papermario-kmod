@@ -1,8 +1,7 @@
 #include "isk_07.h"
 
 EntryList N(Entrances) = {
-    [isk_07_ENTRY_0]    { -283.0, -390.0,  530.0,  110.0 },
-    [isk_07_ENTRY_1]    {  560.0, -340.0,  217.0,  210.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {

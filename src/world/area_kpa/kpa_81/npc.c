@@ -219,8 +219,9 @@ EvtScript N(EVS_NpcInit_Door) = {
 
 NpcData N(NpcData_Door) = {
     .id = NPC_Door,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 0,
+    .pos = { GEN_NPC_DOOR_VEC },
+    .yaw = GEN_NPC_DOOR_DIR,
+    .territory = GEN_NPC_DOOR_TERRITORY,
     .init = &N(EVS_NpcInit_Door),
     .settings = &N(NpcSettings_Toad_Stationary),
     .flags = ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_HAS_NO_SPRITE | ENEMY_FLAG_SKIP_BATTLE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER | ENEMY_FLAG_IGNORE_TOUCH | ENEMY_FLAG_IGNORE_JUMP,

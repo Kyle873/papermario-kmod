@@ -191,8 +191,9 @@ EvtScript N(EVS_NpcInit_ToadMinister) = {
 NpcData N(NpcData_Prisoners)[] = {
     {
         .id = NPC_Toad_01,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_TOAD_01_VEC },
+        .yaw = GEN_NPC_TOAD_01_DIR,
+        .territory = GEN_NPC_TOAD_01_TERRITORY,
         .init = &N(EVS_NpcInit_Toad_01),
         .settings = &N(NpcSettings_Toad_Stationary),
         .flags = BASE_PASSIVE_FLAGS,
@@ -202,8 +203,9 @@ NpcData N(NpcData_Prisoners)[] = {
     },
     {
         .id = NPC_Toad_02,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_TOAD_02_VEC },
+        .yaw = GEN_NPC_TOAD_02_DIR,
+        .territory = GEN_NPC_TOAD_02_TERRITORY,
         .init = &N(EVS_NpcInit_Toad_02),
         .settings = &N(NpcSettings_Toad_Stationary),
         .flags = BASE_PASSIVE_FLAGS,
@@ -213,8 +215,9 @@ NpcData N(NpcData_Prisoners)[] = {
     },
     {
         .id = NPC_ToadGuard,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_TOAD_GUARD_VEC },
+        .yaw = GEN_NPC_TOAD_GUARD_DIR,
+        .territory = GEN_NPC_TOAD_GUARD_TERRITORY,
         .init = &N(EVS_NpcInit_ToadGuard),
         .settings = &N(NpcSettings_Toad_Stationary),
         .flags = BASE_PASSIVE_FLAGS,
@@ -224,8 +227,9 @@ NpcData N(NpcData_Prisoners)[] = {
     },
     {
         .id = NPC_ToadMinister,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_TOAD_MINISTER_VEC },
+        .yaw = GEN_NPC_TOAD_MINISTER_DIR,
+        .territory = GEN_NPC_TOAD_MINISTER_TERRITORY,
         .init = &N(EVS_NpcInit_ToadMinister),
         .settings = &N(NpcSettings_Toad_Stationary),
         .flags = BASE_PASSIVE_FLAGS,

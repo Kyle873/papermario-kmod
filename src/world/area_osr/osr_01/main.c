@@ -18,17 +18,11 @@ EvtScript N(EVS_TexPan_Fountain) = {
     Call(SetTexPanner, MODEL_o501, TEX_PANNER_1)
     Call(SetTexPanner, MODEL_w2, TEX_PANNER_2)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP(    0, -200,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    0,    1,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_2)
-        TEX_PAN_PARAMS_STEP(    0,    0,    0,  300)
-        TEX_PAN_PARAMS_FREQ(    0,    0,    0,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_2
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Return
@@ -36,7 +30,7 @@ EvtScript N(EVS_TexPan_Fountain) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_PEACH_CASTLE_GROUNDS)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
     Set(AF_OSR_01, FALSE)

@@ -2,13 +2,13 @@
 #include "entity.h"
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_YellowBlock), 450, 285, 120, 0, ITEM_SUPER_SHROOM, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_ARN04_ItemBlock_SuperShroom)
-    Call(MakeEntity, Ref(Entity_YellowBlock), 720, 333, 75, 0, ITEM_COIN, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_ARN04_ItemBlock_Coin)
-    Call(MakeEntity, Ref(Entity_MulticoinBlock), 600, 290, 200, 0, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_ARN04_MultiCoinBrick)
-    Call(MakeItemEntity, ITEM_STAR_PIECE, 540, 230, 13, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_ARN04_Item_StarPiece)
+    EVT_MAKE_ENTITY(YellowBlock, GEN_YELLOW_BLOCK_1_PARAMS)
+    Call(AssignBlockFlag, GEN_YELLOW_BLOCK_1_FLAG)
+    EVT_MAKE_ENTITY(YellowBlock, GEN_YELLOW_BLOCK_2_PARAMS)
+    Call(AssignBlockFlag, GEN_YELLOW_BLOCK_2_FLAG)
+    EVT_MAKE_ENTITY(MulticoinBlock, GEN_MULTICOIN_BLOCK_1_PARAMS)
+    Call(AssignBlockFlag, GEN_MULTICOIN_BLOCK_1_FLAG)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
     Return
     End
 };

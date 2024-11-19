@@ -15,22 +15,9 @@ EvtScript N(EVS_NpcInit_EnableReflection) = {
 NpcData N(NpcData_Clubba)[] = {
     {
         .id = NPC_Clubba,
-        .pos = { 200.0f, 0.0f, 75.0f },
-        .yaw = 90,
-        .territory = {
-            .patrol = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .numPoints  = 2,
-                .points  = {
-                    { 200, 0, 75 },
-                    { 300, 0, 75 },
-                },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 250, 0, 75 },
-                .detectSize = { 200, 100 },
-            }
-        },
+        .pos = { GEN_NPC_CLUBBA_VEC },
+        .yaw = GEN_NPC_CLUBBA_DIR,
+        .territory = GEN_NPC_CLUBBA_TERRITORY,
         .init = &N(EVS_NpcInit_EnableReflection),
         .settings = &N(NpcSettings_FrostClubba_Patrol),
         .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -43,22 +30,9 @@ NpcData N(NpcData_Clubba)[] = {
 
 NpcData N(NpcData_Duplighost) = {
     .id = NPC_Duplighost,
-    .pos = { 200.0f, 0.0f, -75.0f },
-    .yaw = 90,
-    .territory = {
-        .patrol = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .numPoints  = 2,
-            .points  = {
-                { 200, 0, -75 },
-                { 300, 0, -75 },
-            },
-            .detectShape = SHAPE_RECT,
-            .detectPos  = { 250, 0, 75 },
-            .detectSize = { 200, 100 },
-        }
-    },
+    .pos = { GEN_NPC_DUPLIGHOST_VEC },
+    .yaw = GEN_NPC_DUPLIGHOST_DIR,
+    .territory = GEN_NPC_DUPLIGHOST_TERRITORY,
     .init = &N(EVS_NpcInit_EnableReflection),
     .settings = &N(NpcSettings_Duplighost_Patrol),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,

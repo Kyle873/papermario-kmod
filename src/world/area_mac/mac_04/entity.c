@@ -279,7 +279,7 @@ EvtScript N(EVS_OnInspect_StreetSign) = {
 
 EvtScript N(EVS_MakeEntities) = {
     IfLt(GB_StoryProgress, STORY_CH4_RETURNED_STOREROOM_KEY)
-        Call(MakeEntity, Ref(Entity_Padlock), 155, 48, -480, 90, MAKE_ENTITY_END)
+        EVT_MAKE_ENTITY(Padlock, GEN_PADLOCK_1_PARAMS)
         Call(AssignScript, Ref(N(EVS_UnlockStoreroom)))
         Set(MV_StoreroomLockEntityID, LVar0)
         Call(SetEntityCullMode, 3)
@@ -300,8 +300,8 @@ EvtScript N(EVS_MakeEntities) = {
     Call(MakeItemEntity, ITEM_VIS_GROUP(ITEM_SNOWMAN_DOLL, VIS_GROUP_2), 50, 40, -310, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_MAC04_Item_SnowmanDoll)
     Call(MakeItemEntity, ITEM_VIS_GROUP(ITEM_VOLT_SHROOM, VIS_GROUP_2), 50, 40, -370, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_MAC04_Item_VoltShroom)
     Call(MakeItemEntity, ITEM_VIS_GROUP(ITEM_DIZZY_DIAL, VIS_GROUP_2), 50, 40, -490, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_MAC04_Item_DizzyDial)
-    Call(MakeEntity, Ref(Entity_ScriptSpring), -480, 20, -90, 0, MAKE_ENTITY_END)
-    Call(AssignScript, Ref(N(EVS_UseSpring_Toybox)))
+    EVT_MAKE_ENTITY(ScriptSpring, GEN_SCRIPT_SPRING_1_PARAMS)
+    Call(AssignScript, Ref(GEN_SCRIPT_SPRING_1_SCRIPT))
     Call(SetEntityCullMode, 2)
     BindTrigger(Ref(N(EVS_OnInspect_StreetSign)), TRIGGER_WALL_PRESS_A, COLLIDER_sign, 1, 0)
     Return

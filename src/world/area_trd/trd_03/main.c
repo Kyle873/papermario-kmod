@@ -75,13 +75,13 @@ EvtScript N(EVS_EnterMap) = {
 };
 
 BombTrigger N(BombPos_MiddleCell) = {
-    .pos = { -160.0f, 0.0f, -10.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_1_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_1_RAD,
 };
 
 BombTrigger N(BombPos_RightCell) = {
-    .pos = { 360.0f, 0.0f, -10.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_2_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_2_RAD,
 };
 
 EvtScript N(EVS_BombWall_MiddleCell) = {
@@ -197,7 +197,7 @@ EvtScript N(EVS_HiddenDoor) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_KOOPA_BROS_FORTRESS)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
     Call(MakeNpcs, TRUE, Ref(N(DefaultNPCs)))

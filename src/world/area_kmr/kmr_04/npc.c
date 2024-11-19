@@ -264,8 +264,9 @@ EvtScript N(EVS_NpcInit_JrTroopa) = {
 
 NpcData N(NpcData_JrTroopa) = {
     .id = NPC_JrTroopa,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 0,
+    .pos = { GEN_NPC_JR_TROOPA_VEC },
+    .yaw = GEN_NPC_JR_TROOPA_DIR,
+    .territory = GEN_NPC_JR_TROOPA_TERRITORY,
     .init = &N(EVS_NpcInit_JrTroopa),
     .settings = &N(NpcSettings_JrTroopa),
     .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_NO_DROPS,
@@ -292,8 +293,9 @@ NpcData N(NpcData_JrTroopa) = {
 
 NpcData N(NpcData_GoombaFamily) = {
     .id = NPC_Goompa,
-    .pos = { -58.0f, 0.0f, 130.0f },
-    .yaw = 0,
+    .pos = { GEN_NPC_GOOMPA_VEC },
+    .yaw = GEN_NPC_GOOMPA_DIR,
+    .territory = GEN_NPC_GOOMPA_TERRITORY,
     .settings = &N(NpcSettings_Goompa),
     .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,
     .animations = {

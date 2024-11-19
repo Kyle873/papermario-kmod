@@ -2,11 +2,11 @@
 #include "entity.h"
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_HiddenPanel), 40, 0, 400, 0, MODEL_ground, MAKE_ENTITY_END)
-    Call(AssignPanelFlag, GF_SAM04_HiddenPanel)
-    Call(MakeItemEntity, ITEM_LETTER_TO_MAYOR_PENGUIN, -290, 70, 110, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_SAM04_Item_Letter05)
+    EVT_MAKE_ENTITY(HiddenPanel, GEN_HIDDEN_PANEL_1_PARAMS)
+    Call(AssignPanelFlag, GEN_HIDDEN_PANEL_1_FLAG)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
     Set(MV_LetterItemID, LVar0)
-    Call(MakeItemEntity, ITEM_REPEL_GEL, 426, 0, -172, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_SAM04_Item_RepelGel)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_2_PARAMS)
     Return
     End
 };

@@ -132,10 +132,7 @@ API_CALLABLE(N(SetFallingSpriteRot)) {
 }
 
 Vec3f N(FallPath)[] = {
-    {    0.0,     0.0,    0.0 },
-    {   20.0,  -150.0,    0.0 },
-    {   50.0,  -170.0,    0.0 },
-    {   80.0,  -160.0,    0.0 },
+    GEN_PATH_1_PATH
 };
 
 EvtScript N(EVS_PlayerFalling) = {

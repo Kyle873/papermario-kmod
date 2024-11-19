@@ -56,13 +56,11 @@ API_CALLABLE(N(Zipline_CheckInputForJumpOff)) {
 }
 
 Vec3f N(Zipline_Endpoints1)[] = {
-    { -327.5, 1008.7, -55.0 },
-    {  233.9,  914.0, -55.0 },
+    GEN_PATH_1_PATH
 };
 
 Vec3f N(Zipline_Endpoints2)[] = {
-    {  297.0, 608.0, 255.0 },
-    { -362.0, 267.0, 255.0 },
+    GEN_PATH_2_PATH
 };
 
 EvtScript N(EVS_Zipline_TetherCameraToPlayer) = {

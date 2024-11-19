@@ -2,6 +2,7 @@
 /// @brief Mt Shiver - Shiver City Pond Area
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

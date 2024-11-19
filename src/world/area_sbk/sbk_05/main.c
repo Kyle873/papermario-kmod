@@ -5,11 +5,7 @@ extern EvtScript N(EVS_MakeEntities);
 extern NpcGroupList N(DefaultNPCs);
 
 EntryList N(Entrances) = {
-    [sbk_05_ENTRY_0]    { -475.0,    0.0,    0.0,   90.0 },
-    [sbk_05_ENTRY_1]    {  475.0,    0.0,    0.0,  270.0 },
-    [sbk_05_ENTRY_2]    {    0.0,    0.0, -475.0,  180.0 },
-    [sbk_05_ENTRY_3]    {    0.0,    0.0,  475.0,    0.0 },
-    [sbk_05_ENTRY_4]    {  157.0,  200.0, -338.0,   90.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {
@@ -48,7 +44,7 @@ EvtScript N(D_80240268_930F58) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_DRY_DRY_DESERT)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     IfEq(GB_StoryProgress, STORY_CH2_GOT_PULSE_STONE)
         Call(DisablePulseStone, FALSE)

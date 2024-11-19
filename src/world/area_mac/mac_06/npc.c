@@ -343,20 +343,7 @@ EvtScript N(EVS_NpcInit_Kolorado) = {
 };
 
 Vec3f N(FlightPath)[] = {
-    { -332.0,    50.0,  120.0 },
-    { -160.0,    70.0,  300.0 },
-    {  -71.0,    80.0,  130.0 },
-    {  105.0,    90.0,  262.0 },
-    {  221.0,   100.0,  120.0 },
-    {  404.0,    85.0,  150.0 },
-    {  238.0,    70.0,  -57.0 },
-    {   63.0,    70.0,  -42.0 },
-    { -131.0,    60.0,  144.0 },
-    {  -75.0,   100.0,  -60.0 },
-    {  200.0,    60.0, -300.0 },
-    {   20.0,    60.0, -280.0 },
-    {   70.0,    60.0,   80.0 },
-    { -332.0,    50.0,  120.0 },
+    GEN_PATH_1_PATH
 };
 
 EvtScript N(EVS_FlyingGull) = {
@@ -511,8 +498,9 @@ EvtScript N(EVS_NpcInit_JrTroopa) = {
 
 NpcData N(NpcData_Whale) = {
     .id = NPC_Whale,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
+    .pos = { GEN_NPC_WHALE_VEC },
+    .yaw = GEN_NPC_WHALE_DIR,
+    .territory = GEN_NPC_WHALE_TERRITORY,
     .init = &N(EVS_NpcInit_Whale),
     .settings = &N(NpcSettings_Whale),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -539,8 +527,9 @@ NpcData N(NpcData_Whale) = {
 
 NpcData N(NpcData_Kolorado) = {
     .id = NPC_Kolorado,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
+    .pos = { GEN_NPC_KOLORADO_VEC },
+    .yaw = GEN_NPC_KOLORADO_DIR,
+    .territory = GEN_NPC_KOLORADO_TERRITORY,
     .init = &N(EVS_NpcInit_Kolorado),
     .settings = &N(NpcSettings_Kolorado),
     .flags = COMMON_PASSIVE_FLAGS,
@@ -574,8 +563,9 @@ AnimID N(ExtraAnims_JrTroopa)[] = {
 
 NpcData N(NpcData_JrTroopa) = {
     .id = NPC_JrTroopa,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
+    .pos = { GEN_NPC_JR_TROOPA_VEC },
+    .yaw = GEN_NPC_JR_TROOPA_DIR,
+    .territory = GEN_NPC_JR_TROOPA_TERRITORY,
     .init = &N(EVS_NpcInit_JrTroopa),
     .settings = &N(NpcSettings_JrTroopa),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,

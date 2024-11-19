@@ -3,7 +3,7 @@
 
 EvtScript N(EVS_MakeEntities) = {
     IfLt(GB_StoryProgress, STORY_CH3_WENT_DOWN_THE_WELL)
-        Call(MakeEntity, Ref(Entity_BoardedFloor), 0, 30, 0, 0, MAKE_ENTITY_END)
+        EVT_MAKE_ENTITY(BoardedFloor, GEN_BOARDED_FLOOR_1_PARAMS)
     EndIf
     Return
     End

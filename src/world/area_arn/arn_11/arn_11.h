@@ -2,6 +2,7 @@
 /// @brief Gusty Gulch - Tubba's Heart Chamber
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

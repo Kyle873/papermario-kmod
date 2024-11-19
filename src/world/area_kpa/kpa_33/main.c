@@ -53,7 +53,7 @@ EvtScript N(EVS_EnterMap) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_BOWSERS_CASTLE)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
     ExecWait(N(EVS_MakeEntities))
@@ -65,31 +65,19 @@ EvtScript N(EVS_Main) = {
     Call(SetTexPanner, MODEL_o1289, TEX_PANNER_1)
     Call(SetTexPanner, MODEL_o1290, TEX_PANNER_1)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP(   20,   20,  -20,  -20)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_2)
-        TEX_PAN_PARAMS_STEP(   20,   20,  -20,  -20)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_2
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_3)
-        TEX_PAN_PARAMS_STEP(   20,   20,  -20,  -20)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_3
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_4)
-        TEX_PAN_PARAMS_STEP(   20,   20,  -20,  -20)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_4
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Thread

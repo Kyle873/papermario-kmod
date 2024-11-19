@@ -16,28 +16,18 @@ EvtScript N(EVS_SetupTexPan) = {
     // flowers
     Call(SetTexPanner, MODEL_hanahana, TEX_PANNER_0)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_0)
-        TEX_PAN_PARAMS_MAX(0x8000)
-        TEX_PAN_PARAMS_STEP(0x4000,    0,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    12,    0,    0,    0)
-        TEX_PAN_PARAMS_INIT(     0,    0,    0,    0)
+        GEN_TEX_PANNER_0
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     // water
     Call(SetTexPanner, MODEL_suimen1, TEX_PANNER_1)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP( -100,    0,  600,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    0,    1,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Call(SetTexPanner, MODEL_kabemizu, TEX_PANNER_2)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_2)
-        TEX_PAN_PARAMS_STEP( -100,    0,  400,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    0,    1,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_2
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Return
@@ -45,7 +35,7 @@ EvtScript N(EVS_SetupTexPan) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_KOOPA_VILLAGE)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_DEFAULT(0, 0, 0)
     IfLt(GB_StoryProgress, STORY_CH1_KOOPER_JOINED_PARTY)

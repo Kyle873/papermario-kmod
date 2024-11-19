@@ -162,14 +162,14 @@ EvtScript N(EVS_ManageWindows) = {
 
 EvtScript N(EVS_MakeEntities) = {
     IfGe(GB_StoryProgress, STORY_CH3_GOT_RECORD)
-        Call(MakeItemEntity, ITEM_BOO_RECORD, 0, 0, -20, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_OBK08_Item_Record)
+        EVT_MAKE_ITEM_ENTITY(GEN_ITEM_2_PARAMS)
     Else
         Call(MakeItemEntity, ITEM_BOO_RECORD, NPC_DISPOSE_LOCATION, ITEM_SPAWN_MODE_DECORATION, 0)
         Call(N(EnableItemTransparency))
         Set(MV_KeepAwayItem, LVar0)
     EndIf
-    Call(MakeEntity, Ref(Entity_HiddenPanel), 0, 0, 0, 0, MODEL_yuka_jyu, MAKE_ENTITY_END)
-    Call(AssignPanelFlag, GF_OBK08_HiddenPanel)
+    EVT_MAKE_ENTITY(HiddenPanel, GEN_HIDDEN_PANEL_1_PARAMS)
+    Call(AssignPanelFlag, GEN_HIDDEN_PANEL_1_FLAG)
     Return
     End
 };

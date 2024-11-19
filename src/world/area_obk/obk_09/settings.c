@@ -6,9 +6,7 @@
 #include "obk_09.h"
 
 EntryList N(Entrances) = {
-    [obk_09_ENTRY_0]    { -180.0,    0.0,  380.0,    0.0 },
-    [obk_09_ENTRY_1]    {  180.0,    0.0,  380.0,    0.0 },
-    [obk_09_ENTRY_2]    { -135.0,    0.0,  135.0,    0.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {

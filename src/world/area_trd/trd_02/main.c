@@ -119,8 +119,8 @@ EvtScript N(EVS_Scene_LowerStairs) = {
 };
 
 BombTrigger N(D_8024240C_9A33EC) = {
-    .pos = { 255.0f, 50.0f, -80.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_1_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_1_RAD,
 };
 
 EvtScript N(D_8024241C_9A33FC) = {
@@ -148,7 +148,7 @@ s32 N(D_8024252C_9A350C)[] = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_KOOPA_BROS_FORTRESS)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
     Call(MakeNpcs, TRUE, Ref(N(DefaultNPCs)))

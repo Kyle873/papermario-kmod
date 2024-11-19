@@ -692,7 +692,7 @@ EvtScript N(EVS_SlotMachine_MainUpdate) = {
                     Wait(30)
                 CaseEq(SLOT_MATCH_TWO)
                     ExecWait(N(EVS_SetCam_ViewPayout))
-                    Call(MakeItemEntity, ITEM_COIN, 535, 150, 50, ITEM_SPAWN_MODE_TOSS_SPAWN_ALWAYS, 0)
+                    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
                     Wait(30)
                 CaseDefault
                     Set(MV_ResetCamSpeed, Float(2.0))
@@ -714,7 +714,7 @@ EvtScript N(EVS_SlotMachine_MainUpdate) = {
                     Wait(30)
                 CaseEq(SLOT_MATCH_TWO)
                     ExecWait(N(EVS_SetCam_ViewPayout))
-                    Call(MakeItemEntity, ITEM_MUSHROOM, 535, 150, 50, ITEM_SPAWN_MODE_TOSS_SPAWN_ALWAYS, 0)
+                    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_2_PARAMS)
                     Wait(30)
                 CaseDefault
                     Set(MV_ResetCamSpeed, Float(2.0))

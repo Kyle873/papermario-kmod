@@ -2,6 +2,7 @@
 /// @brief Crystal Palace - Palace Key Room
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

@@ -28,19 +28,19 @@ API_CALLABLE(N(SetSpringPosition)) {
 
 EvtScript N(EVS_MakeEntities) = {
     IfEq(GF_KPA133_BlueSwitch, FALSE)
-        Call(MakeEntity, Ref(Entity_BlueSwitch), 60, 115, 10, 0, MAKE_ENTITY_END)
-        Call(AssignSwitchFlag, EVT_INDEX_OF_AREA_FLAG(AF_KPA133_HitWaterSwitch))
+        EVT_MAKE_ENTITY(BlueSwitch, GEN_BLUE_SWITCH_1_PARAMS)
+        Call(AssignSwitchFlag, EVT_INDEX_OF_AREA_FLAG(GEN_BLUE_SWITCH_1_FLAG))
         Call(AssignScript, Ref(N(EVS_TriggerSwitch)))
     EndIf
     IfEq(GF_KPA133_BlueSwitch, TRUE)
-        Call(MakeEntity, Ref(Entity_SimpleSpring), 150, 115, 0, 90, 60, MAKE_ENTITY_END)
+        EVT_MAKE_ENTITY(SimpleSpring, GEN_SIMPLE_SPRING_1_PARAMS)
     Else
-        Call(MakeEntity, Ref(Entity_SimpleSpring), 150, 150, -105, 90, 60, MAKE_ENTITY_END)
+        EVT_MAKE_ENTITY(SimpleSpring, GEN_SIMPLE_SPRING_2_PARAMS)
         Set(MV_SpringEntityID, LVar0)
         Call(N(SetSpringRotation), -90, 0, 0)
         Exec(N(EVS_SetupHiddenSpring))
     EndIf
-    Call(MakeItemEntity, ITEM_BOWSER_CASTLE_KEY, -350, 215, -50, ITEM_SPAWN_MODE_KEY, GF_KPA133_Item_CastleKey2)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
     Return
     End
 };

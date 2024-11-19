@@ -4,20 +4,9 @@
 
 NpcData N(NpcData_Bandit_01) = {
     .id = NPC_Bandit_01,
-    .pos = { -100.0f, 0.0f, 80.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -100, 0, 80 },
-            .wanderSize = { 100 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 0, 0, 0 },
-            .detectSize = { 1000 },
-        }
-    },
+    .pos = { GEN_NPC_BANDIT_01_VEC },
+    .yaw = GEN_NPC_BANDIT_01_DIR,
+    .territory = GEN_NPC_BANDIT_01_TERRITORY,
     .settings = &N(NpcSettings_Bandit),
     .flags = ENEMY_FLAG_FLYING,
     .drops = BANDIT_DROPS,
@@ -27,20 +16,9 @@ NpcData N(NpcData_Bandit_01) = {
 
 NpcData N(NpcData_Bandit_02) = {
     .id = NPC_Bandit_02,
-    .pos = { 120.0f, 0.0f, 30.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 120, 0, 30 },
-            .wanderSize = { 100 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 0, 0, 0 },
-            .detectSize = { 1000 },
-        }
-    },
+    .pos = { GEN_NPC_BANDIT_02_VEC },
+    .yaw = GEN_NPC_BANDIT_02_DIR,
+    .territory = GEN_NPC_BANDIT_02_TERRITORY,
     .settings = &N(NpcSettings_Bandit),
     .flags = ENEMY_FLAG_FLYING,
     .drops = BANDIT_DROPS,

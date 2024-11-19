@@ -2,6 +2,7 @@
 /// @brief Jade Jungle - SW Jungle (Super Block)
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

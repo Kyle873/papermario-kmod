@@ -30,8 +30,9 @@ EvtScript N(EVS_NpcInit_Toad) = {
 NpcData N(NpcData_TayceT)[] = {
     {
         .id = NPC_TayceT,
-        .pos = { 400.0f, 0.0f, -70.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_TAYCE_T_VEC },
+        .yaw = GEN_NPC_TAYCE_T_DIR,
+        .territory = GEN_NPC_TAYCE_T_TERRITORY,
         .init = &N(EVS_NpcInit_TayceT),
         .settings = &N(NpcSettings_Toad_Stationary),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -42,8 +43,9 @@ NpcData N(NpcData_TayceT)[] = {
     },
     {
         .id = NPC_Toad,
-        .pos = { 250.0f, 0.0f, -110.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_TOAD_VEC },
+        .yaw = GEN_NPC_TOAD_DIR,
+        .territory = GEN_NPC_TOAD_TERRITORY,
         .init = &N(EVS_NpcInit_Toad),
         .settings = &N(NpcSettings_Toad_Stationary),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,

@@ -6,20 +6,9 @@
 
 NpcData N(NpcData_KoopaTroopa) = {
     .id = NPC_KoopaTroopa,
-    .pos = { -450.0f, 0.0f, -45.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -450, 0, -45 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -450, 0, -45 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_KOOPA_TROOPA_VEC },
+    .yaw = GEN_NPC_KOOPA_TROOPA_DIR,
+    .territory = GEN_NPC_KOOPA_TROOPA_TERRITORY,
     .settings = &N(NpcSettings_KoopaTroopa_Wander),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
     .drops = KOOPA_TROOPA_NOK_DROPS,
@@ -29,20 +18,9 @@ NpcData N(NpcData_KoopaTroopa) = {
 
 NpcData N(NpcData_ParaTroopa) = {
     .id = NPC_ParaTroopa,
-    .pos = { -150.0f, 50.0f, -70.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = FALSE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -150, 50, -70 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -150, 50, -70 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_PARA_TROOPA_VEC },
+    .yaw = GEN_NPC_PARA_TROOPA_DIR,
+    .territory = GEN_NPC_PARA_TROOPA_TERRITORY,
     .settings = &N(NpcSettings_ParaTroopa),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = PARATROOPA_DROPS,

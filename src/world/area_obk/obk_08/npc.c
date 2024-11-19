@@ -448,8 +448,9 @@ EvtScript N(EVS_NpcInit_KeepAwayBoo8) = {
 
 NpcData N(NpcData_Boo_01) = {
     .id = NPC_Boo_01,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 0,
+    .pos = { GEN_NPC_BOO_01_VEC },
+    .yaw = GEN_NPC_BOO_01_DIR,
+    .territory = GEN_NPC_BOO_01_TERRITORY,
     .init = &N(EVS_NpcInit_Boo_01),
     .settings = &N(NpcSettings_Boo),
     .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_SKIP_BATTLE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_IGNORE_TOUCH | ENEMY_FLAG_IGNORE_PARTNER,
@@ -459,8 +460,9 @@ NpcData N(NpcData_Boo_01) = {
 
 NpcData N(NpcData_KeepAwayBoo1) = {
     .id = NPC_KeepAwayBoo1,
-    .pos = { -268.0f, 52.0f, 0.0f },
-    .yaw = 0,
+    .pos = { GEN_NPC_KEEP_AWAY_BOO1_VEC },
+    .yaw = GEN_NPC_KEEP_AWAY_BOO1_DIR,
+    .territory = GEN_NPC_KEEP_AWAY_BOO1_TERRITORY,
     .init = &N(EVS_NpcInit_KeepAwayBoo1),
     .settings = &N(NpcSettings_Boo),
     .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_SKIP_BATTLE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_IGNORE_TOUCH | ENEMY_FLAG_IGNORE_PARTNER,
@@ -470,8 +472,9 @@ NpcData N(NpcData_KeepAwayBoo1) = {
 
 NpcData N(NpcData_KeepAwayBoo2) = {
     .id = NPC_KeepAwayBoo2,
-    .pos = { -268.0f, 52.0f, 0.0f },
-    .yaw = 0,
+    .pos = { GEN_NPC_KEEP_AWAY_BOO2_VEC },
+    .yaw = GEN_NPC_KEEP_AWAY_BOO2_DIR,
+    .territory = GEN_NPC_KEEP_AWAY_BOO2_TERRITORY,
     .init = &N(EVS_NpcInit_KeepAwayBoo2),
     .settings = &N(NpcSettings_Boo),
     .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_SKIP_BATTLE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_IGNORE_TOUCH | ENEMY_FLAG_IGNORE_PARTNER,
@@ -481,8 +484,9 @@ NpcData N(NpcData_KeepAwayBoo2) = {
 
 NpcData N(NpcData_KeepAwayBoo3) = {
     .id = NPC_KeepAwayBoo3,
-    .pos = { -268.0f, 52.0f, 0.0f },
-    .yaw = 0,
+    .pos = { GEN_NPC_KEEP_AWAY_BOO3_VEC },
+    .yaw = GEN_NPC_KEEP_AWAY_BOO3_DIR,
+    .territory = GEN_NPC_KEEP_AWAY_BOO3_TERRITORY,
     .init = &N(EVS_NpcInit_KeepAwayBoo3),
     .settings = &N(NpcSettings_Boo),
     .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_SKIP_BATTLE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_IGNORE_TOUCH | ENEMY_FLAG_IGNORE_PARTNER,
@@ -492,8 +496,9 @@ NpcData N(NpcData_KeepAwayBoo3) = {
 
 NpcData N(NpcData_KeepAwayBoo4) = {
     .id = NPC_KeepAwayBoo4,
-    .pos = { -268.0f, 52.0f, 0.0f },
-    .yaw = 0,
+    .pos = { GEN_NPC_KEEP_AWAY_BOO4_VEC },
+    .yaw = GEN_NPC_KEEP_AWAY_BOO4_DIR,
+    .territory = GEN_NPC_KEEP_AWAY_BOO4_TERRITORY,
     .init = &N(EVS_NpcInit_KeepAwayBoo4),
     .settings = &N(NpcSettings_Boo),
     .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_SKIP_BATTLE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_IGNORE_TOUCH | ENEMY_FLAG_IGNORE_PARTNER,
@@ -503,8 +508,9 @@ NpcData N(NpcData_KeepAwayBoo4) = {
 
 NpcData N(NpcData_KeepAwayBoo5) = {
     .id = NPC_KeepAwayBoo5,
-    .pos = { -268.0f, 52.0f, 0.0f },
-    .yaw = 0,
+    .pos = { GEN_NPC_KEEP_AWAY_BOO5_VEC },
+    .yaw = GEN_NPC_KEEP_AWAY_BOO5_DIR,
+    .territory = GEN_NPC_KEEP_AWAY_BOO5_TERRITORY,
     .init = &N(EVS_NpcInit_KeepAwayBoo5),
     .settings = &N(NpcSettings_Boo),
     .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_SKIP_BATTLE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_IGNORE_TOUCH | ENEMY_FLAG_IGNORE_PARTNER,
@@ -514,8 +520,9 @@ NpcData N(NpcData_KeepAwayBoo5) = {
 
 NpcData N(NpcData_KeepAwayBoo6) = {
     .id = NPC_KeepAwayBoo6,
-    .pos = { -268.0f, 52.0f, 0.0f },
-    .yaw = 0,
+    .pos = { GEN_NPC_KEEP_AWAY_BOO6_VEC },
+    .yaw = GEN_NPC_KEEP_AWAY_BOO6_DIR,
+    .territory = GEN_NPC_KEEP_AWAY_BOO6_TERRITORY,
     .init = &N(EVS_NpcInit_KeepAwayBoo6),
     .settings = &N(NpcSettings_Boo),
     .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_SKIP_BATTLE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_IGNORE_TOUCH | ENEMY_FLAG_IGNORE_PARTNER,
@@ -525,8 +532,9 @@ NpcData N(NpcData_KeepAwayBoo6) = {
 
 NpcData N(NpcData_KeepAwayBoo7) = {
     .id = NPC_KeepAwayBoo7,
-    .pos = { -268.0f, 52.0f, 0.0f },
-    .yaw = 0,
+    .pos = { GEN_NPC_KEEP_AWAY_BOO7_VEC },
+    .yaw = GEN_NPC_KEEP_AWAY_BOO7_DIR,
+    .territory = GEN_NPC_KEEP_AWAY_BOO7_TERRITORY,
     .init = &N(EVS_NpcInit_KeepAwayBoo7),
     .settings = &N(NpcSettings_Boo),
     .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_SKIP_BATTLE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_IGNORE_TOUCH | ENEMY_FLAG_IGNORE_PARTNER,
@@ -536,8 +544,9 @@ NpcData N(NpcData_KeepAwayBoo7) = {
 
 NpcData N(NpcData_KeepAwayBoo8) = {
     .id = NPC_KeepAwayBoo8,
-    .pos = { -268.0f, 52.0f, 0.0f },
-    .yaw = 0,
+    .pos = { GEN_NPC_KEEP_AWAY_BOO8_VEC },
+    .yaw = GEN_NPC_KEEP_AWAY_BOO8_DIR,
+    .territory = GEN_NPC_KEEP_AWAY_BOO8_TERRITORY,
     .init = &N(EVS_NpcInit_KeepAwayBoo8),
     .settings = &N(NpcSettings_Boo),
     .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_SKIP_BATTLE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_IGNORE_TOUCH | ENEMY_FLAG_IGNORE_PARTNER,
@@ -564,8 +573,9 @@ EvtScript N(EVS_NpcInit_TrafficBoo2) = {
 NpcData N(NpcData_TrafficBoos)[] = {
     {
         .id = NPC_TrafficBoo1,
-        .pos = { 523.0f, -139.0f, 193.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_TRAFFIC_BOO1_VEC },
+        .yaw = GEN_NPC_TRAFFIC_BOO1_DIR,
+        .territory = GEN_NPC_TRAFFIC_BOO1_TERRITORY,
         .init = &N(EVS_NpcInit_TrafficBoo1),
         .settings = &N(NpcSettings_Boo),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -574,8 +584,9 @@ NpcData N(NpcData_TrafficBoos)[] = {
     },
     {
         .id = NPC_TrafficBoo2,
-        .pos = { 473.0f, -122.0f, 247.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_TRAFFIC_BOO2_VEC },
+        .yaw = GEN_NPC_TRAFFIC_BOO2_DIR,
+        .territory = GEN_NPC_TRAFFIC_BOO2_TERRITORY,
         .init = &N(EVS_NpcInit_TrafficBoo2),
         .settings = &N(NpcSettings_Boo),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -598,8 +609,9 @@ EvtScript N(EVS_NpcInit_Boo_13) = {
 NpcData N(NpcData_KeepAwayExtras)[] = {
     {
         .id = NPC_LeaderBoo,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_LEADER_BOO_VEC },
+        .yaw = GEN_NPC_LEADER_BOO_DIR,
+        .territory = GEN_NPC_LEADER_BOO_TERRITORY,
         .init = &N(EVS_NpcInit_Boo_12),
         .settings = &N(NpcSettings_Boo),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -608,8 +620,9 @@ NpcData N(NpcData_KeepAwayExtras)[] = {
     },
     {
         .id = NPC_DummyBoo,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_DUMMY_BOO_VEC },
+        .yaw = GEN_NPC_DUMMY_BOO_DIR,
+        .territory = GEN_NPC_DUMMY_BOO_TERRITORY,
         .init = &N(EVS_NpcInit_Boo_13),
         .settings = &N(NpcSettings_Boo),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_HAS_NO_SPRITE,

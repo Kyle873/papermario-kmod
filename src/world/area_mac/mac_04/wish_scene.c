@@ -38,8 +38,9 @@ EvtScript N(EVS_NpcInit_WishingToadKid) = {
 NpcData N(NpcData_WishSceneToads)[] = {
     {
         .id = NPC_WishingToadKid,
-        .pos = { 350.0f, 0.0f, -20.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_WISHING_TOAD_KID_VEC },
+        .yaw = GEN_NPC_WISHING_TOAD_KID_DIR,
+        .territory = GEN_NPC_WISHING_TOAD_KID_TERRITORY,
         .init = &N(EVS_NpcInit_WishingToadKid),
         .settings = &N(NpcSettings_Toad_Stationary_Wish),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -48,8 +49,9 @@ NpcData N(NpcData_WishSceneToads)[] = {
     },
     {
         .id = NPC_GossipTrio1,
-        .pos = { -245.0f, 20.0f, 100.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_GOSSIP_TRIO1_VEC },
+        .yaw = GEN_NPC_GOSSIP_TRIO1_DIR,
+        .territory = GEN_NPC_GOSSIP_TRIO1_TERRITORY,
         .settings = &N(NpcSettings_Toad_Stationary_Wish),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT,
         .drops = NO_DROPS,
@@ -58,8 +60,9 @@ NpcData N(NpcData_WishSceneToads)[] = {
     },
     {
         .id = NPC_GossipTrio2,
-        .pos = { -25.0f, 0.0f, 170.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_GOSSIP_TRIO2_VEC },
+        .yaw = GEN_NPC_GOSSIP_TRIO2_DIR,
+        .territory = GEN_NPC_GOSSIP_TRIO2_TERRITORY,
         .settings = &N(NpcSettings_Toad_Stationary_Wish),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT,
         .drops = NO_DROPS,
@@ -68,8 +71,9 @@ NpcData N(NpcData_WishSceneToads)[] = {
     },
     {
         .id = NPC_GossipTrio3,
-        .pos = { -100.0f, 0.0f, 305.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_GOSSIP_TRIO3_VEC },
+        .yaw = GEN_NPC_GOSSIP_TRIO3_DIR,
+        .territory = GEN_NPC_GOSSIP_TRIO3_TERRITORY,
         .settings = &N(NpcSettings_Toad_Stationary_Wish),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT,
         .drops = NO_DROPS,

@@ -4,20 +4,9 @@
 
 NpcData N(NpcData_DarkTroopa_01) = {
     .id = NPC_DarkTroopa_01,
-    .pos = { -75.0f, -10.0f, 50.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -75, -10, 50 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -75, -10, 50 },
-            .detectSize = { 250 },
-        }
-    },
+    .pos = { GEN_NPC_DARK_TROOPA_01_VEC },
+    .yaw = GEN_NPC_DARK_TROOPA_01_DIR,
+    .territory = GEN_NPC_DARK_TROOPA_01_TERRITORY,
     .settings = &N(NpcSettings_DarkTroopa_Wander),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = DARK_TROOPA_DROPS,
@@ -27,20 +16,9 @@ NpcData N(NpcData_DarkTroopa_01) = {
 
 NpcData N(NpcData_DarkTroopa_02) = {
     .id = NPC_DarkTroopa_02,
-    .pos = { 175.0f, -10.0f, -50.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 175, -10, -50 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 175, -10, -50 },
-            .detectSize = { 250 },
-        }
-    },
+    .pos = { GEN_NPC_DARK_TROOPA_02_VEC },
+    .yaw = GEN_NPC_DARK_TROOPA_02_DIR,
+    .territory = GEN_NPC_DARK_TROOPA_02_TERRITORY,
     .settings = &N(NpcSettings_DarkTroopa_Wander),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = DARK_TROOPA_DROPS,

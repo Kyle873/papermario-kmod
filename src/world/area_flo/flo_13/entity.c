@@ -8,11 +8,11 @@ EvtScript N(EVS_OnBlast_Rock) = {
 };
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeItemEntity, ITEM_MEGA_SMASH, -61, 60, -85, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_FLO13_Item_MegaSmash)
-    Call(MakeItemEntity, ITEM_SHOOTING_STAR, 128, 0, 157, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_FLO13_Item_ShootingStar)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_2_PARAMS)
     IfEq(GF_FLO13_Item_MegaSmash, FALSE)
-        Call(MakeEntity, Ref(Entity_BombableRock), -160, 160, -90, 0, MAKE_ENTITY_END)
-        Call(AssignScript, Ref(N(EVS_OnBlast_Rock)))
+        EVT_MAKE_ENTITY(BombableRock, GEN_BOMBABLE_ROCK_1_PARAMS)
+        Call(AssignScript, Ref(GEN_BOMBABLE_ROCK_1_SCRIPT))
     Else
         Call(ModifyColliderFlags, MODIFY_COLLIDER_FLAGS_SET_BITS, COLLIDER_o85, COLLIDER_FLAGS_UPPER_MASK)
     EndIf

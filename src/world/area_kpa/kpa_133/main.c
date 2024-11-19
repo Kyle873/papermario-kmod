@@ -41,8 +41,8 @@ EvtScript N(EVS_EnterMap) = {
 };
 
 BombTrigger N(BombPos_Wall) = {
-    .pos = { 388.0f, 240.0f, -25.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_1_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_1_RAD,
 };
 
 EvtScript N(EVS_BlastWall) = {
@@ -67,7 +67,7 @@ EvtScript N(EVS_BlastWall) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_BOWSERS_CASTLE)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_DEFAULT(0, 0, 0)
     Call(MakeNpcs, TRUE, Ref(N(DefaultNPCs)))
@@ -86,19 +86,13 @@ EvtScript N(EVS_Main) = {
     Call(SetTexPanner, MODEL_s_sui, TEX_PANNER_1)
     Call(SetTexPanner, MODEL_sui, TEX_PANNER_1)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP( -100,  100,   70,  -70)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     // water surface
     Call(SetTexPanner, MODEL_move, TEX_PANNER_4)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_4)
-        TEX_PAN_PARAMS_STEP(  200, -100,   20,  -20)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_4
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Exec(N(EVS_SetupMusic))

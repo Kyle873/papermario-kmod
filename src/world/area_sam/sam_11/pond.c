@@ -346,10 +346,7 @@ EvtScript N(EVS_DamageFrozenPond_After) = {
     Call(EnableGroup, MODEL_g279, TRUE)
     Call(SetTexPanner, MODEL_o583, TEX_PANNER_1)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP(   70,   60,   60, -100)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Exec(N(EVS_LoadPondAnimation))
@@ -434,8 +431,8 @@ EvtScript N(EVS_TouchPond_After) = {
 };
 
 BombTrigger N(BombTrigger_Pond) = {
-    .pos = { 0.0f, -10.0f, 220.0f },
-    .diameter = 300
+    .pos = { GEN_BOMB_POS_1_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_1_RAD,
 };
 
 EvtScript N(EVS_SetupPond) = {
@@ -471,10 +468,7 @@ EvtScript N(EVS_SetupPond) = {
                 Call(EnableGroup, MODEL_g279, TRUE)
                 Call(SetTexPanner, MODEL_o583, TEX_PANNER_1)
                 Thread
-                    TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-                    TEX_PAN_PARAMS_STEP(   70,   60,   60, -100)
-                    TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-                    TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+                    GEN_TEX_PANNER_1
                     Exec(N(EVS_UpdateTexturePan))
                 EndThread
                 Call(ModifyColliderFlags, MODIFY_COLLIDER_FLAGS_CLEAR_BITS, COLLIDER_o657, COLLIDER_FLAGS_UPPER_MASK)
@@ -490,10 +484,7 @@ EvtScript N(EVS_SetupPond) = {
         Call(EnableGroup, MODEL_g279, TRUE)
         Call(SetTexPanner, MODEL_o583, TEX_PANNER_1)
         Thread
-            TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-            TEX_PAN_PARAMS_STEP(   70,   60,   60, -100)
-            TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-            TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+            GEN_TEX_PANNER_1
             Exec(N(EVS_UpdateTexturePan))
         EndThread
         Call(ModifyColliderFlags, MODIFY_COLLIDER_FLAGS_CLEAR_BITS, COLLIDER_o657, COLLIDER_FLAGS_UPPER_MASK)

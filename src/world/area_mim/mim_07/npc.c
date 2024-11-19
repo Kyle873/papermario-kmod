@@ -186,20 +186,9 @@ EvtScript N(EVS_NpcInit_Fuzzy) = {
 
 NpcData N(NpcData_Fuzzy_01) = {
     .id = NPC_Fuzzy_01,
-    .pos = { -240.0f, 0.0f, -240.0f },
-    .yaw = 0,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 0, 0, 0 },
-            .wanderSize = { 400 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 0, 0, 0 },
-            .detectSize = { 400 },
-        }
-    },
+    .pos = { GEN_NPC_FUZZY_01_VEC },
+    .yaw = GEN_NPC_FUZZY_01_DIR,
+    .territory = GEN_NPC_FUZZY_01_TERRITORY,
     .init = &N(EVS_NpcInit_Fuzzy),
     .settings = &N(NpcSettings_ForestFuzzy_Wander),
     .flags = 0,
@@ -210,20 +199,9 @@ NpcData N(NpcData_Fuzzy_01) = {
 
 NpcData N(NpcData_Fuzzy_02) = {
     .id = NPC_Fuzzy_02,
-    .pos = { 270.0f, 0.0f, 200.0f },
-    .yaw = 0,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 0, 0, 0 },
-            .wanderSize = { 400 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 0, 0, 0 },
-            .detectSize = { 400 },
-        }
-    },
+    .pos = { GEN_NPC_FUZZY_02_VEC },
+    .yaw = GEN_NPC_FUZZY_02_DIR,
+    .territory = GEN_NPC_FUZZY_02_TERRITORY,
     .init = &N(EVS_NpcInit_Fuzzy),
     .settings = &N(NpcSettings_ForestFuzzy_Wander),
     .flags = 0,
@@ -234,8 +212,9 @@ NpcData N(NpcData_Fuzzy_02) = {
 
 NpcData N(NpcData_JrTroopa) = {
     .id = NPC_JrTroopa,
-    .pos = { -338.0f, 0.0f, 0.0f },
-    .yaw = 0,
+    .pos = { GEN_NPC_JR_TROOPA_VEC },
+    .yaw = GEN_NPC_JR_TROOPA_DIR,
+    .territory = GEN_NPC_JR_TROOPA_TERRITORY,
     .init = &N(EVS_NpcInit_JrTroopa),
     .settings = &N(NpcSettings_JrTroopa),
     .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_NO_DROPS,

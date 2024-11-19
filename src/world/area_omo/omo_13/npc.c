@@ -211,8 +211,9 @@ EvtScript N(EVS_NpcInit_AntiGuy) = {
 
 NpcData N(NpcData_AntiGuy) = {
     .id = NPC_AntiGuy,
-    .pos = { 110.0f, 0.0f, -20.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_ANTI_GUY_VEC },
+    .yaw = GEN_NPC_ANTI_GUY_DIR,
+    .territory = GEN_NPC_ANTI_GUY_TERRITORY,
     .init = &N(EVS_NpcInit_AntiGuy),
     .settings = &N(NpcSettings_AntiGuy),
     .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -240,20 +241,9 @@ NpcData N(NpcData_AntiGuy) = {
 
 NpcData N(NpcData_ShyGuy) = {
     .id = NPC_ShyGuy,
-    .pos = { 300.0f, 0.0f, 50.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 300, 0, 50 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 300, 0, 50 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_SHY_GUY_VEC },
+    .yaw = GEN_NPC_SHY_GUY_DIR,
+    .territory = GEN_NPC_SHY_GUY_TERRITORY,
     .settings = &N(NpcSettings_ShyGuy_Wander),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = SHY_GUY_DROPS,
@@ -263,20 +253,9 @@ NpcData N(NpcData_ShyGuy) = {
 
 NpcData N(NpcData_GrooveGuy) = {
     .id = NPC_GrooveGuy,
-    .pos = { -222.0f, 0.0f, 35.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -222, 0, 35 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -222, 0, 35 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_GROOVE_GUY_VEC },
+    .yaw = GEN_NPC_GROOVE_GUY_DIR,
+    .territory = GEN_NPC_GROOVE_GUY_TERRITORY,
     .settings = &N(NpcSettings_GrooveGuy),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = GROOVE_GUY_DROPS_B,

@@ -33,17 +33,16 @@ EvtScript N(EVS_OnBreakBlock) = {
 };
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_GiantChest), 0, 45, -290, 0, ITEM_ULTRA_HAMMER, MAKE_ENTITY_END)
-    Call(AssignChestFlag, GF_KZN07_GiantChest)
+    EVT_MAKE_ENTITY(GiantChest, GEN_GIANT_CHEST_1_PARAMS)
+    Call(AssignChestFlag, GEN_GIANT_CHEST_1_FLAG)
     Exec(N(EVS_MonitorChestStatus))
     IfEq(GF_KZN07_Hammer3Block, FALSE)
-        Call(MakeEntity, Ref(Entity_Hammer3BlockWideZ), 175, 35, -185, 0, MAKE_ENTITY_END)
-        Call(AssignScript, Ref(N(EVS_OnBreakBlock)))
+        EVT_MAKE_ENTITY(Hammer3BlockWideZ, GEN_HAMMER3_BLOCK_WIDE_Z_1_PARAMS)
+        Call(AssignScript, Ref(GEN_HAMMER3_BLOCK_WIDE_Z_1_SCRIPT))
     EndIf
-    Call(CreatePushBlockGrid, 0, 15, 5, -62, 0, 35, 0)
+    Call(CreatePushBlockGrid, GEN_PUSH_BLOCKS_1_GRID_PARAMS)
+    GEN_PUSH_BLOCKS_1_GRID_CONTENT
     Call(SetPushBlockFallEffect, 0, Ref(N(push_block_handle_fall)))
-    Call(SetPushBlock, 0, 8, 1, PUSH_GRID_BLOCK)
-    Call(SetPushBlock, 0, 11, 4, PUSH_GRID_BLOCK)
     Return
     End
 };

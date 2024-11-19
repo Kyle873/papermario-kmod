@@ -2,8 +2,8 @@
 #include "entity.h"
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_HiddenPanel), 25, 15, -60, 0, MODEL_o222, MAKE_ENTITY_END)
-    Call(AssignPanelFlag, GF_JAN02_HiddenPanel)
+    EVT_MAKE_ENTITY(HiddenPanel, GEN_HIDDEN_PANEL_1_PARAMS)
+    Call(AssignPanelFlag, GEN_HIDDEN_PANEL_1_FLAG)
     Return
     End
 };

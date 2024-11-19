@@ -2,6 +2,7 @@
 /// @brief Dry Dry Desert - S2E3 Oasis
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

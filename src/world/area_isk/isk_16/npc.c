@@ -66,8 +66,9 @@ NpcSettings N(NpcSettings_Tutankoopa_02) = {
 NpcData N(NpcData_Tutankoopa)[] = {
     {
         .id = NPC_Tutankoopa_01,
-        .pos = { 457.0f, -1300.0f, 316.0f },
-        .yaw = 230,
+        .pos = { GEN_NPC_TUTANKOOPA_01_VEC },
+        .yaw = GEN_NPC_TUTANKOOPA_01_DIR,
+        .territory = GEN_NPC_TUTANKOOPA_01_TERRITORY,
         .init = &N(EVS_NpcInit_Tutankoopa_01),
         .initVarCount = 1,
         .initVar = { .value = 0 },
@@ -95,8 +96,9 @@ NpcData N(NpcData_Tutankoopa)[] = {
     },
     {
         .id = NPC_Tutankoopa_02,
-        .pos = { 500.0f, -1300.0f, 316.0f },
-        .yaw = 230,
+        .pos = { GEN_NPC_TUTANKOOPA_02_VEC },
+        .yaw = GEN_NPC_TUTANKOOPA_02_DIR,
+        .territory = GEN_NPC_TUTANKOOPA_02_TERRITORY,
         .settings = &N(NpcSettings_Tutankoopa_02),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
         .drops = NO_DROPS,
@@ -123,8 +125,9 @@ NpcData N(NpcData_Tutankoopa)[] = {
 
 NpcData N(NpcData_ChainChomp) = {
     .id = NPC_ChainChomp,
-    .pos = { 457.0f, -1300.0f, 316.0f },
-    .yaw = 230,
+    .pos = { GEN_NPC_CHAIN_CHOMP_VEC },
+    .yaw = GEN_NPC_CHAIN_CHOMP_DIR,
+    .territory = GEN_NPC_CHAIN_CHOMP_TERRITORY,
     .init = &N(EVS_NpcInit_ChainChomp),
     .settings = &N(NpcSettings_ChainChomp),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,

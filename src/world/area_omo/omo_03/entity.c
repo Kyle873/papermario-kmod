@@ -76,13 +76,13 @@ EvtScript N(EVS_Scene_EnterSpring) = {
 };
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_SavePoint), -250, 60, 50, 0, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_ScriptSpring), -150, 0, 250, 0, MAKE_ENTITY_END)
-    Call(AssignScript, Ref(N(EVS_UseSpring_Exit)))
-    Call(MakeEntity, Ref(Entity_HiddenPanel), 203, 0, 200, 0, MODEL_o930, MAKE_ENTITY_END)
-    Call(AssignPanelFlag, GF_OMO03_HiddenPanel)
-    Call(MakeEntity, Ref(Entity_HiddenYellowBlock), 400, 60, -50, 0, ITEM_STONE_CAP, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_OMO03_HiddenItem_StoneCap)
+    EVT_MAKE_ENTITY(SavePoint, GEN_SAVE_POINT_1_PARAMS)
+    EVT_MAKE_ENTITY(ScriptSpring, GEN_SCRIPT_SPRING_1_PARAMS)
+    Call(AssignScript, Ref(GEN_SCRIPT_SPRING_1_SCRIPT))
+    EVT_MAKE_ENTITY(HiddenPanel, GEN_HIDDEN_PANEL_1_PARAMS)
+    Call(AssignPanelFlag, GEN_HIDDEN_PANEL_1_FLAG)
+    EVT_MAKE_ENTITY(HiddenYellowBlock, GEN_HIDDEN_YELLOW_BLOCK_1_PARAMS)
+    Call(AssignBlockFlag, GEN_HIDDEN_YELLOW_BLOCK_1_FLAG)
     Return
     End
 };

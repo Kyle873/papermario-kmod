@@ -1,16 +1,16 @@
 #include "sam_08.h"
 #include "entity.h"
 
-#define SUPER_BLOCK_MAPVAR MV_SuperBlock
-#define SUPER_BLOCK_GAMEFLAG GF_SAM08_SuperBlock
+#define SUPER_BLOCK_MAPVAR GEN_SUPER_BLOCK_1_VAR
+#define SUPER_BLOCK_GAMEFLAG GEN_SUPER_BLOCK_1_FLAG
 #include "world/common/entity/SuperBlock.inc.c"
 
 EvtScript N(EVS_MakeEntities) = {
-    EVT_MAKE_SUPER_BLOCK(-800, 210, -130, 0)
-    Call(MakeItemEntity, ITEM_PEBBLE, -770, -240, 30, ITEM_SPAWN_MODE_FIXED_SPAWN_ALWAYS_NEVER_VANISH, 0)
+    EVT_MAKE_SUPER_BLOCK(GEN_SUPER_BLOCK_1_PARAMS)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
     IfLt(GB_StoryProgress, STORY_CH7_DEFEATED_FIRST_DUPLIGHOST)
-        Call(MakeEntity, Ref(Entity_BlueSwitch), -960, -120, -37, 0, MAKE_ENTITY_END)
-        Call(AssignSwitchFlag, EVT_INDEX_OF_AREA_FLAG(AF_SAM_06))
+        EVT_MAKE_ENTITY(BlueSwitch, GEN_BLUE_SWITCH_1_PARAMS)
+        Call(AssignSwitchFlag, EVT_INDEX_OF_AREA_FLAG(GEN_BLUE_SWITCH_1_FLAG))
     EndIf
     Return
     End

@@ -4,16 +4,16 @@
 /// Creates the version string that appears on the file select menu.
 /// Also used to sign save files created with this mod.
 /// WARNING: name must not exceed 27 characters!
-#define DX_MOD_NAME "New Mod"
-#define DX_MOD_VER_MAJOR 1 /// Increase this when you make breaking changes to the savefile format (like reordering items)
-#define DX_MOD_VER_MINOR 0 /// Increase this when adding new features or other enchancements
+#define DX_MOD_NAME "KMod"
+#define DX_MOD_VER_MAJOR 0 /// Increase this when you make breaking changes to the savefile format (like reordering items)
+#define DX_MOD_VER_MINOR 1 /// Increase this when adding new features or other enchancements
 #define DX_MOD_VER_PATCH 0 /// Increase this when fixing bugs
 
 /// Enables the debug menu.
 #define DX_DEBUG_MENU 1
 
 /// Loads last used save file.
-#define DX_QUICK_LAUNCH 0
+#define DX_QUICK_LAUNCH 1
 
 /// Quick launch into this battle.
 /// Comment out to disable,
@@ -29,13 +29,13 @@
 #define DX_SKIP_DEMO 1
 
 /// Map to load when starting a new game.
-#define NEW_GAME_MAP_ID "kmr_20"
+#define NEW_GAME_MAP_ID "kmr_02"
 
 /// Entry to use when starting a new game.
-#define NEW_GAME_ENTRY_ID kmr_20_ENTRY_0
+#define NEW_GAME_ENTRY_ID kmr_02_ENTRY_5
 
 /// Story progress when starting a new game.
-#define NEW_GAME_STORY_PROGRESS STORY_INTRO
+#define NEW_GAME_STORY_PROGRESS STORY_CH0_MET_INNKEEPER
 
 /// Enables the profiler, which shows lots of performance info on screen.
 /// Press L + D-Pad Up to show/hide the profiler.

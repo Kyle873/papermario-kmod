@@ -2,16 +2,16 @@
 #include "entity.h"
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_BrickBlock), 30, 60, -85, 0, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_YellowBlock), 110, 60, -85, 0, ITEM_COIN, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_NOK11_ItemBlock_Coin)
-    Call(MakeEntity, Ref(Entity_BrickBlock), 330, 60, -85, 0, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_RedBlock), 380, 60, -85, 0, ITEM_DIZZY_ATTACK, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_NOK11_BadgeBlock_DizzyAttack)
-    Call(MakeEntity, Ref(Entity_BrickBlock), 650, 60, -85, 0, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_BrickBlock), 700, 60, -85, 0, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_YellowBlock), 750, 60, -85, 0, ITEM_FRIGHT_JAR, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_NOK11_ItemBlock_FrightJar)
+    EVT_MAKE_ENTITY(BrickBlock, GEN_BRICK_BLOCK_1_PARAMS)
+    EVT_MAKE_ENTITY(YellowBlock, GEN_YELLOW_BLOCK_1_PARAMS)
+    Call(AssignBlockFlag, GEN_YELLOW_BLOCK_1_FLAG)
+    EVT_MAKE_ENTITY(BrickBlock, GEN_BRICK_BLOCK_2_PARAMS)
+    EVT_MAKE_ENTITY(RedBlock, GEN_RED_BLOCK_1_PARAMS)
+    Call(AssignBlockFlag, GEN_RED_BLOCK_1_FLAG)
+    EVT_MAKE_ENTITY(BrickBlock, GEN_BRICK_BLOCK_3_PARAMS)
+    EVT_MAKE_ENTITY(BrickBlock, GEN_BRICK_BLOCK_4_PARAMS)
+    EVT_MAKE_ENTITY(YellowBlock, GEN_YELLOW_BLOCK_2_PARAMS)
+    Call(AssignBlockFlag, GEN_YELLOW_BLOCK_2_FLAG)
     Return
     End
 };

@@ -718,8 +718,9 @@ NpcSettings N(NpcSettings_Rhuff) = {
 NpcData N(NpcData_RowfAndRhuff)[] = {
     {
         .id = NPC_Rowf,
-        .pos = { -213.0f, -54.0f, 256.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_ROWF_1_VEC },
+        .yaw = GEN_NPC_ROWF_1_DIR,
+        .territory = GEN_NPC_ROWF_1_TERRITORY,
         .init = &N(EVS_NpcInit_Rowf),
         .settings = &N(NpcSettings_Rowf),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -732,8 +733,9 @@ NpcData N(NpcData_RowfAndRhuff)[] = {
     },
     {
         .id = NPC_Rhuff,
-        .pos = { -250.0f, 0.0f, 263.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_RHUFF_1_VEC },
+        .yaw = GEN_NPC_RHUFF_1_DIR,
+        .territory = GEN_NPC_RHUFF_1_TERRITORY,
         .init = &N(EVS_NpcInit_Rhuff),
         .settings = &N(NpcSettings_Rhuff),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,

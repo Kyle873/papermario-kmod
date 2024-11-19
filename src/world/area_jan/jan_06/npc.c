@@ -15,20 +15,9 @@ AnimID N(ExtraAnims_JungleFuzzy)[] = {
 
 NpcData N(NpcData_JungleFuzzy) = {
     .id = NPC_JungleFuzzy,
-    .pos = { 310.0f, 24.0f, 35.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 310, 24, 35 },
-            .wanderSize = { 50 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 310, 24, 35 },
-            .detectSize = { 150 },
-        }
-    },
+    .pos = { GEN_NPC_JUNGLE_FUZZY_VEC },
+    .yaw = GEN_NPC_JUNGLE_FUZZY_DIR,
+    .territory = GEN_NPC_JUNGLE_FUZZY_TERRITORY,
     .settings = &N(NpcSettings_JungleFuzzy_Wander),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
     .drops = JUNGLE_FUZZY_DROPS,
@@ -56,20 +45,9 @@ AnimID N(ExtraAnims_SpearGuy_Custom)[] = {
 NpcData N(NpcData_SpearGuy)[] = {
     {
         .id = NPC_SpearGuy,
-        .pos = { -298.0f, 35.0f, 37.0f },
-        .yaw = 90,
-        .territory = {
-            .wander = {
-                .isFlying = FALSE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { -298, 0, 37 },
-                .wanderSize = { 30 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { -298, 0, 37 },
-                .detectSize = { 150 },
-            }
-        },
+        .pos = { GEN_NPC_SPEAR_GUY_VEC },
+        .yaw = GEN_NPC_SPEAR_GUY_DIR,
+        .territory = GEN_NPC_SPEAR_GUY_TERRITORY,
         .settings = &N(NpcSettings_SpearGuy_Wander),
         .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
         .drops = SPEAR_GUY_DROPS,
@@ -82,8 +60,9 @@ NpcData N(NpcData_SpearGuy)[] = {
 
 NpcData N(NpcData_HeartPlant) = {
     .id = NPC_HeartPlant,
-    .pos = { 410.0f, 0.0f, -30.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_HEART_PLANT_VEC },
+    .yaw = GEN_NPC_HEART_PLANT_DIR,
+    .territory = GEN_NPC_HEART_PLANT_TERRITORY,
     .settings = &N(NpcSettings_HeartPlant),
     .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_USE_INSPECT_ICON | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
     .drops = NO_DROPS,
@@ -93,8 +72,9 @@ NpcData N(NpcData_HeartPlant) = {
 
 NpcData N(NpcData_HurtPlant_01) = {
     .id = NPC_HurtPlant_01,
-    .pos = { 110.0f, 0.0f, 55.0f },
-    .yaw = 90,
+    .pos = { GEN_NPC_HURT_PLANT_01_VEC },
+    .yaw = GEN_NPC_HURT_PLANT_01_DIR,
+    .territory = GEN_NPC_HURT_PLANT_01_TERRITORY,
     .settings = &N(NpcSettings_HurtPlant),
     .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_USE_INSPECT_ICON | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
     .drops = HURT_PLANT_DROPS,
@@ -104,8 +84,9 @@ NpcData N(NpcData_HurtPlant_01) = {
 
 NpcData N(NpcData_HurtPlant_02) = {
     .id = NPC_HurtPlant_02,
-    .pos = { -430.0f, 0.0f, -80.0f },
-    .yaw = 90,
+    .pos = { GEN_NPC_HURT_PLANT_02_VEC },
+    .yaw = GEN_NPC_HURT_PLANT_02_DIR,
+    .territory = GEN_NPC_HURT_PLANT_02_TERRITORY,
     .settings = &N(NpcSettings_HurtPlant),
     .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_USE_INSPECT_ICON | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
     .drops = HURT_PLANT_DROPS,

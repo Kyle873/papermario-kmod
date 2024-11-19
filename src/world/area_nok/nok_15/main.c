@@ -9,8 +9,8 @@ EvtScript N(EVS_ExitWalk_trd_00_0) = EVT_EXIT_WALK_NOK(60, nok_15_ENTRY_1, "trd_
 EvtScript N(EVS_ExitWalk_trd_00_4) = EVT_EXIT_WALK_NOK(60, nok_15_ENTRY_2, "trd_00", trd_00_ENTRY_4);
 
 BombTrigger N(BombPos_Wall) = {
-    .pos = { -26.0f, 0.0f, -531.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_2_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_2_RAD,
 };
 
 EvtScript N(EVS_BlastWall) = {
@@ -28,19 +28,13 @@ EvtScript N(EVS_SetupTexPan) = {
     // flowers
     Call(SetTexPanner, MODEL_suimen1, TEX_PANNER_1)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP( -100,    0,  600,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    0,    1,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     // water
     Call(SetTexPanner, MODEL_kabemizu1, TEX_PANNER_2)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_2)
-        TEX_PAN_PARAMS_STEP( -100,    0,  400,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    0,    1,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_2
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Return
@@ -87,7 +81,7 @@ EvtScript N(EVS_BindExitTriggers) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_PLEASANT_PATH)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_DEFAULT(0, 0, 0)
     Call(MakeNpcs, FALSE, Ref(N(DefaultNPCs)))

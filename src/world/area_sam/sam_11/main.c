@@ -20,8 +20,8 @@ ShakeTreeConfig N(ShakeTree_Tree1) = {
 };
 
 BombTrigger N(BombPos_Tree1) = {
-    .pos = { 447.0f, 0.0f, -144.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_2_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_2_RAD,
 };
 
 FoliageModelList N(Tree2_LeafModels)  = FOLIAGE_MODEL_LIST(MODEL_o192);
@@ -33,8 +33,8 @@ ShakeTreeConfig N(ShakeTree_Tree2) = {
 };
 
 BombTrigger N(BombPos_Tree2) = {
-    .pos = { -440.0f, 0.0f, -178.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_3_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_3_RAD,
 };
 
 FoliageModelList N(Tree3_LeafModels) =  FOLIAGE_MODEL_LIST(MODEL_o190);
@@ -46,8 +46,8 @@ ShakeTreeConfig N(ShakeTree_Tree3) = {
 };
 
 BombTrigger N(BombPos_Tree3) = {
-    .pos = { -450.0f, 0.0f, -80.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_4_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_4_RAD,
 };
 
 EvtScript N(EVS_ExitWalk_sam_02_1) = {
@@ -87,7 +87,7 @@ EvtScript N(EVS_BindExitTriggers) = {
 #include "../common/ManageSnowfall.inc.c"
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_SHIVER_CITY)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
     Call(GetEntryID, LVar0)

@@ -2,21 +2,15 @@
 #include "sprite/player.h"
 
 Vec3f N(TwinkPacingPath1)[] = {
-    {  -40.0,    90.0,    0.0 },
-    {  -10.0,    65.0,  -20.0 },
-    {   20.0,    70.0,  -10.0 },
+    GEN_PATH_4_PATH
 };
 
 Vec3f N(TwinkPacingPath2)[] = {
-    {   20.0,    70.0,  -10.0 },
-    {  -30.0,    45.0,  -20.0 },
-    {  -80.0,    50.0,  -10.0 },
+    GEN_PATH_5_PATH
 };
 
 Vec3f N(TwinkPacingPath3)[] = {
-    {  -80.0,    50.0,  -10.0 },
-    {  -70.0,    35.0,   -5.0 },
-    {  -60.0,    30.0,    0.0 },
+    GEN_PATH_6_PATH
 };
 
 EvtScript N(EVS_Scene_Chapter3) = {

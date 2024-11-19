@@ -8,18 +8,18 @@ EvtScript N(EVS_OpenChest_AttackFXE) = EVT_OPEN_CHEST(ITEM_ATTACK_FX_E, GF_SAM01
 #define NAME_SUFFIX
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_Chest), 95, 0, -180, 270, 0, MAKE_ENTITY_END)
-    Call(AssignChestFlag, GF_SAM01_Chest_AttackFXE)
-    Call(AssignScript, Ref(N(EVS_OpenChest_AttackFXE_Entity)))
+    EVT_MAKE_ENTITY(Chest, GEN_CHEST_1_PARAMS)
+    Call(AssignChestFlag, GEN_CHEST_1_FLAG)
+    Call(AssignScript, Ref(GEN_CHEST_1_SCRIPT))
     Call(SetEntityCullMode, 1)
     IfLt(GB_StoryProgress, STORY_CH7_MAYOR_MURDER_SOLVED)
-        Call(MakeItemEntity, ITEM_PRESENT, -325, 0, -240, ITEM_SPAWN_MODE_DECORATION, 0)
+        EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
         Set(MV_PresentItemID, LVar0)
     EndIf
     Call(MakeItemEntity, ITEM_SNOWMAN_BUCKET, NPC_DISPOSE_LOCATION, ITEM_SPAWN_MODE_DECORATION, 0)
     Set(MV_BucketItemID, LVar0)
-    Call(MakeEntity, Ref(Entity_HiddenPanel), -110, 0, 0, 0, MODEL_o341, MAKE_ENTITY_END)
-    Call(AssignPanelFlag, GF_SAM01_HiddenPanel)
+    EVT_MAKE_ENTITY(HiddenPanel, GEN_HIDDEN_PANEL_1_PARAMS)
+    Call(AssignPanelFlag, GEN_HIDDEN_PANEL_1_FLAG)
     Return
     End
 };

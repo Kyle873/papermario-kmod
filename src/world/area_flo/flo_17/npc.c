@@ -8,20 +8,9 @@
 
 NpcData N(NpcData_Lakitu_01) = {
     .id = NPC_Lakitu_01,
-    .pos = { -185.0f, 90.0f, 10.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -185, 90, 10 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_RECT,
-            .detectPos  = { -185, 90, 0 },
-            .detectSize = { 85, 120 },
-        }
-    },
+    .pos = { GEN_NPC_LAKITU_01_VEC },
+    .yaw = GEN_NPC_LAKITU_01_DIR,
+    .territory = GEN_NPC_LAKITU_01_TERRITORY,
     .settings = &N(NpcSettings_Lakitu_SpinySpawner),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = LAKITU_DROPS,
@@ -31,20 +20,9 @@ NpcData N(NpcData_Lakitu_01) = {
 
 NpcData N(NpcData_Lakitu_02) = {
     .id = NPC_Lakitu_02,
-    .pos = { 200.0f, 90.0f, -25.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 200, 90, -25 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_RECT,
-            .detectPos  = { 200, 90, 0 },
-            .detectSize = { 85, 120 },
-        }
-    },
+    .pos = { GEN_NPC_LAKITU_02_VEC },
+    .yaw = GEN_NPC_LAKITU_02_DIR,
+    .territory = GEN_NPC_LAKITU_02_TERRITORY,
     .settings = &N(NpcSettings_Lakitu_SpinySpawner),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = LAKITU_DROPS,
@@ -54,20 +32,9 @@ NpcData N(NpcData_Lakitu_02) = {
 
 NpcData N(NpcData_Spiny_01) = {
     .id = NPC_Spiny_01,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 0,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 0, 0, 0 },
-            .wanderSize = { 0 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 0, 0, 0 },
-            .detectSize = { 0 },
-        }
-    },
+    .pos = { GEN_NPC_SPINY_01_VEC },
+    .yaw = GEN_NPC_SPINY_01_DIR,
+    .territory = GEN_NPC_SPINY_01_TERRITORY,
     .settings = &N(NpcSettings_SpawnedSpiny),
     .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = SPINY_DROPS,
@@ -77,20 +44,9 @@ NpcData N(NpcData_Spiny_01) = {
 
 NpcData N(NpcData_Spiny_02) = {
     .id = NPC_Spiny_02,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 0,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 0, 0, 0 },
-            .wanderSize = { 0 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 0, 0, 0 },
-            .detectSize = { 0 },
-        }
-    },
+    .pos = { GEN_NPC_SPINY_02_VEC },
+    .yaw = GEN_NPC_SPINY_02_DIR,
+    .territory = GEN_NPC_SPINY_02_TERRITORY,
     .settings = &N(NpcSettings_SpawnedSpiny),
     .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = SPINY_DROPS,
@@ -100,20 +56,9 @@ NpcData N(NpcData_Spiny_02) = {
 
 NpcData N(NpcData_Spiny_03) = {
     .id = NPC_Spiny_03,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 0,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 0, 0, 0 },
-            .wanderSize = { 0 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 0, 0, 0 },
-            .detectSize = { 0 },
-        }
-    },
+    .pos = { GEN_NPC_SPINY_03_VEC },
+    .yaw = GEN_NPC_SPINY_03_DIR,
+    .territory = GEN_NPC_SPINY_03_TERRITORY,
     .settings = &N(NpcSettings_SpawnedSpiny),
     .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = SPINY_DROPS,
@@ -123,20 +68,9 @@ NpcData N(NpcData_Spiny_03) = {
 
 NpcData N(NpcData_Spiny_04) = {
     .id = NPC_Spiny_04,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 0,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 0, 0, 0 },
-            .wanderSize = { 0 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 0, 0, 0 },
-            .detectSize = { 0 },
-        }
-    },
+    .pos = { GEN_NPC_SPINY_04_VEC },
+    .yaw = GEN_NPC_SPINY_04_DIR,
+    .territory = GEN_NPC_SPINY_04_TERRITORY,
     .settings = &N(NpcSettings_SpawnedSpiny),
     .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = SPINY_DROPS,

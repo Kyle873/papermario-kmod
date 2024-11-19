@@ -107,8 +107,9 @@ NpcSettings N(NpcSettings_Misstar) = {
 
 NpcData N(NpcData_Misstar) = {
     .id = NPC_Misstar,
-    .pos = { 320.0f, 30.0f, -290.0f },
-    .yaw = 100,
+    .pos = { GEN_NPC_MISSTAR_VEC },
+    .yaw = GEN_NPC_MISSTAR_DIR,
+    .territory = GEN_NPC_MISSTAR_TERRITORY,
     .settings = &N(NpcSettings_Misstar),
     .flags = ENEMY_FLAG_PASSIVE,
     .animations = {

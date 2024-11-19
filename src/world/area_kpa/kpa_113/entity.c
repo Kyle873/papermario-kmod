@@ -37,13 +37,13 @@ EvtScript N(EVS_UnlockPrompt_LockedDoor) = {
 
 EvtScript N(EVS_MakeEntities) = {
     IfEq(GF_KPA113_UnlockedDoor, FALSE)
-        Call(MakeEntity, Ref(Entity_Padlock), 418, 10, 100, 280, MAKE_ENTITY_END)
+        EVT_MAKE_ENTITY(Padlock, GEN_PADLOCK_1_PARAMS)
         Set(MV_PadlockEntityID, LVar0)
         BindPadlock(Ref(N(EVS_UnlockPrompt_LockedDoor)), TRIGGER_WALL_PRESS_A, EVT_ENTITY_INDEX(0), Ref(N(KeyList_BowsersCastle)), 0, 1)
     Else
         BindTrigger(Ref(N(EVS_ExitDoors_kpa_82_0)), TRIGGER_WALL_PRESS_A, COLLIDER_deiliett, 1, 0)
     EndIf
-    Call(MakeEntity, Ref(Entity_SavePoint), 375, 60, 50, 0, MAKE_ENTITY_END)
+    EVT_MAKE_ENTITY(SavePoint, GEN_SAVE_POINT_1_PARAMS)
     Return
     End
 };

@@ -28,7 +28,7 @@ EvtScript N(EVS_EnterMap) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_FOREVER_FOREST)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_MIM_12)
     Call(SetCamPerspective, CAM_DEFAULT, CAM_UPDATE_FROM_ZONE, 25, 16, 1024) // far clip distance closer than normal, further than MIM
     Call(SetCamBGColor, CAM_DEFAULT, 0, 0, 0)

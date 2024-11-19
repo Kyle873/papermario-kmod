@@ -450,8 +450,8 @@ HitResult calc_player_damage_enemy(void) {
             targetDefense += 127;
         }
 
-        currentAttackDamage = battleStatus->curAttackDamage;
-        currentAttackDamage += count_power_plus(battleStatus->curAttackElement);
+        currentAttackDamage = battleStatus->curAttackDamage; // TODO: Variance formula idea?: + ((gPlayerData.level / 2) + rand_int(gPlayerData.level / 2));
+        currentAttackDamage += count_power_plus(battleStatus->curAttackElement) * 10;
 
         if (battleStatus->merleeAttackBoost > 0
             && (gBattleStatus.flags1 & BS_FLAGS1_INCLUDE_POWER_UPS || battleStatus->curAttackElement & DAMAGE_TYPE_JUMP)

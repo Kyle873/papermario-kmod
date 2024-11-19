@@ -2,6 +2,7 @@
 /// @brief Dry Dry Desert - S3W1
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

@@ -4,20 +4,9 @@
 
 NpcData N(NpcData_BuzzyBeetle_01) = {
     .id = NPC_BuzzyBeetle_01,
-    .pos = { 561.0f, 25.0f, 47.0f },
-    .yaw = 355,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 561, 25, 47 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 606, 25, 94 },
-            .detectSize = { 80 },
-        }
-    },
+    .pos = { GEN_NPC_BUZZY_BEETLE_01_VEC },
+    .yaw = GEN_NPC_BUZZY_BEETLE_01_DIR,
+    .territory = GEN_NPC_BUZZY_BEETLE_01_TERRITORY,
     .settings = &N(NpcSettings_BuzzyBeetle),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION,
     .drops = ISK_BUZZY_BEETLE_DROPS,
@@ -26,20 +15,9 @@ NpcData N(NpcData_BuzzyBeetle_01) = {
 
 NpcData N(NpcData_BuzzyBeetle_02) = {
     .id = NPC_BuzzyBeetle_02,
-    .pos = { 608.0f, -260.0f, -158.0f },
-    .yaw = 175,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 608, -260, -158 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 596, -260, -203 },
-            .detectSize = { 80 },
-        }
-    },
+    .pos = { GEN_NPC_BUZZY_BEETLE_02_VEC },
+    .yaw = GEN_NPC_BUZZY_BEETLE_02_DIR,
+    .territory = GEN_NPC_BUZZY_BEETLE_02_TERRITORY,
     .settings = &N(NpcSettings_BuzzyBeetle),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = ISK_BUZZY_BEETLE_DROPS,

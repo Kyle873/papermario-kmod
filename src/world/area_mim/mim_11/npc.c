@@ -56,8 +56,9 @@ EvtScript N(EVS_NpcInit_Bootler) = {
 NpcData N(NpcData_Bootler)[] = {
     {
         .id = NPC_Bootler,
-        .pos = { 68.0f, 60.0f, -145.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_BOOTLER_VEC },
+        .yaw = GEN_NPC_BOOTLER_DIR,
+        .territory = GEN_NPC_BOOTLER_TERRITORY,
         .init = &N(EVS_NpcInit_Bootler),
         .settings = &N(NpcSettings_Boo),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_FLYING,
@@ -83,8 +84,9 @@ NpcData N(NpcData_Bootler)[] = {
     },
     {
         .id = NPC_Skolar,
-        .pos = { 68.0f, 60.0f, -145.0f },
-        .yaw = 135,
+        .pos = { GEN_NPC_SKOLAR_VEC },
+        .yaw = GEN_NPC_SKOLAR_DIR,
+        .territory = GEN_NPC_SKOLAR_TERRITORY,
         .init = &N(EVS_NpcInit_Skolar),
         .settings = &N(NpcSettings_StarSpirit),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_FLYING,

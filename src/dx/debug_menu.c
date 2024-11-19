@@ -1473,19 +1473,19 @@ void dx_debug_update_edit_stats() {
         switch (DebugStatPos) {
             case DEBUG_STAT_HP:
                 val = DebugStatValues[DEBUG_STAT_HP] + 5 * dx;
-                DebugStatValues[DEBUG_STAT_HP] = dx_debug_clamp(val, 5, 50);
+                DebugStatValues[DEBUG_STAT_HP] = dx_debug_clamp(val, 5, MAX_HP);
                 break;
             case DEBUG_STAT_FP:
                 val = DebugStatValues[DEBUG_STAT_FP] + 5 * dx;
-                DebugStatValues[DEBUG_STAT_FP] = dx_debug_clamp(val, 0, 50);
+                DebugStatValues[DEBUG_STAT_FP] = dx_debug_clamp(val, 0, MAX_FP);
                 break;
             case DEBUG_STAT_BP:
                 val = DebugStatValues[DEBUG_STAT_BP] + 3 * dx;
-                DebugStatValues[DEBUG_STAT_BP] = dx_debug_clamp(val, 3, 30);
+                DebugStatValues[DEBUG_STAT_BP] = dx_debug_clamp(val, 3, MAX_BP);
                 break;
             case DEBUG_STAT_LEVEL:
                 val = DebugStatValues[DEBUG_STAT_LEVEL] + dx;
-                DebugStatValues[DEBUG_STAT_LEVEL] = dx_debug_clamp(val, 1, 27);
+                DebugStatValues[DEBUG_STAT_LEVEL] = dx_debug_clamp(val, 1, MAX_LEVEL);
                 break;
             case DEBUG_STAT_SPIRITS:
                 val = DebugStatValues[DEBUG_STAT_SPIRITS] + dx;

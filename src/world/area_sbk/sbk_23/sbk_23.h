@@ -2,6 +2,7 @@
 /// @brief Dry Dry Desert - N1 (Tweester B)
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

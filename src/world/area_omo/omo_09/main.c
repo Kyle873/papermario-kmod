@@ -9,7 +9,7 @@ EvtScript N(EVS_BindExitTriggers) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_SHY_GUYS_TOYBOX)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     IfGe(GB_StoryProgress, STORY_CH4_DEFEATED_GENERAL_GUY)
         Set(GF_OMO09_SpawnedPeachChoice3, TRUE)
     EndIf
@@ -34,7 +34,7 @@ EvtScript N(EVS_Main) = {
                     Call(MakeNpcs, TRUE, Ref(N(KoopatrolAmbushNPCs)))
                 CaseEq(2)
                     Call(MakeNpcs, TRUE, Ref(N(DefaultNPCs)))
-                    Call(MakeItemEntity, ITEM_SUPER_SODA, 1900, 150, 0, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_OMO09_Item_SuperSoda)
+                    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_17_PARAMS)
             EndSwitch
         Else
             Call(MakeNpcs, TRUE, Ref(N(DefaultNPCs)))

@@ -2,6 +2,7 @@
 /// @brief Bowser's Castle - Castle Key Timing Puzzle
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

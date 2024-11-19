@@ -92,7 +92,7 @@ SearchBushConfig N(SearchBush_SwitchBush) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_GOOMBA_ROAD)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     Call(N(UseSlowerFadeOnMapChange))
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)

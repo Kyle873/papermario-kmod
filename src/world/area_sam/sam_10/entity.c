@@ -7,9 +7,9 @@ API_CALLABLE(N(SetStarStoneItemScale)) {
 }
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_RedBlock), 775, 540, -50, 0, ITEM_MEGA_JUMP, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_SAM10_BadgeBlock_MegaJump)
-    Call(MakeItemEntity, ITEM_STAR_PIECE, -160, 300, -110, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_SAM10_Item_StarPiece)
+    EVT_MAKE_ENTITY(RedBlock, GEN_RED_BLOCK_1_PARAMS)
+    Call(AssignBlockFlag, GEN_RED_BLOCK_1_FLAG)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
     IfLt(GB_StoryProgress, STORY_CH7_RAISED_FROZEN_STAIRS)
         Call(DropResizableItemEntity, ITEM_STAR_STONE, NPC_DISPOSE_LOCATION, ITEM_SPAWN_MODE_DECORATION, 0)
         Call(N(SetStarStoneItemScale))
@@ -18,8 +18,8 @@ EvtScript N(EVS_MakeEntities) = {
         Call(DropResizableItemEntity, ITEM_STAR_STONE, -117, 179, -55, ITEM_SPAWN_MODE_DECORATION, 0)
         Call(N(SetStarStoneItemScale))
     EndIf
-    Call(MakeEntity, Ref(Entity_SavePoint), -250, 870, -210, 0, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_HeartBlock), 770, 1200, -225, 0, MAKE_ENTITY_END)
+    EVT_MAKE_ENTITY(SavePoint, GEN_SAVE_POINT_1_PARAMS)
+    EVT_MAKE_ENTITY(HeartBlock, GEN_HEART_BLOCK_1_PARAMS)
     Return
     End
 };

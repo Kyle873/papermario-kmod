@@ -2,6 +2,7 @@
 /// @brief Toad Town Tunnels - Path to Shiver City (B2)
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

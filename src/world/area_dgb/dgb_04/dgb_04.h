@@ -2,6 +2,7 @@
 /// @brief Tubba's Castle - Stairs to Basement
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

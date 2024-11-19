@@ -66,8 +66,8 @@ EvtScript N(EVS_OnBreak_SpecialBrick) = {
     Call(PlaySound, SOUND_CHIME_SOLVED_PUZZLE)
     Call(PlaySoundAt, SOUND_SPAWN_BLOCK, SOUND_SPACE_DEFAULT, 665, 35, 70)
     PlayEffect(EFFECT_SPARKLES, 0, 665, 48, 70, 10)
-    Call(MakeEntity, Ref(Entity_YellowBlock), 665, 35, 70, 45, ITEM_SUPER_SHROOM, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_KMR11_ItemBlock_SuperShroom)
+    EVT_MAKE_ENTITY(YellowBlock, GEN_YELLOW_BLOCK_1_PARAMS)
+    Call(AssignBlockFlag, GEN_YELLOW_BLOCK_1_FLAG)
     Return
     End
 };
@@ -75,8 +75,8 @@ EvtScript N(EVS_OnBreak_SpecialBrick) = {
 EvtScript N(EVS_MakeEntities) = {
     IfLe(GB_StoryProgress, STORY_CH0_FOUND_GATEHOUSE_SWITCH)
         IfEq(GB_StoryProgress, STORY_CH0_FOUND_GATEHOUSE_SWITCH)
-            Call(MakeEntity, Ref(Entity_BlueSwitch), -469, 0, 153, 0, MAKE_ENTITY_END)
-            Call(AssignSwitchFlag, EVT_INDEX_OF_AREA_FLAG(AF_KMR_04))
+            EVT_MAKE_ENTITY(BlueSwitch, GEN_BLUE_SWITCH_1_PARAMS)
+            Call(AssignSwitchFlag, EVT_INDEX_OF_AREA_FLAG(GEN_BLUE_SWITCH_1_FLAG))
             Set(MV_SwitchEntityID, LVar0)
             BindTrigger(Ref(N(EVS_Scene_SelfDestruct)), TRIGGER_AREA_FLAG_SET, AF_KMR_04, 1, 0)
             BindTrigger(Ref(N(EVS_Scene_OverhearEnemies)), TRIGGER_WALL_PRESS_A, COLLIDER_tt, 1, 0)
@@ -88,15 +88,15 @@ EvtScript N(EVS_MakeEntities) = {
             BindTrigger(Ref(N(EVS_Scene_OverhearEnemies)), TRIGGER_WALL_PRESS_A, COLLIDER_tt, 1, 0)
         EndIf
     EndIf
-    Call(MakeEntity, Ref(Entity_BrickBlock), 625, -25, 110, 45, MAKE_ENTITY_END)
+    EVT_MAKE_ENTITY(BrickBlock, GEN_BRICK_BLOCK_1_PARAMS)
     IfEq(GF_KMR11_ItemBlock_SuperShroom, FALSE)
         Call(AssignScript, Ref(N(EVS_OnBreak_SpecialBrick)))
     Else
-        Call(MakeEntity, Ref(Entity_YellowBlock), 665, 35, 70, 45, ITEM_SUPER_SHROOM, MAKE_ENTITY_END)
-        Call(AssignBlockFlag, GF_KMR11_ItemBlock_SuperShroom)
+        EVT_MAKE_ENTITY(YellowBlock, GEN_YELLOW_BLOCK_2_PARAMS)
+        Call(AssignBlockFlag, GEN_YELLOW_BLOCK_2_FLAG)
     EndIf
-    Call(MakeEntity, Ref(Entity_HiddenPanel), 550, 0, -550, 0, MODEL_point, MAKE_ENTITY_END)
-    Call(AssignPanelFlag, GF_KMR11_HiddenPanel)
+    EVT_MAKE_ENTITY(HiddenPanel, GEN_HIDDEN_PANEL_1_PARAMS)
+    Call(AssignPanelFlag, GEN_HIDDEN_PANEL_1_FLAG)
     Return
     End
 };

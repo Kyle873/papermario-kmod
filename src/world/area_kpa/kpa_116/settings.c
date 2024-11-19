@@ -1,8 +1,7 @@
 #include "kpa_116.h"
 
 EntryList N(Entrances) = {
-    [kpa_116_ENTRY_0]   { -150.0,    0.0,  110.0,    0.0 },
-    [kpa_116_ENTRY_1]   {  473.0,    0.0,  112.0,  270.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {

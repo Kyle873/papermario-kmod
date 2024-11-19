@@ -2,9 +2,9 @@
 #include "entity.h"
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_HeartBlock), 800, 60, 0, 0, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_RedBlock), 220, 60, 10, 0, ITEM_CLOSE_CALL, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_KMR06_BadgeBlock_CloseCall)
+    EVT_MAKE_ENTITY(HeartBlock, GEN_HEART_BLOCK_1_PARAMS)
+    EVT_MAKE_ENTITY(RedBlock, GEN_RED_BLOCK_1_PARAMS)
+    Call(AssignBlockFlag, GEN_RED_BLOCK_1_FLAG)
     Return
     End
 };

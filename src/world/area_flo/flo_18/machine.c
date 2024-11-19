@@ -624,23 +624,23 @@ EvtScript N(EVS_DamageMachine) = {
 };
 
 BombTrigger N(Machine_BombTrigger_01) = {
-    .pos = { 5.0f, 0.0f, -10.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_1_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_1_RAD,
 };
 
 BombTrigger N(Machine_BombTrigger_02) = {
-    .pos = { -5.0f, 0.0f, -20.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_2_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_2_RAD,
 };
 
 BombTrigger N(Machine_BombTrigger_03) = {
-    .pos = { 50.0f, 0.0f, -10.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_3_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_3_RAD,
 };
 
 BombTrigger N(Machine_BombTrigger_04) = {
-    .pos = { 105.0f, 0.0f, -10.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_4_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_4_RAD,
 };
 
 EvtScript N(EVS_SetupMachine) = {

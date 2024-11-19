@@ -3,10 +3,7 @@
 extern EvtScript N(EVS_Main);
 
 EntryList N(Entrances) = {
-    [kzn_19_ENTRY_0]    { -435.0,  250.0, -350.0,   90.0 },
-    [kzn_19_ENTRY_1]    { -490.0,   25.0,  -30.0,   90.0 },
-    [kzn_19_ENTRY_2]    {  440.0,   25.0,  -50.0,  270.0 },
-    [kzn_19_ENTRY_3]    {  440.0,   25.0,  -50.0,   90.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {

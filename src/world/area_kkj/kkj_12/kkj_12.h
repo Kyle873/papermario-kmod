@@ -2,6 +2,7 @@
 /// @brief Peach's Castle - Stairs Hallway (3F)
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

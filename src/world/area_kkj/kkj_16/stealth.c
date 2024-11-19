@@ -2,21 +2,15 @@
 #include "sprite/player.h"
 
 Vec3f N(TwinkHide1)[] = {
-    { -752.0,    60.0,  -55.0 },
-    { -755.0,   120.0,  -60.0 },
-    { -770.0,   140.0, -130.0 },
+    GEN_PATH_1_PATH
 };
 
 Vec3f N(TwinkFollowPath1)[] = {
-    { -770.0,   140.0, -130.0 },
-    { -755.0,   135.0,  -90.0 },
-    { -670.0,   110.0,  -80.0 },
+    GEN_PATH_2_PATH
 };
 
 Vec3f N(TwinkFollowPath2)[] = {
-    { -670.0,   110.0,  -80.0 },
-    { -630.0,   100.0,  -80.0 },
-    { -470.0,    90.0,  -80.0 },
+    GEN_PATH_3_PATH
 };
 
 EvtScript N(EVS_ApproachPeach) = {

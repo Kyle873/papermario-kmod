@@ -364,8 +364,8 @@ ShakeTreeConfig N(ShakeTree_Tree1) = {
 };
 
 BombTrigger N(BombPos_Tree1) = {
-    .pos = { -352.0f, 0.0f, 10.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_1_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_1_RAD,
 };
 
 FoliageModelList N(Tree2_LeafModels)  = FOLIAGE_MODEL_LIST(MODEL_o194);
@@ -399,8 +399,8 @@ ShakeTreeConfig N(ShakeTree_Tree2) = {
 };
 
 BombTrigger N(BombPos_Tree2) = {
-    .pos = { -92.0f, 0.0f, -295.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_2_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_2_RAD,
 };
 
 EvtScript N(EVS_OnShakeTree3) = {
@@ -411,7 +411,7 @@ EvtScript N(EVS_OnShakeTree3) = {
         Return
     EndIf
     Wait(15)
-    Call(MakeItemEntity, ITEM_DOLLY, 250, 132, -100, ITEM_SPAWN_MODE_FALL_NEVER_VANISH, GF_KMR04_Tree3_Dolly)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
     Set(AF_KMR_09, TRUE)
     Thread
         Label(10)
@@ -453,8 +453,8 @@ ShakeTreeConfig N(ShakeTree_Tree3) = {
 };
 
 BombTrigger N(BombPos_Tree3) = {
-    .pos = { 248.0f, 0.0f, -122.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_3_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_3_RAD,
 };
 
 EvtScript N(EVS_SetupFoliage) = {

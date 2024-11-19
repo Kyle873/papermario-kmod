@@ -3,7 +3,7 @@
 
 EvtScript N(EVS_MakeEntities) = {
     IfLt(GB_StoryProgress, STORY_EPILOGUE)
-        Call(MakeEntity, Ref(Entity_SavePoint), 110, 60, -100, 0, MAKE_ENTITY_END)
+        EVT_MAKE_ENTITY(SavePoint, GEN_SAVE_POINT_1_PARAMS)
     EndIf
     Return
     End

@@ -3,8 +3,7 @@
 #include "world/common/todo/SetPlayerSpriteSet2_MapInit.inc.c"
 
 EntryList N(Entrances) = {
-    [kkj_23_ENTRY_0]    {  735.0,    0.0,  -60.0,  270.0 },
-    [kkj_23_ENTRY_1]    {   10.0,    0.0,  -60.0,   90.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {

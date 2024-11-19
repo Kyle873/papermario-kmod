@@ -12,25 +12,15 @@ API_CALLABLE(N(ClearPeachDepressed)) {
 }
 
 Vec3f N(TwinkHideCh3Path)[] = {
-    {  100.0,    50.0, -160.0 },
-    {   30.0,   120.0, -120.0 },
-    {   50.0,   200.0,  -80.0 },
+    GEN_PATH_3_PATH
 };
 
 Vec3f N(TwinkFollowCh3Path1)[] = {
-    {   50.0,   200.0,  -70.0 },
-    {   80.0,   110.0,  -70.0 },
-    {  110.0,   120.0,  -70.0 },
-    {  140.0,   110.0,  -70.0 },
-    {  170.0,   120.0,  -70.0 },
-    {  200.0,   110.0,  -70.0 },
-    {  230.0,   120.0,  -70.0 },
+    GEN_PATH_4_PATH
 };
 
 Vec3f N(TwinkFollowCh3Path2)[] = {
-    {  230.0,   120.0,  -70.0 },
-    {  220.0,    60.0,  -70.0 },
-    {  250.0,    40.0,  -70.0 },
+    GEN_PATH_5_PATH
 };
 
 EvtScript N(EVS_ApproachPeach_Ch3) = {

@@ -8,10 +8,7 @@ extern EvtScript N(EVS_SetupFoliage);
 #include "world/common/atomic/TexturePan.inc.c"
 
 EntryList N(Entrances) = {
-    [sbk_56_ENTRY_0]    { -475.0,    0.0,    0.0,   90.0 },
-    [sbk_56_ENTRY_1]    {  475.0,    0.0,    0.0,  270.0 },
-    [sbk_56_ENTRY_2]    {    0.0,    0.0, -475.0,  180.0 },
-    [sbk_56_ENTRY_3]    {    0.0,    0.0,  475.0,    0.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {
@@ -76,7 +73,7 @@ EvtScript N(EVS_BindExitTriggers) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_DRY_DRY_DESERT)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     IfEq(GB_StoryProgress, STORY_CH2_GOT_PULSE_STONE)
         Call(DisablePulseStone, FALSE)
@@ -93,10 +90,7 @@ EvtScript N(EVS_Main) = {
     Exec(N(EVS_SetupFoliage))
     Call(SetTexPanner, MODEL_o49, TEX_PANNER_1)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP(   80,   80,  -80,  -80)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Return

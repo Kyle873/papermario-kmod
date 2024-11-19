@@ -397,8 +397,9 @@ EvtScript N(EVS_NpcInit_GourmetGuy) = {
 NpcData N(NpcData_GourmetGuy)[] = {
     {
         .id = NPC_GourmetGuy,
-        .pos = { -250.0f, 10.0f, 85.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_GOURMET_GUY_VEC },
+        .yaw = GEN_NPC_GOURMET_GUY_DIR,
+        .territory = GEN_NPC_GOURMET_GUY_TERRITORY,
         .init = &N(EVS_NpcInit_GourmetGuy),
         .settings = &N(NpcSettings_GourmetGuy),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -408,8 +409,9 @@ NpcData N(NpcData_GourmetGuy)[] = {
     },
     {
         .id = NPC_GourmetGuy_Knife,
-        .pos = { -250.0f, 10.0f, 85.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_GOURMET_GUY_KNIFE_VEC },
+        .yaw = GEN_NPC_GOURMET_GUY_KNIFE_DIR,
+        .territory = GEN_NPC_GOURMET_GUY_KNIFE_TERRITORY,
         .settings = &N(NpcSettings_GourmetGuy),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
@@ -418,8 +420,9 @@ NpcData N(NpcData_GourmetGuy)[] = {
     },
     {
         .id = NPC_GourmetGuy_Fork,
-        .pos = { -250.0f, 10.0f, 85.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_GOURMET_GUY_FORK_VEC },
+        .yaw = GEN_NPC_GOURMET_GUY_FORK_DIR,
+        .territory = GEN_NPC_GOURMET_GUY_FORK_TERRITORY,
         .settings = &N(NpcSettings_GourmetGuy),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
@@ -430,20 +433,9 @@ NpcData N(NpcData_GourmetGuy)[] = {
 
 NpcData N(NpcData_GrooveGuy) = {
     .id = NPC_GrooveGuy,
-    .pos = { 320.0f, 10.0f, -145.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 320, 10, -145 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 320, 10, -145 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_GROOVE_GUY_VEC },
+    .yaw = GEN_NPC_GROOVE_GUY_DIR,
+    .territory = GEN_NPC_GROOVE_GUY_TERRITORY,
     .settings = &N(NpcSettings_GrooveGuy),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = GROOVE_GUY_DROPS_A,

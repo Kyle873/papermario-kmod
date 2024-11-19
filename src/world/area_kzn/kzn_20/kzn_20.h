@@ -2,6 +2,7 @@
 /// @brief Mt Lavalava - Rising Lava 1
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

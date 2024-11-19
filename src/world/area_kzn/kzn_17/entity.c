@@ -52,35 +52,35 @@ EvtScript N(EVS_OnBreakBlockG) = {
 
 EvtScript N(EVS_MakeEntities) = {
     IfEq(GF_KZN17_Hammer3BlockA, FALSE)
-        Call(MakeEntity, Ref(Entity_Hammer3Block), -195, 50, 27, 0, MAKE_ENTITY_END)
-        Call(AssignScript, Ref(N(EVS_OnBreakBlockA)))
+        EVT_MAKE_ENTITY(Hammer3Block, GEN_HAMMER3_BLOCK_1_PARAMS)
+        Call(AssignScript, Ref(GEN_HAMMER3_BLOCK_1_SCRIPT))
     EndIf
     IfEq(GF_KZN17_Hammer3BlockB, FALSE)
-        Call(MakeEntity, Ref(Entity_Hammer3Block), -245, 60, 27, 0, MAKE_ENTITY_END)
-        Call(AssignScript, Ref(N(EVS_OnBreakBlockB)))
+        EVT_MAKE_ENTITY(Hammer3Block, GEN_HAMMER3_BLOCK_2_PARAMS)
+        Call(AssignScript, Ref(GEN_HAMMER3_BLOCK_2_SCRIPT))
     EndIf
     IfEq(GF_KZN17_Hammer3BlockC, FALSE)
-        Call(MakeEntity, Ref(Entity_Hammer3Block), -295, 70, 27, 0, MAKE_ENTITY_END)
-        Call(AssignScript, Ref(N(EVS_OnBreakBlockC)))
+        EVT_MAKE_ENTITY(Hammer3Block, GEN_HAMMER3_BLOCK_3_PARAMS)
+        Call(AssignScript, Ref(GEN_HAMMER3_BLOCK_3_SCRIPT))
     EndIf
     IfEq(GF_KZN17_Hammer3BlockD, FALSE)
-        Call(MakeEntity, Ref(Entity_Hammer3Block), -345, 80, 27, 0, MAKE_ENTITY_END)
-        Call(AssignScript, Ref(N(EVS_OnBreakBlockD)))
+        EVT_MAKE_ENTITY(Hammer3Block, GEN_HAMMER3_BLOCK_4_PARAMS)
+        Call(AssignScript, Ref(GEN_HAMMER3_BLOCK_4_SCRIPT))
     EndIf
     IfEq(GF_KZN17_Hammer3BlockE, FALSE)
-        Call(MakeEntity, Ref(Entity_Hammer3Block), -395, 90, 27, 0, MAKE_ENTITY_END)
-        Call(AssignScript, Ref(N(EVS_OnBreakBlockE)))
+        EVT_MAKE_ENTITY(Hammer3Block, GEN_HAMMER3_BLOCK_5_PARAMS)
+        Call(AssignScript, Ref(GEN_HAMMER3_BLOCK_5_SCRIPT))
     EndIf
     IfEq(GF_KZN17_Hammer3BlockF, FALSE)
-        Call(MakeEntity, Ref(Entity_Hammer3Block), -445, 100, 27, 0, MAKE_ENTITY_END)
-        Call(AssignScript, Ref(N(EVS_OnBreakBlockF)))
+        EVT_MAKE_ENTITY(Hammer3Block, GEN_HAMMER3_BLOCK_6_PARAMS)
+        Call(AssignScript, Ref(GEN_HAMMER3_BLOCK_6_SCRIPT))
     EndIf
     IfEq(GF_KZN17_Hammer3BlockG, FALSE)
-        Call(MakeEntity, Ref(Entity_Hammer3Block), -495, 110, 27, 0, MAKE_ENTITY_END)
-        Call(AssignScript, Ref(N(EVS_OnBreakBlockG)))
+        EVT_MAKE_ENTITY(Hammer3Block, GEN_HAMMER3_BLOCK_7_PARAMS)
+        Call(AssignScript, Ref(GEN_HAMMER3_BLOCK_7_SCRIPT))
     EndIf
-    Call(CreatePushBlockGrid, 0, 29, 2, -119, -3, 5, 0)
-    Call(SetPushBlock, 0, 28, 1, PUSH_GRID_BLOCK)
+    Call(CreatePushBlockGrid, GEN_PUSH_BLOCKS_1_GRID_PARAMS)
+    GEN_PUSH_BLOCKS_1_GRID_CONTENT
     Return
     End
 };

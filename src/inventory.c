@@ -470,16 +470,16 @@ void enforce_hpfp_limits(void) {
     PlayerData* playerData = &gPlayerData;
 
     playerData->curMaxHP = playerData->hardMaxHP + (is_ability_active(ABILITY_HP_PLUS) * 5);
-    if (playerData->curMaxHP > 75) {
-        playerData->curMaxHP = 75;
+    if (playerData->curMaxHP > MAX_HP) {
+        playerData->curMaxHP = MAX_HP;
     }
     if (playerData->curHP > playerData->curMaxHP) {
         playerData->curHP = playerData->curMaxHP;
     }
 
     playerData->curMaxFP = playerData->hardMaxFP + (is_ability_active(ABILITY_FP_PLUS) * 5);
-    if (playerData->curMaxFP > 75) {
-        playerData->curMaxFP = 75;
+    if (playerData->curMaxFP > MAX_FP) {
+        playerData->curMaxFP = MAX_FP;
     }
     if (playerData->curFP > playerData->curMaxFP) {
         playerData->curFP = playerData->curMaxFP;
@@ -669,15 +669,15 @@ void status_bar_draw_stat(s32 id, s32 startX, s32 startY, s32 currentValue, s32 
     s8 digits[4];
     b32 keepDrawing;
     s32 digit;
-    s32 numDigits = 2;
+    s32 numDigits = 3;
     s32 drawX;
     s32 drawY;
     s32 i = 0;
-    s32 baseX = startX + 8;
+    s32 baseX = startX;
     s32 baseY = startY + 8;
 
     hud_element_set_script(id, SlashHudScript);
-    hud_element_set_render_pos(id, baseX + 14, baseY + 1);
+    hud_element_set_render_pos(id, baseX + 22, baseY + 1);
     hud_element_clear_flags(id, HUD_ELEMENT_FLAG_DISABLED);
     hud_element_draw_next(id);
 
@@ -706,7 +706,7 @@ void status_bar_draw_stat(s32 id, s32 startX, s32 startY, s32 currentValue, s32 
         maxValue /= 10;
     }
 
-    drawX = baseX + 26;
+    drawX = baseX + 34;
     drawY = baseY;
     keepDrawing = FALSE;
     for (i = 0; i < numDigits; i++, drawX += 8) {
@@ -982,7 +982,7 @@ void update_status_bar(void) {
         status_bar_draw_stat(statusBar->fpTimesHID, x, y, statusBar->displayFP, playerData->curMaxFP);
     }
 
-    if (playerData->level >= 27) {
+    if (playerData->level >= MAX_LEVEL) {
         playerData->starPoints = 0;
     }
 

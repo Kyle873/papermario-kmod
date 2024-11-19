@@ -1,7 +1,7 @@
 #include "dgb_12.h"
 
 LavaReset N(SafeFloorColliders)[] = {
-    { .colliderID = COLLIDER_o200, .pos = { -503.0,    0.0,  -63.0 }},
+    { .colliderID = COLLIDER_o200, .pos = { GEN_LAVA_RESET_O200_VEC }},
     { .colliderID = NO_COLLIDER }
 };
 

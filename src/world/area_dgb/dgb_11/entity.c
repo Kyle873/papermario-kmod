@@ -113,9 +113,9 @@ EvtScript N(EVS_UseSpring) = {
 };
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeItemEntity, ITEM_D_DOWN_JUMP, 250, 75, -100, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_DGB11_Item_DDownJump)
-    Call(MakeEntity, Ref(Entity_ScriptSpring), 375, 0, -250, 0, MAKE_ENTITY_END)
-    Call(AssignScript, Ref(N(EVS_UseSpring)))
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
+    EVT_MAKE_ENTITY(ScriptSpring, GEN_SCRIPT_SPRING_1_PARAMS)
+    Call(AssignScript, Ref(GEN_SCRIPT_SPRING_1_SCRIPT))
     Set(MV_SpringEntityID, LVar0)
     Return
     End

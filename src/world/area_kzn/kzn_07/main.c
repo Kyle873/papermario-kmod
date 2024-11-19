@@ -27,17 +27,11 @@ EvtScript N(EVS_SetupTexPanners) = {
     Call(SetTexPanner, MODEL_sara,    TEX_PANNER_1)
     Call(SetTexPanner, MODEL_chioro,  TEX_PANNER_1)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_0)
-        TEX_PAN_PARAMS_STEP( -400,    0, -800,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    0,    1,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_0
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP(    0, -400,    0, -800)
-        TEX_PAN_PARAMS_FREQ(    0,    1,    0,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Return
@@ -45,13 +39,13 @@ EvtScript N(EVS_SetupTexPanners) = {
 };
 
 LavaReset N(SafeFloorColliders)[] = {
-    { .colliderID = COLLIDER_o365, .pos = {  120.0, 0.0, 100.0 }},
-    { .colliderID = COLLIDER_o411, .pos = { -120.0, 0.0, 100.0 }},
+    { .colliderID = COLLIDER_o365, .pos = { GEN_LAVA_RESET_O365_VEC }},
+    { .colliderID = COLLIDER_o411, .pos = { GEN_LAVA_RESET_O411_VEC }},
     { .colliderID = NO_COLLIDER }
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_MT_LAVALAVA)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_KZN_07)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
     Call(MakeNpcs, TRUE, Ref(N(DefaultNPCs)))

@@ -94,7 +94,7 @@ EvtScript N(EVS_EnterStarBeam) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_STAR_WAY)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     Call(SetSurfaceWalkEffect, SURFACE_WALK_FX_SPARKLE)
     EVT_SETUP_CAMERA_DEFAULT(0, 0, 0)

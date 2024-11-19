@@ -57,16 +57,16 @@ EvtScript N(EVS_BreakBlock_DropSpring) = {
 EvtScript N(EVS_OpenChest) = EVT_OPEN_CHEST(ITEM_POWER_SMASH, GF_TIK05_Chest_PowerSmash);
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_Chest), -185, 60, -25, 0, 0, MAKE_ENTITY_END)
-    Call(AssignChestFlag, GF_TIK05_Chest_PowerSmash)
-    Call(AssignScript, Ref(N(EVS_OpenChest)))
-    Call(MakeEntity, Ref(Entity_BrickBlock), 25, 50, 0, 0, MAKE_ENTITY_END)
-    Call(AssignScript, Ref(N(EVS_BreakBlock_DropSpring)))
+    EVT_MAKE_ENTITY(Chest, GEN_CHEST_1_PARAMS)
+    Call(AssignChestFlag, GEN_CHEST_1_FLAG)
+    Call(AssignScript, Ref(GEN_CHEST_1_SCRIPT))
+    EVT_MAKE_ENTITY(BrickBlock, GEN_BRICK_BLOCK_1_PARAMS)
+    Call(AssignScript, Ref(GEN_BRICK_BLOCK_1_SCRIPT))
     IfEq(GF_TIK05_SpringBrick, FALSE)
-        Call(MakeEntity, Ref(Entity_SimpleSpring), 25, 75, 0, 0, 100, MAKE_ENTITY_END)
+        EVT_MAKE_ENTITY(SimpleSpring, GEN_SIMPLE_SPRING_1_PARAMS)
         Set(MV_Unk_00, LVar0)
     Else
-        Call(MakeEntity, Ref(Entity_SimpleSpring), -35, -10, 0, 0, 100, MAKE_ENTITY_END)
+        EVT_MAKE_ENTITY(SimpleSpring, GEN_SIMPLE_SPRING_2_PARAMS)
     EndIf
     Return
     End

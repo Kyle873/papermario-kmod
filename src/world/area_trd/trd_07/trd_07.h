@@ -2,6 +2,7 @@
 /// @brief Koopa Bros Fortress - Dungeon Trap
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

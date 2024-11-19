@@ -2,6 +2,7 @@
 /// @brief Toad Town Tunnels - Room with Spikes (B2)
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

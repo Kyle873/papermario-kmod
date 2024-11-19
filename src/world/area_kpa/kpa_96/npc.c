@@ -141,8 +141,9 @@ EvtScript N(EVS_NpcInit_SpikedGoomba) = {
 
 NpcData N(NpcData_SpikedGoomba) = {
     .id = NPC_SpikedGoomba,
-    .pos = { -122.0f, 0.0f, 163.0f },
-    .yaw = 90,
+    .pos = { GEN_NPC_SPIKED_GOOMBA_VEC },
+    .yaw = GEN_NPC_SPIKED_GOOMBA_DIR,
+    .territory = GEN_NPC_SPIKED_GOOMBA_TERRITORY,
     .init = &N(EVS_NpcInit_SpikedGoomba),
     .settings = &N(NpcSettings_SpikedGoomba),
     .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_RAYCAST_TO_INTERACT | ENEMY_FLAG_SKIP_BATTLE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,

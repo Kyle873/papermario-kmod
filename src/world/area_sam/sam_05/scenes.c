@@ -121,13 +121,7 @@ s32 N(StarKidList)[] = {
 };
 
 Vec3f N(RelativeFleePath)[] = {
-    {    0.0,     0.0,    0.0 },
-    {   40.0,    10.0,    0.0 },
-    {   50.0,    15.0,    0.0 },
-    {   70.0,    25.0,    0.0 },
-    {   80.0,    30.0,    0.0 },
-    {  100.0,    35.0,    0.0 },
-    {  200.0,    45.0,    0.0 },
+    GEN_PATH_1_PATH
 };
 
 EvtScript N(EVS_StarKid_LookAroundPanic) = {

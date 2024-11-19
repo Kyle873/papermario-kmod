@@ -174,25 +174,15 @@ EvtScript N(EVS_NpcIdle_BowserAwaitBattle) = {
 };
 
 Vec3f N(ToWindowPath)[] = {
-    {  800.0,    50.0,    0.0 },
-    {  780.0,    40.0,    0.0 },
-    {  700.0,    20.0,    5.0 },
-    {  620.0,    15.0,   15.0 },
-    {  610.0,    25.0,    0.0 },
-    {  595.0,    50.0,  -15.0 },
+    GEN_PATH_1_PATH
 };
 
 Vec3f N(ThroughWindowPath)[] = {
-    {  595.0,    50.0,  -15.0 },
-    {  595.0,    45.0, -150.0 },
-    {  595.0,    35.0, -170.0 },
-    {  595.0,    40.0, -190.0 },
+    GEN_PATH_2_PATH
 };
 
 Vec3f N(UpAndAwayPath)[] = {
-    {  595.0,    40.0, -190.0 },
-    {  595.0,   145.0, -185.0 },
-    {  595.0,   250.0, -180.0 },
+    GEN_PATH_3_PATH
 };
 
 EvtScript N(EVS_FlyBowserAndPeach) = {
@@ -350,8 +340,9 @@ AnimID N(ExtraAnims_Bowser)[] = {
 
 NpcData N(NpcData_Bowser_Body) = {
     .id = NPC_Bowser_Body,
-    .pos = { 0.0f, -500.0f, 0.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_BOWSER_BODY_1_VEC },
+    .yaw = GEN_NPC_BOWSER_BODY_1_DIR,
+    .territory = GEN_NPC_BOWSER_BODY_1_TERRITORY,
     .init = &N(EVS_NpcInit_Bowser_Body),
     .settings = &N(NpcSettings_Bowser),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_NO_DROPS,
@@ -362,8 +353,9 @@ NpcData N(NpcData_Bowser_Body) = {
 
 NpcData N(NpcData_Bowser_Prop) = {
     .id = NPC_Bowser_Prop,
-    .pos = { 0.0f, -500.0f, 0.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_BOWSER_PROP_1_VEC },
+    .yaw = GEN_NPC_BOWSER_PROP_1_DIR,
+    .territory = GEN_NPC_BOWSER_PROP_1_TERRITORY,
     .init = &N(EVS_NpcInit_Bowser_Prop),
     .settings = &N(NpcSettings_Dummy),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_NO_DROPS,
@@ -374,8 +366,9 @@ NpcData N(NpcData_Bowser_Prop) = {
 
 NpcData N(NpcData_CaptivePeach) = {
     .id = NPC_CaptivePeach,
-    .pos = { 670.0f, 0.0f, -12.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_CAPTIVE_PEACH_VEC },
+    .yaw = GEN_NPC_CAPTIVE_PEACH_DIR,
+    .territory = GEN_NPC_CAPTIVE_PEACH_TERRITORY,
     .init = &N(EVS_NpcInit_CaptivePeach),
     .settings = &N(NpcSettings_Dummy),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_USE_PLAYER_SPRITE | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_NO_DROPS,

@@ -254,8 +254,9 @@ EvtScript N(EVS_NpcInit_TradingToad) = {
 
 NpcData N(NpcData_Mamar) = {
     .id = NPC_Mamar,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 0,
+    .pos = { GEN_NPC_MAMAR_VEC },
+    .yaw = GEN_NPC_MAMAR_DIR,
+    .territory = GEN_NPC_MAMAR_TERRITORY,
     .init = &N(EVS_NpcInit_Mamar),
     .settings = &N(NpcSettings_StarSpirit),
     .flags = BASE_PASSIVE_FLAGS,
@@ -265,8 +266,9 @@ NpcData N(NpcData_Mamar) = {
 
 NpcData N(NpcData_TradingToad) = {
     .id = NPC_TradingToad,
-    .pos = { 0.0f, 2.0f, 150.0f },
-    .yaw = 90,
+    .pos = { GEN_NPC_TRADING_TOAD_VEC },
+    .yaw = GEN_NPC_TRADING_TOAD_DIR,
+    .territory = GEN_NPC_TRADING_TOAD_TERRITORY,
     .init = &N(EVS_NpcInit_TradingToad),
     .settings = &N(NpcSettings_Toad_Stationary),
     .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_RAYCAST_TO_INTERACT | ENEMY_FLAG_SKIP_BATTLE,

@@ -33,8 +33,9 @@ EvtScript N(EVS_NpcInit_Twink) = {
 
 NpcData N(NpcData_Twink) = {
     .id = NPC_Twink,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
+    .pos = { GEN_NPC_TWINK_1_VEC },
+    .yaw = GEN_NPC_TWINK_1_DIR,
+    .territory = GEN_NPC_TWINK_1_TERRITORY,
     .init = &N(EVS_NpcInit_Twink),
     .settings = &N(NpcSettings_StarSpirit),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_FLYING,

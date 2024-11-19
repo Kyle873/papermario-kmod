@@ -9,13 +9,13 @@ EvtScript N(EVS_BombRock) = {
 
 EvtScript N(EVS_MakeEntities) = {
     IfEq(GF_TRD09_BombedRock, FALSE)
-        Call(MakeEntity, Ref(Entity_BombableRockWide), -470, -75, 139, 0, MAKE_ENTITY_END)
-        Call(AssignScript, Ref(N(EVS_BombRock)))
+        EVT_MAKE_ENTITY(BombableRockWide, GEN_BOMBABLE_ROCK_WIDE_1_PARAMS)
+        Call(AssignScript, Ref(GEN_BOMBABLE_ROCK_WIDE_1_SCRIPT))
     EndIf
-    Call(MakeEntity, Ref(Entity_HeartBlock), 1400, -15, 135, 0, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_SavePoint), 1490, -15, 135, 0, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_YellowBlock), -540, -15, 135, 0, ITEM_MAPLE_SYRUP, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_TRD09_ItemBlock_MapleSyrup)
+    EVT_MAKE_ENTITY(HeartBlock, GEN_HEART_BLOCK_1_PARAMS)
+    EVT_MAKE_ENTITY(SavePoint, GEN_SAVE_POINT_1_PARAMS)
+    EVT_MAKE_ENTITY(YellowBlock, GEN_YELLOW_BLOCK_1_PARAMS)
+    Call(AssignBlockFlag, GEN_YELLOW_BLOCK_1_FLAG)
     Return
     End
 };

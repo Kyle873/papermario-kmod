@@ -3,10 +3,7 @@
 extern EvtScript N(EVS_Main);
 
 EntryList N(Entrances) = {
-    [trd_01_ENTRY_0]    { -310.0,    0.0,    0.0,   90.0 },
-    [trd_01_ENTRY_1]    {  310.0,    0.0,    0.0,  270.0 },
-    [trd_01_ENTRY_2]    {  310.0,  220.0,    0.0,  270.0 },
-    [trd_01_ENTRY_3]    {  310.0,  520.0,    0.0,  270.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {

@@ -201,8 +201,9 @@ EvtScript N(EVS_NpcInit_Sun_02) = {
 NpcData N(NpcData_Sun)[] = {
     {
         .id = NPC_Sun_01,
-        .pos = { 0.0f, 250.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_SUN_01_VEC },
+        .yaw = GEN_NPC_SUN_01_DIR,
+        .territory = GEN_NPC_SUN_01_TERRITORY,
         .init = &N(EVS_NpcInit_Sun_01),
         .settings = &N(NpcSettings_Sun),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -212,8 +213,9 @@ NpcData N(NpcData_Sun)[] = {
     },
     {
         .id = NPC_Sun_02,
-        .pos = { 0.0f, 250.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_SUN_02_VEC },
+        .yaw = GEN_NPC_SUN_02_DIR,
+        .territory = GEN_NPC_SUN_02_TERRITORY,
         .init = &N(EVS_NpcInit_Sun_02),
         .settings = &N(NpcSettings_Sun),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_USE_INSPECT_ICON,

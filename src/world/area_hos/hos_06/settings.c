@@ -1,7 +1,7 @@
 #include "hos_06.h"
 
 EntryList N(Entrances) = {
-    [hos_06_ENTRY_0]    { -484.0,    0.0,    5.0,   90.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {

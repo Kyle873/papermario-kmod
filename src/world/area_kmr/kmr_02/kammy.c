@@ -11,36 +11,23 @@
 #include "world/common/todo/UnkFunc42.inc.c"
 
 Vec3f N(FlightPath_KammyAppear)[] = {
-    {  473.0,   150.0,  301.0 },
-    {  234.0,    80.0,  200.0 },
-    {   46.0,   150.0,  180.0 },
+    GEN_PATH_1_PATH
 };
 
 Vec3f N(FlightPath_ToGate1)[] = {
-    {   46.0,   150.0,  180.0 },
-    {  -93.0,   262.0,  114.0 },
-    {  118.0,   121.0,  141.0 },
-    {  340.0,   141.0,  406.0 },
-    {  550.0,   108.0,  320.0 },
+    GEN_PATH_2_PATH
 };
 
 Vec3f N(FlightPath_ToGate2)[] = {
-    {  465.0,   108.0,  320.0 },
-    {  433.0,    78.0,  306.0 },
-    {  399.0,    56.0,  288.0 },
+    GEN_PATH_3_PATH
 };
 
 Vec3f N(FlightPath_ToGate3)[] = {
-    {  399.0,    56.0,  288.0 },
-    {  390.0,    53.0,  284.0 },
-    {  380.0,    50.0,  282.0 },
+    GEN_PATH_4_PATH
 };
 
 Vec3f N(FlightPath_KammyDepart)[] = {
-    {  380.0,    50.0,  282.0 },
-    {  290.0,   100.0,  240.0 },
-    {  204.0,   142.0,  202.0 },
-    { -391.0,   520.0, -212.0 },
+    GEN_PATH_5_PATH
 };
 
 EvtScript N(EVS_PlayKammyFlightSounds) = {

@@ -97,22 +97,9 @@ EvtScript N(EVS_NpcInit_KoopaTroopa_02_Demo) = {
 
 NpcData N(NpcData_KoopaTroopa_01) = {
     .id = NPC_KoopaTroopa_01,
-    .pos = { -370.0f, 0.0f, -25.0f },
-    .yaw = 270,
-    .territory = {
-        .patrol = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .numPoints  = 2,
-            .points  = {
-                { -370, 0, -25 },
-                { -455, 0, -25 },
-            },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -436, 0, -104 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_KOOPA_TROOPA_01_VEC },
+    .yaw = GEN_NPC_KOOPA_TROOPA_01_DIR,
+    .territory = GEN_NPC_KOOPA_TROOPA_01_TERRITORY,
     .settings = &N(NpcSettings_KoopaTroopa_Patrol),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = KOOPA_TROOPA_NOK_DROPS,
@@ -122,20 +109,9 @@ NpcData N(NpcData_KoopaTroopa_01) = {
 
 NpcData N(NpcData_KoopaTroopa_02) = {
     .id = NPC_KoopaTroopa_02,
-    .pos = { 563.0f, 50.0f, -43.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = FALSE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 563, 50, -43 },
-            .wanderSize = { 50 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 563, 50, -43 },
-            .detectSize = { 500 },
-        }
-    },
+    .pos = { GEN_NPC_KOOPA_TROOPA_02_VEC },
+    .yaw = GEN_NPC_KOOPA_TROOPA_02_DIR,
+    .territory = GEN_NPC_KOOPA_TROOPA_02_TERRITORY,
     .init = &N(EVS_NpcInit_KoopaTroopa_02),
     .settings = &N(NpcSettings_KoopaTroopa_Wander),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -146,20 +122,9 @@ NpcData N(NpcData_KoopaTroopa_02) = {
 
 NpcData N(NpcData_KoopaTroopa_02_Demo) = {
     .id = NPC_KoopaTroopa_02,
-    .pos = { 600.0f, 50.0f, -75.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = FALSE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 563, 50, -43 },
-            .wanderSize = { 50 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 563, 50, -43 },
-            .detectSize = { 500 },
-        }
-    },
+    .pos = { GEN_NPC_KOOPA_TROOPA_02_1_VEC },
+    .yaw = GEN_NPC_KOOPA_TROOPA_02_1_DIR,
+    .territory = GEN_NPC_KOOPA_TROOPA_02_1_TERRITORY,
     .init = &N(EVS_NpcInit_KoopaTroopa_02_Demo),
     .settings = &N(NpcSettings_KoopaTroopa_Wander),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -170,20 +135,9 @@ NpcData N(NpcData_KoopaTroopa_02_Demo) = {
 
 NpcData N(NpcData_Goomba) = {
     .id = NPC_Goomba,
-    .pos = { 50.0f, 0.0f, -72.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 50, 0, -72 },
-            .wanderSize = { 50 },
-            .detectShape = SHAPE_RECT,
-            .detectPos  = { 50, 0, -72 },
-            .detectSize = { 150, 80 },
-        }
-    },
+    .pos = { GEN_NPC_GOOMBA_VEC },
+    .yaw = GEN_NPC_GOOMBA_DIR,
+    .territory = GEN_NPC_GOOMBA_TERRITORY,
     .settings = &N(NpcSettings_Goomba_Wander),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = GOOMBA_DROPS,
@@ -193,20 +147,9 @@ NpcData N(NpcData_Goomba) = {
 
 NpcData N(NpcData_SpikedGoomba) = {
     .id = NPC_SpikedGoomba,
-    .pos = { -160.0f, 0.0f, -120.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -84, 0, -72 },
-            .wanderSize = { 50 },
-            .detectShape = SHAPE_RECT,
-            .detectPos  = { -84, 0, -72 },
-            .detectSize = { 150, 80 },
-        }
-    },
+    .pos = { GEN_NPC_SPIKED_GOOMBA_VEC },
+    .yaw = GEN_NPC_SPIKED_GOOMBA_DIR,
+    .territory = GEN_NPC_SPIKED_GOOMBA_TERRITORY,
     .init = &N(EVS_NpcInit_SpikedGoomba),
     .settings = &N(NpcSettings_SpikedGoomba_Wander),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,

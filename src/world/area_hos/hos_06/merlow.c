@@ -259,8 +259,9 @@ EvtScript N(EVS_NpcInit_Merlow) = {
 NpcData N(NpcData_Merluvlee)[] = {
     {
         .id = NPC_Merluvlee,
-        .pos = { 62.0f, 20.0f, 7.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_MERLUVLEE_VEC },
+        .yaw = GEN_NPC_MERLUVLEE_DIR,
+        .territory = GEN_NPC_MERLUVLEE_TERRITORY,
         .init = &N(EVS_NpcInit_Merluvlee_Passthrough),
         .settings = &N(NpcSettings_Merluvlee),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_KILL,
@@ -272,8 +273,9 @@ NpcData N(NpcData_Merluvlee)[] = {
     },
     {
         .id = NPC_Merlow,
-        .pos = { -150.0f, 160.0f, -25.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_MERLOW_VEC },
+        .yaw = GEN_NPC_MERLOW_DIR,
+        .territory = GEN_NPC_MERLOW_TERRITORY,
         .init = &N(EVS_NpcInit_Merlow),
         .settings = &N(NpcSettings_Merlow),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_KILL,

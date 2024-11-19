@@ -621,8 +621,9 @@ EvtScript N(EVS_NpcInit_Lakilulu) = {
 
 NpcData N(NpcData_Wisterwood) = {
     .id = NPC_Dummy_Wisterwood,
-    .pos = { -72.0f, 60.0f, -100.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_DUMMY_WISTERWOOD_VEC },
+    .yaw = GEN_NPC_DUMMY_WISTERWOOD_DIR,
+    .territory = GEN_NPC_DUMMY_WISTERWOOD_TERRITORY,
     .init = &N(EVS_NpcInit_Wisterwood),
     .settings = &N(NpcSettings_Dummy),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_FLYING,
@@ -633,22 +634,9 @@ NpcData N(NpcData_Wisterwood) = {
 NpcData N(NpcData_Bubulbs)[] = {
     {
         .id = NPC_Bubulb_01,
-        .pos = { -59.0f, 0.0f, -40.0f },
-        .yaw = 90,
-        .territory = {
-            .patrol = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .numPoints  = 2,
-                .points  = {
-                    { -59, 0, -40 },
-                    { -80, 0, -40 },
-                },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { -59, 0, -40 },
-                .detectSize = { 100 },
-            }
-        },
+        .pos = { GEN_NPC_BUBULB_01_VEC },
+        .yaw = GEN_NPC_BUBULB_01_DIR,
+        .territory = GEN_NPC_BUBULB_01_TERRITORY,
         .init = &N(EVS_NpcInit_Bubulb_01),
         .settings = &N(NpcSettings_Bubulb_Patrol),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -658,22 +646,9 @@ NpcData N(NpcData_Bubulbs)[] = {
     },
     {
         .id = NPC_Bubulb_02,
-        .pos = { 67.0f, 0.0f, 85.0f },
-        .yaw = 270,
-        .territory = {
-            .patrol = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .numPoints  = 2,
-                .points  = {
-                    { 67, 0, 85 },
-                    { 97, 0, 85 },
-                },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { -59, 0, -40 },
-                .detectSize = { 100 },
-            }
-        },
+        .pos = { GEN_NPC_BUBULB_02_VEC },
+        .yaw = GEN_NPC_BUBULB_02_DIR,
+        .territory = GEN_NPC_BUBULB_02_TERRITORY,
         .init = &N(EVS_NpcInit_Bubulb_02),
         .settings = &N(NpcSettings_Bubulb_Patrol),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -683,22 +658,9 @@ NpcData N(NpcData_Bubulbs)[] = {
     },
     {
         .id = NPC_Bubulb_03,
-        .pos = { 90.0f, 0.0f, 410.0f },
-        .yaw = 90,
-        .territory = {
-            .patrol = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .numPoints  = 2,
-                .points  = {
-                    { 90, 0, 410 },
-                    { 120, 0, 410 },
-                },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { -59, 0, -40 },
-                .detectSize = { 100 },
-            }
-        },
+        .pos = { GEN_NPC_BUBULB_03_VEC },
+        .yaw = GEN_NPC_BUBULB_03_DIR,
+        .territory = GEN_NPC_BUBULB_03_TERRITORY,
         .init = &N(EVS_NpcInit_Bubulb_03),
         .settings = &N(NpcSettings_Bubulb_Patrol),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -708,22 +670,9 @@ NpcData N(NpcData_Bubulbs)[] = {
     },
     {
         .id = NPC_Bubulb_04,
-        .pos = { 200.0f, 0.0f, 430.0f },
-        .yaw = 270,
-        .territory = {
-            .patrol = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .numPoints  = 2,
-                .points  = {
-                    { 200, 0, 430 },
-                    { 240, 0, 430 },
-                },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { -59, 0, -40 },
-                .detectSize = { 100 },
-            }
-        },
+        .pos = { GEN_NPC_BUBULB_04_VEC },
+        .yaw = GEN_NPC_BUBULB_04_DIR,
+        .territory = GEN_NPC_BUBULB_04_TERRITORY,
         .init = &N(EVS_NpcInit_Bubulb_04),
         .settings = &N(NpcSettings_Bubulb_Patrol),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -735,8 +684,9 @@ NpcData N(NpcData_Bubulbs)[] = {
 
 NpcData N(NpcData_Tolielup) = {
     .id = NPC_Tolielup,
-    .pos = { -400.0f, 0.0f, 190.0f },
-    .yaw = 90,
+    .pos = { GEN_NPC_TOLIELUP_VEC },
+    .yaw = GEN_NPC_TOLIELUP_DIR,
+    .territory = GEN_NPC_TOLIELUP_TERRITORY,
     .init = &N(EVS_NpcInit_Tolielup),
     .settings = &N(NpcSettings_Tolielup),
     .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -747,8 +697,9 @@ NpcData N(NpcData_Tolielup) = {
 
 NpcData N(NpcData_Klevar) = {
     .id = NPC_Klevar,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 0,
+    .pos = { GEN_NPC_KLEVAR_VEC },
+    .yaw = GEN_NPC_KLEVAR_DIR,
+    .territory = GEN_NPC_KLEVAR_TERRITORY,
     .init = &N(EVS_NpcInit_Klevar),
     .settings = &N(NpcSettings_StarSpirit),
     .flags = BASE_PASSIVE_FLAGS,
@@ -758,8 +709,9 @@ NpcData N(NpcData_Klevar) = {
 
 NpcData N(NpcData_Lakilulu) = {
     .id = NPC_Lakilulu,
-    .pos = { 198.0f, 0.0f, 363.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_LAKILULU_VEC },
+    .yaw = GEN_NPC_LAKILULU_DIR,
+    .territory = GEN_NPC_LAKILULU_TERRITORY,
     .init = &N(EVS_NpcInit_Lakilulu),
     .settings = &N(NpcSettings_Dummy),
     .flags = BASE_PASSIVE_FLAGS,

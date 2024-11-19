@@ -1,10 +1,7 @@
 #include "jan_06.h"
 
 EntryList N(Entrances) = {
-    [jan_06_ENTRY_0]    {    0.0,    0.0,  470.0,    0.0 },
-    [jan_06_ENTRY_1]    {  470.0,    0.0,    0.0,  270.0 },
-    [jan_06_ENTRY_2]    {    0.0,    0.0, -470.0,  180.0 },
-    [jan_06_ENTRY_3]    { -470.0,    0.0,    0.0,   90.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {

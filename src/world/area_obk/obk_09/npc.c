@@ -134,8 +134,9 @@ EvtScript N(EVS_NpcInit_Bootler_Epilogue) = {
 NpcData N(NpcData_Default)[] = {
     {
         .id = NPC_Bow,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_BOW_VEC },
+        .yaw = GEN_NPC_BOW_DIR,
+        .territory = GEN_NPC_BOW_TERRITORY,
         .init = &N(EVS_NpcInit_Bow),
         .settings = &N(NpcSettings_Dummy),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_FLYING,
@@ -144,8 +145,9 @@ NpcData N(NpcData_Default)[] = {
     },
     {
         .id = NPC_Bootler,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_BOOTLER_VEC },
+        .yaw = GEN_NPC_BOOTLER_DIR,
+        .territory = GEN_NPC_BOOTLER_TERRITORY,
         .init = &N(EVS_NpcInit_Bootler),
         .settings = &N(NpcSettings_Dummy),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_FLYING,
@@ -155,8 +157,9 @@ NpcData N(NpcData_Default)[] = {
     },
     {
         .id = NPC_Skolar,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_SKOLAR_VEC },
+        .yaw = GEN_NPC_SKOLAR_DIR,
+        .territory = GEN_NPC_SKOLAR_TERRITORY,
         .init = &N(EVS_NpcInit_Skolar),
         .settings = &N(NpcSettings_Dummy),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_FLYING,
@@ -168,8 +171,9 @@ NpcData N(NpcData_Default)[] = {
 NpcData N(NpcData_Epilogue)[] = {
     {
         .id = NPC_Bow,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_BOW_1_VEC },
+        .yaw = GEN_NPC_BOW_1_DIR,
+        .territory = GEN_NPC_BOW_1_TERRITORY,
         .init = &N(EVS_NpcInit_Bow_Epilogue),
         .settings = &N(NpcSettings_Dummy),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_FLYING,
@@ -178,8 +182,9 @@ NpcData N(NpcData_Epilogue)[] = {
     },
     {
         .id = NPC_Bootler,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_BOOTLER_1_VEC },
+        .yaw = GEN_NPC_BOOTLER_1_DIR,
+        .territory = GEN_NPC_BOOTLER_1_TERRITORY,
         .init = &N(EVS_NpcInit_Bootler_Epilogue),
         .settings = &N(NpcSettings_Dummy),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_FLYING,

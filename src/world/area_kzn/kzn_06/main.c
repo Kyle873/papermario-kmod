@@ -19,19 +19,13 @@ EvtScript N(EVS_StartTexPanners) = {
     Call(SetTexPanner, MODEL_yo1, TEX_PANNER_0)
     Call(SetTexPanner, MODEL_o349, TEX_PANNER_0)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_0)
-        TEX_PAN_PARAMS_STEP(   0, -400,   0,   0)
-        TEX_PAN_PARAMS_FREQ(   0,    1,   0,   0)
-        TEX_PAN_PARAMS_INIT(   0,    0,   0,   0)
+        GEN_TEX_PANNER_0
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Call(SetTexPanner, MODEL_yougan, TEX_PANNER_1)
     Call(SetTexPanner, MODEL_spot, TEX_PANNER_1)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP( 400,   0, 800,   0)
-        TEX_PAN_PARAMS_FREQ(   1,   0,   1,   0)
-        TEX_PAN_PARAMS_INIT(   0,   0,   0,   0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Return
@@ -39,16 +33,16 @@ EvtScript N(EVS_StartTexPanners) = {
 };
 
 LavaReset N(SafeFloorColliders)[] = {
-    { .colliderID = COLLIDER_o250, .pos = {   10.0, 145.0, -35.0 }},
-    { .colliderID = COLLIDER_o468, .pos = { -150.0, 145.0, -35.0 }},
-    { .colliderID = COLLIDER_o394, .pos = { -210.0,  75.0, 100.0 }},
-    { .colliderID = COLLIDER_o440, .pos = {   60.0,  75.0, 100.0 }},
-    { .colliderID = COLLIDER_o437, .pos = {   60.0,  75.0, 100.0 }},
+    { .colliderID = COLLIDER_o250, .pos = { GEN_LAVA_RESET_O250_VEC }},
+    { .colliderID = COLLIDER_o468, .pos = { GEN_LAVA_RESET_O468_VEC }},
+    { .colliderID = COLLIDER_o394, .pos = { GEN_LAVA_RESET_O394_VEC }},
+    { .colliderID = COLLIDER_o440, .pos = { GEN_LAVA_RESET_O440_VEC }},
+    { .colliderID = COLLIDER_o437, .pos = { GEN_LAVA_RESET_O437_VEC }},
     { .colliderID = NO_COLLIDER }
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_MT_LAVALAVA)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_KZN_06)
     EVT_SETUP_CAMERA_DEFAULT(0, 0, 0)
     Set(GF_KZN06_Visited, TRUE)
@@ -72,4 +66,3 @@ EvtScript N(EVS_Main) = {
     Return
     End
 };
-

@@ -5,20 +5,9 @@
 
 NpcData N(NpcData_LavaBubble_01) = {
     .id = NPC_Bubble_01,
-    .pos = { -200.0f, 50.0f, 150.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -200, 50, 150 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -200, 50, 150 },
-            .detectSize = { 300 },
-        }
-    },
+    .pos = { GEN_NPC_BUBBLE_01_VEC },
+    .yaw = GEN_NPC_BUBBLE_01_DIR,
+    .territory = GEN_NPC_BUBBLE_01_TERRITORY,
     .settings = &N(NpcSettings_LavaBubble),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION,
     .drops = LAVA_BUBBLE_DROPS,
@@ -28,20 +17,9 @@ NpcData N(NpcData_LavaBubble_01) = {
 
 NpcData N(NpcData_LavaBubble_02) = {
     .id = NPC_Bubble_02,
-    .pos = { -250.0f, 80.0f, 50.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = FALSE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -250, 80, 50 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -250, 80, 50 },
-            .detectSize = { 300 },
-        }
-    },
+    .pos = { GEN_NPC_BUBBLE_02_VEC },
+    .yaw = GEN_NPC_BUBBLE_02_DIR,
+    .territory = GEN_NPC_BUBBLE_02_TERRITORY,
     .settings = &N(NpcSettings_LavaBubble),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION,
     .drops = LAVA_BUBBLE_DROPS,

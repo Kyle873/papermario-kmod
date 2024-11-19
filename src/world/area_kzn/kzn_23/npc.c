@@ -105,33 +105,19 @@ EvtScript N(EVS_CameraFollowMisstar) = {
 };
 
 Vec3f N(PyroclastPathA)[] = {
-    {  50.0, 2650.0, -20.0 },
-    { 150.0, 2850.0, -45.0 },
-    { 235.0, 2950.0, -60.0 },
-    { 335.0, 3000.0, -75.0 },
+    GEN_PATH_1_PATH
 };
 
 Vec3f N(PyroclastPathB)[] = {
-    {  -20.0, 2650.0, -20.0 },
-    { -120.0, 2850.0, -40.0 },
-    { -220.0, 3000.0, -40.0 },
+    GEN_PATH_2_PATH
 };
 
 Vec3f N(PyroclastPathC)[] = {
-    { 10.0, 2650.00,  -20.0 },
-    { 20.0, 2800.00,  -60.0 },
-    { 30.0, 2880.00, -100.0 },
-    { 40.0, 2920.00, -150.0 },
-    { 50.0, 2940.00, -220.0 },
+    GEN_PATH_3_PATH
 };
 
 Vec3f N(PyroclastPathD)[] = {
-    {  -35.0, 2650.0, -20.0 },
-    {  -65.0, 2780.0, -30.0 },
-    {  -95.0, 2850.0, -40.0 },
-    { -125.0, 2880.0, -50.0 },
-    { -155.0, 2900.0, -60.0 },
-    { -185.0, 2915.0, -70.0 },
+    GEN_PATH_4_PATH
 };
 
 s32 N(SoundXPositions)[] = {
@@ -278,8 +264,9 @@ EvtScript N(EVS_NpcInit_Misstar) = {
 
 NpcData N(NpcData_Kolorado) = {
     .id = NPC_Kolorado,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 90,
+    .pos = { GEN_NPC_KOLORADO_VEC },
+    .yaw = GEN_NPC_KOLORADO_DIR,
+    .territory = GEN_NPC_KOLORADO_TERRITORY,
     .init = &N(EVS_NpcInit_Kolorado),
     .settings = &N(NpcSettings_Kolorado),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_RAYCAST_TO_INTERACT | ENEMY_FLAG_SKIP_BATTLE,
@@ -290,8 +277,9 @@ NpcData N(NpcData_Kolorado) = {
 
 NpcData N(NpcData_Misstar) = {
     .id = NPC_Misstar,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
+    .pos = { GEN_NPC_MISSTAR_VEC },
+    .yaw = GEN_NPC_MISSTAR_DIR,
+    .territory = GEN_NPC_MISSTAR_TERRITORY,
     .init = &N(EVS_NpcInit_Misstar),
     .settings = &N(NpcSettings_StarSpirit),
     .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_SKIP_BATTLE | ENEMY_FLAG_IGNORE_TOUCH | ENEMY_FLAG_CANT_INTERACT | ENEMY_FLAG_IGNORE_PARTNER,

@@ -10,8 +10,9 @@ EvtScript N(EVS_NpcInit_Toad) = {
 
 NpcData N(NpcData_Dummy) = {
     .id = NPC_Dummy,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 0,
+    .pos = { GEN_NPC_DUMMY_VEC },
+    .yaw = GEN_NPC_DUMMY_DIR,
+    .territory = GEN_NPC_DUMMY_TERRITORY,
     .init = &N(EVS_NpcInit_Toad),
     .settings = &N(NpcSettings_Toad_Stationary),
     .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_HAS_NO_SPRITE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,

@@ -9,16 +9,16 @@ EvtScript N(EVS_OnSmashBlock) = {
 
 EvtScript N(EVS_MakeEntities) = {
     IfEq(GF_IWA01_Hammer1Block, FALSE)
-        Call(MakeEntity, Ref(Entity_Hammer1BlockWideZ), 900, -30, 220, 0, MAKE_ENTITY_END)
-        Call(AssignScript, Ref(N(EVS_OnSmashBlock)))
+        EVT_MAKE_ENTITY(Hammer1BlockWideZ, GEN_HAMMER1_BLOCK_WIDE_Z_1_PARAMS)
+        Call(AssignScript, Ref(GEN_HAMMER1_BLOCK_WIDE_Z_1_SCRIPT))
     EndIf
-    Call(MakeItemEntity, ITEM_COIN, 405, 25, 25, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_IWA00_Item_CoinA)
-    Call(MakeItemEntity, ITEM_COIN, 465, 53, 25, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_IWA00_Item_CoinB)
-    Call(MakeItemEntity, ITEM_COIN, 515, 92, 25, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_IWA00_Item_CoinC)
-    Call(MakeEntity, Ref(Entity_YellowBlock), 1260, 30, 140, 0, ITEM_SLEEPY_SHEEP, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_IWA00_ItemBlock_SleepySheep)
-    Call(MakeEntity, Ref(Entity_ArrowSign), 58, -5, -73, -30, 90, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_ArrowSign), 926, 70, -45, 22, 90, MAKE_ENTITY_END)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_2_PARAMS)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_3_PARAMS)
+    EVT_MAKE_ENTITY(YellowBlock, GEN_YELLOW_BLOCK_1_PARAMS)
+    Call(AssignBlockFlag, GEN_YELLOW_BLOCK_1_FLAG)
+    EVT_MAKE_ENTITY(ArrowSign, GEN_ARROW_SIGN_1_PARAMS)
+    EVT_MAKE_ENTITY(ArrowSign, GEN_ARROW_SIGN_2_PARAMS)
     Return
     End
 };

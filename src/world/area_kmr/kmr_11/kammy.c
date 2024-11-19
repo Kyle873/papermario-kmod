@@ -1,10 +1,7 @@
 #include "kmr_11.h"
 
 Vec3f N(FlightPath_Away)[] = {
-    {    0.0,     0.0,    0.0 },
-    {  100.0,    50.0,    0.0 },
-    {  200.0,   150.0,    0.0 },
-    {  250.0,   400.0,    0.0 },
+    GEN_PATH_1_PATH
 };
 
 EvtScript N(EVS_Scene_KammyWatching) = {

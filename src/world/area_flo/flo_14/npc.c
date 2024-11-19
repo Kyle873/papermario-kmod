@@ -80,8 +80,9 @@ EvtScript N(EVS_NpcInit_BubbleFlower) = {
 // uses a dummy bubulb for collision
 NpcData N(NpcData_BubbleFlower) = {
     .id = NPC_BubbleFlower,
-    .pos = { 617.0f, 0.0f, 108.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_BUBBLE_FLOWER_VEC },
+    .yaw = GEN_NPC_BUBBLE_FLOWER_DIR,
+    .territory = GEN_NPC_BUBBLE_FLOWER_TERRITORY,
     .init = &N(EVS_NpcInit_BubbleFlower),
     .settings = &N(NpcSettings_BubbleFlower),
     .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_HAS_NO_SPRITE,
@@ -92,20 +93,9 @@ NpcData N(NpcData_BubbleFlower) = {
 
 NpcData N(NpcData_Bzzap) = {
     .id = NPC_Bzzap,
-    .pos = { -175.0f, 55.0f, 15.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -175, 55, 15 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -175, 55, 15 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_BZZAP_VEC },
+    .yaw = GEN_NPC_BZZAP_DIR,
+    .territory = GEN_NPC_BZZAP_TERRITORY,
     .settings = &N(NpcSettings_Bzzap),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = BZZAP_DROPS,

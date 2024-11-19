@@ -60,9 +60,9 @@ EvtScript N(EVS_MakeCrystalBerry) = {
     Call(GetPlayerPos, LVar0, LVar1, LVar2)
     Sub(LVar0, LVar2)
     IfLt(LVar0, -250)
-        Call(MakeItemEntity, ITEM_CRYSTAL_BERRY, -225, 100, -25, ITEM_SPAWN_MODE_FALL_NEVER_VANISH, GF_FLO07_Item_CrystalBerry)
+        EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
     Else
-        Call(MakeItemEntity, ITEM_CRYSTAL_BERRY, -265, 100, 54, ITEM_SPAWN_MODE_FALL_NEVER_VANISH, GF_FLO07_Item_CrystalBerry)
+        EVT_MAKE_ITEM_ENTITY(GEN_ITEM_2_PARAMS)
         Set(GF_FLO07_CrystalBerryFellOnLeftSide, TRUE)
     EndIf
     Call(PlaySound, SOUND_LRAW_RUMBLE | SOUND_ID_TRIGGER_CHANGE_SOUND)
@@ -136,9 +136,9 @@ EvtScript N(EVS_NpcInit_Posie) = {
     IfEq(GB_StoryProgress, STORY_CH6_GOT_CRYSTAL_BERRY)
         IfEq(GF_FLO07_Item_CrystalBerry, FALSE)
             IfEq(GF_FLO07_CrystalBerryFellOnLeftSide, FALSE)
-                Call(MakeItemEntity, ITEM_CRYSTAL_BERRY, -225, 0, -25, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_FLO07_Item_CrystalBerry)
+                EVT_MAKE_ITEM_ENTITY(GEN_ITEM_3_PARAMS)
             Else
-                Call(MakeItemEntity, ITEM_CRYSTAL_BERRY, -265, 0, 54, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_FLO07_Item_CrystalBerry)
+                EVT_MAKE_ITEM_ENTITY(GEN_ITEM_4_PARAMS)
             EndIf
         EndIf
     EndIf
@@ -219,8 +219,8 @@ ShakeTreeConfig N(ShakeTree_CrystalTree) = {
 };
 
 BombTrigger N(BombPos_CrystalTree) = {
-    .pos = { -309.0f, 0.0f, 31.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_1_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_1_RAD,
 };
 
 EvtScript N(EVS_SetupFoliage) = {
@@ -233,8 +233,9 @@ EvtScript N(EVS_SetupFoliage) = {
 
 NpcData N(NpcData_Posie) = {
     .id = NPC_Posie,
-    .pos = { -260.0f, 0.0f, 0.0f },
-    .yaw = 90,
+    .pos = { GEN_NPC_POSIE_VEC },
+    .yaw = GEN_NPC_POSIE_DIR,
+    .territory = GEN_NPC_POSIE_TERRITORY,
     .init = &N(EVS_NpcInit_Posie),
     .settings = &N(NpcSettings_Posie),
     .flags = BASE_PASSIVE_FLAGS,

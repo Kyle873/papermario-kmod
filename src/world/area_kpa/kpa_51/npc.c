@@ -7,20 +7,9 @@
 NpcData N(NpcData_Magikoopa_01)[] = {
     {
         .id = NPC_Magikoopa_01,
-        .pos = { -130.0f, 0.0f, -30.0f },
-        .yaw = 90,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { -130, 0, -30 },
-                .wanderSize = { 100, 20 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { -130, 0, -30 },
-                .detectSize = { 200 },
-            }
-        },
+        .pos = { GEN_NPC_MAGIKOOPA_01_VEC },
+        .yaw = GEN_NPC_MAGIKOOPA_01_DIR,
+        .territory = GEN_NPC_MAGIKOOPA_01_TERRITORY,
         .settings = &N(NpcSettings_Magikoopa),
         .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = MAGINO_DROPS,
@@ -34,20 +23,9 @@ NpcData N(NpcData_Magikoopa_01)[] = {
 NpcData N(NpcData_Magikoopa_02)[] = {
     {
         .id = NPC_Magikoopa_02,
-        .pos = { 150.0f, 0.0f, -30.0f },
-        .yaw = 270,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 150, 0, -30 },
-                .wanderSize = { 100, 20 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 150, 0, -30 },
-                .detectSize = { 200 },
-            }
-        },
+        .pos = { GEN_NPC_MAGIKOOPA_02_VEC },
+        .yaw = GEN_NPC_MAGIKOOPA_02_DIR,
+        .territory = GEN_NPC_MAGIKOOPA_02_TERRITORY,
         .settings = &N(NpcSettings_Magikoopa),
         .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = MAGINO_DROPS,
@@ -60,20 +38,9 @@ NpcData N(NpcData_Magikoopa_02)[] = {
 
 NpcData N(NpcData_Koopatrol) = {
     .id = NPC_Koopatrol,
-    .pos = { 0.0f, 0.0f, -30.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 0, 0, -30 },
-            .wanderSize = { 50 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 0, 0, -30 },
-            .detectSize = { 300 },
-        }
-    },
+    .pos = { GEN_NPC_KOOPATROL_VEC },
+    .yaw = GEN_NPC_KOOPATROL_DIR,
+    .territory = GEN_NPC_KOOPATROL_TERRITORY,
     .settings = &N(NpcSettings_Koopatrol_Wander),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = KOOPATROL_DROPS,

@@ -1,8 +1,7 @@
 #include "flo_23.h"
 
 EntryList N(Entrances) = {
-    [flo_23_ENTRY_0]    {  470.0,    0.0,    0.0,  270.0 },
-    [flo_23_ENTRY_1]    { -470.0,    0.0,    0.0,   90.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {

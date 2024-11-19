@@ -59,7 +59,7 @@ EvtScript N(EVS_EnterMap) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_YOSHIS_VILLAGE)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
     Switch(GB_StoryProgress)
@@ -88,19 +88,13 @@ EvtScript N(EVS_Main) = {
     Call(SetTexPanner, MODEL_o121, TEX_PANNER_1)
     Call(SetTexPanner, MODEL_o371, TEX_PANNER_1)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP(    0,  400,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    0,    1,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     // water surface
     Call(SetTexPanner, MODEL_o119, TEX_PANNER_2)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_2)
-        TEX_PAN_PARAMS_STEP( -100,  200,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_2
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Call(SetModelFlags, MODEL_o189, MODEL_FLAG_BILLBOARD, TRUE)

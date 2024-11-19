@@ -218,20 +218,9 @@ EvtScript N(EVS_NpcInit_StoneChomp) = {
 
 NpcData N(NpcData_StoneChomp) = {
     .id = NPC_StoneChomp,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 218,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 468, 0, -378 },
-            .wanderSize = { 200 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 468, 0, -378 },
-            .detectSize = { 400 },
-        }
-    },
+    .pos = { GEN_NPC_STONE_CHOMP_VEC },
+    .yaw = GEN_NPC_STONE_CHOMP_DIR,
+    .territory = GEN_NPC_STONE_CHOMP_TERRITORY,
     .init = &N(EVS_NpcInit_StoneChomp),
     .initVarCount = 1,
     .initVar = { .value = -780 },

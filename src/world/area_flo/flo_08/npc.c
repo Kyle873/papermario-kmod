@@ -158,8 +158,9 @@ EvtScript N(EVS_NpcInit_GateFlower) = {
 
 NpcData N(NpcData_GateFlower) = {
     .id = NPC_GateFlower,
-    .pos = { -695.0f, 0.0f, -30.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_GATE_FLOWER_VEC },
+    .yaw = GEN_NPC_GATE_FLOWER_DIR,
+    .territory = GEN_NPC_GATE_FLOWER_TERRITORY,
     .init = &N(EVS_NpcInit_GateFlower),
     .settings = &N(NpcSettings_GateFlower),
     .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -170,20 +171,9 @@ NpcData N(NpcData_GateFlower) = {
 
 NpcData N(NpcData_Dayzee_01) = {
     .id = NPC_Dayzee_01,
-    .pos = { 205.0f, 0.0f, -80.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 205, 0, -80 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 205, 0, -80 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_DAYZEE_01_VEC },
+    .yaw = GEN_NPC_DAYZEE_01_DIR,
+    .territory = GEN_NPC_DAYZEE_01_TERRITORY,
     .settings = &N(NpcSettings_CrazyDayzee),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = CRAZY_DAYZEE_DROPS,
@@ -193,20 +183,9 @@ NpcData N(NpcData_Dayzee_01) = {
 
 NpcData N(NpcData_Dayzee_02) = {
     .id = NPC_Dayzee_02,
-    .pos = { 275.0f, 0.0f, -115.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 275, 0, -115 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 275, 0, -115 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_DAYZEE_02_VEC },
+    .yaw = GEN_NPC_DAYZEE_02_DIR,
+    .territory = GEN_NPC_DAYZEE_02_TERRITORY,
     .settings = &N(NpcSettings_CrazyDayzee),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = CRAZY_DAYZEE_DROPS,
@@ -216,20 +195,9 @@ NpcData N(NpcData_Dayzee_02) = {
 
 NpcData N(NpcData_Dayzee_03) = {
     .id = NPC_Dayzee_03,
-    .pos = { -230.0f, 60.0f, -110.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -230, 60, -110 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -230, 60, -110 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_DAYZEE_03_VEC },
+    .yaw = GEN_NPC_DAYZEE_03_DIR,
+    .territory = GEN_NPC_DAYZEE_03_TERRITORY,
     .settings = &N(NpcSettings_CrazyDayzee),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
     .drops = CRAZY_DAYZEE_DROPS,
@@ -239,20 +207,9 @@ NpcData N(NpcData_Dayzee_03) = {
 
 NpcData N(NpcData_Dayzee_04) = {
     .id = NPC_Dayzee_04,
-    .pos = { -330.0f, 60.0f, -110.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -330, 60, -110 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -330, 60, -110 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_DAYZEE_04_VEC },
+    .yaw = GEN_NPC_DAYZEE_04_DIR,
+    .territory = GEN_NPC_DAYZEE_04_TERRITORY,
     .settings = &N(NpcSettings_CrazyDayzee),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
     .drops = CRAZY_DAYZEE_DROPS,
@@ -262,20 +219,9 @@ NpcData N(NpcData_Dayzee_04) = {
 
 NpcData N(NpcData_Dayzee_05) = {
     .id = NPC_Dayzee_05,
-    .pos = { -430.0f, 60.0f, -110.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -430, 60, -110 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -430, 60, -110 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_DAYZEE_05_VEC },
+    .yaw = GEN_NPC_DAYZEE_05_DIR,
+    .territory = GEN_NPC_DAYZEE_05_TERRITORY,
     .settings = &N(NpcSettings_CrazyDayzee),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
     .drops = CRAZY_DAYZEE_DROPS,
@@ -285,20 +231,9 @@ NpcData N(NpcData_Dayzee_05) = {
 
 NpcData N(NpcData_Dayzee_06) = {
     .id = NPC_Dayzee_06,
-    .pos = { -530.0f, 60.0f, -110.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -530, 60, -110 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -530, 60, -110 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_DAYZEE_06_VEC },
+    .yaw = GEN_NPC_DAYZEE_06_DIR,
+    .territory = GEN_NPC_DAYZEE_06_TERRITORY,
     .settings = &N(NpcSettings_CrazyDayzee),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
     .drops = CRAZY_DAYZEE_DROPS,
@@ -308,20 +243,9 @@ NpcData N(NpcData_Dayzee_06) = {
 
 NpcData N(NpcData_Dayzee_07) = {
     .id = NPC_Dayzee_07,
-    .pos = { -630.0f, 60.0f, -110.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -630, 60, -110 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -630, 60, -110 },
-            .detectSize = { 150 },
-        }
-    },
+    .pos = { GEN_NPC_DAYZEE_07_VEC },
+    .yaw = GEN_NPC_DAYZEE_07_DIR,
+    .territory = GEN_NPC_DAYZEE_07_TERRITORY,
     .settings = &N(NpcSettings_CrazyDayzee),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
     .drops = CRAZY_DAYZEE_DROPS,
@@ -352,20 +276,9 @@ EvtScript N(EVS_NpcInit_AmazyDayzee) = {
 
 NpcData N(NpcData_AmazyDayzee) = {
     .id = NPC_AmazyDayzee,
-    .pos = { 240.0f, 0.0f, -90.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 240, 0, -90 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 240, 0, -90 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_AMAZY_DAYZEE_VEC },
+    .yaw = GEN_NPC_AMAZY_DAYZEE_DIR,
+    .territory = GEN_NPC_AMAZY_DAYZEE_TERRITORY,
     .init = &N(EVS_NpcInit_AmazyDayzee),
     .settings = &N(NpcSettings_AmazyDayzee),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,

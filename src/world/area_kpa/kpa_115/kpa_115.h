@@ -2,6 +2,7 @@
 /// @brief Bowser's Castle - Room with Hidden Door 3
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

@@ -32,7 +32,7 @@ EvtScript N(EVS_BindExitTriggers) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_MARIOS_HOUSE)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(GetEntryID, LVar0)
     IfEq(LVar0, kmr_20_ENTRY_2)
         Set(GB_StoryProgress, STORY_EPILOGUE)

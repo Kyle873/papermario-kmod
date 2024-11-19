@@ -26,7 +26,7 @@ EvtScript N(EVS_MonitorSceneSkip) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_MT_RUGGED)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     Call(SetCamPerspective, CAM_DEFAULT, CAM_UPDATE_FROM_ZONE, 30, 16, 4096) // uses fov 25 instead of 30
     Call(SetCamBGColor, CAM_DEFAULT, 0, 0, 0)

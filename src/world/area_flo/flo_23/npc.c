@@ -157,8 +157,9 @@ EvtScript N(EVS_NpcInit_GateFlower) = {
 
 NpcData N(NpcData_GateFlower) = {
     .id = NPC_GateFlower,
-    .pos = { 385.0f, 0.0f, -35.0f },
-    .yaw = 90,
+    .pos = { GEN_NPC_GATE_FLOWER_VEC },
+    .yaw = GEN_NPC_GATE_FLOWER_DIR,
+    .territory = GEN_NPC_GATE_FLOWER_TERRITORY,
     .init = &N(EVS_NpcInit_GateFlower),
     .settings = &N(NpcSettings_GateFlower),
     .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -169,20 +170,9 @@ NpcData N(NpcData_GateFlower) = {
 
 NpcData N(NpcData_Spiny_01) = {
     .id = NPC_Spiny_01,
-    .pos = { 80.0f, 0.0f, 0.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 80, 0, 0 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 80, 0, 0 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_SPINY_01_VEC },
+    .yaw = GEN_NPC_SPINY_01_DIR,
+    .territory = GEN_NPC_SPINY_01_TERRITORY,
     .settings = &N(NpcSettings_Spiny),
     .flags = ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
     .drops = SPINY_DROPS,
@@ -191,20 +181,9 @@ NpcData N(NpcData_Spiny_01) = {
 
 NpcData N(NpcData_Spiny_02) = {
     .id = NPC_Spiny_02,
-    .pos = { -320.0f, 0.0f, 0.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -320, 0, 0 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -320, 0, 0 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_SPINY_02_VEC },
+    .yaw = GEN_NPC_SPINY_02_DIR,
+    .territory = GEN_NPC_SPINY_02_TERRITORY,
     .settings = &N(NpcSettings_Spiny),
     .flags = ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
     .drops = SPINY_DROPS,

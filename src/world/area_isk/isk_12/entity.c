@@ -10,8 +10,8 @@ EvtScript N(EVS_SmashBlock_Stone) = {
 
 EvtScript N(EVS_MakeEntities) = {
     IfEq(GF_ISK12_Hammer2Block, FALSE)
-        Call(MakeEntity, Ref(Entity_Hammer2Block), 627, -840, 135, 75, MAKE_ENTITY_END)
-        Call(AssignScript, Ref(N(EVS_SmashBlock_Stone)))
+        EVT_MAKE_ENTITY(Hammer2Block, GEN_HAMMER2_BLOCK_1_PARAMS)
+        Call(AssignScript, Ref(GEN_HAMMER2_BLOCK_1_SCRIPT))
     EndIf
     PlayEffect(EFFECT_FLAME, FX_FLAME_RED, 415, -453, 291, Float(0.3), LVar0)
     PlayEffect(EFFECT_FLAME, FX_FLAME_RED, 505, -453, 44, Float(0.3), LVar0)
@@ -19,7 +19,7 @@ EvtScript N(EVS_MakeEntities) = {
     PlayEffect(EFFECT_FLAME, FX_FLAME_RED, 505, -643, 44, Float(0.3), LVar0)
     PlayEffect(EFFECT_FLAME, FX_FLAME_RED, 417, -643, 196, Float(0.3), LVar0)
     PlayEffect(EFFECT_FLAME, FX_FLAME_RED, 444, -643, 120, Float(0.3), LVar0)
-    Call(MakeItemEntity, ITEM_RUINS_KEY, 461, -760, 109, ITEM_SPAWN_MODE_KEY, GF_ISK12_Item_RuinsKey)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
     Return
     End
 };

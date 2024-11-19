@@ -2,6 +2,7 @@
 /// @brief Toad Town Tunnels - Windy Path (B3)
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

@@ -547,8 +547,9 @@ EvtScript N(EVS_NpcInit_Eldstar_02) = {
 NpcData N(NpcData_Eldstar)[] = {
     {
         .id = NPC_StarSpirit,
-        .pos = { -40.0f, 96.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_STAR_SPIRIT_VEC },
+        .yaw = GEN_NPC_STAR_SPIRIT_DIR,
+        .territory = GEN_NPC_STAR_SPIRIT_TERRITORY,
         .init = &N(EVS_NpcInit_Eldstar_01),
         .settings = &N(NpcSettings_StarSpirit),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -557,8 +558,9 @@ NpcData N(NpcData_Eldstar)[] = {
     },
     {
         .id = NPC_AuxSpirit,
-        .pos = { -40.0f, 96.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_AUX_SPIRIT_VEC },
+        .yaw = GEN_NPC_AUX_SPIRIT_DIR,
+        .territory = GEN_NPC_AUX_SPIRIT_TERRITORY,
         .init = &N(EVS_NpcInit_Eldstar_02),
         .settings = &N(NpcSettings_StarSpirit),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -570,8 +572,9 @@ NpcData N(NpcData_Eldstar)[] = {
 NpcData N(NpcData_Mamar)[] = {
     {
         .id = NPC_StarSpirit,
-        .pos = { -40.0f, 96.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_STAR_SPIRIT_1_VEC },
+        .yaw = GEN_NPC_STAR_SPIRIT_1_DIR,
+        .territory = GEN_NPC_STAR_SPIRIT_1_TERRITORY,
         .init = &N(EVS_NpcInit_Eldstar_01),
         .settings = &N(NpcSettings_StarSpirit),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -580,8 +583,9 @@ NpcData N(NpcData_Mamar)[] = {
     },
     {
         .id = NPC_AuxSpirit,
-        .pos = { -40.0f, 96.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_AUX_SPIRIT_1_VEC },
+        .yaw = GEN_NPC_AUX_SPIRIT_1_DIR,
+        .territory = GEN_NPC_AUX_SPIRIT_1_TERRITORY,
         .init = &N(EVS_NpcInit_Eldstar_02),
         .settings = &N(NpcSettings_StarSpirit),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -593,8 +597,9 @@ NpcData N(NpcData_Mamar)[] = {
 NpcData N(NpcData_Skolar)[] = {
     {
         .id = NPC_StarSpirit,
-        .pos = { -40.0f, 96.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_STAR_SPIRIT_2_VEC },
+        .yaw = GEN_NPC_STAR_SPIRIT_2_DIR,
+        .territory = GEN_NPC_STAR_SPIRIT_2_TERRITORY,
         .init = &N(EVS_NpcInit_Eldstar_01),
         .settings = &N(NpcSettings_StarSpirit),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -603,8 +608,9 @@ NpcData N(NpcData_Skolar)[] = {
     },
     {
         .id = NPC_AuxSpirit,
-        .pos = { -40.0f, 96.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_AUX_SPIRIT_2_VEC },
+        .yaw = GEN_NPC_AUX_SPIRIT_2_DIR,
+        .territory = GEN_NPC_AUX_SPIRIT_2_TERRITORY,
         .init = &N(EVS_NpcInit_Eldstar_02),
         .settings = &N(NpcSettings_StarSpirit),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -616,8 +622,9 @@ NpcData N(NpcData_Skolar)[] = {
 NpcData N(NpcData_Muskular)[] = {
     {
         .id = NPC_StarSpirit,
-        .pos = { -40.0f, 96.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_STAR_SPIRIT_3_VEC },
+        .yaw = GEN_NPC_STAR_SPIRIT_3_DIR,
+        .territory = GEN_NPC_STAR_SPIRIT_3_TERRITORY,
         .init = &N(EVS_NpcInit_Eldstar_01),
         .settings = &N(NpcSettings_StarSpirit),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -626,8 +633,9 @@ NpcData N(NpcData_Muskular)[] = {
     },
     {
         .id = NPC_AuxSpirit,
-        .pos = { -40.0f, 96.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_AUX_SPIRIT_3_VEC },
+        .yaw = GEN_NPC_AUX_SPIRIT_3_DIR,
+        .territory = GEN_NPC_AUX_SPIRIT_3_TERRITORY,
         .init = &N(EVS_NpcInit_Eldstar_02),
         .settings = &N(NpcSettings_StarSpirit),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -639,8 +647,9 @@ NpcData N(NpcData_Muskular)[] = {
 NpcData N(NpcData_Misstar)[] = {
     {
         .id = NPC_StarSpirit,
-        .pos = { -40.0f, 96.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_STAR_SPIRIT_4_VEC },
+        .yaw = GEN_NPC_STAR_SPIRIT_4_DIR,
+        .territory = GEN_NPC_STAR_SPIRIT_4_TERRITORY,
         .init = &N(EVS_NpcInit_Eldstar_01),
         .settings = &N(NpcSettings_StarSpirit),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -649,8 +658,9 @@ NpcData N(NpcData_Misstar)[] = {
     },
     {
         .id = NPC_AuxSpirit,
-        .pos = { -40.0f, 96.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_AUX_SPIRIT_4_VEC },
+        .yaw = GEN_NPC_AUX_SPIRIT_4_DIR,
+        .territory = GEN_NPC_AUX_SPIRIT_4_TERRITORY,
         .init = &N(EVS_NpcInit_Eldstar_02),
         .settings = &N(NpcSettings_StarSpirit),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -662,8 +672,9 @@ NpcData N(NpcData_Misstar)[] = {
 NpcData N(NpcData_Klevar)[] = {
     {
         .id = NPC_StarSpirit,
-        .pos = { -40.0f, 96.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_STAR_SPIRIT_5_VEC },
+        .yaw = GEN_NPC_STAR_SPIRIT_5_DIR,
+        .territory = GEN_NPC_STAR_SPIRIT_5_TERRITORY,
         .init = &N(EVS_NpcInit_Eldstar_01),
         .settings = &N(NpcSettings_StarSpirit),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -672,8 +683,9 @@ NpcData N(NpcData_Klevar)[] = {
     },
     {
         .id = NPC_AuxSpirit,
-        .pos = { -40.0f, 96.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_AUX_SPIRIT_5_VEC },
+        .yaw = GEN_NPC_AUX_SPIRIT_5_DIR,
+        .territory = GEN_NPC_AUX_SPIRIT_5_TERRITORY,
         .init = &N(EVS_NpcInit_Eldstar_02),
         .settings = &N(NpcSettings_StarSpirit),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -685,8 +697,9 @@ NpcData N(NpcData_Klevar)[] = {
 NpcData N(NpcData_Kalmar)[] = {
     {
         .id = NPC_StarSpirit,
-        .pos = { -40.0f, 96.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_STAR_SPIRIT_6_VEC },
+        .yaw = GEN_NPC_STAR_SPIRIT_6_DIR,
+        .territory = GEN_NPC_STAR_SPIRIT_6_TERRITORY,
         .init = &N(EVS_NpcInit_Eldstar_01),
         .settings = &N(NpcSettings_StarSpirit),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -695,8 +708,9 @@ NpcData N(NpcData_Kalmar)[] = {
     },
     {
         .id = NPC_AuxSpirit,
-        .pos = { -40.0f, 96.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_AUX_SPIRIT_6_VEC },
+        .yaw = GEN_NPC_AUX_SPIRIT_6_DIR,
+        .territory = GEN_NPC_AUX_SPIRIT_6_TERRITORY,
         .init = &N(EVS_NpcInit_Eldstar_02),
         .settings = &N(NpcSettings_StarSpirit),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,

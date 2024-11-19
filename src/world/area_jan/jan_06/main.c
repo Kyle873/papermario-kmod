@@ -46,7 +46,7 @@ EvtScript N(EVS_InitRavenStatueObjects) = {
         Call(RotateModel, MODEL_o148, 0, 0, 1, 0)
         Call(RotateModel, MODEL_o151, 0, 0, 1, 0)
         Call(RotateModel, MODEL_o162, 0, 0, 1, 0)
-        Call(MakeItemEntity, ITEM_JADE_RAVEN, -100, 15, -400, ITEM_SPAWN_MODE_DECORATION, 0)
+        EVT_MAKE_ITEM_ENTITY(GEN_ITEM_3_PARAMS)
         Call(ModifyColliderFlags, MODIFY_COLLIDER_FLAGS_SET_BITS, COLLIDER_o166, COLLIDER_FLAGS_UPPER_MASK)
         Call(ModifyColliderFlags, MODIFY_COLLIDER_FLAGS_SET_BITS, COLLIDER_o247, COLLIDER_FLAGS_UPPER_MASK)
     EndIf
@@ -55,7 +55,7 @@ EvtScript N(EVS_InitRavenStatueObjects) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_JADE_JUNGLE)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
     Call(SetZoneEnabled, ZONE_o59, FALSE)
@@ -88,10 +88,7 @@ EvtScript N(EVS_Main) = {
     // water surface
     Call(SetTexPanner, MODEL_o61, TEX_PANNER_1)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP(  -80,  140,   80, -100)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Return

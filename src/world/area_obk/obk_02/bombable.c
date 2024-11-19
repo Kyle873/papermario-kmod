@@ -2,8 +2,8 @@
 #include "effects.h"
 
 BombTrigger N(BombPos_Wall) = {
-    .pos = { 237.0f, -210.0f, 53.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_1_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_1_RAD,
 };
 
 EvtScript N(EVS_OnBlast_Wall) = {

@@ -9,13 +9,13 @@ EvtScript N(EVS_OnSmashFloor) = {
 
 EvtScript N(EVS_MakeEntities) = {
     IfEq(GF_OBK05_BoardedFloor, FALSE)
-        Call(MakeEntity, Ref(Entity_BoardedFloor), 0, 0, 0, 0, MAKE_ENTITY_END)
-        Call(AssignScript, Ref(N(EVS_OnSmashFloor)))
+        EVT_MAKE_ENTITY(BoardedFloor, GEN_BOARDED_FLOOR_1_PARAMS)
+        Call(AssignScript, Ref(GEN_BOARDED_FLOOR_1_SCRIPT))
     EndIf
-    Call(MakeEntity, Ref(Entity_WoodenCrate), 200, 0, -100, 0, ITEM_APPLE, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_WoodenCrate), 200, 30, -100, 0, -1, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_WoodenCrate), 165, 0, -100, 0, ITEM_APPLE, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_WoodenCrate), -105, 0, -55, 0, -1, MAKE_ENTITY_END)
+    EVT_MAKE_ENTITY(WoodenCrate, GEN_WOODEN_CRATE_1_PARAMS)
+    EVT_MAKE_ENTITY(WoodenCrate, GEN_WOODEN_CRATE_2_PARAMS)
+    EVT_MAKE_ENTITY(WoodenCrate, GEN_WOODEN_CRATE_3_PARAMS)
+    EVT_MAKE_ENTITY(WoodenCrate, GEN_WOODEN_CRATE_4_PARAMS)
     Return
     End
 };

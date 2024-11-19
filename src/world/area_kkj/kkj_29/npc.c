@@ -65,8 +65,9 @@ AnimID N(ExtraAnims_Koopatrol)[] = {
 NpcData N(NpcData_Characters)[] = {
     {
         .id = NPC_Bowser,
-        .pos = { 0.0f, -500.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_BOWSER_VEC },
+        .yaw = GEN_NPC_BOWSER_DIR,
+        .territory = GEN_NPC_BOWSER_TERRITORY,
         .settings = &N(NpcSettings_Bowser),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
@@ -75,8 +76,9 @@ NpcData N(NpcData_Characters)[] = {
     },
     {
         .id = NPC_Koopatrol_01,
-        .pos = { 0.0f, -500.0f, 0.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_KOOPATROL_01_VEC },
+        .yaw = GEN_NPC_KOOPATROL_01_DIR,
+        .territory = GEN_NPC_KOOPATROL_01_TERRITORY,
         .init = &N(EVS_NpcInit_Koopatrol_01),
         .settings = &N(NpcSettings_Koopatrol_Stationary),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION,
@@ -86,8 +88,9 @@ NpcData N(NpcData_Characters)[] = {
     },
     {
         .id = NPC_Koopatrol_02,
-        .pos = { 0.0f, -500.0f, 0.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_KOOPATROL_02_VEC },
+        .yaw = GEN_NPC_KOOPATROL_02_DIR,
+        .territory = GEN_NPC_KOOPATROL_02_TERRITORY,
         .init = &N(EVS_NpcInit_Koopatrol_02),
         .settings = &N(NpcSettings_Koopatrol_Stationary),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION,
@@ -97,8 +100,9 @@ NpcData N(NpcData_Characters)[] = {
     },
     {
         .id = NPC_HammerBros,
-        .pos = { 0.0f, -500.0f, 0.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_HAMMER_BROS_VEC },
+        .yaw = GEN_NPC_HAMMER_BROS_DIR,
+        .territory = GEN_NPC_HAMMER_BROS_TERRITORY,
         .init = &N(EVS_NpcInit_HammerBros),
         .settings = &N(NpcSettings_HammerBros),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION,

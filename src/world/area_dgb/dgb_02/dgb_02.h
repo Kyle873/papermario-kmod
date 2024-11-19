@@ -2,6 +2,7 @@
 /// @brief Tubba's Castle - West Hall (1F)
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

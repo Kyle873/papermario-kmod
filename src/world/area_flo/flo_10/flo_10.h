@@ -2,6 +2,7 @@
 /// @brief Flower Fields - (SE) Lily's Fountain
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

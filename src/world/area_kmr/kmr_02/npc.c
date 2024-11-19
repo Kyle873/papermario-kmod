@@ -1737,20 +1737,9 @@ EvtScript N(EVS_NpcAI_Eldstar_02) = {
 NpcData N(NpcData_GoombaFamily)[] = {
     {
         .id = NPC_Goompa,
-        .pos = { 506.0f, 30.0f, -364.0f },
-        .yaw = 45,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 506, 30, -364 },
-                .wanderSize = { 100 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 412, 28, -453 },
-                .detectSize = { 100 },
-            }
-        },
+        .pos = { GEN_NPC_GOOMPA_VEC },
+        .yaw = GEN_NPC_GOOMPA_DIR,
+        .territory = GEN_NPC_GOOMPA_TERRITORY,
         .init = &N(EVS_NpcInit_Goompa),
         .settings = &N(NpcSettings_GoombaFamily_Wander),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -1760,20 +1749,9 @@ NpcData N(NpcData_GoombaFamily)[] = {
     },
     {
         .id = NPC_Goombaria,
-        .pos = { 92.0f, 0.0f, 76.0f },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 92, 0, 76 },
-                .wanderSize = { 100 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 124, 0, -35 },
-                .detectSize = { 100 },
-            }
-        },
+        .pos = { GEN_NPC_GOOMBARIA_VEC },
+        .yaw = GEN_NPC_GOOMBARIA_DIR,
+        .territory = GEN_NPC_GOOMBARIA_TERRITORY,
         .init = &N(EVS_NpcInit_Goombaria),
         .settings = &N(NpcSettings_GoombaFamily_Wander),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -1783,20 +1761,9 @@ NpcData N(NpcData_GoombaFamily)[] = {
     },
     {
         .id = NPC_Goombario,
-        .pos = { -50.0f, 0.0f, -30.0f },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { -50, 0, -30 },
-                .wanderSize = { 70 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { -50, 0, -30 },
-                .detectSize = { 100 },
-            }
-        },
+        .pos = { GEN_NPC_GOOMBARIO_VEC },
+        .yaw = GEN_NPC_GOOMBARIO_DIR,
+        .territory = GEN_NPC_GOOMBARIO_TERRITORY,
         .init = &N(EVS_NpcInit_Goombario),
         .settings = &N(NpcSettings_GoombaFamily_Wander),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -1805,20 +1772,9 @@ NpcData N(NpcData_GoombaFamily)[] = {
     },
     {
         .id = NPC_Gooma,
-        .pos = { 100.0f, 0.0f, -256.0f },
-        .yaw = 90,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 100, 0, -256 },
-                .wanderSize = { 30 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 100, 0, -256 },
-                .detectSize = { 30 },
-            }
-        },
+        .pos = { GEN_NPC_GOOMA_VEC },
+        .yaw = GEN_NPC_GOOMA_DIR,
+        .territory = GEN_NPC_GOOMA_TERRITORY,
         .init = &N(EVS_NpcInit_Gooma),
         .settings = &N(NpcSettings_GoombaFamily_Wander),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -1828,20 +1784,9 @@ NpcData N(NpcData_GoombaFamily)[] = {
     },
     {
         .id = NPC_Goompapa,
-        .pos = { 163.0f, 0.0f, 283.0f },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 163, 0, 283 },
-                .wanderSize = { 50 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 267, 0, 245 },
-                .detectSize = { 100 },
-            }
-        },
+        .pos = { GEN_NPC_GOOMPAPA_VEC },
+        .yaw = GEN_NPC_GOOMPAPA_DIR,
+        .territory = GEN_NPC_GOOMPAPA_TERRITORY,
         .init = &N(EVS_NpcInit_Goompapa),
         .settings = &N(NpcSettings_GoombaFamily_Wander),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -1853,20 +1798,9 @@ NpcData N(NpcData_GoombaFamily)[] = {
 
 NpcData N(NpcData_Goomama) = {
     .id = NPC_Goomama,
-    .pos = { -200.0f, 0.0f, 100.0f },
-    .yaw = 0,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -200, 0, 100 },
-            .wanderSize = { 70 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -200, 0, 100 },
-            .detectSize = { 100 },
-        }
-    },
+    .pos = { GEN_NPC_GOOMAMA_VEC },
+    .yaw = GEN_NPC_GOOMAMA_DIR,
+    .territory = GEN_NPC_GOOMAMA_TERRITORY,
     .init = &N(EVS_NpcInit_Goomama),
     .settings = &N(NpcSettings_GoombaFamily_Wander),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -1883,20 +1817,9 @@ EvtScript N(EVS_NpcInit_Toad) = {
 
 NpcData N(NpcData_Toad) = {
     .id = NPC_Toad,
-    .pos = { -138.0f, 19.0f, -297.0f },
-    .yaw = 0,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 0, 0, 0 },
-            .wanderSize = { 0 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 0, 0, 0 },
-            .detectSize = { 0 },
-        }
-    },
+    .pos = { GEN_NPC_TOAD_VEC },
+    .yaw = GEN_NPC_TOAD_DIR,
+    .territory = GEN_NPC_TOAD_TERRITORY,
     .init = &N(EVS_NpcInit_Toad),
     .settings = &N(NpcSettings_Toad_Guard),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -1917,20 +1840,9 @@ AnimID N(ExtraAnims_Kammy)[] = {
 
 NpcData N(NpcData_Kammy) = {
     .id = NPC_Kammy,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 0, 0, 0 },
-            .wanderSize = { 100 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 0, 0, 0 },
-            .detectSize = { 100 },
-        }
-    },
+    .pos = { GEN_NPC_KAMMY_VEC },
+    .yaw = GEN_NPC_KAMMY_DIR,
+    .territory = GEN_NPC_KAMMY_TERRITORY,
     .init = &N(EVS_NpcInit_Kammy),
     .settings = &N(NpcSettings_Kammy_Guard),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_FLYING,
@@ -1941,8 +1853,9 @@ NpcData N(NpcData_Kammy) = {
 
 NpcData N(NpcData_ChuckQuizmo) = {
     .id = NPC_ChuckQuizmo,
-    .pos = { -300.0f, 0.0f, 175.0f },
-    .yaw = 90,
+    .pos = { GEN_NPC_CHUCK_QUIZMO_VEC },
+    .yaw = GEN_NPC_CHUCK_QUIZMO_DIR,
+    .territory = GEN_NPC_CHUCK_QUIZMO_TERRITORY,
     .initVarCount = 1,
     .initVar = { .bytes = { 0, QUIZ_AREA_KMR, QUIZ_COUNT_KMR, QUIZ_MAP_KMR_02 }},
     .settings = &N(NpcSettings_ChuckQuizmo),
@@ -1988,8 +1901,9 @@ AnimID N(ExtraAnims_Eldstar)[] = {
 NpcData N(NpcData_Eldstar_Prologue)[] = {
     {
         .id = NPC_Eldstar_01,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_ELDSTAR_01_VEC },
+        .yaw = GEN_NPC_ELDSTAR_01_DIR,
+        .territory = GEN_NPC_ELDSTAR_01_TERRITORY,
         .init = &N(EVS_NpcInit_Eldstar_01),
         .settings = &N(NpcSettings_StarSpirit),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_HAS_NO_SPRITE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,
@@ -1999,8 +1913,9 @@ NpcData N(NpcData_Eldstar_Prologue)[] = {
     },
     {
         .id = NPC_Eldstar_02,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_ELDSTAR_02_VEC },
+        .yaw = GEN_NPC_ELDSTAR_02_DIR,
+        .territory = GEN_NPC_ELDSTAR_02_TERRITORY,
         .init = &N(EVS_NpcInit_Eldstar_02),
         .settings = &N(NpcSettings_StarSpirit),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -2204,8 +2119,9 @@ EvtScript N(EVS_NpcInit_Parakarry_Epilogue) = {
 NpcData N(NpcData_Epilogue)[] = {
     {
         .id = NPC_Eldstar_01,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_ELDSTAR_01_1_VEC },
+        .yaw = GEN_NPC_ELDSTAR_01_1_DIR,
+        .territory = GEN_NPC_ELDSTAR_01_1_TERRITORY,
         .init = &N(EVS_NpcInit_Eldstar_Epilogue),
         .settings = &N(NpcSettings_StarSpirit),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_HAS_NO_SPRITE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,
@@ -2215,8 +2131,9 @@ NpcData N(NpcData_Epilogue)[] = {
     },
     {
         .id = NPC_Parakarry,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_PARAKARRY_VEC },
+        .yaw = GEN_NPC_PARAKARRY_DIR,
+        .territory = GEN_NPC_PARAKARRY_TERRITORY,
         .init = &N(EVS_NpcInit_Parakarry_Epilogue),
         .settings = &N(NpcSettings_GoombaFamily),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,
@@ -2242,8 +2159,9 @@ NpcData N(NpcData_Epilogue)[] = {
     },
     {
         .id = NPC_Goombario,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_GOOMBARIO_1_VEC },
+        .yaw = GEN_NPC_GOOMBARIO_1_DIR,
+        .territory = GEN_NPC_GOOMBARIO_1_TERRITORY,
         .init = &N(EVS_NpcInit_Goombario_Epilogue),
         .settings = &N(NpcSettings_GoombaFamily),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,
@@ -2252,8 +2170,9 @@ NpcData N(NpcData_Epilogue)[] = {
     },
     {
         .id = NPC_Goombaria,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_GOOMBARIA_1_VEC },
+        .yaw = GEN_NPC_GOOMBARIA_1_DIR,
+        .territory = GEN_NPC_GOOMBARIA_1_TERRITORY,
         .init = &N(EVS_NpcInit_Goombaria_Epilogue),
         .settings = &N(NpcSettings_GoombaFamily),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,

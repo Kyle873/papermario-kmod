@@ -343,8 +343,9 @@ EvtScript N(EVS_NpcInit_Guardian) = {
 NpcData N(NpcData_Imposter)[] = {
     {
         .id = NPC_Follower,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_FOLLOWER_VEC },
+        .yaw = GEN_NPC_FOLLOWER_DIR,
+        .territory = GEN_NPC_FOLLOWER_TERRITORY,
         .init = &N(EVS_NpcInit_Follower),
         .settings = &N(NpcSettings_Peach),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_USE_PLAYER_SPRITE | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_NO_DROPS,
@@ -354,8 +355,9 @@ NpcData N(NpcData_Imposter)[] = {
     },
     {
         .id = NPC_Guardian,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_GUARDIAN_VEC },
+        .yaw = GEN_NPC_GUARDIAN_DIR,
+        .territory = GEN_NPC_GUARDIAN_TERRITORY,
         .init = &N(EVS_NpcInit_Guardian),
         .settings = &N(NpcSettings_Peach),
         .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_SKIP_BATTLE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_NO_DROPS | ENEMY_FLAG_IGNORE_TOUCH,
@@ -365,8 +367,9 @@ NpcData N(NpcData_Imposter)[] = {
     },
     {
         .id = NPC_Duplighost,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_DUPLIGHOST_VEC },
+        .yaw = GEN_NPC_DUPLIGHOST_DIR,
+        .territory = GEN_NPC_DUPLIGHOST_TERRITORY,
         .init = &N(EVS_NpcInit_Duplighost),
         .settings = &N(NpcSettings_Duplighost),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER | ENEMY_FLAG_NO_DROPS,

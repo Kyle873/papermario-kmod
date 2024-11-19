@@ -40,7 +40,7 @@ EvtScript N(EVS_EnterMap) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_BOWSERS_CASTLE)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_DEFAULT(0, 0, 0)
     Call(MakeNpcs, TRUE, Ref(N(DefaultNPCs)))
@@ -79,37 +79,25 @@ EvtScript N(EVS_Main) = {
     Call(SetTexPanner, MODEL_s_sui, TEX_PANNER_1)
     Call(SetTexPanner, MODEL_o385, TEX_PANNER_1)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP( -100,  100,   70,  -70)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     // water falling
     Call(SetTexPanner, MODEL_o388, TEX_PANNER_2)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_2)
-        TEX_PAN_PARAMS_STEP( 1000, 4000,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_2
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     // water spreading
     Call(SetTexPanner, MODEL_o389, TEX_PANNER_3)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_3)
-        TEX_PAN_PARAMS_STEP(    0, -1500,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    0,     1,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,     0,    0,    0)
+        GEN_TEX_PANNER_3
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     // water surface
     Call(SetTexPanner, MODEL_move, TEX_PANNER_4)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_4)
-        TEX_PAN_PARAMS_STEP(  200, -100,   20,  -20)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_4
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Exec(N(EVS_SetupMusic))

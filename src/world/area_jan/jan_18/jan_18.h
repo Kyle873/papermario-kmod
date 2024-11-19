@@ -2,6 +2,7 @@
 /// @brief Jade Jungle - Great Tree Vine Ascent
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

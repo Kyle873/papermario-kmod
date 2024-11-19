@@ -22,9 +22,7 @@ NpcSettings N(NpcSettings_HuffNPuff) = {
 #include "world/common/npc/StarSpirit.inc.c"
 
 Vec3f N(Path_JumpOut)[] = {
-    {  600.0,   104.0,    0.0 },
-    {  575.0,   204.0,    0.0 },
-    {  550.0,   104.0,    0.0 },
+    GEN_PATH_1_PATH
 };
 
 EvtScript N(EVS_PlayRumbleSounds) = {
@@ -588,8 +586,9 @@ AnimID N(ExtraAnims_HuffNPuff)[] = {
 NpcData N(NpcData_HuffNPuff)[] = {
     {
         .id = NPC_HuffNPuff_01,
-        .pos = { 650.0f, NPC_DISPOSE_POS_Y, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_HUFF_N_PUFF_01_VEC },
+        .yaw = GEN_NPC_HUFF_N_PUFF_01_DIR,
+        .territory = GEN_NPC_HUFF_N_PUFF_01_TERRITORY,
         .init = &N(EVS_NpcInit_HuffNPuff_Face),
         .settings = &N(NpcSettings_HuffNPuff),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_NO_DELAY_AFTER_FLEE,
@@ -599,8 +598,9 @@ NpcData N(NpcData_HuffNPuff)[] = {
     },
     {
         .id = NPC_HuffNPuff_02,
-        .pos = { 650.0f, 100.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_HUFF_N_PUFF_02_VEC },
+        .yaw = GEN_NPC_HUFF_N_PUFF_02_DIR,
+        .territory = GEN_NPC_HUFF_N_PUFF_02_TERRITORY,
         .init = &N(EVS_NpcInit_HuffNPuff_Body),
         .settings = &N(NpcSettings_HuffNPuff),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_NO_DELAY_AFTER_FLEE,
@@ -610,8 +610,9 @@ NpcData N(NpcData_HuffNPuff)[] = {
     },
     {
         .id = NPC_HuffNPuff_03,
-        .pos = { 650.0f, NPC_DISPOSE_POS_Y, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_HUFF_N_PUFF_03_VEC },
+        .yaw = GEN_NPC_HUFF_N_PUFF_03_DIR,
+        .territory = GEN_NPC_HUFF_N_PUFF_03_TERRITORY,
         .init = &N(EVS_NpcInit_HuffNPuff_Arms),
         .settings = &N(NpcSettings_HuffNPuff),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_NO_DELAY_AFTER_FLEE,
@@ -629,8 +630,9 @@ AnimID N(ExtraAnims_RuffPuff)[] = {
 NpcData N(NpcData_RuffPuffs)[] = {
     {
         .id = NPC_RuffPuff_01,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_RUFF_PUFF_01_VEC },
+        .yaw = GEN_NPC_RUFF_PUFF_01_DIR,
+        .territory = GEN_NPC_RUFF_PUFF_01_TERRITORY,
         .init = &N(EVS_NpcInit_RuffPuff),
         .settings = &N(NpcSettings_RuffPuff),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -640,8 +642,9 @@ NpcData N(NpcData_RuffPuffs)[] = {
     },
     {
         .id = NPC_RuffPuff_02,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_RUFF_PUFF_02_VEC },
+        .yaw = GEN_NPC_RUFF_PUFF_02_DIR,
+        .territory = GEN_NPC_RUFF_PUFF_02_TERRITORY,
         .init = &N(EVS_NpcInit_RuffPuff),
         .settings = &N(NpcSettings_RuffPuff),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -651,8 +654,9 @@ NpcData N(NpcData_RuffPuffs)[] = {
     },
     {
         .id = NPC_RuffPuff_03,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_RUFF_PUFF_03_VEC },
+        .yaw = GEN_NPC_RUFF_PUFF_03_DIR,
+        .territory = GEN_NPC_RUFF_PUFF_03_TERRITORY,
         .init = &N(EVS_NpcInit_RuffPuff),
         .settings = &N(NpcSettings_RuffPuff),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -662,8 +666,9 @@ NpcData N(NpcData_RuffPuffs)[] = {
     },
     {
         .id = NPC_RuffPuff_04,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_RUFF_PUFF_04_VEC },
+        .yaw = GEN_NPC_RUFF_PUFF_04_DIR,
+        .territory = GEN_NPC_RUFF_PUFF_04_TERRITORY,
         .init = &N(EVS_NpcInit_RuffPuff),
         .settings = &N(NpcSettings_RuffPuff),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -673,8 +678,9 @@ NpcData N(NpcData_RuffPuffs)[] = {
     },
     {
         .id = NPC_RuffPuff_05,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_RUFF_PUFF_05_VEC },
+        .yaw = GEN_NPC_RUFF_PUFF_05_DIR,
+        .territory = GEN_NPC_RUFF_PUFF_05_TERRITORY,
         .init = &N(EVS_NpcInit_RuffPuff),
         .settings = &N(NpcSettings_RuffPuff),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -684,8 +690,9 @@ NpcData N(NpcData_RuffPuffs)[] = {
     },
     {
         .id = NPC_RuffPuff_06,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_RUFF_PUFF_06_VEC },
+        .yaw = GEN_NPC_RUFF_PUFF_06_DIR,
+        .territory = GEN_NPC_RUFF_PUFF_06_TERRITORY,
         .init = &N(EVS_NpcInit_RuffPuff),
         .settings = &N(NpcSettings_RuffPuff),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -695,8 +702,9 @@ NpcData N(NpcData_RuffPuffs)[] = {
     },
     {
         .id = NPC_RuffPuff_07,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_RUFF_PUFF_07_VEC },
+        .yaw = GEN_NPC_RUFF_PUFF_07_DIR,
+        .territory = GEN_NPC_RUFF_PUFF_07_TERRITORY,
         .init = &N(EVS_NpcInit_RuffPuff),
         .settings = &N(NpcSettings_RuffPuff),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -706,8 +714,9 @@ NpcData N(NpcData_RuffPuffs)[] = {
     },
     {
         .id = NPC_RuffPuff_08,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_RUFF_PUFF_08_VEC },
+        .yaw = GEN_NPC_RUFF_PUFF_08_DIR,
+        .territory = GEN_NPC_RUFF_PUFF_08_TERRITORY,
         .init = &N(EVS_NpcInit_RuffPuff),
         .settings = &N(NpcSettings_RuffPuff),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -717,8 +726,9 @@ NpcData N(NpcData_RuffPuffs)[] = {
     },
     {
         .id = NPC_RuffPuff_09,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_RUFF_PUFF_09_VEC },
+        .yaw = GEN_NPC_RUFF_PUFF_09_DIR,
+        .territory = GEN_NPC_RUFF_PUFF_09_TERRITORY,
         .init = &N(EVS_NpcInit_RuffPuff),
         .settings = &N(NpcSettings_RuffPuff),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -728,8 +738,9 @@ NpcData N(NpcData_RuffPuffs)[] = {
     },
     {
         .id = NPC_RuffPuff_10,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_RUFF_PUFF_10_VEC },
+        .yaw = GEN_NPC_RUFF_PUFF_10_DIR,
+        .territory = GEN_NPC_RUFF_PUFF_10_TERRITORY,
         .init = &N(EVS_NpcInit_RuffPuff),
         .settings = &N(NpcSettings_RuffPuff),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -739,8 +750,9 @@ NpcData N(NpcData_RuffPuffs)[] = {
     },
     {
         .id = NPC_RuffPuff_11,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_RUFF_PUFF_11_VEC },
+        .yaw = GEN_NPC_RUFF_PUFF_11_DIR,
+        .territory = GEN_NPC_RUFF_PUFF_11_TERRITORY,
         .init = &N(EVS_NpcInit_RuffPuff),
         .settings = &N(NpcSettings_RuffPuff),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -750,8 +762,9 @@ NpcData N(NpcData_RuffPuffs)[] = {
     },
     {
         .id = NPC_RuffPuff_12,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_RUFF_PUFF_12_VEC },
+        .yaw = GEN_NPC_RUFF_PUFF_12_DIR,
+        .territory = GEN_NPC_RUFF_PUFF_12_TERRITORY,
         .init = &N(EVS_NpcInit_RuffPuff),
         .settings = &N(NpcSettings_RuffPuff),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -761,8 +774,9 @@ NpcData N(NpcData_RuffPuffs)[] = {
     },
     {
         .id = NPC_RuffPuff_13,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_RUFF_PUFF_13_VEC },
+        .yaw = GEN_NPC_RUFF_PUFF_13_DIR,
+        .territory = GEN_NPC_RUFF_PUFF_13_TERRITORY,
         .init = &N(EVS_NpcInit_RuffPuff),
         .settings = &N(NpcSettings_RuffPuff),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -772,8 +786,9 @@ NpcData N(NpcData_RuffPuffs)[] = {
     },
     {
         .id = NPC_RuffPuff_14,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_RUFF_PUFF_14_VEC },
+        .yaw = GEN_NPC_RUFF_PUFF_14_DIR,
+        .territory = GEN_NPC_RUFF_PUFF_14_TERRITORY,
         .init = &N(EVS_NpcInit_RuffPuff),
         .settings = &N(NpcSettings_RuffPuff),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -783,8 +798,9 @@ NpcData N(NpcData_RuffPuffs)[] = {
     },
     {
         .id = NPC_RuffPuff_15,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_RUFF_PUFF_15_VEC },
+        .yaw = GEN_NPC_RUFF_PUFF_15_DIR,
+        .territory = GEN_NPC_RUFF_PUFF_15_TERRITORY,
         .init = &N(EVS_NpcInit_RuffPuff),
         .settings = &N(NpcSettings_RuffPuff),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,

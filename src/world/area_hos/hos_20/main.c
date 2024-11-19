@@ -13,34 +13,22 @@ EvtScript N(EVS_TexPan_MotionLines) = {
     EndIf
     Call(SetTexPanner, MODEL_h1, TEX_PANNER_C)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_C)
-        TEX_PAN_PARAMS_STEP(-2048,-2048,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_C
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Call(SetTexPanner, MODEL_h2, TEX_PANNER_B)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_B)
-        TEX_PAN_PARAMS_STEP(-6144,    0,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    0,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_B
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Call(SetTexPanner, MODEL_h3, TEX_PANNER_D)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_D)
-        TEX_PAN_PARAMS_STEP(    0,-5120,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    0,    1,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_D
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Call(SetTexPanner, MODEL_h4, TEX_PANNER_A)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_A)
-        TEX_PAN_PARAMS_STEP( 1024,-3072,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_A
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Return

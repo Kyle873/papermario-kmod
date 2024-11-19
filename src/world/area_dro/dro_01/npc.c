@@ -190,8 +190,9 @@ EvtScript N(EVS_NpcInit_Dryite_06) = {
 NpcData N(PassiveNPCs)[] = {
     {
         .id = NPC_Mouser_01,
-        .pos = { -332.0f, 0.0f, 188.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_MOUSER_01_VEC },
+        .yaw = GEN_NPC_MOUSER_01_DIR,
+        .territory = GEN_NPC_MOUSER_01_TERRITORY,
         .init = &N(EVS_NpcInit_Mouser_01),
         .settings = &N(NpcSettings_Mouser),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -201,20 +202,9 @@ NpcData N(PassiveNPCs)[] = {
     },
     {
         .id = NPC_Dryite_01,
-        .pos = { -235.0f, 0.0f, 160.0f },
-        .yaw = 90,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { -235, 0, 160 },
-                .wanderSize = { 30 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 0 },
-            }
-        },
+        .pos = { GEN_NPC_DRYITE_01_VEC },
+        .yaw = GEN_NPC_DRYITE_01_DIR,
+        .territory = GEN_NPC_DRYITE_01_TERRITORY,
         .init = &N(EVS_NpcInit_Dryite_01),
         .settings = &N(NpcSettings_Dryite_Wander),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -224,8 +214,9 @@ NpcData N(PassiveNPCs)[] = {
     },
     {
         .id = NPC_Dryite_02,
-        .pos = { -380.0f, 0.0f, -15.0f },
-        .yaw = 61,
+        .pos = { GEN_NPC_DRYITE_02_VEC },
+        .yaw = GEN_NPC_DRYITE_02_DIR,
+        .territory = GEN_NPC_DRYITE_02_TERRITORY,
         .init = &N(EVS_NpcInit_Dryite_02),
         .settings = &N(NpcSettings_Dryite),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -235,8 +226,9 @@ NpcData N(PassiveNPCs)[] = {
     },
     {
         .id = NPC_Dryite_03,
-        .pos = { 195.0f, 0.0f, -75.0f },
-        .yaw = 74,
+        .pos = { GEN_NPC_DRYITE_03_VEC },
+        .yaw = GEN_NPC_DRYITE_03_DIR,
+        .territory = GEN_NPC_DRYITE_03_TERRITORY,
         .init = &N(EVS_NpcInit_HintDryite),
         .settings = &N(NpcSettings_Dryite),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -246,8 +238,9 @@ NpcData N(PassiveNPCs)[] = {
     },
     {
         .id = NPC_Dryite_04,
-        .pos = { 225.0f, 0.0f, -83.0f },
-        .yaw = 257,
+        .pos = { GEN_NPC_DRYITE_04_VEC },
+        .yaw = GEN_NPC_DRYITE_04_DIR,
+        .territory = GEN_NPC_DRYITE_04_TERRITORY,
         .init = &N(EVS_NpcInit_Dryite_04),
         .settings = &N(NpcSettings_Dryite),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -257,8 +250,9 @@ NpcData N(PassiveNPCs)[] = {
     },
     {
         .id = NPC_ArtistToad,
-        .pos = { 285.0f, 0.0f, -274.0f },
-        .yaw = 271,
+        .pos = { GEN_NPC_ARTIST_TOAD_VEC },
+        .yaw = GEN_NPC_ARTIST_TOAD_DIR,
+        .territory = GEN_NPC_ARTIST_TOAD_TERRITORY,
         .init = &N(EVS_NpcInit_Composer),
         .settings = &N(NpcSettings_Dryite),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -285,8 +279,9 @@ NpcData N(PassiveNPCs)[] = {
     },
     {
         .id = NPC_Mouser_ShopOwner,
-        .pos = { 31.0f, 0.0f, -374.0f },
-        .yaw = 180,
+        .pos = { GEN_NPC_MOUSER_SHOP_OWNER_VEC },
+        .yaw = GEN_NPC_MOUSER_SHOP_OWNER_DIR,
+        .territory = GEN_NPC_MOUSER_SHOP_OWNER_TERRITORY,
         .init = &N(EVS_NpcInit_ShopOwner),
         .settings = &N(NpcSettings_Mouser),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -296,8 +291,9 @@ NpcData N(PassiveNPCs)[] = {
     },
     {
         .id = NPC_ChuckQuizmo,
-        .pos = { -400.0f, 0.0f, 100.0f },
-        .yaw = 263,
+        .pos = { GEN_NPC_CHUCK_QUIZMO_VEC },
+        .yaw = GEN_NPC_CHUCK_QUIZMO_DIR,
+        .territory = GEN_NPC_CHUCK_QUIZMO_TERRITORY,
         .initVarCount = 1,
         .initVar = { .bytes = { 0, QUIZ_AREA_DRO, QUIZ_COUNT_DRO, QUIZ_MAP_DRO_01 }},
         .settings = &N(NpcSettings_ChuckQuizmo),
@@ -325,20 +321,9 @@ NpcData N(PassiveNPCs)[] = {
     },
     {
         .id = NPC_Dryite_05,
-        .pos = { -120.0f, 0.0f, 134.0f },
-        .yaw = 257,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { -120, 0, 134 },
-                .wanderSize = { 40 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 0 },
-            }
-        },
+        .pos = { GEN_NPC_DRYITE_05_VEC },
+        .yaw = GEN_NPC_DRYITE_05_DIR,
+        .territory = GEN_NPC_DRYITE_05_TERRITORY,
         .init = &N(EVS_NpcInit_DojoGrad),
         .settings = &N(NpcSettings_Dryite_Wander),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -348,22 +333,9 @@ NpcData N(PassiveNPCs)[] = {
     },
     {
         .id = NPC_Dryite_06,
-        .pos = { 40.0f, 0.0f, 105.0f },
-        .yaw = 270,
-        .territory = {
-            .patrol = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .numPoints  = 2,
-                .points  = {
-                    { 40, 0, 105 },
-                    { -30, 0, 125 },
-                },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 0 },
-            }
-        },
+        .pos = { GEN_NPC_DRYITE_06_VEC },
+        .yaw = GEN_NPC_DRYITE_06_DIR,
+        .territory = GEN_NPC_DRYITE_06_TERRITORY,
         .init = &N(EVS_NpcInit_Dryite_06),
         .settings = &N(NpcSettings_Dryite_Patrol),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -376,8 +348,9 @@ NpcData N(PassiveNPCs)[] = {
 NpcData N(ThreeSisterNPCs)[] = {
     {
         .id = NPC_Toadette_01,
-        .pos = { -141.0f, 0.0f, -18.0f },
-        .yaw = 62,
+        .pos = { GEN_NPC_TOADETTE_01_VEC },
+        .yaw = GEN_NPC_TOADETTE_01_DIR,
+        .territory = GEN_NPC_TOADETTE_01_TERRITORY,
         .init = &N(EVS_NpcInit_Toadette),
         .settings = &N(NpcSettings_Toad_Stationary),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -387,8 +360,9 @@ NpcData N(ThreeSisterNPCs)[] = {
     },
     {
         .id = NPC_Toadette_02,
-        .pos = { -124.0f, 0.0f, -61.0f },
-        .yaw = 63,
+        .pos = { GEN_NPC_TOADETTE_02_VEC },
+        .yaw = GEN_NPC_TOADETTE_02_DIR,
+        .territory = GEN_NPC_TOADETTE_02_TERRITORY,
         .init = &N(EVS_NpcInit_Toadette),
         .settings = &N(NpcSettings_Toad_Stationary),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -398,8 +372,9 @@ NpcData N(ThreeSisterNPCs)[] = {
     },
     {
         .id = NPC_Toadette_03,
-        .pos = { -80.0f, 0.0f, -35.0f },
-        .yaw = 244,
+        .pos = { GEN_NPC_TOADETTE_03_VEC },
+        .yaw = GEN_NPC_TOADETTE_03_DIR,
+        .territory = GEN_NPC_TOADETTE_03_TERRITORY,
         .init = &N(EVS_NpcInit_Toadette),
         .settings = &N(NpcSettings_Toad_Stationary),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,

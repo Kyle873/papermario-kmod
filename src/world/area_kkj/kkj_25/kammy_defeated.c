@@ -29,9 +29,7 @@ API_CALLABLE(N(UpgradeStarBeam)) {
 }
 
 Vec3f N(TwinkStrikeBowserPath)[] = {
-    {  510.0,    30.0,    0.0 },
-    {  430.0,    15.0,   15.0 },
-    {  350.0,    20.0,    0.0 },
+    GEN_PATH_2_PATH
 };
 
 EvtScript N(AddStarSpiritHovering) = {

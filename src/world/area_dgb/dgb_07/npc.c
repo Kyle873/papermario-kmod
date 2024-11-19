@@ -6,20 +6,9 @@
 NpcData N(NpcData_Clubba_01)[] = {
     {
         .id = NPC_Clubba_01,
-        .pos = { -500.0f, 0.0f, -240.0f },
-        .yaw = 270,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { -500, 0, -240 },
-                .wanderSize = { 40 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { -500, 0, -240 },
-                .detectSize = { 200 },
-            }
-        },
+        .pos = { GEN_NPC_CLUBBA_01_VEC },
+        .yaw = GEN_NPC_CLUBBA_01_DIR,
+        .territory = GEN_NPC_CLUBBA_01_TERRITORY,
         .settings = &N(NpcSettings_Clubba_Napping),
         .flags = ENEMY_FLAG_FLYING,
         .drops = CLUBBA_DROPS,

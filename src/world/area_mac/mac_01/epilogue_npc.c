@@ -198,8 +198,9 @@ AnimID N(ExtraAnims_Bobomb)[] = {
 NpcData N(NpcData_Koopas)[] = {
     {
         .id = NPC_Kolorado,
-        .pos = { 60.0f, 0.0f, -120.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_KOLORADO_VEC },
+        .yaw = GEN_NPC_KOLORADO_DIR,
+        .territory = GEN_NPC_KOLORADO_TERRITORY,
         .init = &N(EVS_NpcInit_Kolorado),
         .settings = &N(NpcSettings_Kolorado),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -209,8 +210,9 @@ NpcData N(NpcData_Koopas)[] = {
     },
     {
         .id = NPC_KoloradoWife,
-        .pos = { 100.0f, 0.0f, -110.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_KOLORADO_WIFE_VEC },
+        .yaw = GEN_NPC_KOLORADO_WIFE_DIR,
+        .territory = GEN_NPC_KOLORADO_WIFE_TERRITORY,
         .init = &N(EVS_NpcInit_KoloradoWife),
         .settings = &N(NpcSettings_KoloradoWife),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -220,8 +222,9 @@ NpcData N(NpcData_Koopas)[] = {
     },
     {
         .id = NPC_KoopaKoot,
-        .pos = { -330.0f, 0.0f, 330.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_KOOPA_KOOT_VEC },
+        .yaw = GEN_NPC_KOOPA_KOOT_DIR,
+        .territory = GEN_NPC_KOOPA_KOOT_TERRITORY,
         .init = &N(EVS_NpcInit_KoopaKoot),
         .settings = &N(NpcSettings_KoopaKoot),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -231,8 +234,9 @@ NpcData N(NpcData_Koopas)[] = {
     },
     {
         .id = NPC_Koopa,
-        .pos = { 300.0f, 20.0f, -100.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_KOOPA_VEC },
+        .yaw = GEN_NPC_KOOPA_DIR,
+        .territory = GEN_NPC_KOOPA_TERRITORY,
         .init = &N(EVS_NpcInit_Koopa),
         .settings = &N(NpcSettings_Koopa),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -242,8 +246,9 @@ NpcData N(NpcData_Koopas)[] = {
     },
     {
         .id = NPC_Bobomb,
-        .pos = { 252.0f, 20.0f, -100.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_BOBOMB_VEC },
+        .yaw = GEN_NPC_BOBOMB_DIR,
+        .territory = GEN_NPC_BOBOMB_TERRITORY,
         .init = &N(EVS_NpcInit_Bobomb),
         .settings = &N(NpcSettings_Bobomb),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -263,8 +268,9 @@ AnimID N(ExtraAnims_Rowf)[] = {
 NpcData N(NpcData_RowfAndRhuff)[] = {
     {
         .id = NPC_Rowf,
-        .pos = { -213.0f, -54.0f, 256.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_ROWF_VEC },
+        .yaw = GEN_NPC_ROWF_DIR,
+        .territory = GEN_NPC_ROWF_TERRITORY,
         .init = &N(EVS_NpcInit_Rowf),
         .settings = &N(NpcSettings_Dummy),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -277,8 +283,9 @@ NpcData N(NpcData_RowfAndRhuff)[] = {
     },
     {
         .id = NPC_Rhuff,
-        .pos = { -250.0f, 0.0f, 263.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_RHUFF_VEC },
+        .yaw = GEN_NPC_RHUFF_DIR,
+        .territory = GEN_NPC_RHUFF_TERRITORY,
         .init = &N(EVS_NpcInit_Rhuff),
         .settings = &N(NpcSettings_Dummy),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -301,8 +308,9 @@ AnimID N(ExtraAnims_Dryite)[] = {
 NpcData N(NpcData_Dryites)[] = {
     {
         .id = NPC_Dryite_01,
-        .pos = { -10.0f, 0.0f, 360.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_DRYITE_01_VEC },
+        .yaw = GEN_NPC_DRYITE_01_DIR,
+        .territory = GEN_NPC_DRYITE_01_TERRITORY,
         .init = &N(EVS_NpcInit_Dryite_01),
         .settings = &N(NpcSettings_Dryite),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -312,8 +320,9 @@ NpcData N(NpcData_Dryites)[] = {
     },
     {
         .id = NPC_Dryite_02,
-        .pos = { 25.0f, 0.0f, 300.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_DRYITE_02_VEC },
+        .yaw = GEN_NPC_DRYITE_02_DIR,
+        .territory = GEN_NPC_DRYITE_02_TERRITORY,
         .init = &N(EVS_NpcInit_Dryite_02),
         .settings = &N(NpcSettings_Dryite),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -341,8 +350,9 @@ AnimID N(ExtraAnims_Poet)[] = {
 NpcData N(NpcData_Artists)[] = {
     {
         .id = NPC_Chanterelle,
-        .pos = { 260.0f, 20.0f, 560.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_CHANTERELLE_VEC },
+        .yaw = GEN_NPC_CHANTERELLE_DIR,
+        .territory = GEN_NPC_CHANTERELLE_TERRITORY,
         .init = &N(EVS_NpcInit_Chanterelle),
         .settings = &N(NpcSettings_Toad_Stationary),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -370,8 +380,9 @@ NpcData N(NpcData_Artists)[] = {
     },
     {
         .id = NPC_Poet,
-        .pos = { 230.0f, 20.0f, 500.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_POET_VEC },
+        .yaw = GEN_NPC_POET_DIR,
+        .territory = GEN_NPC_POET_TERRITORY,
         .init = &N(EVS_NpcInit_Poet),
         .settings = &N(NpcSettings_Toad_Stationary),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -399,8 +410,9 @@ NpcData N(NpcData_Artists)[] = {
     },
     {
         .id = NPC_Composer,
-        .pos = { 300.0f, 20.0f, 500.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_COMPOSER_VEC },
+        .yaw = GEN_NPC_COMPOSER_DIR,
+        .territory = GEN_NPC_COMPOSER_TERRITORY,
         .init = &N(EVS_NpcInit_Composer),
         .settings = &N(NpcSettings_Toad_Stationary),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,

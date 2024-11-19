@@ -114,7 +114,7 @@ EvtScript N(EVS_EnterStarBeam) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_SHOOTING_STAR_SUMMIT)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_HOS_01)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
     Thread

@@ -4,20 +4,9 @@
 
 NpcData N(NpcData_Ember) = {
     .id = NPC_Ember_01,
-    .pos = { -410.0f, -15.0f, 260.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -410, -15, 260 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -410, -15, 260 },
-            .detectSize = { 1000 },
-        }
-    },
+    .pos = { GEN_NPC_EMBER_01_VEC },
+    .yaw = GEN_NPC_EMBER_01_DIR,
+    .territory = GEN_NPC_EMBER_01_TERRITORY,
     .settings = &N(NpcSettings_Ember),
     .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = EMBER_DROPS,
@@ -27,20 +16,9 @@ NpcData N(NpcData_Ember) = {
 
 NpcData N(NpcData_Ember_02) = {
     .id = NPC_Ember_02,
-    .pos = { 220.0f, 200.0f, -205.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 220, 200, -205 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 220, 200, -205 },
-            .detectSize = { 1000 },
-        }
-    },
+    .pos = { GEN_NPC_EMBER_02_VEC },
+    .yaw = GEN_NPC_EMBER_02_DIR,
+    .territory = GEN_NPC_EMBER_02_TERRITORY,
     .settings = &N(NpcSettings_Ember),
     .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = EMBER_DROPS,
@@ -50,20 +28,9 @@ NpcData N(NpcData_Ember_02) = {
 
 NpcData N(NpcData_Ember_03) = {
     .id = NPC_Ember_03,
-    .pos = { -135.0f, 370.0f, 270.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -135, 370, 270 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -135, 370, 270 },
-            .detectSize = { 1000 },
-        }
-    },
+    .pos = { GEN_NPC_EMBER_03_VEC },
+    .yaw = GEN_NPC_EMBER_03_DIR,
+    .territory = GEN_NPC_EMBER_03_TERRITORY,
     .settings = &N(NpcSettings_Ember),
     .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = EMBER_DROPS,

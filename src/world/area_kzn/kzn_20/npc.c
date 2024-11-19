@@ -342,22 +342,11 @@ EvtScript N(EVS_NpcInit_Kolorado) = {
 };
 
 Vec3f N(FlightPath1)[] = {
-    { -120.0,  70.0, 45.0 },
-    {  -75.0,  80.0, 90.0 },
-    {  -10.0, 115.0, 90.0 },
-    {   10.0, 180.0, 70.0 },
-    {   50.0, 210.0, 30.0 },
-    {  100.0, 160.0,  0.0 },
+    GEN_PATH_1_PATH
 };
 
 Vec3f N(FlightPath2)[] = {
-    { 145.0, 195.0, -10.0 },
-    { 100.0, 190.0, -90.0 },
-    {  80.0, 180.0, -60.0 },
-    { 115.0, 175.0, -40.0 },
-    { 165.0, 170.0, -10.0 },
-    { 230.0, 170.0, -20.0 },
-    { 270.0, 175.0, -30.0 },
+    GEN_PATH_2_PATH
 };
 
 API_CALLABLE(N(GetFloorCollider)) {
@@ -528,8 +517,9 @@ EvtScript N(EVS_NpcInit_Misstar) = {
 
 NpcData N(NpcData_Kolorado) = {
     .id = NPC_Kolorado,
-    .pos = { -65.0f, 0.0f, 190.0f },
-    .yaw = 90,
+    .pos = { GEN_NPC_KOLORADO_VEC },
+    .yaw = GEN_NPC_KOLORADO_DIR,
+    .territory = GEN_NPC_KOLORADO_TERRITORY,
     .init = &N(EVS_NpcInit_Kolorado),
     .settings = &N(NpcSettings_Kolorado),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_RAYCAST_TO_INTERACT | ENEMY_FLAG_SKIP_BATTLE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -540,8 +530,9 @@ NpcData N(NpcData_Kolorado) = {
 
 NpcData N(NpcData_Misstar) = {
     .id = NPC_Misstar,
-    .pos = { 100.0f, 160.0f, 0.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_MISSTAR_VEC },
+    .yaw = GEN_NPC_MISSTAR_DIR,
+    .territory = GEN_NPC_MISSTAR_TERRITORY,
     .init = &N(EVS_NpcInit_Misstar),
     .settings = &N(NpcSettings_StarSpirit),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,

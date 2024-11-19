@@ -123,8 +123,8 @@ EvtScript N(EVS_Sushie_ShoutAtChildren) = {
 };
 
 BombTrigger N(BombPos_SushieTree) = {
-    .pos = { 30.0f, 0.0f, -110.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_1_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_1_RAD,
 };
 
 #include "world/common/util/ChangeNpcToPartner.inc.c"
@@ -262,8 +262,9 @@ EvtScript N(EVS_NpcInit_Bubulb) = {
 NpcData N(NpcData_Characters)[] = {
     {
         .id = NPC_Sushie,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 90,
+        .pos = { GEN_NPC_SUSHIE_VEC },
+        .yaw = GEN_NPC_SUSHIE_DIR,
+        .territory = GEN_NPC_SUSHIE_TERRITORY,
         .init = &N(EVS_NpcInit_Sushie),
         .settings = &N(NpcSettings_Sushie),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -272,8 +273,9 @@ NpcData N(NpcData_Characters)[] = {
     },
     {
         .id = NPC_Bubulb,
-        .pos = { -230.0f, 0.0f, -320.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_BUBULB_VEC },
+        .yaw = GEN_NPC_BUBULB_DIR,
+        .territory = GEN_NPC_BUBULB_TERRITORY,
         .init = &N(EVS_NpcInit_Bubulb),
         .settings = &N(NpcSettings_Bubulb),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -286,8 +288,9 @@ NpcData N(NpcData_Characters)[] = {
 NpcData N(NpcData_YoshiKids)[] = {
     {
         .id = NPC_YoshiKid_01,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 90,
+        .pos = { GEN_NPC_YOSHI_KID_01_VEC },
+        .yaw = GEN_NPC_YOSHI_KID_01_DIR,
+        .territory = GEN_NPC_YOSHI_KID_01_TERRITORY,
         .settings = &N(NpcSettings_YoshiKid),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL,
         .drops = NO_DROPS,
@@ -296,8 +299,9 @@ NpcData N(NpcData_YoshiKids)[] = {
     },
     {
         .id = NPC_YoshiKid_02,
-        .pos = { 45.0f, 0.0f, -70.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_YOSHI_KID_02_VEC },
+        .yaw = GEN_NPC_YOSHI_KID_02_DIR,
+        .territory = GEN_NPC_YOSHI_KID_02_TERRITORY,
         .settings = &N(NpcSettings_YoshiKid),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL,
         .drops = NO_DROPS,
@@ -306,8 +310,9 @@ NpcData N(NpcData_YoshiKids)[] = {
     },
     {
         .id = NPC_YoshiKid_03,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 90,
+        .pos = { GEN_NPC_YOSHI_KID_03_VEC },
+        .yaw = GEN_NPC_YOSHI_KID_03_DIR,
+        .territory = GEN_NPC_YOSHI_KID_03_TERRITORY,
         .settings = &N(NpcSettings_YoshiKid),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL,
         .drops = NO_DROPS,
@@ -316,8 +321,9 @@ NpcData N(NpcData_YoshiKids)[] = {
     },
     {
         .id = NPC_YoshiKid_04,
-        .pos = { 20.0f, 0.0f, -70.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_YOSHI_KID_04_VEC },
+        .yaw = GEN_NPC_YOSHI_KID_04_DIR,
+        .territory = GEN_NPC_YOSHI_KID_04_TERRITORY,
         .settings = &N(NpcSettings_YoshiKid),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL,
         .drops = NO_DROPS,
@@ -326,8 +332,9 @@ NpcData N(NpcData_YoshiKids)[] = {
     },
     {
         .id = NPC_YoshiKid_05,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 90,
+        .pos = { GEN_NPC_YOSHI_KID_05_VEC },
+        .yaw = GEN_NPC_YOSHI_KID_05_DIR,
+        .territory = GEN_NPC_YOSHI_KID_05_TERRITORY,
         .settings = &N(NpcSettings_YoshiKid),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL,
         .drops = NO_DROPS,

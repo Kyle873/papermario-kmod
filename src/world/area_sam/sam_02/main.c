@@ -16,8 +16,8 @@ ShakeTreeConfig N(ShakeTree_Tree1) = {
 };
 
 BombTrigger N(BombPos_Tree1) = {
-    .pos = { 230.0f, 20.0f, -370.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_1_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_1_RAD,
 };
 
 FoliageModelList N(Tree2_LeafModels) = FOLIAGE_MODEL_LIST(MODEL_o186);
@@ -27,8 +27,8 @@ ShakeTreeConfig N(ShakeTree_Tree2) = {
 };
 
 BombTrigger N(BombPos_Tree2) = {
-    .pos = { 264.0f, 24.0f, 316.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_2_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_2_RAD,
 };
 
 EvtScript N(EVS_ExitWalk_sam_01_0) = EVT_EXIT_WALK(60, sam_02_ENTRY_0, "sam_01", sam_01_ENTRY_0);
@@ -112,10 +112,7 @@ EvtScript N(EVS_EnterMap) = {
 EvtScript N(EVS_TexPan_Fire) = {
     Call(SetTexPanner, MODEL_hi1, TEX_PANNER_1)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP(   50,   50,  -70,  300)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Return
@@ -123,7 +120,7 @@ EvtScript N(EVS_TexPan_Fire) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_SHIVER_CITY)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
     Set(GF_MAP_ShiverCity, TRUE)

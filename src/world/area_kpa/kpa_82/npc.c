@@ -1298,8 +1298,9 @@ EvtScript N(EVS_NpcInit_AntiGuy) = {
 NpcData N(NpcData_AntiGuys)[] = {
     {
         .id = NPC_Dummy,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_DUMMY_VEC },
+        .yaw = GEN_NPC_DUMMY_DIR,
+        .territory = GEN_NPC_DUMMY_TERRITORY,
         .init = &N(EVS_NpcInit_Door),
         .settings = &N(NpcSettings_ShyGuy_Stationary),
         .flags = QUIZ_DOOR_ENEMY_FLAGS,
@@ -1308,8 +1309,9 @@ NpcData N(NpcData_AntiGuys)[] = {
     },
     {
         .id = NPC_AntiGuy_01,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_ANTI_GUY_01_VEC },
+        .yaw = GEN_NPC_ANTI_GUY_01_DIR,
+        .territory = GEN_NPC_ANTI_GUY_01_TERRITORY,
         .init = &N(EVS_NpcInit_AntiGuy),
         .settings = &N(NpcSettings_ShyGuy_Stationary),
         .flags = QUIZ_ANTI_GUY_ENEMY_FLAGS,
@@ -1318,8 +1320,9 @@ NpcData N(NpcData_AntiGuys)[] = {
     },
     {
         .id = NPC_AntiGuy_02,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_ANTI_GUY_02_VEC },
+        .yaw = GEN_NPC_ANTI_GUY_02_DIR,
+        .territory = GEN_NPC_ANTI_GUY_02_TERRITORY,
         .init = &N(EVS_NpcInit_AntiGuy),
         .settings = &N(NpcSettings_ShyGuy_Stationary),
         .flags = QUIZ_ANTI_GUY_ENEMY_FLAGS,
@@ -1328,8 +1331,9 @@ NpcData N(NpcData_AntiGuys)[] = {
     },
     {
         .id = NPC_AntiGuy_03,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_ANTI_GUY_03_VEC },
+        .yaw = GEN_NPC_ANTI_GUY_03_DIR,
+        .territory = GEN_NPC_ANTI_GUY_03_TERRITORY,
         .init = &N(EVS_NpcInit_AntiGuy),
         .settings = &N(NpcSettings_ShyGuy_Stationary),
         .flags = QUIZ_ANTI_GUY_ENEMY_FLAGS,
@@ -1356,20 +1360,9 @@ NpcData N(NpcData_AntiGuys)[] = {
 NpcData N(NpcData_Goombas)[] = {
     {
         .id = NPC_Goomba_01,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_GOOMBA_01_VEC },
+        .yaw = GEN_NPC_GOOMBA_01_DIR,
+        .territory = GEN_NPC_GOOMBA_01_TERRITORY,
         .init = &N(EVS_NpcInit_Goomba),
         .settings = &N(NpcSettings_Short),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -1378,20 +1371,9 @@ NpcData N(NpcData_Goombas)[] = {
     },
     {
         .id = NPC_Goomba_02,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_GOOMBA_02_VEC },
+        .yaw = GEN_NPC_GOOMBA_02_DIR,
+        .territory = GEN_NPC_GOOMBA_02_TERRITORY,
         .init = &N(EVS_NpcInit_Goomba),
         .settings = &N(NpcSettings_Short),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -1400,20 +1382,9 @@ NpcData N(NpcData_Goombas)[] = {
     },
     {
         .id = NPC_Goomba_03,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_GOOMBA_03_VEC },
+        .yaw = GEN_NPC_GOOMBA_03_DIR,
+        .territory = GEN_NPC_GOOMBA_03_TERRITORY,
         .init = &N(EVS_NpcInit_Goomba),
         .settings = &N(NpcSettings_Short),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -1422,20 +1393,9 @@ NpcData N(NpcData_Goombas)[] = {
     },
     {
         .id = NPC_Goomba_04,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_GOOMBA_04_VEC },
+        .yaw = GEN_NPC_GOOMBA_04_DIR,
+        .territory = GEN_NPC_GOOMBA_04_TERRITORY,
         .init = &N(EVS_NpcInit_Goomba),
         .settings = &N(NpcSettings_Short),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -1444,20 +1404,9 @@ NpcData N(NpcData_Goombas)[] = {
     },
     {
         .id = NPC_Goomba_05,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_GOOMBA_05_VEC },
+        .yaw = GEN_NPC_GOOMBA_05_DIR,
+        .territory = GEN_NPC_GOOMBA_05_TERRITORY,
         .init = &N(EVS_NpcInit_Goomba),
         .settings = &N(NpcSettings_Short),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -1469,20 +1418,9 @@ NpcData N(NpcData_Goombas)[] = {
 NpcData N(NpcData_RedShyGuys)[] = {
     {
         .id = NPC_RedShyGuy_01,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_RED_SHY_GUY_01_VEC },
+        .yaw = GEN_NPC_RED_SHY_GUY_01_DIR,
+        .territory = GEN_NPC_RED_SHY_GUY_01_TERRITORY,
         .init = &N(EVS_NpcInit_ShyGuy),
         .settings = &N(NpcSettings_ShyGuy),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -1491,20 +1429,9 @@ NpcData N(NpcData_RedShyGuys)[] = {
     },
     {
         .id = NPC_RedShyGuy_02,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_RED_SHY_GUY_02_VEC },
+        .yaw = GEN_NPC_RED_SHY_GUY_02_DIR,
+        .territory = GEN_NPC_RED_SHY_GUY_02_TERRITORY,
         .init = &N(EVS_NpcInit_ShyGuy),
         .settings = &N(NpcSettings_ShyGuy),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -1513,20 +1440,9 @@ NpcData N(NpcData_RedShyGuys)[] = {
     },
     {
         .id = NPC_RedShyGuy_03,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_RED_SHY_GUY_03_VEC },
+        .yaw = GEN_NPC_RED_SHY_GUY_03_DIR,
+        .territory = GEN_NPC_RED_SHY_GUY_03_TERRITORY,
         .init = &N(EVS_NpcInit_ShyGuy),
         .settings = &N(NpcSettings_ShyGuy),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -1535,20 +1451,9 @@ NpcData N(NpcData_RedShyGuys)[] = {
     },
     {
         .id = NPC_RedShyGuy_04,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_RED_SHY_GUY_04_VEC },
+        .yaw = GEN_NPC_RED_SHY_GUY_04_DIR,
+        .territory = GEN_NPC_RED_SHY_GUY_04_TERRITORY,
         .init = &N(EVS_NpcInit_ShyGuy),
         .settings = &N(NpcSettings_ShyGuy),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -1557,20 +1462,9 @@ NpcData N(NpcData_RedShyGuys)[] = {
     },
     {
         .id = NPC_RedShyGuy_05,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_RED_SHY_GUY_05_VEC },
+        .yaw = GEN_NPC_RED_SHY_GUY_05_DIR,
+        .territory = GEN_NPC_RED_SHY_GUY_05_TERRITORY,
         .init = &N(EVS_NpcInit_ShyGuy),
         .settings = &N(NpcSettings_ShyGuy),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -1582,20 +1476,9 @@ NpcData N(NpcData_RedShyGuys)[] = {
 NpcData N(NpcData_BlueShyGuys)[] = {
     {
         .id = NPC_BlueShyGuy_01,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_BLUE_SHY_GUY_01_VEC },
+        .yaw = GEN_NPC_BLUE_SHY_GUY_01_DIR,
+        .territory = GEN_NPC_BLUE_SHY_GUY_01_TERRITORY,
         .init = &N(EVS_NpcInit_ShyGuy),
         .settings = &N(NpcSettings_ShyGuy),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -1604,20 +1487,9 @@ NpcData N(NpcData_BlueShyGuys)[] = {
     },
     {
         .id = NPC_BlueShyGuy_02,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_BLUE_SHY_GUY_02_VEC },
+        .yaw = GEN_NPC_BLUE_SHY_GUY_02_DIR,
+        .territory = GEN_NPC_BLUE_SHY_GUY_02_TERRITORY,
         .init = &N(EVS_NpcInit_ShyGuy),
         .settings = &N(NpcSettings_ShyGuy),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -1626,20 +1498,9 @@ NpcData N(NpcData_BlueShyGuys)[] = {
     },
     {
         .id = NPC_BlueShyGuy_03,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_BLUE_SHY_GUY_03_VEC },
+        .yaw = GEN_NPC_BLUE_SHY_GUY_03_DIR,
+        .territory = GEN_NPC_BLUE_SHY_GUY_03_TERRITORY,
         .init = &N(EVS_NpcInit_ShyGuy),
         .settings = &N(NpcSettings_ShyGuy),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -1648,20 +1509,9 @@ NpcData N(NpcData_BlueShyGuys)[] = {
     },
     {
         .id = NPC_BlueShyGuy_04,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_BLUE_SHY_GUY_04_VEC },
+        .yaw = GEN_NPC_BLUE_SHY_GUY_04_DIR,
+        .territory = GEN_NPC_BLUE_SHY_GUY_04_TERRITORY,
         .init = &N(EVS_NpcInit_ShyGuy),
         .settings = &N(NpcSettings_ShyGuy),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -1670,20 +1520,9 @@ NpcData N(NpcData_BlueShyGuys)[] = {
     },
     {
         .id = NPC_BlueShyGuy_05,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_BLUE_SHY_GUY_05_VEC },
+        .yaw = GEN_NPC_BLUE_SHY_GUY_05_DIR,
+        .territory = GEN_NPC_BLUE_SHY_GUY_05_TERRITORY,
         .init = &N(EVS_NpcInit_ShyGuy),
         .settings = &N(NpcSettings_ShyGuy),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -1695,20 +1534,9 @@ NpcData N(NpcData_BlueShyGuys)[] = {
 NpcData N(NpcData_GreenShyGuys)[] = {
     {
         .id = NPC_GreenShyGuy_01,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_GREEN_SHY_GUY_01_VEC },
+        .yaw = GEN_NPC_GREEN_SHY_GUY_01_DIR,
+        .territory = GEN_NPC_GREEN_SHY_GUY_01_TERRITORY,
         .init = &N(EVS_NpcInit_ShyGuy),
         .settings = &N(NpcSettings_ShyGuy),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -1717,20 +1545,9 @@ NpcData N(NpcData_GreenShyGuys)[] = {
     },
     {
         .id = NPC_GreenShyGuy_02,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_GREEN_SHY_GUY_02_VEC },
+        .yaw = GEN_NPC_GREEN_SHY_GUY_02_DIR,
+        .territory = GEN_NPC_GREEN_SHY_GUY_02_TERRITORY,
         .init = &N(EVS_NpcInit_ShyGuy),
         .settings = &N(NpcSettings_ShyGuy),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -1739,20 +1556,9 @@ NpcData N(NpcData_GreenShyGuys)[] = {
     },
     {
         .id = NPC_GreenShyGuy_03,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_GREEN_SHY_GUY_03_VEC },
+        .yaw = GEN_NPC_GREEN_SHY_GUY_03_DIR,
+        .territory = GEN_NPC_GREEN_SHY_GUY_03_TERRITORY,
         .init = &N(EVS_NpcInit_ShyGuy),
         .settings = &N(NpcSettings_ShyGuy),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -1761,20 +1567,9 @@ NpcData N(NpcData_GreenShyGuys)[] = {
     },
     {
         .id = NPC_GreenShyGuy_04,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_GREEN_SHY_GUY_04_VEC },
+        .yaw = GEN_NPC_GREEN_SHY_GUY_04_DIR,
+        .territory = GEN_NPC_GREEN_SHY_GUY_04_TERRITORY,
         .init = &N(EVS_NpcInit_ShyGuy),
         .settings = &N(NpcSettings_ShyGuy),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -1783,20 +1578,9 @@ NpcData N(NpcData_GreenShyGuys)[] = {
     },
     {
         .id = NPC_GreenShyGuy_05,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_GREEN_SHY_GUY_05_VEC },
+        .yaw = GEN_NPC_GREEN_SHY_GUY_05_DIR,
+        .territory = GEN_NPC_GREEN_SHY_GUY_05_TERRITORY,
         .init = &N(EVS_NpcInit_ShyGuy),
         .settings = &N(NpcSettings_ShyGuy),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -1808,20 +1592,9 @@ NpcData N(NpcData_GreenShyGuys)[] = {
 NpcData N(NpcData_DarkTroopas)[] = {
     {
         .id = NPC_DarkTroopa_01,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_DARK_TROOPA_01_VEC },
+        .yaw = GEN_NPC_DARK_TROOPA_01_DIR,
+        .territory = GEN_NPC_DARK_TROOPA_01_TERRITORY,
         .init = &N(EVS_NpcInit_KoopaTroopa),
         .settings = &N(NpcSettings_KoopaTroopa),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -1830,20 +1603,9 @@ NpcData N(NpcData_DarkTroopas)[] = {
     },
     {
         .id = NPC_DarkTroopa_02,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_DARK_TROOPA_02_VEC },
+        .yaw = GEN_NPC_DARK_TROOPA_02_DIR,
+        .territory = GEN_NPC_DARK_TROOPA_02_TERRITORY,
         .init = &N(EVS_NpcInit_KoopaTroopa),
         .settings = &N(NpcSettings_KoopaTroopa),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -1852,20 +1614,9 @@ NpcData N(NpcData_DarkTroopas)[] = {
     },
     {
         .id = NPC_DarkTroopa_03,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_DARK_TROOPA_03_VEC },
+        .yaw = GEN_NPC_DARK_TROOPA_03_DIR,
+        .territory = GEN_NPC_DARK_TROOPA_03_TERRITORY,
         .init = &N(EVS_NpcInit_KoopaTroopa),
         .settings = &N(NpcSettings_KoopaTroopa),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -1874,20 +1625,9 @@ NpcData N(NpcData_DarkTroopas)[] = {
     },
     {
         .id = NPC_DarkTroopa_04,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_DARK_TROOPA_04_VEC },
+        .yaw = GEN_NPC_DARK_TROOPA_04_DIR,
+        .territory = GEN_NPC_DARK_TROOPA_04_TERRITORY,
         .init = &N(EVS_NpcInit_KoopaTroopa),
         .settings = &N(NpcSettings_KoopaTroopa),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -1896,20 +1636,9 @@ NpcData N(NpcData_DarkTroopas)[] = {
     },
     {
         .id = NPC_DarkTroopa_05,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_DARK_TROOPA_05_VEC },
+        .yaw = GEN_NPC_DARK_TROOPA_05_DIR,
+        .territory = GEN_NPC_DARK_TROOPA_05_TERRITORY,
         .init = &N(EVS_NpcInit_KoopaTroopa),
         .settings = &N(NpcSettings_KoopaTroopa),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -1921,20 +1650,9 @@ NpcData N(NpcData_DarkTroopas)[] = {
 NpcData N(NpcData_KoopaTroopas)[] = {
     {
         .id = NPC_KoopaTroopa_01,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_KOOPA_TROOPA_01_VEC },
+        .yaw = GEN_NPC_KOOPA_TROOPA_01_DIR,
+        .territory = GEN_NPC_KOOPA_TROOPA_01_TERRITORY,
         .init = &N(EVS_NpcInit_KoopaTroopa),
         .settings = &N(NpcSettings_KoopaTroopa),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -1943,20 +1661,9 @@ NpcData N(NpcData_KoopaTroopas)[] = {
     },
     {
         .id = NPC_KoopaTroopa_02,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_KOOPA_TROOPA_02_VEC },
+        .yaw = GEN_NPC_KOOPA_TROOPA_02_DIR,
+        .territory = GEN_NPC_KOOPA_TROOPA_02_TERRITORY,
         .init = &N(EVS_NpcInit_KoopaTroopa),
         .settings = &N(NpcSettings_KoopaTroopa),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -1965,20 +1672,9 @@ NpcData N(NpcData_KoopaTroopas)[] = {
     },
     {
         .id = NPC_KoopaTroopa_03,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_KOOPA_TROOPA_03_VEC },
+        .yaw = GEN_NPC_KOOPA_TROOPA_03_DIR,
+        .territory = GEN_NPC_KOOPA_TROOPA_03_TERRITORY,
         .init = &N(EVS_NpcInit_KoopaTroopa),
         .settings = &N(NpcSettings_KoopaTroopa),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -1987,20 +1683,9 @@ NpcData N(NpcData_KoopaTroopas)[] = {
     },
     {
         .id = NPC_KoopaTroopa_04,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_KOOPA_TROOPA_04_VEC },
+        .yaw = GEN_NPC_KOOPA_TROOPA_04_DIR,
+        .territory = GEN_NPC_KOOPA_TROOPA_04_TERRITORY,
         .init = &N(EVS_NpcInit_KoopaTroopa),
         .settings = &N(NpcSettings_KoopaTroopa),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -2009,20 +1694,9 @@ NpcData N(NpcData_KoopaTroopas)[] = {
     },
     {
         .id = NPC_KoopaTroopa_05,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_KOOPA_TROOPA_05_VEC },
+        .yaw = GEN_NPC_KOOPA_TROOPA_05_DIR,
+        .territory = GEN_NPC_KOOPA_TROOPA_05_TERRITORY,
         .init = &N(EVS_NpcInit_KoopaTroopa),
         .settings = &N(NpcSettings_KoopaTroopa),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -2034,20 +1708,9 @@ NpcData N(NpcData_KoopaTroopas)[] = {
 NpcData N(NpcData_Bobombs)[] = {
     {
         .id = NPC_Bobomb_01,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_BOBOMB_01_VEC },
+        .yaw = GEN_NPC_BOBOMB_01_DIR,
+        .territory = GEN_NPC_BOBOMB_01_TERRITORY,
         .init = &N(EVS_NpcInit_Bobomb),
         .settings = &N(NpcSettings_Short),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -2056,20 +1719,9 @@ NpcData N(NpcData_Bobombs)[] = {
     },
     {
         .id = NPC_Bobomb_02,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_BOBOMB_02_VEC },
+        .yaw = GEN_NPC_BOBOMB_02_DIR,
+        .territory = GEN_NPC_BOBOMB_02_TERRITORY,
         .init = &N(EVS_NpcInit_Bobomb),
         .settings = &N(NpcSettings_Short),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -2078,20 +1730,9 @@ NpcData N(NpcData_Bobombs)[] = {
     },
     {
         .id = NPC_Bobomb_03,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_BOBOMB_03_VEC },
+        .yaw = GEN_NPC_BOBOMB_03_DIR,
+        .territory = GEN_NPC_BOBOMB_03_TERRITORY,
         .init = &N(EVS_NpcInit_Bobomb),
         .settings = &N(NpcSettings_Short),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -2100,20 +1741,9 @@ NpcData N(NpcData_Bobombs)[] = {
     },
     {
         .id = NPC_Bobomb_04,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_BOBOMB_04_VEC },
+        .yaw = GEN_NPC_BOBOMB_04_DIR,
+        .territory = GEN_NPC_BOBOMB_04_TERRITORY,
         .init = &N(EVS_NpcInit_Bobomb),
         .settings = &N(NpcSettings_Short),
         .flags = QUIZ_GAME_ENEMY_FLAGS,
@@ -2122,20 +1752,9 @@ NpcData N(NpcData_Bobombs)[] = {
     },
     {
         .id = NPC_Bobomb_05,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_RECT,
-                .centerPos  = { 0, 0, 150 },
-                .wanderSize = { 130, 100 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 0, 0, 150 },
-                .detectSize = { 130, 100 },
-            }
-        },
+        .pos = { GEN_NPC_BOBOMB_05_VEC },
+        .yaw = GEN_NPC_BOBOMB_05_DIR,
+        .territory = GEN_NPC_BOBOMB_05_TERRITORY,
         .init = &N(EVS_NpcInit_Bobomb),
         .settings = &N(NpcSettings_Short),
         .flags = QUIZ_GAME_ENEMY_FLAGS,

@@ -2,6 +2,7 @@
 /// @brief Dry Dry Desert - S2E2 West of Oasis
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

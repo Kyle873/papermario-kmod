@@ -2,7 +2,7 @@
 
 EvtScript N(EVS_MakeEntities) = {
     IfGe(GB_StoryProgress, STORY_CH6_FILLED_SPRING_WITH_WATER)
-        Call(MakeItemEntity, ITEM_WATER_STONE, 0, -60, 6, ITEM_SPAWN_MODE_DECORATION, 0)
+        EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
     EndIf
     Return
     End

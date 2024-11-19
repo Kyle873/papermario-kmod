@@ -2,9 +2,9 @@
 #include "entity.h"
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_SavePoint), 1400, 90, -875, 0, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_YellowBlock), 1400, 90, -375, 0, ITEM_LIFE_SHROOM, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_KPA10_ItemBlock_LifeShroom)
+    EVT_MAKE_ENTITY(SavePoint, GEN_SAVE_POINT_1_PARAMS)
+    EVT_MAKE_ENTITY(YellowBlock, GEN_YELLOW_BLOCK_1_PARAMS)
+    Call(AssignBlockFlag, GEN_YELLOW_BLOCK_1_FLAG)
     Return
     End
 };

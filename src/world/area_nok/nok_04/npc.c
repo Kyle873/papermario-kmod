@@ -1528,8 +1528,9 @@ EvtScript N(EVS_NpcInit_Kooper) = {
 NpcData N(NpcData_Minigame)[] = {
     {
         .id = NPC_KoopersShell,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_KOOPERS_SHELL_VEC },
+        .yaw = GEN_NPC_KOOPERS_SHELL_DIR,
+        .territory = GEN_NPC_KOOPERS_SHELL_TERRITORY,
         .init = &N(EVS_NpcInit_KoopersShell),
         .settings = &N(NpcSettings_Koopa),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER | ENEMY_FLAG_NO_DROPS,
@@ -1538,20 +1539,9 @@ NpcData N(NpcData_Minigame)[] = {
     },
     {
         .id = NPC_AmbushFuzzy,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = FALSE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 0, 0, 0 },
-                .wanderSize = { 0 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 0 },
-            }
-        },
+        .pos = { GEN_NPC_AMBUSH_FUZZY_VEC },
+        .yaw = GEN_NPC_AMBUSH_FUZZY_DIR,
+        .territory = GEN_NPC_AMBUSH_FUZZY_TERRITORY,
         .init = &N(EVS_NpcInit_WrongFuzzy),
         .settings = &N(NpcSettings_Fuzzy),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER | ENEMY_FLAG_NO_DROPS,
@@ -1560,20 +1550,9 @@ NpcData N(NpcData_Minigame)[] = {
     },
     {
         .id = NPC_Fuzzy_01,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = FALSE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 0, 0, 0 },
-                .wanderSize = { 0 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 0 },
-            }
-        },
+        .pos = { GEN_NPC_FUZZY_01_VEC },
+        .yaw = GEN_NPC_FUZZY_01_DIR,
+        .territory = GEN_NPC_FUZZY_01_TERRITORY,
         .init = &N(EVS_NpcInit_Fuzzy_Aux),
         .settings = &N(NpcSettings_Fuzzy),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER | ENEMY_FLAG_NO_DROPS,
@@ -1582,20 +1561,9 @@ NpcData N(NpcData_Minigame)[] = {
     },
     {
         .id = NPC_Fuzzy_02,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = FALSE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 0, 0, 0 },
-                .wanderSize = { 0 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 0 },
-            }
-        },
+        .pos = { GEN_NPC_FUZZY_02_VEC },
+        .yaw = GEN_NPC_FUZZY_02_DIR,
+        .territory = GEN_NPC_FUZZY_02_TERRITORY,
         .init = &N(EVS_NpcInit_Fuzzy_Aux),
         .settings = &N(NpcSettings_Fuzzy),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER | ENEMY_FLAG_NO_DROPS,
@@ -1604,20 +1572,9 @@ NpcData N(NpcData_Minigame)[] = {
     },
     {
         .id = NPC_Fuzzy_03,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = FALSE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 0, 0, 0 },
-                .wanderSize = { 0 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 0 },
-            }
-        },
+        .pos = { GEN_NPC_FUZZY_03_VEC },
+        .yaw = GEN_NPC_FUZZY_03_DIR,
+        .territory = GEN_NPC_FUZZY_03_TERRITORY,
         .init = &N(EVS_NpcInit_Fuzzy_Aux),
         .settings = &N(NpcSettings_Fuzzy),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER | ENEMY_FLAG_NO_DROPS,
@@ -1626,8 +1583,9 @@ NpcData N(NpcData_Minigame)[] = {
     },
     {
         .id = NPC_Kooper,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_KOOPER_VEC },
+        .yaw = GEN_NPC_KOOPER_DIR,
+        .territory = GEN_NPC_KOOPER_TERRITORY,
         .init = &N(EVS_NpcInit_Kooper),
         .settings = &N(NpcSettings_Koopa),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER | ENEMY_FLAG_NO_DROPS,
@@ -1638,20 +1596,9 @@ NpcData N(NpcData_Minigame)[] = {
 
 NpcData N(NpcData_Miniboss) = {
     .id = NPC_BossFuzzy,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 0,
-    .territory = {
-        .wander = {
-            .isFlying = FALSE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 0, 0, 0 },
-            .wanderSize = { 0 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 0, 0, 0 },
-            .detectSize = { 0 },
-        }
-    },
+    .pos = { GEN_NPC_BOSS_FUZZY_VEC },
+    .yaw = GEN_NPC_BOSS_FUZZY_DIR,
+    .territory = GEN_NPC_BOSS_FUZZY_TERRITORY,
     .init = &N(EVS_SetupMinigame),
     .settings = &N(NpcSettings_Fuzzy),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,

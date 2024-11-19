@@ -63,7 +63,7 @@ EvtScript N(EVS_ManageRetroJar) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_BOOS_MANSION)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     Call(N(SetupLandingCamAdjust))
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
@@ -79,10 +79,7 @@ EvtScript N(EVS_Main) = {
     Call(SetTexPanner, MODEL_m1, TEX_PANNER_0)
     Call(SetTexPanner, MODEL_m2, TEX_PANNER_0)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_0)
-        TEX_PAN_PARAMS_STEP(  300,  100,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_0
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Return

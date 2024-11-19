@@ -6,20 +6,9 @@
 NpcData N(NpcData_Gulpit)[] = {
     {
         .id = NPC_Gulpit,
-        .pos = { -500.0f, -150.0f, -75.0f },
-        .yaw = 270,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { -500, -150, -75 },
-                .wanderSize = { 30 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { -500, -150, -75 },
-                .detectSize = { 200 },
-            }
-        },
+        .pos = { GEN_NPC_GULPIT_VEC },
+        .yaw = GEN_NPC_GULPIT_DIR,
+        .territory = GEN_NPC_GULPIT_TERRITORY,
         .settings = &N(NpcSettings_Gulpit),
         .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = GULPIT_DROPS,
@@ -32,20 +21,9 @@ NpcData N(NpcData_Gulpit)[] = {
 NpcData N(NpcData_FrostPiranha_01)[] = {
     {
         .id = NPC_FrostPiranha_01,
-        .pos = { 250.0f, 120.0f, -75.0f },
-        .yaw = 270,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 250, 120, -75 },
-                .wanderSize = { 30 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 330, 120, -65 },
-                .detectSize = { 260, 65 },
-            }
-        },
+        .pos = { GEN_NPC_FROST_PIRANHA_01_VEC },
+        .yaw = GEN_NPC_FROST_PIRANHA_01_DIR,
+        .territory = GEN_NPC_FROST_PIRANHA_01_TERRITORY,
         .settings = &N(NpcSettings_FrostPiranha),
         .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION,
         .drops = FROST_PIRANHA_DROPS,
@@ -58,20 +36,9 @@ NpcData N(NpcData_FrostPiranha_01)[] = {
 NpcData N(NpcData_FrostPiranha_02)[] = {
     {
         .id = NPC_FrostPiranha_02,
-        .pos = { 400.0f, 120.0f, -75.0f },
-        .yaw = 270,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 400, 120, -75 },
-                .wanderSize = { 30 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 330, 120, -65 },
-                .detectSize = { 260, 65 },
-            }
-        },
+        .pos = { GEN_NPC_FROST_PIRANHA_02_VEC },
+        .yaw = GEN_NPC_FROST_PIRANHA_02_DIR,
+        .territory = GEN_NPC_FROST_PIRANHA_02_TERRITORY,
         .settings = &N(NpcSettings_FrostPiranha),
         .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION,
         .drops = FROST_PIRANHA_DROPS,

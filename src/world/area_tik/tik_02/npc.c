@@ -107,8 +107,9 @@ EvtScript N(EVS_NpcInit_Blooper) = {
 
 NpcData N(NpcData_Blooper) = {
     .id = NPC_Blooper,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 90,
+    .pos = { GEN_NPC_BLOOPER_VEC },
+    .yaw = GEN_NPC_BLOOPER_DIR,
+    .territory = GEN_NPC_BLOOPER_TERRITORY,
     .init = &N(EVS_NpcInit_Blooper),
     .settings = &N(NpcSettings_Blooper),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_NO_DROPS,

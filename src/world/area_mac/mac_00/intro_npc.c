@@ -37,8 +37,9 @@ AnimID N(ExtraAnims_Lee_Intro)[] = {
 NpcData N(NpcData_IntroNPCs)[] = {
     {
         .id = NPC_Luigi_Intro,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 90,
+        .pos = { GEN_NPC_LUIGI_INTRO_VEC },
+        .yaw = GEN_NPC_LUIGI_INTRO_DIR,
+        .territory = GEN_NPC_LUIGI_INTRO_TERRITORY,
         .settings = &N(NpcSettings_Luigi_Intro),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
@@ -46,8 +47,9 @@ NpcData N(NpcData_IntroNPCs)[] = {
     },
     {
         .id = NPC_Toad_01,
-        .pos = { -150.0f, 0.0f, -275.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_TOAD_01_1_VEC },
+        .yaw = GEN_NPC_TOAD_01_1_DIR,
+        .territory = GEN_NPC_TOAD_01_1_TERRITORY,
         .settings = &N(NpcSettings_Toad_Stationary_Intro),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_RAYCAST_TO_INTERACT | ENEMY_FLAG_SKIP_BATTLE,
         .drops = NO_DROPS,
@@ -56,25 +58,9 @@ NpcData N(NpcData_IntroNPCs)[] = {
     },
     {
         .id = NPC_Toad_02,
-        .pos = { 219.0f, 0.0f, -45.0f },
-        .yaw = 90,
-        .territory = {
-            .patrol = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .numPoints  = 5,
-                .points  = {
-                    { 219, 0, -45 },
-                    { 144, 0, -10 },
-                    { 163, 0, -50 },
-                    { 240, 0, 50 },
-                    { 275, 0, 10 },
-                },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 200 },
-            }
-        },
+        .pos = { GEN_NPC_TOAD_02_VEC },
+        .yaw = GEN_NPC_TOAD_02_DIR,
+        .territory = GEN_NPC_TOAD_02_TERRITORY,
         .settings = &N(NpcSettings_Toad_Wander_Intro),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_RAYCAST_TO_INTERACT,
         .drops = NO_DROPS,
@@ -83,8 +69,9 @@ NpcData N(NpcData_IntroNPCs)[] = {
     },
     {
         .id = NPC_Toad_03,
-        .pos = { 424.0f, 20.0f, -85.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_TOAD_03_VEC },
+        .yaw = GEN_NPC_TOAD_03_DIR,
+        .territory = GEN_NPC_TOAD_03_TERRITORY,
         .settings = &N(NpcSettings_Toad_Stationary_Intro),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_RAYCAST_TO_INTERACT,
         .drops = NO_DROPS,
@@ -93,8 +80,9 @@ NpcData N(NpcData_IntroNPCs)[] = {
     },
     {
         .id = NPC_Chan,
-        .pos = { 310.0f, 115.0f, -390.0f },
-        .yaw = 45,
+        .pos = { GEN_NPC_CHAN_1_VEC },
+        .yaw = GEN_NPC_CHAN_1_DIR,
+        .territory = GEN_NPC_CHAN_1_TERRITORY,
         .init = &N(EVS_NpcInit_Chan_Intro),
         .settings = &N(NpcSettings_Toad_Stationary_Intro),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_RAYCAST_TO_INTERACT | ENEMY_FLAG_SKIP_BATTLE,
@@ -107,8 +95,9 @@ NpcData N(NpcData_IntroNPCs)[] = {
     },
     {
         .id = NPC_Lee,
-        .pos = { 330.0f, 115.0f, -410.0f },
-        .yaw = 45,
+        .pos = { GEN_NPC_LEE_1_VEC },
+        .yaw = GEN_NPC_LEE_1_DIR,
+        .territory = GEN_NPC_LEE_1_TERRITORY,
         .init = &N(EVS_NpcInit_Lee_Intro),
         .settings = &N(NpcSettings_Toad_Stationary_Intro),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_RAYCAST_TO_INTERACT | ENEMY_FLAG_SKIP_BATTLE,

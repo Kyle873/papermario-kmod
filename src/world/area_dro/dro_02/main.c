@@ -49,7 +49,7 @@ EvtScript N(EVS_EnterScene) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_DRY_DRY_OUTPOST)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
     Call(MakeNpcs, FALSE, Ref(N(DefaultNPCs)))
@@ -70,10 +70,7 @@ EvtScript N(EVS_Main) = {
     Wait(1)
     Thread
         Call(SetTexPanner, MODEL_kemuri, TEX_PANNER_1)
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP(    0,  420,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    0,    1,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Set(MF_Unk_00, FALSE)

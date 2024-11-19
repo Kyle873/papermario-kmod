@@ -2,6 +2,7 @@
 /// @brief Forever Forest - Flowers Appear (FP Plus)
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

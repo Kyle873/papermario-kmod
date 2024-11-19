@@ -160,8 +160,9 @@ EvtScript N(EVS_NpcInit_ZiplineDummy) = {
 NpcData N(NpcData_PassiveNPCs)[] = {
     {
         .id = NPC_Kolorado,
-        .pos = { 392.0f, 470.0f, 218.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_KOLORADO_VEC },
+        .yaw = GEN_NPC_KOLORADO_DIR,
+        .territory = GEN_NPC_KOLORADO_TERRITORY,
         .init = &N(EVS_NpcInit_Kolorado),
         .settings = &N(NpcSettings_Kolorado),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_RAYCAST_TO_INTERACT | ENEMY_FLAG_SKIP_BATTLE,
@@ -171,8 +172,9 @@ NpcData N(NpcData_PassiveNPCs)[] = {
     },
     {
         .id = NPC_ZiplineDummy1,
-        .pos = { 392.0f, 470.0f, 218.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_ZIPLINE_DUMMY1_VEC },
+        .yaw = GEN_NPC_ZIPLINE_DUMMY1_DIR,
+        .territory = GEN_NPC_ZIPLINE_DUMMY1_TERRITORY,
         .init = &N(EVS_NpcInit_ZiplineDummy),
         .settings = &N(NpcSettings_Dummy),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,
@@ -182,8 +184,9 @@ NpcData N(NpcData_PassiveNPCs)[] = {
     },
     {
         .id = NPC_ZiplineDummy2,
-        .pos = { 392.0f, 470.0f, 218.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_ZIPLINE_DUMMY2_VEC },
+        .yaw = GEN_NPC_ZIPLINE_DUMMY2_DIR,
+        .territory = GEN_NPC_ZIPLINE_DUMMY2_TERRITORY,
         .init = &N(EVS_NpcInit_ZiplineDummy),
         .settings = &N(NpcSettings_Dummy),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,
@@ -195,20 +198,9 @@ NpcData N(NpcData_PassiveNPCs)[] = {
 
 NpcData N(NpcData_SpikeTop_01) = {
     .id = NPC_SpikeTop_01,
-    .pos = { 140.0f, 670.0f, -20.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 140, 670, -20 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_RECT,
-            .detectPos  = { -50, 670, -25 },
-            .detectSize = { 240, 115 },
-        }
-    },
+    .pos = { GEN_NPC_SPIKE_TOP_01_VEC },
+    .yaw = GEN_NPC_SPIKE_TOP_01_DIR,
+    .territory = GEN_NPC_SPIKE_TOP_01_TERRITORY,
     .settings = &N(NpcSettings_SpikeTop),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
     .drops = SPIKE_TOP_DROPS,
@@ -218,20 +210,9 @@ NpcData N(NpcData_SpikeTop_01) = {
 
 NpcData N(NpcData_SpikeTop_02) = {
     .id = NPC_SpikeTop_02,
-    .pos = { -200.0f, 670.0f, -35.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -200, 670, -35 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_RECT,
-            .detectPos  = { -50, 670, -25 },
-            .detectSize = { 240, 115 },
-        }
-    },
+    .pos = { GEN_NPC_SPIKE_TOP_02_VEC },
+    .yaw = GEN_NPC_SPIKE_TOP_02_DIR,
+    .territory = GEN_NPC_SPIKE_TOP_02_TERRITORY,
     .settings = &N(NpcSettings_SpikeTop),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
     .drops = SPIKE_TOP_DROPS,
@@ -241,20 +222,9 @@ NpcData N(NpcData_SpikeTop_02) = {
 
 NpcData N(NpcData_SpikeTop_03) = {
     .id = NPC_SpikeTop_03,
-    .pos = { 30.0f, 20.0f, 320.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 30, 20, 320 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_RECT,
-            .detectPos  = { 140, 20, 275 },
-            .detectSize = { 180, 95 },
-        }
-    },
+    .pos = { GEN_NPC_SPIKE_TOP_03_VEC },
+    .yaw = GEN_NPC_SPIKE_TOP_03_DIR,
+    .territory = GEN_NPC_SPIKE_TOP_03_TERRITORY,
     .settings = &N(NpcSettings_SpikeTop),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
     .drops = SPIKE_TOP_DROPS,
@@ -265,20 +235,9 @@ NpcData N(NpcData_SpikeTop_03) = {
 NpcData N(NpcData_PutridPiranha)[] = {
     {
         .id = NPC_Piranha,
-        .pos = { 260.0f, 20.0f, 255.0f },
-        .yaw = 270,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 260, 20, 255 },
-                .wanderSize = { 30 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 260, 20, 255 },
-                .detectSize = { 100, 50 },
-            }
-        },
+        .pos = { GEN_NPC_PIRANHA_VEC },
+        .yaw = GEN_NPC_PIRANHA_DIR,
+        .territory = GEN_NPC_PIRANHA_TERRITORY,
         .settings = &N(NpcSettings_PutridPiranha),
         .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION,
         .drops = PUTRID_PIRANHA_DROPS,

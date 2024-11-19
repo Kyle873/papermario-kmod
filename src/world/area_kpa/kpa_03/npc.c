@@ -15,20 +15,9 @@ AnimID N(ExtraAnims_Koopatrol)[] = {
 
 NpcData N(NpcData_Koopatrol_01) = {
     .id = NPC_Koopatrol_01,
-    .pos = { 1045.0f, -255.0f, -194.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = FALSE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 1045, -255, -194 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 1045, -255, -194 },
-            .detectSize = { 300 },
-        }
-    },
+    .pos = { GEN_NPC_KOOPATROL_01_VEC },
+    .yaw = GEN_NPC_KOOPATROL_01_DIR,
+    .territory = GEN_NPC_KOOPATROL_01_TERRITORY,
     .settings = &N(NpcSettings_Koopatrol_Wander),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION,
     .drops = KOOPATROL_DROPS,
@@ -39,20 +28,9 @@ NpcData N(NpcData_Koopatrol_01) = {
 
 NpcData N(NpcData_Koopatrol_02) = {
     .id = NPC_Koopatrol_02,
-    .pos = { 950.0f, -265.0f, 0.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = FALSE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 950, -265, 0 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 950, -265, 0 },
-            .detectSize = { 300 },
-        }
-    },
+    .pos = { GEN_NPC_KOOPATROL_02_VEC },
+    .yaw = GEN_NPC_KOOPATROL_02_DIR,
+    .territory = GEN_NPC_KOOPATROL_02_TERRITORY,
     .settings = &N(NpcSettings_Koopatrol_Wander),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION,
     .drops = KOOPATROL_DROPS,
@@ -63,20 +41,9 @@ NpcData N(NpcData_Koopatrol_02) = {
 
 NpcData N(NpcData_BonyBeetle_01) = {
     .id = NPC_BonyBeetle_01,
-    .pos = { -940.0f, 140.0f, -145.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = FALSE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -940, 140, -145 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -940, 140, -145 },
-            .detectSize = { 300 },
-        }
-    },
+    .pos = { GEN_NPC_BONY_BEETLE_01_VEC },
+    .yaw = GEN_NPC_BONY_BEETLE_01_DIR,
+    .territory = GEN_NPC_BONY_BEETLE_01_TERRITORY,
     .settings = &N(NpcSettings_BonyBeetle),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
     .drops = BONY_BEETLE_DROPS_ALT,
@@ -86,20 +53,9 @@ NpcData N(NpcData_BonyBeetle_01) = {
 
 NpcData N(NpcData_BonyBeetle_02) = {
     .id = NPC_BonyBeetle_02,
-    .pos = { 175.0f, -130.0f, 0.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = FALSE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 175, -130, 0 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 175, -130, 0 },
-            .detectSize = { 300 },
-        }
-    },
+    .pos = { GEN_NPC_BONY_BEETLE_02_VEC },
+    .yaw = GEN_NPC_BONY_BEETLE_02_DIR,
+    .territory = GEN_NPC_BONY_BEETLE_02_TERRITORY,
     .settings = &N(NpcSettings_BonyBeetle),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
     .drops = BONY_BEETLE_DROPS,
@@ -110,20 +66,9 @@ NpcData N(NpcData_BonyBeetle_02) = {
 NpcData N(NpcData_Magikoopa_01)[] = {
     {
         .id = NPC_Magikoopa_01,
-        .pos = { -1000.0f, -160.0f, -150.0f },
-        .yaw = 90,
-        .territory = {
-            .wander = {
-                .isFlying = FALSE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { -1000, -160, -150 },
-                .wanderSize = { 30 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { -1000, -160, -150 },
-                .detectSize = { 200 },
-            }
-        },
+        .pos = { GEN_NPC_MAGIKOOPA_01_VEC },
+        .yaw = GEN_NPC_MAGIKOOPA_01_DIR,
+        .territory = GEN_NPC_MAGIKOOPA_01_TERRITORY,
         .settings = &N(NpcSettings_Magikoopa),
         .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION,
         .drops = MAGINO_DROPS,

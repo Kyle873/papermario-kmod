@@ -2,10 +2,7 @@
 #include "entity.h"
 
 TweesterPath N(DefaultTweesterPath) = {
-    { -65, 0, 217 },
-    { -262, 0, -64 },
-    { 57, 0, -286 },
-    { 327, 0, 8 },
+    GEN_PATH_1_PATH
     TWEESTER_PATH_LOOP
 };
 
@@ -24,14 +21,14 @@ EvtScript N(EVS_GotoMap_sbk_05_4) = {
 };
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_Tweester), 327, 0, 8, 0, Ref(N(TweesterPaths)), MAKE_ENTITY_END)
+    EVT_MAKE_ENTITY(Tweester, GEN_TWEESTER_1_PARAMS)
     Call(AssignScript, Ref(N(EVS_GotoMap_sbk_05_4)))
-    Call(MakeEntity, Ref(Entity_MulticoinBlock), 0, 60, -100, 0, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_SBK14_MultiCoinBrick)
-    Call(MakeEntity, Ref(Entity_YellowBlock), -240, 0, 215, 0, ITEM_COIN, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_SBK14_ItemBlock_Coin)
-    Call(MakeEntity, Ref(Entity_YellowBlock), 220, 0, 150, 0, ITEM_HONEY_SYRUP, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_SBK14_ItemBlock_HoneySyrup)
+    EVT_MAKE_ENTITY(MulticoinBlock, GEN_MULTICOIN_BLOCK_1_PARAMS)
+    Call(AssignBlockFlag, GEN_MULTICOIN_BLOCK_1_FLAG)
+    EVT_MAKE_ENTITY(YellowBlock, GEN_YELLOW_BLOCK_1_PARAMS)
+    Call(AssignBlockFlag, GEN_YELLOW_BLOCK_1_FLAG)
+    EVT_MAKE_ENTITY(YellowBlock, GEN_YELLOW_BLOCK_2_PARAMS)
+    Call(AssignBlockFlag, GEN_YELLOW_BLOCK_2_FLAG)
     Return
     End
 };

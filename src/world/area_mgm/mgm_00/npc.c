@@ -167,8 +167,9 @@ EvtScript N(EVS_NpcInit_RedToad) = {
 
 NpcData N(NpcData_RedToad) = {
     .id = NPC_RedToad,
-    .pos = { -213.0f, 12.0f, -180.0f },
-    .yaw = 90,
+    .pos = { GEN_NPC_RED_TOAD_VEC },
+    .yaw = GEN_NPC_RED_TOAD_DIR,
+    .territory = GEN_NPC_RED_TOAD_TERRITORY,
     .init = &N(EVS_NpcInit_RedToad),
     .settings = &N(NpcSettings_Toad_Stationary),
     .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -207,22 +208,9 @@ EvtScript N(EVS_NpcInit_GreenToad) = {
 
 NpcData N(NpcData_GreenToad) = {
     .id = NPC_GreenToad,
-    .pos = { -88.0f, 0.0f, -95.0f },
-    .yaw = 270,
-    .territory = {
-        .patrol = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .numPoints  = 2,
-            .points = {
-                { -100, 0, -95 },
-                { -70, 0, -95 },
-            },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 0, 0, 0 },
-            .detectSize = { 0 },
-        }
-    },
+    .pos = { GEN_NPC_GREEN_TOAD_VEC },
+    .yaw = GEN_NPC_GREEN_TOAD_DIR,
+    .territory = GEN_NPC_GREEN_TOAD_TERRITORY,
     .init = &N(EVS_NpcInit_GreenToad),
     .settings = &N(NpcSettings_Toad_Patrol),
     .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -257,22 +245,9 @@ EvtScript N(EVS_NpcInit_BlueToad) = {
 
 NpcData N(NpcData_BlueToad) = {
     .id = NPC_BlueToad,
-    .pos = { 46.0f, 0.0f, -205.0f },
-    .yaw = 90,
-    .territory = {
-        .patrol = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .numPoints  = 2,
-            .points = {
-                { 25, 0, -205 },
-                { 75, 0, -205 },
-            },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 0, 0, 0 },
-            .detectSize = { 0 },
-        }
-    },
+    .pos = { GEN_NPC_BLUE_TOAD_VEC },
+    .yaw = GEN_NPC_BLUE_TOAD_DIR,
+    .territory = GEN_NPC_BLUE_TOAD_TERRITORY,
     .init = &N(EVS_NpcInit_BlueToad),
     .settings = &N(NpcSettings_Toad_Patrol),
     .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,

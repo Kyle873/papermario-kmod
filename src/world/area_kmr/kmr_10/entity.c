@@ -75,18 +75,18 @@ EvtScript N(EVS_UseSpring) = {
 EvtScript N(EVS_OpenChest_HammerThrow) = EVT_OPEN_CHEST(ITEM_HAMMER_THROW, GF_KMR10_Chest_HammerThrow);
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_YellowBlock), -190, 75, 220, 0, ITEM_SLEEPY_SHEEP, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_KMR10_ItemBlock_SleepySheep)
-    Call(MakeEntity, Ref(Entity_Chest), 633, 142, 119, 0, 0, MAKE_ENTITY_END)
-    Call(AssignChestFlag, GF_KMR10_Chest_HammerThrow)
-    Call(AssignScript, Ref(N(EVS_OpenChest_HammerThrow)))
+    EVT_MAKE_ENTITY(YellowBlock, GEN_YELLOW_BLOCK_1_PARAMS)
+    Call(AssignBlockFlag, GEN_YELLOW_BLOCK_1_FLAG)
+    EVT_MAKE_ENTITY(Chest, GEN_CHEST_1_PARAMS)
+    Call(AssignChestFlag, GEN_CHEST_1_FLAG)
+    Call(AssignScript, Ref(GEN_CHEST_1_SCRIPT))
     IfEq(GF_KMR10_KnockedSpringOutOfTree, FALSE)
-        Call(MakeEntity, Ref(Entity_ScriptSpring), 370, 115, -20, 0, MAKE_ENTITY_END)
-        Call(AssignScript, Ref(N(EVS_UseSpring)))
+        EVT_MAKE_ENTITY(ScriptSpring, GEN_SCRIPT_SPRING_1_PARAMS)
+        Call(AssignScript, Ref(GEN_SCRIPT_SPRING_1_SCRIPT))
         Set(MV_SpringEntityIndex, LVar0)
     Else
-        Call(MakeEntity, Ref(Entity_ScriptSpring), 370, 10, 20, 0, MAKE_ENTITY_END)
-        Call(AssignScript, Ref(N(EVS_UseSpring)))
+        EVT_MAKE_ENTITY(ScriptSpring, GEN_SCRIPT_SPRING_2_PARAMS)
+        Call(AssignScript, Ref(GEN_SCRIPT_SPRING_2_SCRIPT))
     EndIf
     Return
     End

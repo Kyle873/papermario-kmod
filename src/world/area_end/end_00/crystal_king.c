@@ -2,19 +2,11 @@
 #include "effects.h"
 
 Vec3f N(CrystalsFlyInPath)[] = {
-    { 2050.0,   100.0,    0.0 },
-    { 1900.0,    80.0,    0.0 },
-    { 1820.0,    70.0,    0.0 },
-    { 1800.0,    60.0,    0.0 },
-    { 1840.0,    50.0,    0.0 },
+    GEN_PATH_2_PATH
 };
 
 Vec3f N(CrystalsFlyOutPath)[] = {
-    { 1840.0,    50.0,    0.0 },
-    { 1880.0,    60.0,    0.0 },
-    { 1860.0,    70.0,    0.0 },
-    { 1760.0,   100.0,    0.0 },
-    { 1660.0,   170.0,    0.0 },
+    GEN_PATH_3_PATH
 };
 
 EvtScript N(EVS_ParadePhase_CrystalKing) = {

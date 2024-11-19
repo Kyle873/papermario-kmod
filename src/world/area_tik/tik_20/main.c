@@ -25,8 +25,8 @@ EvtScript N(EVS_BindExitTriggers) = {
 };
 
 LavaReset N(SafeFloorColliders)[] = {
-    { .colliderID = COLLIDER_yuka, .pos = { -190.0,   30.0,  -85.0 }},
-    { .colliderID = COLLIDER_yuka2, .pos = {  200.0,   30.0,  -70.0 }},
+    { .colliderID = COLLIDER_yuka, .pos = { GEN_LAVA_RESET_YUKA_VEC }},
+    { .colliderID = COLLIDER_yuka2, .pos = { GEN_LAVA_RESET_YUKA2_VEC }},
     { .colliderID = NO_COLLIDER }
 };
 
@@ -37,18 +37,18 @@ DripVolumeList N(DripVolumes) = {
     .count = 2,
     .volumes = {
         {
-            .minPos = { -312,  -19 },
-            .maxPos = {   52,   46 },
-            .startY = 200,
-            .endY   = -20,
+            .minPos = { GEN_DRIP_VOLUME_1_MIN_XZ },
+            .maxPos = { GEN_DRIP_VOLUME_1_MAX_XZ },
+            .startY = GEN_DRIP_VOLUME_1_MAX_Y,
+            .endY   = GEN_DRIP_VOLUME_1_MIN_Y,
             .duration = 60,
             .density  = 2,
         },
         {
-            .minPos = {  460,  -50 },
-            .maxPos = {   40,  185 },
-            .startY = 200,
-            .endY   = -20,
+            .minPos = { GEN_DRIP_VOLUME_2_MIN_XZ },
+            .maxPos = { GEN_DRIP_VOLUME_2_MAX_XZ },
+            .startY = GEN_DRIP_VOLUME_2_MAX_Y,
+            .endY   = GEN_DRIP_VOLUME_2_MIN_Y,
             .duration = 60,
             .density  = 1,
         }
@@ -65,7 +65,7 @@ EvtScript N(EVS_SetupDrips) = {
 #include "../common/Flotsam.inc.c"
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_TOAD_TOWN_TUNNELS)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_TIK_20)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
     Call(MakeNpcs, TRUE, Ref(N(DefaultNPCs)))
@@ -79,10 +79,7 @@ EvtScript N(EVS_Main) = {
     Exec(N(EVS_SetupDrips))
     Call(SetTexPanner, MODEL_nagare, TEX_PANNER_0)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_0)
-        TEX_PAN_PARAMS_STEP(   70,  100,  100,  130)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_0
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Thread

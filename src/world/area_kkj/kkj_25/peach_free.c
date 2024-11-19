@@ -36,9 +36,7 @@ API_CALLABLE(N(SetEnergyWaveOrigin)) {
 }
 
 Vec3f N(TwinkArrivePath)[] = {
-    {  445.0,    60.0,    0.0 },
-    {  480.0,    40.0,  -20.0 },
-    {  510.0,    25.0,    0.0 },
+    GEN_PATH_1_PATH
 };
 
 EvtScript N(EVS_SpawnBowserStarEnergyWaves) = {

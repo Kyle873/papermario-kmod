@@ -2,7 +2,7 @@
 #include "entity.h"
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeItemEntity, ITEM_HP_PLUS_B, 218, 64, -100, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_NOK03_Item_HPPlusB)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
     Return
     End
 };

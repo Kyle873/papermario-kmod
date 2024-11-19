@@ -115,8 +115,8 @@ EvtScript N(EVS_ThirdSwitch_JumpToSafety) = {
 };
 
 EvtScript N(EVS_HitSwitch_First) = {
-    Call(MakeEntity, Ref(Entity_BlueSwitch), 360, -210, -100, 0, MAKE_ENTITY_END)
-    Call(AssignSwitchFlag, EVT_INDEX_OF_AREA_FLAG(AF_OBK03_HitSecondSwitch))
+    EVT_MAKE_ENTITY(BlueSwitch, GEN_BLUE_SWITCH_1_PARAMS)
+    Call(AssignSwitchFlag, EVT_INDEX_OF_AREA_FLAG(GEN_BLUE_SWITCH_1_FLAG))
     Call(AssignScript, Ref(N(EVS_HitSwitch_Second)))
     Exec(N(EVS_SecondSwitch_JumpToSafety))
     Set(LVar2, 360)
@@ -132,8 +132,8 @@ EvtScript N(EVS_HitSwitch_First) = {
 };
 
 EvtScript N(EVS_HitSwitch_Second) = {
-    Call(MakeEntity, Ref(Entity_HugeBlueSwitch), 440, -210, -100, 0, MAKE_ENTITY_END)
-    Call(AssignSwitchFlag, EVT_INDEX_OF_AREA_FLAG(AF_OBK03_HitThirdSwitch))
+    EVT_MAKE_ENTITY(HugeBlueSwitch, GEN_HUGE_BLUE_SWITCH_1_PARAMS)
+    Call(AssignSwitchFlag, EVT_INDEX_OF_AREA_FLAG(GEN_HUGE_BLUE_SWITCH_1_FLAG))
     Call(AssignScript, Ref(N(EVS_HitSwitch_Third)))
     Exec(N(EVS_ThirdSwitch_JumpToSafety))
     Set(LVar2, 440)
@@ -159,14 +159,14 @@ EvtScript N(EVS_HitSwitch_Third) = {
 
 EvtScript N(EVS_MakeEntities) = {
     IfLt(GB_StoryProgress, STORY_CH3_HIT_HUGE_BLUE_SWITCH)
-        Call(MakeEntity, Ref(Entity_BlueSwitch), 300, -210, -100, 0, MAKE_ENTITY_END)
-        Call(AssignSwitchFlag, EVT_INDEX_OF_AREA_FLAG(AF_OBK03_HitFirstSwitch))
+        EVT_MAKE_ENTITY(BlueSwitch, GEN_BLUE_SWITCH_2_PARAMS)
+        Call(AssignSwitchFlag, EVT_INDEX_OF_AREA_FLAG(GEN_BLUE_SWITCH_2_FLAG))
         Call(AssignScript, Ref(N(EVS_HitSwitch_First)))
     EndIf
-    Call(MakeEntity, Ref(Entity_WoodenCrate), -130, 0, -50, 0, ITEM_SUPER_SHROOM, MAKE_ENTITY_END)
-    Call(AssignCrateFlag, GF_OBK03_Crate_SuperShroom)
-    Call(MakeEntity, Ref(Entity_WoodenCrate), 155, 0, -100, 0, -1, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_WoodenCrate), -165, 0, -50, 0, -1, MAKE_ENTITY_END)
+    EVT_MAKE_ENTITY(WoodenCrate, GEN_WOODEN_CRATE_1_PARAMS)
+    Call(AssignCrateFlag, GEN_WOODEN_CRATE_1_FLAG)
+    EVT_MAKE_ENTITY(WoodenCrate, GEN_WOODEN_CRATE_2_PARAMS)
+    EVT_MAKE_ENTITY(WoodenCrate, GEN_WOODEN_CRATE_3_PARAMS)
     Return
     End
 };

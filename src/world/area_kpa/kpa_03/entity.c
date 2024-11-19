@@ -54,10 +54,10 @@ EvtScript N(EVS_MakeEntities) = {
     Thread
         Call(N(MonitorPlayerAltitude))
     EndThread
-    Call(MakeEntity, Ref(Entity_ScriptSpring), -400, -300, -150, 0, MAKE_ENTITY_END)
-    Call(AssignScript, Ref(N(EVS_UseSpring)))
-    Call(MakeEntity, Ref(Entity_YellowBlock), 620, -65, -200, 0, ITEM_SHOOTING_STAR, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_KPA03_ItemBlock_ShootingStar)
+    EVT_MAKE_ENTITY(ScriptSpring, GEN_SCRIPT_SPRING_1_PARAMS)
+    Call(AssignScript, Ref(GEN_SCRIPT_SPRING_1_SCRIPT))
+    EVT_MAKE_ENTITY(YellowBlock, GEN_YELLOW_BLOCK_1_PARAMS)
+    Call(AssignBlockFlag, GEN_YELLOW_BLOCK_1_FLAG)
     Return
     End
 };

@@ -7,18 +7,18 @@ DripVolumeList N(DripVolumes) = {
     .count = 2,
     .volumes = {
         {
-            .minPos = { -230,  -40 },
-            .maxPos = {  150,   80 },
-            .startY = 200,
-            .endY   = -10,
+            .minPos = { GEN_DRIP_VOLUME_1_MIN_XZ },
+            .maxPos = { GEN_DRIP_VOLUME_1_MAX_XZ },
+            .startY = GEN_DRIP_VOLUME_1_MAX_Y,
+            .endY   = GEN_DRIP_VOLUME_1_MIN_Y,
             .duration = 50,
             .density  = 1,
         },
         {
-            .minPos = {  -50,  100 },
-            .maxPos = {  355,   37 },
-            .startY = 200,
-            .endY   = -135,
+            .minPos = { GEN_DRIP_VOLUME_2_MIN_XZ },
+            .maxPos = { GEN_DRIP_VOLUME_2_MAX_XZ },
+            .startY = GEN_DRIP_VOLUME_2_MAX_Y,
+            .endY   = GEN_DRIP_VOLUME_2_MIN_Y,
             .duration = 80,
             .density  = 2,
         }

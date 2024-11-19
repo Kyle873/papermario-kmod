@@ -2,6 +2,7 @@
 /// @brief Bowser's Castle - Outside Lower Jail (No Lava)
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

@@ -18,19 +18,11 @@ API_CALLABLE(N(GetKammyFlightEmitterPos)) {
 }
 
 Vec3f N(KammyFlightPath1)[] = {
-    { -700.0,  -370.0, 1600.0 },
-    { -750.0,  -450.0, 1550.0 },
-    { -700.0,  -530.0, 1550.0 },
-    { -630.0,  -550.0, 1550.0 },
+    GEN_PATH_1_PATH
 };
 
 Vec3f N(KammyFlightPath2)[] = {
-    { -630.0,  -550.0, 1550.0 },
-    { -430.0,  -520.0, 1525.0 },
-    { -350.0,  -430.0, 1500.0 },
-    { -100.0,  -100.0, 1000.0 },
-    {    0.0,     0.0,  500.0 },
-    {    0.0,     0.0,    0.0 },
+    GEN_PATH_2_PATH
 };
 
 EvtScript N(EVS_PlayKammyFlightFX) = {

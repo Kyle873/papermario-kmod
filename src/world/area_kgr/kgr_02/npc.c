@@ -289,8 +289,9 @@ NpcSettings N(NpcSettings_Fuzzipede) = {
 
 NpcData N(NpcData_Fuzzipede) = {
     .id = NPC_Fuzzipede,
-    .pos = { 333.0f, -10.0f, -130.0f },
-    .yaw = 90,
+    .pos = { GEN_NPC_FUZZIPEDE_VEC },
+    .yaw = GEN_NPC_FUZZIPEDE_DIR,
+    .territory = GEN_NPC_FUZZIPEDE_TERRITORY,
     .settings = &N(NpcSettings_Fuzzipede),
     .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_USE_INSPECT_ICON | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_SKIP_BATTLE | ENEMY_FLAG_IGNORE_TOUCH | ENEMY_FLAG_IGNORE_JUMP | ENEMY_FLAG_IGNORE_HAMMER | ENEMY_FLAG_IGNORE_PARTNER,
     .drops = NO_DROPS,

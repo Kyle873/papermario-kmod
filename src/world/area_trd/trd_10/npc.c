@@ -338,8 +338,9 @@ NpcSettings N(NpcSettings_KoopaBros_04) = {
 NpcData N(NpcData_KoopaBros_01)[] = {
     {
         .id = NPC_KoopaBros_01,
-        .pos = { 0.0f, 0.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_KOOPA_BROS_01_VEC },
+        .yaw = GEN_NPC_KOOPA_BROS_01_DIR,
+        .territory = GEN_NPC_KOOPA_BROS_01_TERRITORY,
         .settings = &N(NpcSettings_KoopaBros_01),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_NO_DROPS,
         .drops = NO_DROPS,
@@ -364,8 +365,9 @@ NpcData N(NpcData_KoopaBros_01)[] = {
     },
     {
         .id = NPC_KoopaBros_02,
-        .pos = { 0.0f, 0.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_KOOPA_BROS_02_VEC },
+        .yaw = GEN_NPC_KOOPA_BROS_02_DIR,
+        .territory = GEN_NPC_KOOPA_BROS_02_TERRITORY,
         .settings = &N(NpcSettings_KoopaBros_02),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_NO_DROPS,
         .drops = NO_DROPS,
@@ -390,8 +392,9 @@ NpcData N(NpcData_KoopaBros_01)[] = {
     },
     {
         .id = NPC_KoopaBros_03,
-        .pos = { 0.0f, 0.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_KOOPA_BROS_03_VEC },
+        .yaw = GEN_NPC_KOOPA_BROS_03_DIR,
+        .territory = GEN_NPC_KOOPA_BROS_03_TERRITORY,
         .settings = &N(NpcSettings_KoopaBros_03),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_NO_DROPS,
         .drops = NO_DROPS,
@@ -416,8 +419,9 @@ NpcData N(NpcData_KoopaBros_01)[] = {
     },
     {
         .id = NPC_KoopaBros_04,
-        .pos = { 0.0f, 0.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_KOOPA_BROS_04_VEC },
+        .yaw = GEN_NPC_KOOPA_BROS_04_DIR,
+        .territory = GEN_NPC_KOOPA_BROS_04_TERRITORY,
         .settings = &N(NpcSettings_KoopaBros_04),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_NO_DROPS,
         .drops = NO_DROPS,

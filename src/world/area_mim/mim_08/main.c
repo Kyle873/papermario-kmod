@@ -42,7 +42,7 @@ EvtScript N(D_802431F0_BB0B30) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_FOREVER_FOREST)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_MIM_08)
     EVT_SETUP_CAMERA_MIM()
     Set(AB_MIM_2, GB_MIM_CurrentMapID)

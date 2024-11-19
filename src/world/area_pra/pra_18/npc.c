@@ -341,8 +341,9 @@ EvtScript N(EVS_NpcInit_Clubba_03_Aux) = {
 NpcData N(NpcData_Clubba_01)[] = {
     {
         .id = NPC_Clubba_01,
-        .pos = { 268.0f, 0.0f, 70.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_CLUBBA_01_VEC },
+        .yaw = GEN_NPC_CLUBBA_01_DIR,
+        .territory = GEN_NPC_CLUBBA_01_TERRITORY,
         .init = &N(EVS_NpcInit_Clubba_01),
         .settings = &N(NpcSettings_Clubba),
         .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_SKIP_BATTLE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER | CLUBBA_EXTRA_FLAGS,
@@ -351,8 +352,9 @@ NpcData N(NpcData_Clubba_01)[] = {
     },
     {
         .id = NPC_Clubba_01_Aux,
-        .pos = { 268.0f, 0.0f, 70.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_CLUBBA_01_AUX_VEC },
+        .yaw = GEN_NPC_CLUBBA_01_AUX_DIR,
+        .territory = GEN_NPC_CLUBBA_01_AUX_TERRITORY,
         .init = &N(EVS_NpcInit_Clubba_01_Aux),
         .settings = &N(NpcSettings_Clubba),
         .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_HAS_NO_SPRITE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER | CLUBBA_EXTRA_FLAGS,
@@ -364,8 +366,9 @@ NpcData N(NpcData_Clubba_01)[] = {
 NpcData N(NpcData_Clubba_02)[] = {
     {
         .id = NPC_Clubba_02,
-        .pos = { 490.0f, 0.0f, 70.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_CLUBBA_02_VEC },
+        .yaw = GEN_NPC_CLUBBA_02_DIR,
+        .territory = GEN_NPC_CLUBBA_02_TERRITORY,
         .init = &N(EVS_NpcInit_Clubba_02),
         .settings = &N(NpcSettings_Clubba),
         .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_SKIP_BATTLE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER | CLUBBA_EXTRA_FLAGS,
@@ -374,8 +377,9 @@ NpcData N(NpcData_Clubba_02)[] = {
     },
     {
         .id = NPC_Clubba_02_Aux,
-        .pos = { 490.0f, 0.0f, 70.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_CLUBBA_02_AUX_VEC },
+        .yaw = GEN_NPC_CLUBBA_02_AUX_DIR,
+        .territory = GEN_NPC_CLUBBA_02_AUX_TERRITORY,
         .init = &N(EVS_NpcInit_Clubba_02_Aux),
         .settings = &N(NpcSettings_Clubba),
         .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_HAS_NO_SPRITE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER | CLUBBA_EXTRA_FLAGS,
@@ -387,8 +391,9 @@ NpcData N(NpcData_Clubba_02)[] = {
 NpcData N(NpcData_Clubba_03)[] = {
     {
         .id = NPC_Clubba_03,
-        .pos = { 717.0f, 0.0f, 70.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_CLUBBA_03_VEC },
+        .yaw = GEN_NPC_CLUBBA_03_DIR,
+        .territory = GEN_NPC_CLUBBA_03_TERRITORY,
         .init = &N(EVS_NpcInit_Clubba_03),
         .settings = &N(NpcSettings_Clubba),
         .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_SKIP_BATTLE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER | CLUBBA_EXTRA_FLAGS,
@@ -397,8 +402,9 @@ NpcData N(NpcData_Clubba_03)[] = {
     },
     {
         .id = NPC_Clubba_03_Aux,
-        .pos = { 717.0f, 0.0f, 70.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_CLUBBA_03_AUX_VEC },
+        .yaw = GEN_NPC_CLUBBA_03_AUX_DIR,
+        .territory = GEN_NPC_CLUBBA_03_AUX_TERRITORY,
         .init = &N(EVS_NpcInit_Clubba_03_Aux),
         .settings = &N(NpcSettings_Clubba),
         .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_HAS_NO_SPRITE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER | CLUBBA_EXTRA_FLAGS,

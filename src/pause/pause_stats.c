@@ -213,7 +213,7 @@ void pause_stats_draw_contents(MenuPanel* menu, s32 baseX, s32 baseY, s32 width,
     draw_msg(pause_get_menu_msg(PAUSE_MSG_LBL_HP), baseX + COL_A_X, baseY + ROW_1_Y, 255, MSG_PAL_WHITE, 1);
     draw_number(gPlayerData.curHP, baseX + 78, baseY + 51, 1, 0, 255, 3);
     draw_msg(pause_get_menu_msg(PAUSE_MSG_SLASH), baseX + COL_B_X, baseY + ROW_2_Y, 255, MSG_PAL_WHITE, 1);
-    draw_number(gPlayerData.curMaxHP, baseX + COL_C_X, baseY + ROW_2_Y + NUMBER_OFFSET_Y, 1, 0, 255, 3);
+    draw_number(gPlayerData.curMaxHP, baseX + COL_C_X + 11, baseY + ROW_2_Y + NUMBER_OFFSET_Y, 1, 0, 255, 3);
 
     // draw FP count
     pause_draw_menu_label(PAUSE_LBL_FP, baseX + 21, baseY + 69);
@@ -222,7 +222,7 @@ void pause_stats_draw_contents(MenuPanel* menu, s32 baseX, s32 baseY, s32 width,
     draw_msg(pause_get_menu_msg(PAUSE_MSG_LBL_FP), baseX + COL_A_X, baseY + ROW_3_Y, 255, MSG_PAL_WHITE, 1);
     draw_number(gPlayerData.curFP, baseX + 78, baseY + 85, 1, MSG_PAL_WHITE, 255, 3);
     draw_msg(pause_get_menu_msg(PAUSE_MSG_SLASH), baseX + COL_B_X, baseY + ROW_3_Y, 255, MSG_PAL_WHITE, 1);
-    draw_number(gPlayerData.curMaxFP, baseX + COL_C_X, baseY + ROW_3_Y + NUMBER_OFFSET_Y, 1, MSG_PAL_WHITE, 255, 3);
+    draw_number(gPlayerData.curMaxFP, baseX + COL_C_X + 11, baseY + ROW_3_Y + NUMBER_OFFSET_Y, 1, MSG_PAL_WHITE, 255, 3);
 
     // draw BP count
     pause_draw_menu_label(PAUSE_LBL_BP, baseX + 21, baseY + 103);

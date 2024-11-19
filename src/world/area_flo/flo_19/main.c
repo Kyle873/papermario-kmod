@@ -17,7 +17,7 @@ EvtScript N(EVS_BindExitTriggers) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_CLOUDY_CLIMB)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
     Set(GF_MAP_CloudyClimb, TRUE)
@@ -30,17 +30,11 @@ EvtScript N(EVS_Main) = {
     Call(SetTexPanner, MODEL_o59, TEX_PANNER_1)
     Call(SetTexPanner, MODEL_o60, TEX_PANNER_1)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP( -120,    0,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    0,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_2)
-        TEX_PAN_PARAMS_STEP(  -90,    0,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    0,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_2
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Call(GetEntryID, LVar0)

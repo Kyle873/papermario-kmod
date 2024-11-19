@@ -6,20 +6,9 @@
 NpcData N(NpcData_PutridPiranha)[] = {
     {
         .id = NPC_PutridPiranha,
-        .pos = { 80.0f, 0.0f, 135.0f },
-        .yaw = 270,
-        .territory = {
-            .wander = {
-                .isFlying = FALSE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 80, 0, 135 },
-                .wanderSize = { 30 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { 90, 0, 130 },
-                .detectSize = { 130, 60 },
-            }
-        },
+        .pos = { GEN_NPC_PUTRID_PIRANHA_VEC },
+        .yaw = GEN_NPC_PUTRID_PIRANHA_DIR,
+        .territory = GEN_NPC_PUTRID_PIRANHA_TERRITORY,
         .settings = &N(NpcSettings_PutridPiranha),
         .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION,
         .drops = PUTRID_PIRANHA_DROPS,

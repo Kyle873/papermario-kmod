@@ -9,37 +9,25 @@ EvtScript N(EVS_StartTexPanners) = {
     // background lava fall
     Call(SetTexPanner, MODEL_yougan1, TEX_PANNER_0)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_0)
-        TEX_PAN_PARAMS_STEP(   0, -800,   0,   0)
-        TEX_PAN_PARAMS_FREQ(   0,    1,   0,   0)
-        TEX_PAN_PARAMS_INIT(   0,    0,   0,   0)
+        GEN_TEX_PANNER_0
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     // lava channel
     Call(SetTexPanner, MODEL_yougan, TEX_PANNER_1)
     Call(SetTexPanner, MODEL_o640, TEX_PANNER_1)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP( 800,   0, 1600,   0)
-        TEX_PAN_PARAMS_FREQ(   1,   0,    1,   0)
-        TEX_PAN_PARAMS_INIT(   0,   0,    0,   0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     // smoke
     Call(SetTexPanner, MODEL_kem1, TEX_PANNER_3)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_3)
-        TEX_PAN_PARAMS_STEP( -200,    0,  600, -400)
-        TEX_PAN_PARAMS_FREQ(    1,    0,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_3
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Call(SetTexPanner, MODEL_kem2, TEX_PANNER_4)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_4)
-        TEX_PAN_PARAMS_STEP( 500,    0,    0, -400)
-        TEX_PAN_PARAMS_FREQ(   1,    0,    0,    1)
-        TEX_PAN_PARAMS_INIT(   0,    0,    0,    0)
+        GEN_TEX_PANNER_4
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Return
@@ -60,11 +48,11 @@ EvtScript N(EVS_BindExitTriggers) = {
 };
 
 LavaReset N(SafeFloorColliders)[] = {
-    { .colliderID = COLLIDER_o468, .pos = { -230.0, 0.0, 100.0 }},
-    { .colliderID = COLLIDER_o470, .pos = { -230.0, 0.0, 100.0 }},
-    { .colliderID = COLLIDER_o322, .pos = {  -10.0, 0.0, 100.0 }},
-    { .colliderID = COLLIDER_o446, .pos = {  -10.0, 0.0, 100.0 }},
-    { .colliderID = COLLIDER_o454, .pos = {  -90.0, 0.0, -45.0 }},
+    { .colliderID = COLLIDER_o468, .pos = { GEN_LAVA_RESET_O468_VEC }},
+    { .colliderID = COLLIDER_o470, .pos = { GEN_LAVA_RESET_O470_VEC }},
+    { .colliderID = COLLIDER_o322, .pos = { GEN_LAVA_RESET_O322_VEC }},
+    { .colliderID = COLLIDER_o446, .pos = { GEN_LAVA_RESET_O446_VEC }},
+    { .colliderID = COLLIDER_o454, .pos = { GEN_LAVA_RESET_O454_VEC }},
     { .colliderID = NO_COLLIDER }
 };
 
@@ -106,7 +94,7 @@ EvtScript N(EVS_AnimateLavaScale) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_MT_LAVALAVA)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_KZN_08)
     EVT_SETUP_CAMERA_DEFAULT(0, 0, 0)
     Call(MakeNpcs, TRUE, Ref(N(DefaultNPCs)))

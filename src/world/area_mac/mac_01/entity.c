@@ -11,7 +11,7 @@ EvtScript N(EVS_Inspect_StreetSign) = {
 
 EvtScript N(EVS_MakeEntities) = {
     IfLt(GB_StoryProgress, STORY_EPILOGUE)
-        Call(MakeEntity, Ref(Entity_SavePoint), 280, 80, -130, 0, MAKE_ENTITY_END)
+        EVT_MAKE_ENTITY(SavePoint, GEN_SAVE_POINT_1_PARAMS)
     EndIf
     BindTrigger(Ref(N(EVS_Inspect_StreetSign)), TRIGGER_WALL_PRESS_A, COLLIDER_o406, 1, 0)
     Return

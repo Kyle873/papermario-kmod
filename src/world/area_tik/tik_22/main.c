@@ -64,18 +64,18 @@ DripVolumeList N(DripVolumes) = {
     .count = 2,
     .volumes = {
         {
-            .minPos = { -220,  -19 },
-            .maxPos = {   60,   46 },
-            .startY = 200,
-            .endY   = 0,
+            .minPos = { GEN_DRIP_VOLUME_1_MIN_XZ },
+            .maxPos = { GEN_DRIP_VOLUME_1_MAX_XZ },
+            .startY = GEN_DRIP_VOLUME_1_MAX_Y,
+            .endY   = GEN_DRIP_VOLUME_1_MIN_Y,
             .duration = 60,
             .density  = 2,
         },
         {
-            .minPos = {   63, -100 },
-            .maxPos = {   47,  235 },
-            .startY = 200,
-            .endY   = 0,
+            .minPos = { GEN_DRIP_VOLUME_2_MIN_XZ },
+            .maxPos = { GEN_DRIP_VOLUME_2_MAX_XZ },
+            .startY = GEN_DRIP_VOLUME_2_MAX_Y,
+            .endY   = GEN_DRIP_VOLUME_2_MIN_Y,
             .duration = 60,
             .density  = 1,
         }
@@ -90,7 +90,7 @@ EvtScript N(EVS_SetupDrips) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_TOAD_TOWN_TUNNELS)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_TIK_22)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
     Exec(N(EVS_SetupMusic))
@@ -98,10 +98,7 @@ EvtScript N(EVS_Main) = {
     Exec(N(EVS_SetupDrips))
     Call(SetTexPanner, MODEL_mizu, TEX_PANNER_0)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_0)
-        TEX_PAN_PARAMS_STEP(    0, -200, -100, -500)
-        TEX_PAN_PARAMS_FREQ(    0,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_0
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Wait(1)

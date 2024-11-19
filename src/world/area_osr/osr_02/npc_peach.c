@@ -75,8 +75,9 @@ EvtScript N(EVS_NpcInit_Clubba) = {
 
 NpcData N(NpcData_Clubba) = {
     .id = NPC_Clubba,
-    .pos = { -70.0f, 0.0f, -100.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_CLUBBA_VEC },
+    .yaw = GEN_NPC_CLUBBA_DIR,
+    .territory = GEN_NPC_CLUBBA_TERRITORY,
     .init = &N(EVS_NpcInit_Clubba),
     .settings = &N(NpcSettings_Clubba),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,

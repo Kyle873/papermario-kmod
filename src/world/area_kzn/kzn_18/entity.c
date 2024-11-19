@@ -2,10 +2,10 @@
 #include "entity.h"
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_HiddenPanel), 250, 250, -225, 0, MODEL_o380, MAKE_ENTITY_END)
-    Call(AssignPanelFlag, GF_KZN18_HiddenPanel)
-    Call(MakeEntity, Ref(Entity_SavePoint), -420, 85, -80, 0, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_HeartBlock), 350, 310, -250, 0, MAKE_ENTITY_END)
+    EVT_MAKE_ENTITY(HiddenPanel, GEN_HIDDEN_PANEL_1_PARAMS)
+    Call(AssignPanelFlag, GEN_HIDDEN_PANEL_1_FLAG)
+    EVT_MAKE_ENTITY(SavePoint, GEN_SAVE_POINT_1_PARAMS)
+    EVT_MAKE_ENTITY(HeartBlock, GEN_HEART_BLOCK_1_PARAMS)
     Return
     End
 };

@@ -1,8 +1,7 @@
 #include "jan_13.h"
 
 EntryList N(Entrances) = {
-    [jan_13_ENTRY_0]    { -300.0,    0.0,  120.0,    0.0 },
-    [jan_13_ENTRY_1]    {   55.0,    0.0, -120.0,  180.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {

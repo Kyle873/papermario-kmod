@@ -16,9 +16,7 @@ EvtScript N(EVS_SetStarshipPosRot) = {
 };
 
 Vec3f N(FlightPath_Arrival)[] = {
-    {  -58.0,  -166.0, -545.0 },
-    { -116.0,   -50.0, -759.0 },
-    { -120.0,   160.0, -970.0 },
+    GEN_PATH_1_PATH
 };
 
 EvtScript N(EVS_Scene_Arrival) = {
@@ -64,10 +62,7 @@ EvtScript N(EVS_Scene_Arrival) = {
 };
 
 Vec3f N(FlightPath_Departure)[] = {
-    { -120.0,   160.0, -970.0 },
-    { -116.0,   -50.0, -759.0 },
-    {  -58.0,  -166.0, -545.0 },
-    {    0.0,     0.0,    0.0 },
+    GEN_PATH_2_PATH
 };
 
 EvtScript N(EVS_Scene_Departure) = {

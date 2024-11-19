@@ -11,18 +11,18 @@ DripVolumeList N(DripVolumes) = {
     .count = 2,
     .volumes = {
         {
-            .minPos = { -154,  100 },
-            .maxPos = {   92,   36 },
-            .startY = 200,
-            .endY   = 0,
+            .minPos = { GEN_DRIP_VOLUME_1_MIN_XZ },
+            .maxPos = { GEN_DRIP_VOLUME_1_MAX_XZ },
+            .startY = GEN_DRIP_VOLUME_1_MAX_Y,
+            .endY   = GEN_DRIP_VOLUME_1_MIN_Y,
             .duration = 60,
             .density  = 2,
         },
          {
-            .minPos = {  212,   10 },
-            .maxPos = {   53,  122 },
-            .startY = 200,
-            .endY   = 0,
+            .minPos = { GEN_DRIP_VOLUME_2_MIN_XZ },
+            .maxPos = { GEN_DRIP_VOLUME_2_MAX_XZ },
+            .startY = GEN_DRIP_VOLUME_2_MAX_Y,
+            .endY   = GEN_DRIP_VOLUME_2_MIN_Y,
             .duration = 60,
             .density  = 2,
         }
@@ -52,7 +52,7 @@ EvtScript N(D_80241F38_B72798) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_JADE_JUNGLE)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
     Call(MakeNpcs, FALSE, Ref(N(DefaultNPCs)))

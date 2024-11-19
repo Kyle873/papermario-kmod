@@ -4,8 +4,7 @@ extern EvtScript N(EVS_Main);
 extern EvtScript N(EVS_MakeEntities);
 
 EntryList N(Entrances) = {
-    [sbk_99_ENTRY_0]    { -484.0,  100.0,    5.0,   90.0 },
-    [sbk_99_ENTRY_1]    {  346.0,    0.0, -342.0,  220.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {
@@ -40,7 +39,7 @@ EvtScript N(EVS_EnterMap) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_DRY_DRY_DESERT)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
     Set(GF_MAP_DryDryDesert, TRUE)

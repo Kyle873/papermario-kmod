@@ -27,20 +27,9 @@ EvtScript N(EVS_NpcInit_Bzzap) = {
 
 NpcData N(NpcData_Bzzap) = {
     .id = NPC_Bzzap,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -300, 60, 0 },
-            .wanderSize = { 60 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -300, 60, 0 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_BZZAP_VEC },
+    .yaw = GEN_NPC_BZZAP_DIR,
+    .territory = GEN_NPC_BZZAP_TERRITORY,
     .init = &N(EVS_NpcInit_Bzzap),
     .settings = &N(NpcSettings_Bzzap),
     .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,
@@ -51,20 +40,9 @@ NpcData N(NpcData_Bzzap) = {
 NpcData N(NpcData_PiranhaPlant_01)[] = {
     {
         .id = NPC_PiranhaPlant_01,
-        .pos = { -240.0f, 0.0f, -240.0f },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 0, 0, 0 },
-                .wanderSize = { 400 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 400 },
-            }
-        },
+        .pos = { GEN_NPC_PIRANHA_PLANT_01_VEC },
+        .yaw = GEN_NPC_PIRANHA_PLANT_01_DIR,
+        .territory = GEN_NPC_PIRANHA_PLANT_01_TERRITORY,
         .settings = &N(NpcSettings_PiranhaPlant),
         .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
         .drops = PIRANHA_PLANT_DROPS,
@@ -77,20 +55,9 @@ NpcData N(NpcData_PiranhaPlant_01)[] = {
 NpcData N(NpcData_PiranhaPlant_02)[] = {
     {
         .id = NPC_PiranhaPlant_02,
-        .pos = { 240.0f, 0.0f, 240.0f },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 0, 0, 0 },
-                .wanderSize = { 400 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 400 },
-            }
-        },
+        .pos = { GEN_NPC_PIRANHA_PLANT_02_VEC },
+        .yaw = GEN_NPC_PIRANHA_PLANT_02_DIR,
+        .territory = GEN_NPC_PIRANHA_PLANT_02_TERRITORY,
         .settings = &N(NpcSettings_PiranhaPlant),
         .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
         .drops = PIRANHA_PLANT_DROPS,

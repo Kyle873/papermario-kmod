@@ -2,10 +2,7 @@
 #include "effects.h"
 
 Vec3f N(FlightPath)[] = {
-    { -100.0,   200.0,  130.0 },
-    {  -70.0,    60.0,  140.0 },
-    {  -40.0,    25.0,  150.0 },
-    {  -10.0,    15.0,  160.0 },
+    GEN_PATH_1_PATH
 };
 
 EvtScript N(EVS_Scene_Epilogue) = {

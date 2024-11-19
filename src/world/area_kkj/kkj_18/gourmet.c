@@ -33,11 +33,7 @@ API_CALLABLE(N(SpinCameraAround)) {
 }
 
 Vec3f N(TwinkDepartPath)[] = {
-    {  -23.0,    30.0,   36.0 },
-    {   16.0,    62.0,  -10.0 },
-    {   64.0,    55.0,    5.0 },
-    {  112.0,    46.0,   20.0 },
-    {  160.0,    60.0,  -25.0 },
+    GEN_PATH_1_PATH
 };
 
 EvtScript N(EVS_ApproachPeach) = {

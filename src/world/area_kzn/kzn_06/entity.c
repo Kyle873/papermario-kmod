@@ -11,23 +11,19 @@ EvtScript N(EVS_OnBreakBlock) = {
 };
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_HiddenYellowBlock), 325, 205, -30, 0, ITEM_LIFE_SHROOM, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_KZN06_HiddenItem_LifeShroom)
+    EVT_MAKE_ENTITY(HiddenYellowBlock, GEN_HIDDEN_YELLOW_BLOCK_1_PARAMS)
+    Call(AssignBlockFlag, GEN_HIDDEN_YELLOW_BLOCK_1_FLAG)
     IfEq(GF_KZN06_Hammer3Block, FALSE)
-        Call(MakeEntity, Ref(Entity_Hammer3BlockWideZ), 385, 5, 180, 0, MAKE_ENTITY_END)
-        Call(AssignScript, Ref(N(EVS_OnBreakBlock)))
+        EVT_MAKE_ENTITY(Hammer3BlockWideZ, GEN_HAMMER3_BLOCK_WIDE_Z_1_PARAMS)
+        Call(AssignScript, Ref(GEN_HAMMER3_BLOCK_WIDE_Z_1_SCRIPT))
     EndIf
     IfLt(GB_StoryProgress, STORY_CH5_LAVA_STREAM_BLOCKED)
-        Call(CreatePushBlockGrid, 0, 12, 1, -330, 145, -90, 0)
+        Call(CreatePushBlockGrid, GEN_PUSH_BLOCKS_1_GRID_PARAMS)
+        GEN_PUSH_BLOCKS_1_GRID_CONTENT
         Call(SetPushBlockFallEffect, 0, Ref(N(push_block_handle_fall)))
-        Call(SetPushBlock, 0, 4, 0, PUSH_GRID_BLOCK)
-        Call(SetPushBlock, 0, 6, 0, PUSH_GRID_BLOCK)
-        Call(SetPushBlock, 0, 8, 0, PUSH_GRID_BLOCK)
     Else
-        Call(CreatePushBlockGrid, 0, 12, 1, -330, 120, -90, 0)
-        Call(SetPushBlock, 0,  9, 0, PUSH_GRID_BLOCK)
-        Call(SetPushBlock, 0, 10, 0, PUSH_GRID_BLOCK)
-        Call(SetPushBlock, 0, 11, 0, PUSH_GRID_BLOCK)
+        Call(CreatePushBlockGrid, GEN_PUSH_BLOCKS_2_GRID_PARAMS)
+        GEN_PUSH_BLOCKS_2_GRID_CONTENT
     EndIf
     Return
     End

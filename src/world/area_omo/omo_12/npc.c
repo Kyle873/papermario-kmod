@@ -170,15 +170,11 @@ EvtScript N(EVS_UseWattTutorial) = {
 };
 
 Vec3f N(WattRightFlightPath)[] = {
-    {    0.0,     0.0,    0.0 },
-    {   25.0,    -5.0,    0.0 },
-    {   60.0,    30.0,    0.0 },
+    GEN_PATH_1_PATH
 };
 
 Vec3f N(WattLeftFlightPath)[] = {
-    {    0.0,     0.0,    0.0 },
-    {  -25.0,    -5.0,    0.0 },
-    {  -60.0,    30.0,    0.0 },
+    GEN_PATH_2_PATH
 };
 
 EvtScript N(EVS_Scene_ReleaseWatt) = {
@@ -613,8 +609,9 @@ AnimID N(ExtraAnims_LanternGhost)[] = {
 
 NpcData N(NpcData_BigLanternGhost) = {
     .id = NPC_BigLanternGhost,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 90,
+    .pos = { GEN_NPC_BIG_LANTERN_GHOST_VEC },
+    .yaw = GEN_NPC_BIG_LANTERN_GHOST_DIR,
+    .territory = GEN_NPC_BIG_LANTERN_GHOST_TERRITORY,
     .init = &N(EVS_NpcInit_BigLanternGhost),
     .initVarCount = 1,
     .initVar = { .value = 0 },
@@ -628,8 +625,9 @@ NpcData N(NpcData_BigLanternGhost) = {
 
 NpcData N(NpcData_Watt) = {
     .id = NPC_Watt,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
+    .pos = { GEN_NPC_WATT_VEC },
+    .yaw = GEN_NPC_WATT_DIR,
+    .territory = GEN_NPC_WATT_TERRITORY,
     .init = &N(EVS_NpcInit_Watt),
     .initVarCount = 1,
     .initVar = { .value = 0 },
@@ -659,8 +657,9 @@ NpcData N(NpcData_Watt) = {
 
 NpcData N(NpcData_LanternTop) = {
     .id = NPC_LaternTop,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
+    .pos = { GEN_NPC_LATERN_TOP_VEC },
+    .yaw = GEN_NPC_LATERN_TOP_DIR,
+    .territory = GEN_NPC_LATERN_TOP_TERRITORY,
     .init = &N(EVS_NpcInit_LanternTop),
     .initVarCount = 1,
     .initVar = { .value = 0 },
@@ -674,8 +673,9 @@ NpcData N(NpcData_LanternTop) = {
 
 NpcData N(NpcData_LanternBottom) = {
     .id = NPC_LaternBottom,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
+    .pos = { GEN_NPC_LATERN_BOTTOM_VEC },
+    .yaw = GEN_NPC_LATERN_BOTTOM_DIR,
+    .territory = GEN_NPC_LATERN_BOTTOM_TERRITORY,
     .init = &N(EVS_NpcInit_LanternBottom),
     .initVarCount = 1,
     .initVar = { .value = 0 },

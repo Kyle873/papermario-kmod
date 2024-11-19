@@ -206,8 +206,8 @@ EvtScript N(EVS_ItemPrompt_StarStoneSocket) = {
 };
 
 BombTrigger N(BombPos_Wall) = {
-    .pos = { 337.0f, -20.0f, -103.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_1_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_1_RAD,
 };
 
 EvtScript N(EVS_BlastWall) = {

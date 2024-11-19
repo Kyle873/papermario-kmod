@@ -25,8 +25,8 @@ ShakeTreeConfig N(ShakeTree_Tree1) = {
 };
 
 BombTrigger N(BombPos_Tree1) = {
-    .pos = { -259.0f, 0.0f, -160.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_1_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_1_RAD,
 };
 
 FoliageModelList N(Tree2_LeafModels)  = FOLIAGE_MODEL_LIST(MODEL_ki);
@@ -52,8 +52,8 @@ ShakeTreeConfig N(ShakeTree_Tree2) = {
 };
 
 BombTrigger N(BombPos_Tree2) = {
-    .pos = { 171.0f, 0.0f, -291.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_2_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_2_RAD,
 };
 
 FoliageModelList N(Tree3_LeafModels)  = FOLIAGE_MODEL_LIST(MODEL_o52);
@@ -78,8 +78,8 @@ ShakeTreeConfig N(ShakeTree_Tree3) = {
 };
 
 BombTrigger N(BombPos_Tree3) = {
-    .pos = { -436.0f, 0.0f, 224.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_3_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_3_RAD,
 };
 
 FoliageModelList N(Tree4_LeafModels)  = FOLIAGE_MODEL_LIST(MODEL_y_ha);
@@ -91,8 +91,8 @@ ShakeTreeConfig N(ShakeTree_Tree4) = {
 };
 
 BombTrigger N(BombPos_Tree4) = {
-    .pos = { -320.0f, 0.0f, -21.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_4_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_4_RAD,
 };
 
 FoliageModelList N(Tree5_LeafModels)  = FOLIAGE_MODEL_LIST(MODEL_o54);
@@ -104,8 +104,8 @@ ShakeTreeConfig N(ShakeTree_Tree5) = {
 };
 
 BombTrigger N(BombPos_Tree5) = {
-    .pos = { -242.0f, 0.0f, 88.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_5_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_5_RAD,
 };
 
 FoliageModelList N(Tree6_LeafModels)  = FOLIAGE_MODEL_LIST(MODEL_o56);
@@ -117,8 +117,8 @@ ShakeTreeConfig N(ShakeTree_Tree6) = {
 };
 
 BombTrigger N(BombPos_Tree6) = {
-    .pos = { -203.0f, 0.0f, -214.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_6_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_6_RAD,
 };
 
 FoliageModelList N(Tree7_LeafModels)  = FOLIAGE_MODEL_LIST(MODEL_o58);
@@ -130,8 +130,8 @@ ShakeTreeConfig N(ShakeTree_Tree7) = {
 };
 
 BombTrigger N(BombPos_Tree7) = {
-    .pos = { -101.0f, 0.0f, -376.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_7_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_7_RAD,
 };
 
 FoliageModelList N(Tree8_LeafModels)  = FOLIAGE_MODEL_LIST(MODEL_o60);
@@ -143,8 +143,8 @@ ShakeTreeConfig N(ShakeTree_Tree8) = {
 };
 
 BombTrigger N(BombPos_Tree8) = {
-    .pos = { 104.0f, 0.0f, -386.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_8_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_8_RAD,
 };
 
 FoliageModelList N(Tree9_LeafModels)  = FOLIAGE_MODEL_LIST(MODEL_o62);
@@ -169,8 +169,8 @@ ShakeTreeConfig N(ShakeTree_Tree9) = {
 };
 
 BombTrigger N(BombPos_Tree9) = {
-    .pos = { 266.0f, 0.0f, 124.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_9_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_9_RAD,
 };
 
 FoliageModelList N(Tree10_LeafModels)  = FOLIAGE_MODEL_LIST(MODEL_o64);
@@ -182,8 +182,8 @@ ShakeTreeConfig N(ShakeTree_Tree10) = {
 };
 
 BombTrigger N(BombPos_Tree10) = {
-    .pos = { 362.0f, 0.0f, -74.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_10_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_10_RAD,
 };
 
 EvtScript N(EVS_SetupFoliage) = {

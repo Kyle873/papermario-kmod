@@ -174,11 +174,7 @@ EvtScript N(EVS_ParadePhase_Caravan) = {
 };
 
 Vec3f N(BuzzarFlightPath)[] = {
-    { -805.0,   100.0,  -80.0 },
-    { -675.0,   100.0, -230.0 },
-    { -805.0,   100.0, -280.0 },
-    { -935.0,   100.0, -230.0 },
-    { -805.0,   100.0,  -80.0 },
+    GEN_PATH_1_PATH
 };
 
 EvtScript N(EVS_ParadePhase_BuzzarNest) = {

@@ -152,10 +152,7 @@ EvtScript N(EVS_SetupModelFX) = {
     Call(SetTexPanner, MODEL_o549, TEX_PANNER_1)
     Call(SetTexPanner, MODEL_o552, TEX_PANNER_1)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP(   80, -200,  -50,  100)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     // custom gfx for lantern glow halos, flags for the entire lamp posts

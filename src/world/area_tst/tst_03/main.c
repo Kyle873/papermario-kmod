@@ -4,17 +4,7 @@ extern EvtScript N(EVS_Main);
 extern EvtScript N(EVS_MakeEntities);
 
 EntryList N(Entrances) = {
-    [tst_03_ENTRY_0]    {  -85.0,    0.0,   10.0,    0.0 },
-    [tst_03_ENTRY_1]    { 1536.0,    0.0,   15.0,    0.0 },
-    [tst_03_ENTRY_2]    {    0.0,    0.0,    0.0,    0.0 },
-    [tst_03_ENTRY_3]    {    0.0,    0.0,    0.0,    0.0 },
-    [tst_03_ENTRY_4]    {    0.0,    0.0,    0.0,    0.0 },
-    [tst_03_ENTRY_5]    {    0.0,    0.0,    0.0,    0.0 },
-    [tst_03_ENTRY_6]    {    0.0,    0.0,    0.0,    0.0 },
-    [tst_03_ENTRY_7]    {    0.0,    0.0,    0.0,    0.0 },
-    [tst_03_ENTRY_8]    {    0.0,    0.0,    0.0,    0.0 },
-    [tst_03_ENTRY_9]    {    0.0,    0.0,    0.0,    0.0 },
-    [tst_03_ENTRY_A]    {  354.0,    0.0,  294.0,  117.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {
@@ -38,7 +28,7 @@ EvtScript N(EVS_GotoMap_tst_04_0) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_TESTING)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_DEFAULT(0, 0, 0)
     ExecWait(N(EVS_MakeEntities))

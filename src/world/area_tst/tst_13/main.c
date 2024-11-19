@@ -7,7 +7,7 @@ extern EvtScript N(D_80240510_B1DC70);
 extern NpcGroupList N(DefaultNPCs);
 
 EntryList N(Entrances) = {
-    [tst_13_ENTRY_0]    {    0.0,    0.0,  100.0,   90.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {
@@ -177,8 +177,9 @@ NpcSettings N(NpcSettings_09) = {
 NpcData N(NpcData_Testing)[] = {
     {
         .id = NPC_00,
-        .pos = { 0.0f, 0.0f, 0.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_00_VEC },
+        .yaw = GEN_NPC_00_DIR,
+        .territory = GEN_NPC_00_TERRITORY,
         .settings = &N(NpcSettings_00),
         .flags = COMMON_PASSIVE_FLAGS,
         .animations = {
@@ -187,8 +188,9 @@ NpcData N(NpcData_Testing)[] = {
     },
     {
         .id = NPC_01,
-        .pos = { 20.0f, 0.0f, 20.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_01_VEC },
+        .yaw = GEN_NPC_01_DIR,
+        .territory = GEN_NPC_01_TERRITORY,
         .settings = &N(NpcSettings_01),
         .flags = COMMON_PASSIVE_FLAGS,
         .animations = {
@@ -197,8 +199,9 @@ NpcData N(NpcData_Testing)[] = {
     },
     {
         .id = NPC_02,
-        .pos = { 40.0f, 0.0f, 40.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_02_VEC },
+        .yaw = GEN_NPC_02_DIR,
+        .territory = GEN_NPC_02_TERRITORY,
         .settings = &N(NpcSettings_02),
         .flags = COMMON_PASSIVE_FLAGS,
         .animations = {
@@ -207,8 +210,9 @@ NpcData N(NpcData_Testing)[] = {
     },
     {
         .id = NPC_03,
-        .pos = { 60.0f, 0.0f, 60.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_03_VEC },
+        .yaw = GEN_NPC_03_DIR,
+        .territory = GEN_NPC_03_TERRITORY,
         .settings = &N(NpcSettings_03),
         .flags = COMMON_PASSIVE_FLAGS,
         .animations = {
@@ -217,8 +221,9 @@ NpcData N(NpcData_Testing)[] = {
     },
     {
         .id = NPC_04,
-        .pos = { 80.0f, 0.0f, 80.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_04_VEC },
+        .yaw = GEN_NPC_04_DIR,
+        .territory = GEN_NPC_04_TERRITORY,
         .settings = &N(NpcSettings_04),
         .flags = COMMON_PASSIVE_FLAGS,
         .animations = {
@@ -227,8 +232,9 @@ NpcData N(NpcData_Testing)[] = {
     },
     {
         .id = NPC_05,
-        .pos = { 100.0f, 0.0f, 100.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_05_VEC },
+        .yaw = GEN_NPC_05_DIR,
+        .territory = GEN_NPC_05_TERRITORY,
         .settings = &N(NpcSettings_05),
         .flags = COMMON_PASSIVE_FLAGS,
         .animations = {
@@ -237,8 +243,9 @@ NpcData N(NpcData_Testing)[] = {
     },
     {
         .id = NPC_06,
-        .pos = { 120.0f, 0.0f, 120.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_06_VEC },
+        .yaw = GEN_NPC_06_DIR,
+        .territory = GEN_NPC_06_TERRITORY,
         .settings = &N(NpcSettings_06),
         .flags = COMMON_PASSIVE_FLAGS,
         .animations = {
@@ -247,8 +254,9 @@ NpcData N(NpcData_Testing)[] = {
     },
     {
         .id = NPC_07,
-        .pos = { 140.0f, 0.0f, 140.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_07_VEC },
+        .yaw = GEN_NPC_07_DIR,
+        .territory = GEN_NPC_07_TERRITORY,
         .settings = &N(NpcSettings_07),
         .flags = COMMON_PASSIVE_FLAGS,
         .animations = {
@@ -257,8 +265,9 @@ NpcData N(NpcData_Testing)[] = {
     },
     {
         .id = NPC_08,
-        .pos = { 160.0f, 0.0f, 160.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_08_VEC },
+        .yaw = GEN_NPC_08_DIR,
+        .territory = GEN_NPC_08_TERRITORY,
         .settings = &N(NpcSettings_08),
         .flags = COMMON_PASSIVE_FLAGS,
         .animations = {
@@ -267,8 +276,9 @@ NpcData N(NpcData_Testing)[] = {
     },
     {
         .id = NPC_09,
-        .pos = { 180.0f, 0.0f, 180.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_09_VEC },
+        .yaw = GEN_NPC_09_DIR,
+        .territory = GEN_NPC_09_TERRITORY,
         .settings = &N(NpcSettings_09),
         .flags = COMMON_PASSIVE_FLAGS,
         .animations = {
@@ -323,7 +333,7 @@ s32 N(BetaPanelData)[] = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_TESTING)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_DEFAULT(0, 0, 0)
     Call(MakeNpcs, FALSE, Ref(N(DefaultNPCs)))

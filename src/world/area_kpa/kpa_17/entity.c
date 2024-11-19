@@ -2,12 +2,12 @@
 #include "entity.h"
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_HeartBlock), 1000, 90, -575, 0, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_WoodenCrate), 820, 60, -565, 0, -1, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_WoodenCrate), 820, 30, -565, 0, ITEM_TASTY_TONIC, MAKE_ENTITY_END)
-    Call(AssignCrateFlag, GF_KPA17_Crate_TastyTonic)
-    Call(MakeEntity, Ref(Entity_WoodenCrate), 855, 30, -565, 0, ITEM_LIFE_SHROOM, MAKE_ENTITY_END)
-    Call(AssignCrateFlag, GF_KPA17_Crate_LifeShroom)
+    EVT_MAKE_ENTITY(HeartBlock, GEN_HEART_BLOCK_1_PARAMS)
+    EVT_MAKE_ENTITY(WoodenCrate, GEN_WOODEN_CRATE_1_PARAMS)
+    EVT_MAKE_ENTITY(WoodenCrate, GEN_WOODEN_CRATE_2_PARAMS)
+    Call(AssignCrateFlag, GEN_WOODEN_CRATE_2_FLAG)
+    EVT_MAKE_ENTITY(WoodenCrate, GEN_WOODEN_CRATE_3_PARAMS)
+    Call(AssignCrateFlag, GEN_WOODEN_CRATE_3_FLAG)
     Return
     End
 };

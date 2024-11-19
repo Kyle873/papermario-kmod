@@ -2,6 +2,7 @@
 /// @brief Flower Fields - (SW) Posie and Crystal Tree
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

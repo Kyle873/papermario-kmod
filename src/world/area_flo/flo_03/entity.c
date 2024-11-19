@@ -7,8 +7,8 @@ EvtScript N(EVS_EmptyEntityHandler) = {
 };
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_HiddenPanel), -175, 0, 150, 0, MODEL_o56, MAKE_ENTITY_END)
-    Call(AssignPanelFlag, GF_FLO03_HiddenPanel)
+    EVT_MAKE_ENTITY(HiddenPanel, GEN_HIDDEN_PANEL_1_PARAMS)
+    Call(AssignPanelFlag, GEN_HIDDEN_PANEL_1_FLAG)
     Return
     End
 };

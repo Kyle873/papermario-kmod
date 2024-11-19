@@ -3,24 +3,15 @@
 #include "sprite/player.h"
 
 Vec3f N(PeachTossPath)[] = {
-    { -307.0,    30.0,  -30.0 },
-    { -290.0,    35.0,  -30.0 },
-    { -250.0,     0.0,  -30.0 },
+    GEN_PATH_1_PATH
 };
 
 Vec3f N(TwinkFollowPath)[] = {
-    { -480.0,    30.0,  -30.0 },
-    { -360.0,    60.0,  -30.0 },
-    { -340.0,   120.0,  -70.0 },
-    { -380.0,    40.0, -100.0 },
+    GEN_PATH_2_PATH
 };
 
 Vec3f N(TwinkApproachPath)[] = {
-    { -380.0,    40.0, -100.0 },
-    { -360.0,    45.0,  -82.0 },
-    { -340.0,    40.0,  -65.0 },
-    { -320.0,    32.0,  -52.0 },
-    { -290.0,    25.0,  -30.0 },
+    GEN_PATH_3_PATH
 };
 
 EvtScript N(EVS_Scene_TossedBackInRoom) = {
@@ -206,8 +197,9 @@ AnimID N(ExtraAnims_Koopatrol)[] = {
 NpcData N(NpcData_Guards)[] = {
     {
         .id = NPC_Koopatrol_Guard_01,
-        .pos = { 0.0f, -500.0f, 0.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_KOOPATROL_GUARD_01_VEC },
+        .yaw = GEN_NPC_KOOPATROL_GUARD_01_DIR,
+        .territory = GEN_NPC_KOOPATROL_GUARD_01_TERRITORY,
         .settings = &N(NpcSettings_Koopatrol_Stationary),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
@@ -216,8 +208,9 @@ NpcData N(NpcData_Guards)[] = {
     },
     {
         .id = NPC_Koopatrol_Guard_02,
-        .pos = { 0.0f, -500.0f, 0.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_KOOPATROL_GUARD_02_VEC },
+        .yaw = GEN_NPC_KOOPATROL_GUARD_02_DIR,
+        .territory = GEN_NPC_KOOPATROL_GUARD_02_TERRITORY,
         .settings = &N(NpcSettings_Koopatrol_Stationary),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,

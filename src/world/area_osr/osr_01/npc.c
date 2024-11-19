@@ -101,8 +101,9 @@ EvtScript N(EVS_NpcInit_Toad) = {
 
 NpcData N(NpcData_Toad) = {
     .id = NPC_Toad,
-    .pos = { 25.0f, 0.0f, 130.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_TOAD_VEC },
+    .yaw = GEN_NPC_TOAD_DIR,
+    .territory = GEN_NPC_TOAD_TERRITORY,
     .init = &N(EVS_NpcInit_Toad),
     .settings = &N(NpcSettings_Toad_Stationary),
     .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_RAYCAST_TO_INTERACT | ENEMY_FLAG_SKIP_BATTLE,

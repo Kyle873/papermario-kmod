@@ -16,7 +16,7 @@ EvtScript N(EVS_SpawnBzzap) = {
 EvtScript N(EVS_OnShakeTree1) = {
     IfEq(GF_FLO09_Item_HappyFlowerB, FALSE)
         IfEq(AB_FLO_TreePuzzle_SecondCorrect, 1)
-            Call(MakeItemEntity, ITEM_HAPPY_FLOWER_B, -250, 100, 0, ITEM_SPAWN_MODE_FALL_NEVER_VANISH, GF_FLO09_Item_HappyFlowerB)
+            EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
         Else
             Set(LVar9, MODEL_o10)
             Exec(N(EVS_SpawnBzzap))
@@ -64,8 +64,8 @@ ShakeTreeConfig N(ShakeTree_Tree1) = {
 };
 
 BombTrigger N(BombPos_Tree1) = {
-    .pos = { -200.0f, 0.0f, 1.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_1_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_1_RAD,
 };
 
 FoliageModelList N(Tree2_LeafModels)  = FOLIAGE_MODEL_LIST(MODEL_o4, MODEL_o5);
@@ -78,8 +78,8 @@ ShakeTreeConfig N(ShakeTree_Tree2) = {
 };
 
 BombTrigger N(BombPos_Tree2) = {
-    .pos = { 0.0f, 0.0f, 1.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_2_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_2_RAD,
 };
 
 FoliageModelList N(Tree3_LeafModels)  = FOLIAGE_MODEL_LIST(MODEL_o14, MODEL_o15);
@@ -92,8 +92,8 @@ ShakeTreeConfig N(ShakeTree_Tree3) = {
 };
 
 BombTrigger N(BombPos_Tree3) = {
-    .pos = { 200.0f, 0.0f, 1.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_3_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_3_RAD,
 };
 
 EvtScript N(EVS_SetupFoliage) = {

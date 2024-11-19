@@ -2,12 +2,7 @@
 #include "sprite/player.h"
 
 Vec3f N(TwinkEmergePath)[] = {
-    {  110.0,     0.0, -190.0 },
-    {  160.0,    70.0, -150.0 },
-    {  100.0,    40.0,  -60.0 },
-    {   20.0,    70.0, -100.0 },
-    {  -60.0,    40.0,  -20.0 },
-    {    0.0,    20.0,   30.0 },
+    GEN_PATH_11_PATH
 };
 
 EvtScript N(EVS_OpenAndCloseDoor_Ch2) = {

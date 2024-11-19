@@ -21,7 +21,7 @@ EvtScript N(EVS_BindExitTriggers) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_MT_RUGGED)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     Call(N(SetupSlidingCheck))
     EVT_SETUP_CAMERA_DEFAULT(0, 0, 0)

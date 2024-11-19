@@ -79,20 +79,9 @@ EvtScript N(EVS_NpcInit_ShyGuy) = {
 
 NpcData N(NpcData_ShyGuy_01) = {
     .id = NPC_ShyGuy_01,
-    .pos = { -165.0f, 0.0f, -50.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -165, 0, -50 },
-            .wanderSize = { 40 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -165, 0, -50 },
-            .detectSize = { 300 },
-        }
-    },
+    .pos = { GEN_NPC_SHY_GUY_01_VEC },
+    .yaw = GEN_NPC_SHY_GUY_01_DIR,
+    .territory = GEN_NPC_SHY_GUY_01_TERRITORY,
     .init = &N(EVS_NpcInit_ShyGuy),
     .settings = &N(NpcSettings_ShyGuy_AvoidPlayer),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -114,20 +103,9 @@ EvtScript N(EVS_NpcInit_ShyGuy_02) = {
 
 NpcData N(NpcData_ShyGuy_02) = {
     .id = NPC_ShyGuy_02,
-    .pos = { -25.0f, 0.0f, -160.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -25, 0, -160 },
-            .wanderSize = { 40 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -25, 0, -160 },
-            .detectSize = { 300 },
-        }
-    },
+    .pos = { GEN_NPC_SHY_GUY_02_VEC },
+    .yaw = GEN_NPC_SHY_GUY_02_DIR,
+    .territory = GEN_NPC_SHY_GUY_02_TERRITORY,
     .init = &N(EVS_NpcInit_ShyGuy_02),
     .settings = &N(NpcSettings_ShyGuy_AvoidPlayer),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -149,20 +127,9 @@ EvtScript N(EVS_NpcInit_ShyGuy_03) = {
 
 NpcData N(NpcData_ShyGuy_03) = {
     .id = NPC_ShyGuy_03,
-    .pos = { -60.0f, 0.0f, 390.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -60, 0, 390 },
-            .wanderSize = { 40 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -60, 0, 390 },
-            .detectSize = { 300 },
-        }
-    },
+    .pos = { GEN_NPC_SHY_GUY_03_VEC },
+    .yaw = GEN_NPC_SHY_GUY_03_DIR,
+    .territory = GEN_NPC_SHY_GUY_03_TERRITORY,
     .init = &N(EVS_NpcInit_ShyGuy_03),
     .settings = &N(NpcSettings_ShyGuy_AvoidPlayer),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -184,20 +151,9 @@ EvtScript N(EVS_NpcInit_ShyGuy_04) = {
 
 NpcData N(NpcData_ShyGuy_04) = {
     .id = NPC_ShyGuy_04,
-    .pos = { 50.0f, 0.0f, 230.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 50, 0, 230 },
-            .wanderSize = { 40 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 50, 0, 230 },
-            .detectSize = { 300 },
-        }
-    },
+    .pos = { GEN_NPC_SHY_GUY_04_VEC },
+    .yaw = GEN_NPC_SHY_GUY_04_DIR,
+    .territory = GEN_NPC_SHY_GUY_04_TERRITORY,
     .init = &N(EVS_NpcInit_ShyGuy_04),
     .settings = &N(NpcSettings_ShyGuy_AvoidPlayer),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -219,20 +175,9 @@ EvtScript N(EVS_NpcInit_ShyGuy_05) = {
 
 NpcData N(NpcData_ShyGuy_05) = {
     .id = NPC_ShyGuy_05,
-    .pos = { 340.0f, 0.0f, 120.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 340, 0, 120 },
-            .wanderSize = { 40 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 340, 0, 120 },
-            .detectSize = { 300 },
-        }
-    },
+    .pos = { GEN_NPC_SHY_GUY_05_VEC },
+    .yaw = GEN_NPC_SHY_GUY_05_DIR,
+    .territory = GEN_NPC_SHY_GUY_05_TERRITORY,
     .init = &N(EVS_NpcInit_ShyGuy_05),
     .settings = &N(NpcSettings_ShyGuy_AvoidPlayer),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,

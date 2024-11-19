@@ -153,20 +153,9 @@ EvtScript N(EVS_NpcInit_BombshellBlaster_03) = {
 NpcData N(NpcData_BombshellBlaster_01)[] = {
     {
         .id = NPC_BombshellBlaster_01,
-        .pos = { -288.0f, 120.0f, 120.0f },
-        .yaw = 270,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 0, 0, 0 },
-                .wanderSize = { 0 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 0 },
-            }
-        },
+        .pos = { GEN_NPC_BOMBSHELL_BLASTER_01_VEC },
+        .yaw = GEN_NPC_BOMBSHELL_BLASTER_01_DIR,
+        .territory = GEN_NPC_BOMBSHELL_BLASTER_01_TERRITORY,
         .init = &N(EVS_NpcInit_BombshellBlaster),
         .settings = &N(NpcSettings_BombshellBlaster),
         .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -175,20 +164,9 @@ NpcData N(NpcData_BombshellBlaster_01)[] = {
     },
     {
         .id = NPC_BombshellBlaster_02,
-        .pos = { -288.0f, 120.0f, 78.0f },
-        .yaw = 270,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 0, 0, 0 },
-                .wanderSize = { 0 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 0 },
-            }
-        },
+        .pos = { GEN_NPC_BOMBSHELL_BLASTER_02_VEC },
+        .yaw = GEN_NPC_BOMBSHELL_BLASTER_02_DIR,
+        .territory = GEN_NPC_BOMBSHELL_BLASTER_02_TERRITORY,
         .init = &N(EVS_NpcInit_BombshellBlaster),
         .settings = &N(NpcSettings_BombshellBlaster),
         .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -200,20 +178,9 @@ NpcData N(NpcData_BombshellBlaster_01)[] = {
 NpcData N(NpcData_BombshellBlaster_03)[] = {
     {
         .id = NPC_BombshellBlaster_03,
-        .pos = { -748.0f, 300.0f, -22.0f },
-        .yaw = 90,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 0, 0, 0 },
-                .wanderSize = { 0 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 0 },
-            }
-        },
+        .pos = { GEN_NPC_BOMBSHELL_BLASTER_03_VEC },
+        .yaw = GEN_NPC_BOMBSHELL_BLASTER_03_DIR,
+        .territory = GEN_NPC_BOMBSHELL_BLASTER_03_TERRITORY,
         .init = &N(EVS_NpcInit_BombshellBlaster_03),
         .settings = &N(NpcSettings_BombshellBlaster),
         .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -222,20 +189,9 @@ NpcData N(NpcData_BombshellBlaster_03)[] = {
     },
     {
         .id = NPC_BombshellBlaster_04,
-        .pos = { -748.0f, 300.0f, 22.0f },
-        .yaw = 90,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 0, 0, 0 },
-                .wanderSize = { 0 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 0 },
-            }
-        },
+        .pos = { GEN_NPC_BOMBSHELL_BLASTER_04_VEC },
+        .yaw = GEN_NPC_BOMBSHELL_BLASTER_04_DIR,
+        .territory = GEN_NPC_BOMBSHELL_BLASTER_04_TERRITORY,
         .init = &N(EVS_NpcInit_BombshellBlaster_03),
         .settings = &N(NpcSettings_BombshellBlaster),
         .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -247,20 +203,9 @@ NpcData N(NpcData_BombshellBlaster_03)[] = {
 NpcData N(NpcData_BombshellBlaster_05)[] = {
     {
         .id = NPC_BombshellBlaster_05,
-        .pos = { 30.0f, 480.0f, -122.0f },
-        .yaw = 270,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 0, 0, 0 },
-                .wanderSize = { 0 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 0 },
-            }
-        },
+        .pos = { GEN_NPC_BOMBSHELL_BLASTER_05_VEC },
+        .yaw = GEN_NPC_BOMBSHELL_BLASTER_05_DIR,
+        .territory = GEN_NPC_BOMBSHELL_BLASTER_05_TERRITORY,
         .init = &N(EVS_NpcInit_BombshellBlaster),
         .settings = &N(NpcSettings_BombshellBlaster),
         .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -269,20 +214,9 @@ NpcData N(NpcData_BombshellBlaster_05)[] = {
     },
     {
         .id = NPC_BombshellBlaster_06,
-        .pos = { 30.0f, 480.0f, -78.0f },
-        .yaw = 270,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 0, 0, 0 },
-                .wanderSize = { 0 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 0 },
-            }
-        },
+        .pos = { GEN_NPC_BOMBSHELL_BLASTER_06_VEC },
+        .yaw = GEN_NPC_BOMBSHELL_BLASTER_06_DIR,
+        .territory = GEN_NPC_BOMBSHELL_BLASTER_06_TERRITORY,
         .init = &N(EVS_NpcInit_BombshellBlaster),
         .settings = &N(NpcSettings_BombshellBlaster),
         .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -294,20 +228,9 @@ NpcData N(NpcData_BombshellBlaster_05)[] = {
 NpcData N(NpcData_BombshellBlaster_07)[] = {
     {
         .id = NPC_BombshellBlaster_07,
-        .pos = { 820.0f, 600.0f, -122.0f },
-        .yaw = 270,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 0, 0, 0 },
-                .wanderSize = { 0 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 0 },
-            }
-        },
+        .pos = { GEN_NPC_BOMBSHELL_BLASTER_07_VEC },
+        .yaw = GEN_NPC_BOMBSHELL_BLASTER_07_DIR,
+        .territory = GEN_NPC_BOMBSHELL_BLASTER_07_TERRITORY,
         .init = &N(EVS_NpcInit_BombshellBlaster),
         .settings = &N(NpcSettings_BombshellBlaster),
         .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -316,20 +239,9 @@ NpcData N(NpcData_BombshellBlaster_07)[] = {
     },
     {
         .id = NPC_BombshellBlaster_08,
-        .pos = { 820.0f, 600.0f, -78.0f },
-        .yaw = 270,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 0, 0, 0 },
-                .wanderSize = { 0 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 0 },
-            }
-        },
+        .pos = { GEN_NPC_BOMBSHELL_BLASTER_08_VEC },
+        .yaw = GEN_NPC_BOMBSHELL_BLASTER_08_DIR,
+        .territory = GEN_NPC_BOMBSHELL_BLASTER_08_TERRITORY,
         .init = &N(EVS_NpcInit_BombshellBlaster),
         .settings = &N(NpcSettings_BombshellBlaster),
         .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,

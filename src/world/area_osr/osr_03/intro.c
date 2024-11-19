@@ -10,11 +10,7 @@ API_CALLABLE(N(MakeCastleChainAngle)) {
 }
 
 Vec3f N(UnusedFallingPath1)[] = {
-    { -100.0,    70.0,  873.0 },
-    { -328.0,   -10.0,  900.0 },
-    { -406.0,   -90.0,  958.0 },
-    { -485.0,  -170.0, 1010.0 },
-    { -618.0,  -230.0, 1075.0 },
+    GEN_PATH_3_PATH
 };
 
 EvtScript N(EVS_UnusedFalling1) = {
@@ -32,14 +28,7 @@ EvtScript N(EVS_UnusedFalling1) = {
 };
 
 Vec3f N(UnusedFallingPath2)[] = {
-    { -1380.0,  -2950.0, 2300.0 },
-    { -1325.0,  -3030.0, 2327.0 },
-    { -1257.0,  -3050.0, 2306.0 },
-    { -1225.0,  -3000.0, 2318.0 },
-    { -1268.0,  -3000.0, 2306.0 },
-    { -1325.0,  -3057.0, 2297.0 },
-    { -1387.0,  -3134.0, 2324.0 },
-    { -1433.0,  -3181.0, 2352.0 },
+    GEN_PATH_4_PATH
 };
 
 EvtScript N(EVS_UnusedFalling2) = {
@@ -232,9 +221,7 @@ EvtScript N(MV_Scene_CastleAscending) = {
 };
 
 Vec3f N(FlightPath_TossedOut)[] = {
-    { -300.0,     0.0,  300.0 },
-    { -500.0,    25.0,  900.0 },
-    { -720.0,  -650.0, 1500.0 },
+    GEN_PATH_5_PATH
 };
 
 EvtScript N(MV_Scene_PlayerTossedOut) = {

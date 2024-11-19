@@ -81,7 +81,7 @@ EvtScript N(EVS_NpcInteract_Rosie) = {
                     Call(SetNpcAnimation, NPC_SELF, ANIM_Rosie_TakeOut)
                     Wait(10)
                     Call(SetNpcAnimation, NPC_SELF, ANIM_Rosie_IdleHold)
-                    Call(MakeItemEntity, ITEM_WATER_STONE, -33, 14, 19, ITEM_SPAWN_MODE_DECORATION, EVT_INDEX_OF_GAME_FLAG(GF_FLO12_HeldItemPickup))
+                    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
                     Wait(10)
                     Switch(GF_FLO10_LilyRequestedWaterStone)
                         CaseEq(0)
@@ -134,7 +134,7 @@ EvtScript N(EVS_NpcInteract_Rosie) = {
                 CaseDefault
                     Call(SpeakToPlayer, NPC_SELF, ANIM_Rosie_TalkHold, ANIM_Rosie_IdleHold, 5, MSG_CH6_0095)
                     Call(RemoveItemEntity, LVar7)
-                    Call(MakeItemEntity, ITEM_CRYSTAL_BERRY, -33, 14, 19, ITEM_SPAWN_MODE_DECORATION, EVT_INDEX_OF_GAME_FLAG(GF_FLO12_HeldItemPickup))
+                    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_2_PARAMS)
                     EVT_GIVE_REWARD(ITEM_WATER_STONE)
                     Wait(10)
                     Call(SpeakToPlayer, NPC_SELF, ANIM_Rosie_TalkHold, ANIM_Rosie_IdleHold, 5, MSG_CH6_0096)
@@ -171,18 +171,18 @@ EvtScript N(EVS_NpcInit_Rosie) = {
             IfEq(GF_FLO12_Met_Rosie, TRUE)
                 Call(SetNpcFlagBits, NPC_Dummy, NPC_FLAG_IGNORE_PLAYER_COLLISION, FALSE)
                 Call(SetNpcAnimation, NPC_SELF, ANIM_Rosie_IdleHold)
-                Call(MakeItemEntity, ITEM_WATER_STONE, -33, 14, 19, ITEM_SPAWN_MODE_DECORATION, EVT_INDEX_OF_GAME_FLAG(GF_FLO12_HeldItemPickup))
+                EVT_MAKE_ITEM_ENTITY(GEN_ITEM_3_PARAMS)
                 Set(LVarA, LVar0)
             EndIf
         CaseLt(STORY_CH6_GOT_WATER_STONE)
             Call(SetNpcFlagBits, NPC_Dummy, NPC_FLAG_IGNORE_PLAYER_COLLISION, FALSE)
             Call(SetNpcAnimation, NPC_SELF, ANIM_Rosie_IdleHold)
-            Call(MakeItemEntity, ITEM_WATER_STONE, -33, 14, 19, ITEM_SPAWN_MODE_DECORATION, EVT_INDEX_OF_GAME_FLAG(GF_FLO12_HeldItemPickup))
+            EVT_MAKE_ITEM_ENTITY(GEN_ITEM_4_PARAMS)
             Set(LVarA, LVar0)
         CaseDefault
             Call(SetNpcFlagBits, NPC_Dummy, NPC_FLAG_IGNORE_PLAYER_COLLISION, FALSE)
             Call(SetNpcAnimation, NPC_SELF, ANIM_Rosie_IdleHold)
-            Call(MakeItemEntity, ITEM_CRYSTAL_BERRY, -33, 14, 19, ITEM_SPAWN_MODE_DECORATION, EVT_INDEX_OF_GAME_FLAG(GF_FLO12_HeldItemPickup))
+            EVT_MAKE_ITEM_ENTITY(GEN_ITEM_5_PARAMS)
             Set(LVarA, LVar0)
     EndSwitch
     Return
@@ -192,8 +192,9 @@ EvtScript N(EVS_NpcInit_Rosie) = {
 NpcData N(NpcData_Rosie)[] = {
     {
         .id = NPC_Rosie,
-        .pos = { -70.0f, 0.0f, 20.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_ROSIE_VEC },
+        .yaw = GEN_NPC_ROSIE_DIR,
+        .territory = GEN_NPC_ROSIE_TERRITORY,
         .init = &N(EVS_NpcInit_Rosie),
         .settings = &N(NpcSettings_Rosie),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -203,8 +204,9 @@ NpcData N(NpcData_Rosie)[] = {
     },
     {
         .id = NPC_Dummy,
-        .pos = { -70.0f, 0.0f, 20.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_DUMMY_VEC },
+        .yaw = GEN_NPC_DUMMY_DIR,
+        .territory = GEN_NPC_DUMMY_TERRITORY,
         .settings = &N(NpcSettings_Dummy),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
         .drops = NO_DROPS,

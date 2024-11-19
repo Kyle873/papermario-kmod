@@ -573,14 +573,14 @@ void btl_state_update_celebration(void) {
                         playerData->starPoints++;
                     }
                 }
-                if (playerData->level >= 27) {
+                if (playerData->level >= MAX_LEVEL) {
                     playerData->starPoints = 0;
                 }
                 if (playerData->starPoints >= 100) {
                     pendingLevelUps = 1;
                     playerData->starPoints -= 100;
                 }
-                if (playerData->level + pendingLevelUps == 27) {
+                if (playerData->level + pendingLevelUps == MAX_LEVEL) {
                     playerData->starPoints = 0;
                 }
                 if (battleStatus->totalStarPoints == 0) {
@@ -723,7 +723,7 @@ void btl_state_update_celebration(void) {
                 CantLevelUpStat[MENU_FP] = FALSE;
                 CantLevelUpStat[MENU_BP] = FALSE;
 
-                if (playerData->hardMaxFP != 50) {
+                if (playerData->hardMaxFP != MAX_FP) {
                     // current FP
                     tensDigit = playerData->curMaxFP / 10;
                     onesDigit = playerData->curMaxFP % 10;
@@ -793,7 +793,7 @@ void btl_state_update_celebration(void) {
                     hud_element_set_render_pos(id, x + 17, y + 46);
                 }
 
-                if (playerData->hardMaxHP != 50) {
+                if (playerData->hardMaxHP != MAX_HP) {
                     // current HP
                     tensDigit = playerData->curMaxHP / 10;
                     onesDigit = playerData->curMaxHP % 10;
@@ -864,7 +864,7 @@ void btl_state_update_celebration(void) {
                     hud_element_set_render_pos(id, x + 17, y + 46);
                 }
 
-                if (playerData->maxBP != 30) {
+                if (playerData->maxBP != MAX_BP) {
                     tensDigit = playerData->maxBP / 10;
                     onesDigit = playerData->maxBP % 10;
 
@@ -1042,8 +1042,8 @@ void btl_state_update_celebration(void) {
                     playerData->hardMaxHP += 5;
                     playerData->curMaxHP += 5;
                     playerData->curHP += 5;
-                    if (playerData->curMaxHP > 75) {
-                        playerData->curMaxHP = 75;
+                    if (playerData->curMaxHP > MAX_HP) {
+                        playerData->curMaxHP = MAX_HP;
                     }
                     if (playerData->curHP > playerData->curMaxHP) {
                         playerData->curHP = playerData->curMaxHP;
@@ -1055,8 +1055,8 @@ void btl_state_update_celebration(void) {
                     playerData->hardMaxFP += 5;
                     playerData->curMaxFP += 5;
                     playerData->curFP += 5;
-                    if (playerData->curMaxFP > 75) {
-                        playerData->curMaxFP = 75;
+                    if (playerData->curMaxFP > MAX_FP) {
+                        playerData->curMaxFP = MAX_FP;
                     }
                     if (playerData->curFP > playerData->curMaxFP) {
                         playerData->curFP = playerData->curMaxFP;
@@ -1064,8 +1064,8 @@ void btl_state_update_celebration(void) {
                     break;
                 case 2:
                     playerData->maxBP += 3;
-                    if (playerData->maxBP > 30) {
-                        playerData->maxBP = 30;
+                    if (playerData->maxBP > MAX_BP) {
+                        playerData->maxBP = MAX_BP;
                     }
                     break;
             }

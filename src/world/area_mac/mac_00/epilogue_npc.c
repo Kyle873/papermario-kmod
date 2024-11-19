@@ -148,8 +148,9 @@ AnimID N(ExtraAnims_Luigi_Epilogue)[] = {
 
 NpcData N(NpcData_Luigi_Epilogue) = {
     .id = NPC_Luigi_Epilogue,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 90,
+    .pos = { GEN_NPC_LUIGI_EPILOGUE_VEC },
+    .yaw = GEN_NPC_LUIGI_EPILOGUE_DIR,
+    .territory = GEN_NPC_LUIGI_EPILOGUE_TERRITORY,
     .settings = &N(NpcSettings_Luigi_Epilogue),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = NO_DROPS,
@@ -181,8 +182,9 @@ AnimID N(ExtraAnims_Gooma_Epilogue)[] = {
 NpcData N(NpcData_GoombaFamilypa_Epilogue)[] = {
     {
         .id = NPC_Goompapa_Epilogue,
-        .pos = { 70.0f, 0.0f, -30.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_GOOMPAPA_EPILOGUE_VEC },
+        .yaw = GEN_NPC_GOOMPAPA_EPILOGUE_DIR,
+        .territory = GEN_NPC_GOOMPAPA_EPILOGUE_TERRITORY,
         .init = &N(EVS_NpcInit_Goompapa_Epilogue),
         .settings = &N(NpcSettings_GoombaFamily_Epilogue),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_RAYCAST_TO_INTERACT,
@@ -193,8 +195,9 @@ NpcData N(NpcData_GoombaFamilypa_Epilogue)[] = {
     },
     {
         .id = NPC_Goomama_Epilogue,
-        .pos = { 40.0f, 0.0f, 20.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_GOOMAMA_EPILOGUE_VEC },
+        .yaw = GEN_NPC_GOOMAMA_EPILOGUE_DIR,
+        .territory = GEN_NPC_GOOMAMA_EPILOGUE_TERRITORY,
         .init = &N(EVS_NpcInit_Goomama_Epilogue),
         .settings = &N(NpcSettings_GoombaFamily_Epilogue),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_RAYCAST_TO_INTERACT,
@@ -205,8 +208,9 @@ NpcData N(NpcData_GoombaFamilypa_Epilogue)[] = {
     },
     {
         .id = NPC_Gooma_Epilogue,
-        .pos = { 20.0f, 0.0f, -35.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_GOOMA_EPILOGUE_VEC },
+        .yaw = GEN_NPC_GOOMA_EPILOGUE_DIR,
+        .territory = GEN_NPC_GOOMA_EPILOGUE_TERRITORY,
         .init = &N(EVS_NpcInit_Gooma_Epilogue),
         .settings = &N(NpcSettings_GoombaFamily_Epilogue),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_RAYCAST_TO_INTERACT,
@@ -234,8 +238,9 @@ AnimID N(ExtraAnims_VannaT_Epilogue)[] = {
 NpcData N(NpcData_ChuckQuizmo_Epilogue)[] = {
     {
         .id = NPC_ChuckQuizmo,
-        .pos = { 545.0f, 20.0f, 150.0f },
-        .yaw = 30,
+        .pos = { GEN_NPC_CHUCK_QUIZMO_VEC },
+        .yaw = GEN_NPC_CHUCK_QUIZMO_DIR,
+        .territory = GEN_NPC_CHUCK_QUIZMO_TERRITORY,
         .init = &N(EVS_NpcInit_ChuckQuizmo_Epilogue),
         .settings = &N(NpcSettings_Luigi_Epilogue),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -263,8 +268,9 @@ NpcData N(NpcData_ChuckQuizmo_Epilogue)[] = {
     },
     {
         .id = NPC_VannaT_Epilogue,
-        .pos = { 500.0f, 20.0f, -130.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_VANNA_T_EPILOGUE_VEC },
+        .yaw = GEN_NPC_VANNA_T_EPILOGUE_DIR,
+        .territory = GEN_NPC_VANNA_T_EPILOGUE_TERRITORY,
         .init = &N(EVS_NpcInit_VannaT_Epilogue),
         .settings = &N(NpcSettings_Toad_Stationary_Epilogue),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -316,8 +322,9 @@ AnimID N(ExtraAnims_Lee_Epilogue)[] = {
 NpcData N(NpcData_DojoMembers_Epilogue)[] = {
     {
         .id = NPC_TheMaster,
-        .pos = { 375.0f, 115.0f, -440.0f },
-        .yaw = 225,
+        .pos = { GEN_NPC_THE_MASTER_VEC },
+        .yaw = GEN_NPC_THE_MASTER_DIR,
+        .territory = GEN_NPC_THE_MASTER_TERRITORY,
         .init = &N(EVS_NpcInit_TheMaster_Epilogue),
         .settings = &N(NpcSettings_Luigi_Epilogue),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_RAYCAST_TO_INTERACT,
@@ -345,8 +352,9 @@ NpcData N(NpcData_DojoMembers_Epilogue)[] = {
     },
     {
         .id = NPC_Chan,
-        .pos = { 310.0f, 115.0f, -390.0f },
-        .yaw = 45,
+        .pos = { GEN_NPC_CHAN_VEC },
+        .yaw = GEN_NPC_CHAN_DIR,
+        .territory = GEN_NPC_CHAN_TERRITORY,
         .init = &N(EVS_NpcInit_Chan_Epilogue),
         .settings = &N(NpcSettings_Luigi_Epilogue),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_RAYCAST_TO_INTERACT,
@@ -359,8 +367,9 @@ NpcData N(NpcData_DojoMembers_Epilogue)[] = {
     },
     {
         .id = NPC_Lee,
-        .pos = { 330.0f, 115.0f, -410.0f },
-        .yaw = 45,
+        .pos = { GEN_NPC_LEE_VEC },
+        .yaw = GEN_NPC_LEE_DIR,
+        .territory = GEN_NPC_LEE_TERRITORY,
         .init = &N(EVS_NpcInit_Lee_Epilogue),
         .settings = &N(NpcSettings_Luigi_Epilogue),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_RAYCAST_TO_INTERACT,
@@ -383,8 +392,9 @@ AnimID N(ExtraAnims_HarryT_Epilogue)[] = {
 NpcData N(NpcData_Toad_01_Epilogue)[] = {
     {
         .id = NPC_Toad_01,
-        .pos = { 430.0f, 20.0f, -373.0f },
-        .yaw = 223,
+        .pos = { GEN_NPC_TOAD_01_VEC },
+        .yaw = GEN_NPC_TOAD_01_DIR,
+        .territory = GEN_NPC_TOAD_01_TERRITORY,
         .init = &N(EVS_NpcInit_Toad_01_Epilogue),
         .settings = &N(NpcSettings_Toad_Stationary_Epilogue),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_RAYCAST_TO_INTERACT | ENEMY_FLAG_SKIP_BATTLE,
@@ -401,8 +411,9 @@ NpcData N(NpcData_Toad_01_Epilogue)[] = {
     },
     {
         .id = NPC_HarryT,
-        .pos = { 410.0f, 20.0f, -320.0f },
-        .yaw = 43,
+        .pos = { GEN_NPC_HARRY_T_VEC },
+        .yaw = GEN_NPC_HARRY_T_DIR,
+        .territory = GEN_NPC_HARRY_T_TERRITORY,
         .init = &N(EVS_NpcInit_HarryT_Epilogue),
         .settings = &N(NpcSettings_Toad_Stationary_Epilogue),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_RAYCAST_TO_INTERACT | ENEMY_FLAG_SKIP_BATTLE,

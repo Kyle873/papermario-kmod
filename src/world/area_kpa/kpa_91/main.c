@@ -31,7 +31,7 @@ EvtScript N(EVS_OpenCellDoor) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_BOWSERS_CASTLE)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Set(AB_KPA91_Toad2_Dialogue, 0)
     Set(AB_KPA91_Dryite_Dialogue, 0)
     Set(AB_KPA91_Toad3_Dialogue, 0)

@@ -35,7 +35,7 @@ EvtScript N(EVS_ItemPrompt_Lock) = {
 EvtScript N(EVS_MakeEntities) = {
     IfLe(GB_StoryProgress, STORY_CH4_BEGAN_PEACH_MISSION)
         IfEq(GF_KKJ11_UnlockedKitchen, FALSE)
-            Call(MakeEntity, Ref(Entity_Padlock), 0, 10, 490, 180, MAKE_ENTITY_END)
+            EVT_MAKE_ENTITY(Padlock, GEN_PADLOCK_1_PARAMS)
             Set(MV_PadlockEntityIdx, LVar0)
             BindPadlock(Ref(N(EVS_ItemPrompt_Lock)), TRIGGER_WALL_PRESS_A, EVT_ENTITY_INDEX(0), Ref(N(PeachKeyList)), 0, 1)
         Else

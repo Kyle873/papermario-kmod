@@ -302,34 +302,34 @@ API_CALLABLE(N(FadeScreenFromBlack)) {
 EvtScript N(EVS_SetCookwareOnTable) = {
     Switch(AB_KKJ_CompletedBakeStep)
         CaseEq(CAKE_TYPE_NONE)
-            Call(MakeItemEntity, ITEM_CAKE_BOWL, 287, 16, -40, ITEM_SPAWN_MODE_DECORATION, 0)
+            EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
             Set(AB_KKJ19_CookwareItemIdx, LVar0)
-            Call(MakeItemEntity, ITEM_CAKE_PAN, 230, 16, 0, ITEM_SPAWN_MODE_DECORATION, 0)
+            EVT_MAKE_ITEM_ENTITY(GEN_ITEM_2_PARAMS)
             Set(AB_KKJ19_CakeItemIdx, LVar0)
         CaseEq(CAKE_TYPE_BEGUN)
-            Call(MakeItemEntity, ITEM_CAKE_BOWL, 287, 16, -40, ITEM_SPAWN_MODE_DECORATION, 0)
+            EVT_MAKE_ITEM_ENTITY(GEN_ITEM_3_PARAMS)
             Set(AB_KKJ19_CookwareItemIdx, LVar0)
-            Call(MakeItemEntity, ITEM_CAKE_PAN, 230, 16, 0, ITEM_SPAWN_MODE_DECORATION, 0)
+            EVT_MAKE_ITEM_ENTITY(GEN_ITEM_4_PARAMS)
             Set(AB_KKJ19_CakeItemIdx, LVar0)
         CaseEq(CAKE_TYPE_READY_TO_MIX)
-            Call(MakeItemEntity, ITEM_CAKE_MIXED, 287, 16, -40, ITEM_SPAWN_MODE_DECORATION, 0)
+            EVT_MAKE_ITEM_ENTITY(GEN_ITEM_5_PARAMS)
             Set(AB_KKJ19_CookwareItemIdx, LVar0)
-            Call(MakeItemEntity, ITEM_CAKE_PAN, 230, 16, 0, ITEM_SPAWN_MODE_DECORATION, 0)
+            EVT_MAKE_ITEM_ENTITY(GEN_ITEM_6_PARAMS)
             Set(AB_KKJ19_CakeItemIdx, LVar0)
         CaseEq(CAKE_TYPE_MIXED)
-            Call(MakeItemEntity, ITEM_CAKE_MIXED, 287, 16, -40, ITEM_SPAWN_MODE_DECORATION, 0)
+            EVT_MAKE_ITEM_ENTITY(GEN_ITEM_7_PARAMS)
             Set(AB_KKJ19_CookwareItemIdx, LVar0)
-            Call(MakeItemEntity, ITEM_CAKE_PAN, 230, 16, 0, ITEM_SPAWN_MODE_DECORATION, 0)
+            EVT_MAKE_ITEM_ENTITY(GEN_ITEM_8_PARAMS)
             Set(AB_KKJ19_CakeItemIdx, LVar0)
         CaseEq(CAKE_TYPE_READY_TO_BAKE)
-            Call(MakeItemEntity, ITEM_CAKE_MIXED, 287, 16, -40, ITEM_SPAWN_MODE_DECORATION, 0)
+            EVT_MAKE_ITEM_ENTITY(GEN_ITEM_9_PARAMS)
             Set(AB_KKJ19_CookwareItemIdx, LVar0)
-            Call(MakeItemEntity, ITEM_CAKE_PAN, 230, 16, 0, ITEM_SPAWN_MODE_DECORATION, 0)
+            EVT_MAKE_ITEM_ENTITY(GEN_ITEM_10_PARAMS)
             Set(AB_KKJ19_CakeItemIdx, LVar0)
         CaseEq(CAKE_TYPE_BAKED)
-            Call(MakeItemEntity, ITEM_CAKE_BARE, 287, 20, -30, ITEM_SPAWN_MODE_DECORATION, 0)
+            EVT_MAKE_ITEM_ENTITY(GEN_ITEM_11_PARAMS)
             Set(AB_KKJ19_CakeItemIdx, LVar0)
-            Call(MakeItemEntity, ITEM_CAKE_BOWL, 230, 16, 0, ITEM_SPAWN_MODE_DECORATION, 0)
+            EVT_MAKE_ITEM_ENTITY(GEN_ITEM_12_PARAMS)
             Set(AB_KKJ19_CookwareItemIdx, LVar0)
     EndSwitch
     Return
@@ -550,7 +550,7 @@ EvtScript N(EVS_ItemPrompt_AddIngredient) = {
             EndSwitch
             IfEq(AB_KKJ19_BakeStepProgress, 0)
                 Call(RemoveItemEntity, AB_KKJ19_CookwareItemIdx)
-                Call(MakeItemEntity, ITEM_CAKE_MIXED, 287, 16, -40, ITEM_SPAWN_MODE_DECORATION, 0)
+                EVT_MAKE_ITEM_ENTITY(GEN_ITEM_13_PARAMS)
                 Set(AB_KKJ19_CookwareItemIdx, LVar0)
             EndIf
             IfGt(AB_KKJ19_BakeStepProgress, 1)
@@ -585,15 +585,15 @@ EvtScript N(EVS_ItemPrompt_AddIngredient) = {
             Switch(LVar0)
                 CaseEq(ITEM_BAKING_STRAWBERRY)
                     IfEq(AB_KKJ19_AddedIcing, FALSE)
-                        Call(MakeItemEntity, ITEM_CAKE_WITH_BERRIES, 287, 20, -30, ITEM_SPAWN_MODE_DECORATION, 0)
+                        EVT_MAKE_ITEM_ENTITY(GEN_ITEM_14_PARAMS)
                         Set(AB_KKJ19_CakeItemIdx, LVar0)
                     Else
-                        Call(MakeItemEntity, ITEM_CAKE_DONE, 287, 20, -30, ITEM_SPAWN_MODE_DECORATION, 0)
+                        EVT_MAKE_ITEM_ENTITY(GEN_ITEM_15_PARAMS)
                         Set(AB_KKJ19_CakeItemIdx, LVar0)
                     EndIf
                     Set(AB_KKJ19_AddedBerries, TRUE)
                 CaseDefault
-                    Call(MakeItemEntity, ITEM_CAKE_WITH_ICING, 287, 20, -30, ITEM_SPAWN_MODE_DECORATION, 0)
+                    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_16_PARAMS)
                     Set(AB_KKJ19_CakeItemIdx, LVar0)
                     Set(AB_KKJ19_AddedIcing, TRUE)
                     Set(AB_KKJ19_AddedBerries, FALSE)
@@ -676,11 +676,7 @@ EvtScript N(EVS_BindCakePickup) = {
 };
 
 Vec3f N(FetchBookPath)[] = {
-    {  440.0,    25.0,  -30.0 },
-    {  480.0,    60.0,  -60.0 },
-    {  550.0,    50.0,  -90.0 },
-    {  590.0,    40.0, -110.0 },
-    {  630.0,   100.0, -124.0 },
+    GEN_PATH_1_PATH
 };
 
 EvtScript N(EVS_FocusCam_Twink) = {
@@ -1121,7 +1117,7 @@ EvtScript N(EVS_ManageBaking) = {
     ExecWait(N(EVS_FocusCam_PeachAndTwink))
     Thread
         Call(SetPlayerAnimation, ANIM_Peach2_ForwardIdle)
-        Call(MakeItemEntity, ITEM_CAKE_MIXED, 287, 16, -40, ITEM_SPAWN_MODE_DECORATION, 0)
+        EVT_MAKE_ITEM_ENTITY(GEN_ITEM_17_PARAMS)
         Set(AB_KKJ19_CookwareItemIdx, LVar0)
     EndThread
     Call(SpeakToPlayer, NPC_PARTNER, ANIM_Twink_Talk, ANIM_Twink_Idle, 5, MSG_Peach_00D6)
@@ -1252,12 +1248,12 @@ EvtScript N(EVS_ManageBaking) = {
     Call(SetPlayerAnimation, ANIM_Peach3_PourBatter)
     Wait(20 * DT)
     Call(RemoveItemEntity, AB_KKJ19_CakeItemIdx)
-    Call(MakeItemEntity, ITEM_CAKE_BATTER, 230, 16, 0, ITEM_SPAWN_MODE_DECORATION, 0)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_18_PARAMS)
     Set(AB_KKJ19_CakeItemIdx, LVar0)
     Wait(10 * DT)
     Call(N(SetHeldBakingItem), PEACH_BAKING_NONE)
     Call(SetPlayerActionState, ACTION_STATE_IDLE)
-    Call(MakeItemEntity, ITEM_CAKE_BOWL, 250, 16, 0, ITEM_SPAWN_MODE_DECORATION, 0)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_19_PARAMS)
     Set(AB_KKJ19_CookwareItemIdx, LVar0)
     Wait(40 * DT)
     ExecWait(N(EVS_FocusCam_Twink))
@@ -1290,7 +1286,7 @@ EvtScript N(EVS_ManageBaking) = {
     ExecWait(N(EVS_OpenOverDoor))
     Call(N(SetHeldBakingItem), PEACH_BAKING_NONE)
     Call(SetPlayerActionState, ACTION_STATE_IDLE)
-    Call(MakeItemEntity, ITEM_CAKE_BATTER, 100, 5, -135, ITEM_SPAWN_MODE_DECORATION, 0)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_20_PARAMS)
     Set(AB_KKJ19_CakeItemIdx, LVar0)
     Set(LVar0, -135)
     Loop(30)
@@ -1347,10 +1343,10 @@ EvtScript N(EVS_ManageBaking) = {
     Call(PlayerMoveTo, 287, -74, 100)
     Call(N(SetHeldBakingItem), PEACH_BAKING_NONE)
     Call(SetPlayerActionState, ACTION_STATE_IDLE)
-    Call(MakeItemEntity, ITEM_CAKE_BATTER, 287, 16, -40, ITEM_SPAWN_MODE_DECORATION, 0)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_21_PARAMS)
     Wait(30 * DT)
     Call(RemoveItemEntity, LVar0)
-    Call(MakeItemEntity, ITEM_CAKE_BARE, 287, 20, -30, ITEM_SPAWN_MODE_DECORATION, 0)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_22_PARAMS)
     Set(AB_KKJ19_CakeItemIdx, LVar0)
     Wait(10 * DT)
     IfEq(AF_KKJ19_FailedBakingTask, FALSE)

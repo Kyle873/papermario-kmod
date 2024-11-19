@@ -61,10 +61,10 @@ EvtScript N(EVS_MakeEntities) = {
             EndIf
         EndIf
     EndIf
-    Call(MakeEntity, Ref(Entity_BlueWarpPipe), -540, 0, 195, 30, jan_03_ENTRY_3, Ref(N(EVS_GotoMap_tik_08_4)), EVT_INDEX_OF_GAME_FLAG(GF_JAN03_WarpPipe), MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_SavePoint), 100, 60, -25, 0, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_ScriptSpring), -556, 0, -195, 0, MAKE_ENTITY_END)
-    Call(AssignScript, Ref(N(EVS_UseSpring)))
+    EVT_MAKE_ENTITY(BlueWarpPipe, GEN_BLUE_WARP_PIPE_1_PARAMS)
+    EVT_MAKE_ENTITY(SavePoint, GEN_SAVE_POINT_1_PARAMS)
+    EVT_MAKE_ENTITY(ScriptSpring, GEN_SCRIPT_SPRING_1_PARAMS)
+    Call(AssignScript, Ref(GEN_SCRIPT_SPRING_1_SCRIPT))
     Return
     End
 };

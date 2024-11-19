@@ -158,8 +158,9 @@ EvtScript N(EVS_NpcInit_Oaklie) = {
 
 NpcData N(NpcData_Oaklie) = {
     .id = NPC_Oaklie,
-    .pos = { -426.0f, 58.0f, -70.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_OAKLIE_VEC },
+    .yaw = GEN_NPC_OAKLIE_DIR,
+    .territory = GEN_NPC_OAKLIE_TERRITORY,
     .init = &N(EVS_NpcInit_Oaklie),
     .settings = &N(NpcSettings_Oaklie),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -170,20 +171,9 @@ NpcData N(NpcData_Oaklie) = {
 
 NpcData N(NpcData_Fuzzy_01) = {
     .id = NPC_Fuzzy_01,
-    .pos = { 300.0f, 0.0f, 130.0f },
-    .yaw = 0,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 0, 0, 0 },
-            .wanderSize = { 400 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 0, 0, 0 },
-            .detectSize = { 400 },
-        }
-    },
+    .pos = { GEN_NPC_FUZZY_01_VEC },
+    .yaw = GEN_NPC_FUZZY_01_DIR,
+    .territory = GEN_NPC_FUZZY_01_TERRITORY,
     .settings = &N(NpcSettings_ForestFuzzy_Wander),
     .flags = 0,
     .drops = FOREST_FUZZY_DROPS,
@@ -193,20 +183,9 @@ NpcData N(NpcData_Fuzzy_01) = {
 
 NpcData N(NpcData_Fuzzy_02) = {
     .id = NPC_Fuzzy_02,
-    .pos = { -100.0f, 0.0f, -320.0f },
-    .yaw = 0,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 0, 0, 0 },
-            .wanderSize = { 400 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 0, 0, 0 },
-            .detectSize = { 400 },
-        }
-    },
+    .pos = { GEN_NPC_FUZZY_02_VEC },
+    .yaw = GEN_NPC_FUZZY_02_DIR,
+    .territory = GEN_NPC_FUZZY_02_TERRITORY,
     .settings = &N(NpcSettings_ForestFuzzy_Wander),
     .flags = 0,
     .drops = FOREST_FUZZY_DROPS,

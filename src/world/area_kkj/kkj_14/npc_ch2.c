@@ -28,8 +28,9 @@ AnimID N(ExtraAnims_Kammy)[] = {
 NpcData N(NpcData_Characters)[] = {
     {
         .id = NPC_Bowser,
-        .pos = { 0.0f, -500.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_BOWSER_VEC },
+        .yaw = GEN_NPC_BOWSER_DIR,
+        .territory = GEN_NPC_BOWSER_TERRITORY,
         .settings = &N(NpcSettings_Bowser),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
@@ -38,8 +39,9 @@ NpcData N(NpcData_Characters)[] = {
     },
     {
         .id = NPC_Kammy,
-        .pos = { 0.0f, -500.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_KAMMY_VEC },
+        .yaw = GEN_NPC_KAMMY_DIR,
+        .territory = GEN_NPC_KAMMY_TERRITORY,
         .settings = &N(NpcSettings_Kammy),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,

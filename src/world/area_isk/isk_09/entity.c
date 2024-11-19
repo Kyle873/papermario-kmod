@@ -68,16 +68,16 @@ EvtScript N(EVS_SmashBlock_Stone) = {
 };
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_GiantChest), -158, -358, -562, 283, ITEM_SUPER_HAMMER, MAKE_ENTITY_END)
-    Call(AssignChestFlag, GF_ISK09_GiantChest)
+    EVT_MAKE_ENTITY(GiantChest, GEN_GIANT_CHEST_1_PARAMS)
+    Call(AssignChestFlag, GEN_GIANT_CHEST_1_FLAG)
     Exec(N(EVS_SetupGiantChest_SuperHammer))
     IfEq(GF_ISK09_Hammer2Block, FALSE)
-        Call(MakeEntity, Ref(Entity_Hammer2Block), -274, -390, -517, 115, MAKE_ENTITY_END)
-        Call(AssignScript, Ref(N(EVS_SmashBlock_Stone)))
+        EVT_MAKE_ENTITY(Hammer2Block, GEN_HAMMER2_BLOCK_1_PARAMS)
+        Call(AssignScript, Ref(GEN_HAMMER2_BLOCK_1_SCRIPT))
     EndIf
-    Call(MakeEntity, Ref(Entity_Chest), 50, -240, -535, 222, 0, MAKE_ENTITY_END)
-    Call(AssignChestFlag, GF_ISK09_Chest_SlowGo)
-    Call(AssignScript, Ref(N(EVS_OpenChest_SlowGo)))
+    EVT_MAKE_ENTITY(Chest, GEN_CHEST_1_PARAMS)
+    Call(AssignChestFlag, GEN_CHEST_1_FLAG)
+    Call(AssignScript, Ref(GEN_CHEST_1_SCRIPT))
     PlayEffect(EFFECT_FLAME, FX_FLAME_RED, -503, -323, -44, Float(0.3), LVar0)
     PlayEffect(EFFECT_FLAME, FX_FLAME_RED, -481, -323, -130, Float(0.3), LVar0)
     PlayEffect(EFFECT_FLAME, FX_FLAME_RED, -413, -323, -290, Float(0.3), LVar0)

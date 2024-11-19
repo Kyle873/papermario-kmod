@@ -2,10 +2,7 @@
 #include "entity.h"
 
 TweesterPath N(DefaultTweesterPath) = {
-    { -65, 0, 217 },
-    { -262, 0, -64 },
-    { 57, 0, -286 },
-    { 327, 0, 8 },
+    GEN_PATH_1_PATH
     TWEESTER_PATH_LOOP
 };
 
@@ -24,7 +21,7 @@ EvtScript N(EVS_GotoMap_sbk_14_4) = {
 };
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_Tweester), 327, 0, 8, 0, Ref(N(TweesterPaths)), MAKE_ENTITY_END)
+    EVT_MAKE_ENTITY(Tweester, GEN_TWEESTER_1_PARAMS)
     Call(AssignScript, Ref(N(EVS_GotoMap_sbk_14_4)))
     Return
     End

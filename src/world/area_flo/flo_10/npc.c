@@ -56,7 +56,7 @@ EvtScript N(EVS_OnInteract_WaterStoneSocket) = {
                 Wait(10 * DT)
                 Call(SetPlayerAnimation, ANIM_MarioW1_PlaceItem)
                 Call(RemoveKeyItemAt, LVar1)
-                Call(MakeItemEntity, ITEM_WATER_STONE, 0, -60, 6, ITEM_SPAWN_MODE_DECORATION, 0)
+                EVT_MAKE_ITEM_ENTITY(GEN_ITEM_2_PARAMS)
                 Set(LVarA, LVar0)
                 Call(CloseChoicePopup)
                 Call(SetTimeFreezeMode, TIME_FREEZE_NONE)
@@ -201,8 +201,9 @@ EvtScript N(EVS_NpcInit_Lily) = {
 
 NpcData N(NpcData_Lily) = {
     .id = NPC_Lily,
-    .pos = { 80.0f, -60.0f, 0.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_LILY_VEC },
+    .yaw = GEN_NPC_LILY_DIR,
+    .territory = GEN_NPC_LILY_TERRITORY,
     .init = &N(EVS_NpcInit_Lily),
     .settings = &N(NpcSettings_Lily),
     .flags = BASE_PASSIVE_FLAGS,

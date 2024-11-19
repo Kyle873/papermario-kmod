@@ -77,8 +77,9 @@ AnimID N(ExtraAnims_Koopatrol)[] = {
 
 NpcData N(NpcData_Bowser) = {
     .id = NPC_Bowser_Body,
-    .pos = { 0.0f, -500.0f, 0.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_BOWSER_BODY_VEC },
+    .yaw = GEN_NPC_BOWSER_BODY_DIR,
+    .territory = GEN_NPC_BOWSER_BODY_TERRITORY,
     .init = &N(EVS_NpcInit_Bowser_Body),
     .settings = &N(NpcSettings_Bowser),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_NO_DROPS,
@@ -90,8 +91,9 @@ NpcData N(NpcData_Bowser) = {
 NpcData N(NpcData_Characters)[] = {
     {
         .id = NPC_Bowser_Prop,
-        .pos = { 0.0f, -500.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_BOWSER_PROP_VEC },
+        .yaw = GEN_NPC_BOWSER_PROP_DIR,
+        .territory = GEN_NPC_BOWSER_PROP_TERRITORY,
         .settings = &N(NpcSettings_Dummy),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
@@ -100,8 +102,9 @@ NpcData N(NpcData_Characters)[] = {
     },
     {
         .id = NPC_Koopatrol_01,
-        .pos = { 0.0f, -500.0f, 0.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_KOOPATROL_01_VEC },
+        .yaw = GEN_NPC_KOOPATROL_01_DIR,
+        .territory = GEN_NPC_KOOPATROL_01_TERRITORY,
         .settings = &N(NpcSettings_Koopatrol_Stationary),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
@@ -110,8 +113,9 @@ NpcData N(NpcData_Characters)[] = {
     },
     {
         .id = NPC_Koopatrol_02,
-        .pos = { 0.0f, -500.0f, 0.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_KOOPATROL_02_VEC },
+        .yaw = GEN_NPC_KOOPATROL_02_DIR,
+        .territory = GEN_NPC_KOOPATROL_02_TERRITORY,
         .settings = &N(NpcSettings_Koopatrol_Stationary),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
@@ -120,8 +124,9 @@ NpcData N(NpcData_Characters)[] = {
     },
     {
         .id = NPC_Kammy,
-        .pos = { 0.0f, -500.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_KAMMY_VEC },
+        .yaw = GEN_NPC_KAMMY_DIR,
+        .territory = GEN_NPC_KAMMY_TERRITORY,
         .settings = &N(NpcSettings_Kammy),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
@@ -130,8 +135,9 @@ NpcData N(NpcData_Characters)[] = {
     },
     {
         .id = NPC_Peach,
-        .pos = { 670.0f, 0.0f, -12.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_PEACH_VEC },
+        .yaw = GEN_NPC_PEACH_DIR,
+        .territory = GEN_NPC_PEACH_TERRITORY,
         .settings = &N(NpcSettings_Peach),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_USE_PLAYER_SPRITE,
         .drops = NO_DROPS,

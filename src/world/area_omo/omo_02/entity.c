@@ -37,14 +37,14 @@ EvtScript N(EVS_StarBoxLaunch_Impl) = {
 };
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_YellowBlock), 300, 60, -100, 0, ITEM_SLEEPY_SHEEP, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_OMO02_ItemBlock_SleepySheep)
-    Call(MakeEntity, Ref(Entity_HiddenYellowBlock), -200, 60, -78, 0, ITEM_COIN, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_OMO02_HiddenItem_Coin)
-    Call(MakeEntity, Ref(Entity_BrickBlock), -80, 89, -78, 0, MAKE_ENTITY_END)
-    Call(MakeItemEntity, ITEM_SHOOTING_STAR, -80, 114, -78, ITEM_SPAWN_MODE_FALL_NEVER_VANISH, GF_OMO02_Item_ShootingStar)
-    Call(MakeEntity, Ref(Entity_StarBoxLauncher), -358, 0, -82, 0, MAKE_ENTITY_END)
-    Call(AssignScript, Ref(N(EVS_StarBoxLaunch_Impl)))
+    EVT_MAKE_ENTITY(YellowBlock, GEN_YELLOW_BLOCK_1_PARAMS)
+    Call(AssignBlockFlag, GEN_YELLOW_BLOCK_1_FLAG)
+    EVT_MAKE_ENTITY(HiddenYellowBlock, GEN_HIDDEN_YELLOW_BLOCK_1_PARAMS)
+    Call(AssignBlockFlag, GEN_HIDDEN_YELLOW_BLOCK_1_FLAG)
+    EVT_MAKE_ENTITY(BrickBlock, GEN_BRICK_BLOCK_1_PARAMS)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
+    EVT_MAKE_ENTITY(StarBoxLauncher, GEN_STAR_BOX_LAUNCHER_1_PARAMS)
+    Call(AssignScript, Ref(GEN_STAR_BOX_LAUNCHER_1_SCRIPT))
     Return
     End
 };

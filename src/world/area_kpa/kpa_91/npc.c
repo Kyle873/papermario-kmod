@@ -156,8 +156,9 @@ EvtScript N(EVS_NpcInit_Dryite) = {
 NpcData N(NpcData_Prisoners)[] = {
     {
         .id = NPC_Toad_01,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_TOAD_01_VEC },
+        .yaw = GEN_NPC_TOAD_01_DIR,
+        .territory = GEN_NPC_TOAD_01_TERRITORY,
         .init = &N(EVS_NpcInit_Toad_01),
         .settings = &N(NpcSettings_Toad_Stationary),
         .flags = BASE_PASSIVE_FLAGS,
@@ -167,8 +168,9 @@ NpcData N(NpcData_Prisoners)[] = {
     },
     {
         .id = NPC_Toad_02,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_TOAD_02_VEC },
+        .yaw = GEN_NPC_TOAD_02_DIR,
+        .territory = GEN_NPC_TOAD_02_TERRITORY,
         .init = &N(EVS_NpcInit_Toad_02),
         .settings = &N(NpcSettings_Toad_Stationary),
         .flags = BASE_PASSIVE_FLAGS,
@@ -178,8 +180,9 @@ NpcData N(NpcData_Prisoners)[] = {
     },
     {
         .id = NPC_ToadGuard,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_TOAD_GUARD_VEC },
+        .yaw = GEN_NPC_TOAD_GUARD_DIR,
+        .territory = GEN_NPC_TOAD_GUARD_TERRITORY,
         .init = &N(EVS_NpcInit_ToadGuard),
         .settings = &N(NpcSettings_Toad_Stationary),
         .flags = BASE_PASSIVE_FLAGS,
@@ -189,8 +192,9 @@ NpcData N(NpcData_Prisoners)[] = {
     },
     {
         .id = NPC_Dryite,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_DRYITE_VEC },
+        .yaw = GEN_NPC_DRYITE_DIR,
+        .territory = GEN_NPC_DRYITE_TERRITORY,
         .init = &N(EVS_NpcInit_Dryite),
         .settings = &N(NpcSettings_Dryite),
         .flags = BASE_PASSIVE_FLAGS,
@@ -232,22 +236,9 @@ EvtScript N(EVS_NpcInit_Koopatrol) = {
 
 NpcData N(NpcData_Koopatrol) = {
     .id = NPC_Koopatrol,
-    .pos = { 60.0f, 0.0f, 55.0f },
-    .yaw = 270,
-    .territory = {
-        .patrol = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .numPoints  = 2,
-            .points  = {
-                { 60, 0, 55 },
-                { 140, 0, 55 },
-            },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 60, 0, 55 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_KOOPATROL_VEC },
+    .yaw = GEN_NPC_KOOPATROL_DIR,
+    .territory = GEN_NPC_KOOPATROL_TERRITORY,
     .init = &N(EVS_NpcInit_Koopatrol),
     .settings = &N(NpcSettings_Koopatrol_Patrol),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_NO_DROPS,

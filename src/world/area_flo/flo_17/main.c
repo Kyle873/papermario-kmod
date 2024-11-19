@@ -20,30 +20,30 @@ EvtScript N(EVS_BindExitTriggers) = {
 };
 
 LavaReset N(SafeFloorColliders)[] = {
-    { .colliderID = COLLIDER_o116, .pos = { -530.0,    0.0, -110.0 }},
-    { .colliderID = COLLIDER_o118, .pos = { -540.0,    0.0,  -50.0 }},
-    { .colliderID = COLLIDER_o117, .pos = { -530.0,    0.0,   80.0 }},
-    { .colliderID = COLLIDER_o121, .pos = { -270.0,    0.0, -120.0 }},
-    { .colliderID = COLLIDER_o120, .pos = { -270.0,    0.0, -120.0 }},
-    { .colliderID = COLLIDER_o119, .pos = { -270.0,    0.0,   35.0 }},
-    { .colliderID = COLLIDER_o124, .pos = { -130.0,    0.0,  -50.0 }},
-    { .colliderID = COLLIDER_o123, .pos = { -130.0,    0.0,  -50.0 }},
-    { .colliderID = COLLIDER_o122, .pos = { -140.0,    0.0,   75.0 }},
-    { .colliderID = COLLIDER_o128, .pos = {  120.0,    0.0,  -50.0 }},
-    { .colliderID = COLLIDER_o127, .pos = {  120.0,    0.0,  -50.0 }},
-    { .colliderID = COLLIDER_o125, .pos = {  130.0,    0.0,   60.0 }},
-    { .colliderID = COLLIDER_o126, .pos = {  120.0,    0.0,  120.0 }},
-    { .colliderID = COLLIDER_o132, .pos = {  280.0,    0.0, -110.0 }},
-    { .colliderID = COLLIDER_o131, .pos = {  280.0,    0.0, -110.0 }},
-    { .colliderID = COLLIDER_o130, .pos = {  270.0,    0.0,  -50.0 }},
-    { .colliderID = COLLIDER_o129, .pos = {  280.0,    0.0,   50.0 }},
-    { .colliderID = COLLIDER_o134, .pos = {  525.0,    0.0,  -70.0 }},
-    { .colliderID = COLLIDER_o133, .pos = {  525.0,    0.0,   50.0 }},
+    { .colliderID = COLLIDER_o116, .pos = { GEN_LAVA_RESET_O116_VEC }},
+    { .colliderID = COLLIDER_o118, .pos = { GEN_LAVA_RESET_O118_VEC }},
+    { .colliderID = COLLIDER_o117, .pos = { GEN_LAVA_RESET_O117_VEC }},
+    { .colliderID = COLLIDER_o121, .pos = { GEN_LAVA_RESET_O121_VEC }},
+    { .colliderID = COLLIDER_o120, .pos = { GEN_LAVA_RESET_O120_VEC }},
+    { .colliderID = COLLIDER_o119, .pos = { GEN_LAVA_RESET_O119_VEC }},
+    { .colliderID = COLLIDER_o124, .pos = { GEN_LAVA_RESET_O124_VEC }},
+    { .colliderID = COLLIDER_o123, .pos = { GEN_LAVA_RESET_O123_VEC }},
+    { .colliderID = COLLIDER_o122, .pos = { GEN_LAVA_RESET_O122_VEC }},
+    { .colliderID = COLLIDER_o128, .pos = { GEN_LAVA_RESET_O128_VEC }},
+    { .colliderID = COLLIDER_o127, .pos = { GEN_LAVA_RESET_O127_VEC }},
+    { .colliderID = COLLIDER_o125, .pos = { GEN_LAVA_RESET_O125_VEC }},
+    { .colliderID = COLLIDER_o126, .pos = { GEN_LAVA_RESET_O126_VEC }},
+    { .colliderID = COLLIDER_o132, .pos = { GEN_LAVA_RESET_O132_VEC }},
+    { .colliderID = COLLIDER_o131, .pos = { GEN_LAVA_RESET_O131_VEC }},
+    { .colliderID = COLLIDER_o130, .pos = { GEN_LAVA_RESET_O130_VEC }},
+    { .colliderID = COLLIDER_o129, .pos = { GEN_LAVA_RESET_O129_VEC }},
+    { .colliderID = COLLIDER_o134, .pos = { GEN_LAVA_RESET_O134_VEC }},
+    { .colliderID = COLLIDER_o133, .pos = { GEN_LAVA_RESET_O133_VEC }},
     { .colliderID = NO_COLLIDER }
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_FLOWER_FIELDS)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_DEFAULT(0, 0, 0)
     Call(MakeNpcs, FALSE, Ref(N(DefaultNPCs)))
@@ -58,12 +58,12 @@ EvtScript N(EVS_Main) = {
     Call(ModifyColliderFlags, MODIFY_COLLIDER_FLAGS_SET_SURFACE, COLLIDER_o129, SURFACE_TYPE_FLOWERS)
     Call(ModifyColliderFlags, MODIFY_COLLIDER_FLAGS_SET_SURFACE, COLLIDER_o132, SURFACE_TYPE_FLOWERS)
     Call(ModifyColliderFlags, MODIFY_COLLIDER_FLAGS_SET_SURFACE, COLLIDER_o133, SURFACE_TYPE_FLOWERS)
-    EVT_FLOWER_SPAWN_REGION( -736, -137, -522, -118,  0)
-    EVT_FLOWER_SPAWN_REGION( -728,   76, -496,  137,  0)
-    EVT_FLOWER_SPAWN_REGION( -160, -117,  -92,  -54,  0)
-    EVT_FLOWER_SPAWN_REGION(   76, -124,  150,  -55,  0)
-    EVT_FLOWER_SPAWN_REGION(  192,   60,  309,  133,  0)
-    EVT_FLOWER_SPAWN_REGION(  488,   46,  733,  137,  0)
+    GEN_FLOWER_SPAWN_REGION(GEN_FLOWER_VOLUME_1_MIN_XZ, GEN_FLOWER_VOLUME_1_MAX_XZ, GEN_FLOWER_VOLUME_1_MIN_Y)
+    GEN_FLOWER_SPAWN_REGION(GEN_FLOWER_VOLUME_2_MIN_XZ, GEN_FLOWER_VOLUME_2_MAX_XZ, GEN_FLOWER_VOLUME_2_MIN_Y)
+    GEN_FLOWER_SPAWN_REGION(GEN_FLOWER_VOLUME_3_MIN_XZ, GEN_FLOWER_VOLUME_3_MAX_XZ, GEN_FLOWER_VOLUME_3_MIN_Y)
+    GEN_FLOWER_SPAWN_REGION(GEN_FLOWER_VOLUME_4_MIN_XZ, GEN_FLOWER_VOLUME_4_MAX_XZ, GEN_FLOWER_VOLUME_4_MIN_Y)
+    GEN_FLOWER_SPAWN_REGION(GEN_FLOWER_VOLUME_5_MIN_XZ, GEN_FLOWER_VOLUME_5_MAX_XZ, GEN_FLOWER_VOLUME_5_MIN_Y)
+    GEN_FLOWER_SPAWN_REGION(GEN_FLOWER_VOLUME_6_MIN_XZ, GEN_FLOWER_VOLUME_6_MAX_XZ, GEN_FLOWER_VOLUME_6_MIN_Y)
     Call(ModifyColliderFlags, MODIFY_COLLIDER_FLAGS_SET_SURFACE, COLLIDER_o103, SURFACE_TYPE_SPIKES)
     Thread
         Call(ResetFromLava, Ref(N(SafeFloorColliders)))
@@ -88,10 +88,7 @@ EvtScript N(EVS_Main) = {
     Call(SetTexPanner, MODEL_o30, TEX_PANNER_1)
     Call(SetTexPanner, MODEL_o33, TEX_PANNER_1)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP(  140,    0,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    0,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     // vines scrolling right
@@ -111,10 +108,7 @@ EvtScript N(EVS_Main) = {
     Call(SetTexPanner, MODEL_o31, TEX_PANNER_2)
     Call(SetTexPanner, MODEL_o32, TEX_PANNER_2)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_2)
-        TEX_PAN_PARAMS_STEP( -200,    0,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    0,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_2
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Call(ModifyColliderFlags, MODIFY_COLLIDER_FLAGS_SET_BITS, COLLIDER_deilitw, COLLIDER_FLAGS_UPPER_MASK)

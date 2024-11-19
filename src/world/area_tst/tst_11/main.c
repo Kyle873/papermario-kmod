@@ -4,7 +4,7 @@ extern EvtScript N(EVS_Main);
 extern EvtScript N(EVS_SetupReflections);
 
 EntryList N(Entrances) = {
-    [tst_11_ENTRY_0]    {    0.0,    0.0,  100.0,   90.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {
@@ -14,7 +14,7 @@ MapSettings N(settings) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_TESTING)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_DEFAULT(0, 0, 0)
     Exec(N(EVS_SetupReflections))

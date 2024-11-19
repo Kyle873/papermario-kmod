@@ -59,57 +59,39 @@ EvtScript N(EVS_SetupWater) = {
     Call(SetTexPanner, MODEL_o165, TEX_PANNER_1)
     Call(SetTexPanner, MODEL_o215, TEX_PANNER_1)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP(  140,  -80,  -70,  100)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     // water edge
     Call(SetTexPanner, MODEL_o166, TEX_PANNER_2)
     Call(SetTexPanner, MODEL_o216, TEX_PANNER_2)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_2)
-        TEX_PAN_PARAMS_STEP(  -70,  100,  100,  -40)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_2
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     // water falls
     Call(SetTexPanner, MODEL_o189, TEX_PANNER_3)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_3)
-        TEX_PAN_PARAMS_STEP(    0, -800,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    0,    1,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_3
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     // water spreading
     Call(SetTexPanner, MODEL_o192, TEX_PANNER_4)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_4)
-        TEX_PAN_PARAMS_STEP(    0, -800, -200,  100)
-        TEX_PAN_PARAMS_FREQ(    0,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_4
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     // water rising
     Call(SetTexPanner, MODEL_o219, TEX_PANNER_5)
     Call(SetTexPanner, MODEL_o220, TEX_PANNER_5)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_5)
-        TEX_PAN_PARAMS_STEP(    0,-2500,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    0,    1,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_5
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     // water spreading
     Call(SetTexPanner, MODEL_o218, TEX_PANNER_6)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_6)
-        TEX_PAN_PARAMS_STEP(    0,-2500, -200,  100)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_6
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Return

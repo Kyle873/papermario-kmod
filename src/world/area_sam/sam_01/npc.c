@@ -628,8 +628,9 @@ EvtScript N(EVS_NpcInit_Penguin_09) = {
 NpcData N(NpcData_MayorPenguin)[] = {
     {
         .id = NPC_MayorPenguin,
-        .pos = { -272.0f, 0.0f, -180.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_MAYOR_PENGUIN_VEC },
+        .yaw = GEN_NPC_MAYOR_PENGUIN_DIR,
+        .territory = GEN_NPC_MAYOR_PENGUIN_TERRITORY,
         .init = &N(EVS_NpcInit_MayorPenguin),
         .settings = &N(NpcSettings_Penguin),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -639,8 +640,9 @@ NpcData N(NpcData_MayorPenguin)[] = {
     },
     {
         .id = NPC_MayorDummy,
-        .pos = { -272.0f, 0.0f, -180.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_MAYOR_DUMMY_VEC },
+        .yaw = GEN_NPC_MAYOR_DUMMY_DIR,
+        .territory = GEN_NPC_MAYOR_DUMMY_TERRITORY,
         .init = &N(EVS_NpcInit_MayorDummy),
         .settings = &N(NpcSettings_Penguin),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_HAS_NO_SPRITE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -650,8 +652,9 @@ NpcData N(NpcData_MayorPenguin)[] = {
     },
     {
         .id = NPC_MayorPenguinWife,
-        .pos = { -316.0f, 0.0f, 113.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_MAYOR_PENGUIN_WIFE_VEC },
+        .yaw = GEN_NPC_MAYOR_PENGUIN_WIFE_DIR,
+        .territory = GEN_NPC_MAYOR_PENGUIN_WIFE_TERRITORY,
         .init = &N(EVS_NpcInit_MayorPenguinWife),
         .settings = &N(NpcSettings_Penguin),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -661,8 +664,9 @@ NpcData N(NpcData_MayorPenguin)[] = {
     },
     {
         .id = NPC_PenguinPatrol,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_PENGUIN_PATROL_VEC },
+        .yaw = GEN_NPC_PENGUIN_PATROL_DIR,
+        .territory = GEN_NPC_PENGUIN_PATROL_TERRITORY,
         .init = &N(EVS_NpcInit_PenguinPatrol),
         .settings = &N(NpcSettings_Penguin),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -672,8 +676,9 @@ NpcData N(NpcData_MayorPenguin)[] = {
     },
     {
         .id = NPC_Herringway,
-        .pos = { 0.0f, 0.0f, 0.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_HERRINGWAY_VEC },
+        .yaw = GEN_NPC_HERRINGWAY_DIR,
+        .territory = GEN_NPC_HERRINGWAY_TERRITORY,
         .init = &N(EVS_NpcInit_Herringway),
         .settings = &N(NpcSettings_Penguin),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -683,20 +688,9 @@ NpcData N(NpcData_MayorPenguin)[] = {
     },
     {
         .id = NPC_Penguin_01,
-        .pos = { -150.0f, 0.0f, 400.0f },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { -150, 0, 400 },
-                .wanderSize = { 50 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 0 },
-            }
-        },
+        .pos = { GEN_NPC_PENGUIN_01_VEC },
+        .yaw = GEN_NPC_PENGUIN_01_DIR,
+        .territory = GEN_NPC_PENGUIN_01_TERRITORY,
         .init = &N(EVS_NpcInit_Penguin_01),
         .settings = &N(NpcSettings_Penguin_Wander),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -706,20 +700,9 @@ NpcData N(NpcData_MayorPenguin)[] = {
     },
     {
         .id = NPC_Penguin_02,
-        .pos = { 100.0f, 0.0f, 250.0f },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 100, 0, 250 },
-                .wanderSize = { 50 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 0 },
-            }
-        },
+        .pos = { GEN_NPC_PENGUIN_02_VEC },
+        .yaw = GEN_NPC_PENGUIN_02_DIR,
+        .territory = GEN_NPC_PENGUIN_02_TERRITORY,
         .init = &N(EVS_NpcInit_Penguin_02),
         .settings = &N(NpcSettings_Penguin_Wander),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -729,20 +712,9 @@ NpcData N(NpcData_MayorPenguin)[] = {
     },
     {
         .id = NPC_Penguin_03,
-        .pos = { 400.0f, 0.0f, 50.0f },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 400, 0, 50 },
-                .wanderSize = { 50 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 0 },
-            }
-        },
+        .pos = { GEN_NPC_PENGUIN_03_VEC },
+        .yaw = GEN_NPC_PENGUIN_03_DIR,
+        .territory = GEN_NPC_PENGUIN_03_TERRITORY,
         .init = &N(EVS_NpcInit_Penguin_03),
         .settings = &N(NpcSettings_Penguin_Wander),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -752,8 +724,9 @@ NpcData N(NpcData_MayorPenguin)[] = {
     },
     {
         .id = NPC_Penguin_04,
-        .pos = { 350.0f, 0.0f, -190.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_PENGUIN_04_VEC },
+        .yaw = GEN_NPC_PENGUIN_04_DIR,
+        .territory = GEN_NPC_PENGUIN_04_TERRITORY,
         .init = &N(EVS_NpcInit_Penguin_04),
         .settings = &N(NpcSettings_Penguin),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -766,8 +739,9 @@ NpcData N(NpcData_MayorPenguin)[] = {
 NpcData N(NpcData_Penguin_05)[] = {
     {
         .id = NPC_Penguin_05,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 90,
+        .pos = { GEN_NPC_PENGUIN_05_VEC },
+        .yaw = GEN_NPC_PENGUIN_05_DIR,
+        .territory = GEN_NPC_PENGUIN_05_TERRITORY,
         .init = &N(EVS_NpcInit_Penguin_05),
         .settings = &N(NpcSettings_Penguin),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -777,8 +751,9 @@ NpcData N(NpcData_Penguin_05)[] = {
     },
     {
         .id = NPC_Penguin_06,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_PENGUIN_06_VEC },
+        .yaw = GEN_NPC_PENGUIN_06_DIR,
+        .territory = GEN_NPC_PENGUIN_06_TERRITORY,
         .init = &N(EVS_NpcInit_Penguin_06),
         .settings = &N(NpcSettings_Penguin),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -788,8 +763,9 @@ NpcData N(NpcData_Penguin_05)[] = {
     },
     {
         .id = NPC_Penguin_07,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 180,
+        .pos = { GEN_NPC_PENGUIN_07_VEC },
+        .yaw = GEN_NPC_PENGUIN_07_DIR,
+        .territory = GEN_NPC_PENGUIN_07_TERRITORY,
         .init = &N(EVS_NpcInit_Penguin_07),
         .settings = &N(NpcSettings_Penguin),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -799,8 +775,9 @@ NpcData N(NpcData_Penguin_05)[] = {
     },
     {
         .id = NPC_Penguin_08,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_PENGUIN_08_VEC },
+        .yaw = GEN_NPC_PENGUIN_08_DIR,
+        .territory = GEN_NPC_PENGUIN_08_TERRITORY,
         .init = &N(EVS_NpcInit_Penguin_08),
         .settings = &N(NpcSettings_Penguin),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -812,8 +789,9 @@ NpcData N(NpcData_Penguin_05)[] = {
 
 NpcData N(NpcData_Penguin_09) = {
     .id = NPC_Penguin_09,
-    .pos = { 0.0f, 0.0f, 0.0f },
-    .yaw = 0,
+    .pos = { GEN_NPC_PENGUIN_09_VEC },
+    .yaw = GEN_NPC_PENGUIN_09_DIR,
+    .territory = GEN_NPC_PENGUIN_09_TERRITORY,
     .init = &N(EVS_NpcInit_Penguin_09),
     .settings = &N(NpcSettings_Penguin),
     .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -823,8 +801,9 @@ NpcData N(NpcData_Penguin_09) = {
 
 NpcData N(NpcData_ChuckQuizmo) = {
     .id = NPC_ChuckQuizmo,
-    .pos = { 230.0f, 0.0f, 150.0f },
-    .yaw = 90,
+    .pos = { GEN_NPC_CHUCK_QUIZMO_VEC },
+    .yaw = GEN_NPC_CHUCK_QUIZMO_DIR,
+    .territory = GEN_NPC_CHUCK_QUIZMO_TERRITORY,
     .initVarCount = 1,
     .initVar = { .bytes = { 0, QUIZ_AREA_SAM, QUIZ_COUNT_SAM, QUIZ_MAP_SAM_01 }},
     .settings = &N(NpcSettings_ChuckQuizmo),

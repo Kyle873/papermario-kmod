@@ -158,8 +158,9 @@ EvtScript N(EVS_NpcInit_GateFlower) = {
 
 NpcData N(NpcData_GateFlower) = {
     .id = NPC_GateFlower,
-    .pos = { 505.0f, 0.0f, -25.0f },
-    .yaw = 90,
+    .pos = { GEN_NPC_GATE_FLOWER_VEC },
+    .yaw = GEN_NPC_GATE_FLOWER_DIR,
+    .territory = GEN_NPC_GATE_FLOWER_TERRITORY,
     .init = &N(EVS_NpcInit_GateFlower),
     .settings = &N(NpcSettings_GateFlower),
     .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -170,20 +171,9 @@ NpcData N(NpcData_GateFlower) = {
 
 NpcData N(NpcData_RuffPuff) = {
     .id = NPC_RuffPuff,
-    .pos = { -200.0f, 45.0f, 0.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = FALSE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -200, 45, 0 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -200, 45, 0 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_RUFF_PUFF_VEC },
+    .yaw = GEN_NPC_RUFF_PUFF_DIR,
+    .territory = GEN_NPC_RUFF_PUFF_TERRITORY,
     .settings = &N(NpcSettings_RuffPuff),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION,
     .drops = RUFF_PUFF_DROPS,
@@ -193,20 +183,9 @@ NpcData N(NpcData_RuffPuff) = {
 
 NpcData N(NpcData_Bzzap) = {
     .id = NPC_Bzzap,
-    .pos = { 150.0f, 55.0f, 0.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 150, 50, 0 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 150, 50, 0 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_BZZAP_VEC },
+    .yaw = GEN_NPC_BZZAP_DIR,
+    .territory = GEN_NPC_BZZAP_TERRITORY,
     .settings = &N(NpcSettings_Bzzap),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION,
     .drops = BZZAP_DROPS,

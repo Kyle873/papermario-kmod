@@ -4,20 +4,9 @@
 
 NpcData N(NpcData_PyroGuy_01) = {
     .id = NPC_PyroGuy_01,
-    .pos = { -180.0f, 0.0f, 70.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_RECT,
-            .centerPos  = { -180, 0, 70 },
-            .wanderSize = { 30, 10 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -180, 0, 70 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_PYRO_GUY_01_VEC },
+    .yaw = GEN_NPC_PYRO_GUY_01_DIR,
+    .territory = GEN_NPC_PYRO_GUY_01_TERRITORY,
     .settings = &N(NpcSettings_PyroGuy),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = PYRO_GUY_DROPS,
@@ -27,20 +16,9 @@ NpcData N(NpcData_PyroGuy_01) = {
 
 NpcData N(NpcData_PyroGuy_02) = {
     .id = NPC_PyroGuy_02,
-    .pos = { 330.0f, 0.0f, 83.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_RECT,
-            .centerPos  = { 330, 0, 83 },
-            .wanderSize = { 30, 10 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 330, 0, 83 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_PYRO_GUY_02_VEC },
+    .yaw = GEN_NPC_PYRO_GUY_02_DIR,
+    .territory = GEN_NPC_PYRO_GUY_02_TERRITORY,
     .settings = &N(NpcSettings_PyroGuy),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = PYRO_GUY_DROPS,

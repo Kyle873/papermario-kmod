@@ -1719,7 +1719,7 @@ Actor* create_actor(Formation formation) {
     actor->headOffset.x = 0;
     actor->headOffset.y = 0;
     actor->headOffset.z = 0;
-    actor->maxHP = actor->curHP = formationActor->maxHP;
+    actor->maxHP = actor->curHP = formationActor->maxHP; // TODO: 10x HP pools for new stat numbers?
     actor->numParts = partCount;
     actor->idleSource = NULL;
     actor->takeTurnSource = formationActor->initScript;

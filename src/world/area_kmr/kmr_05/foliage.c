@@ -43,9 +43,9 @@ EvtScript N(EVS_OnShakeTree1) = {
     Wait(10)
     Call(GetPlayerPos, LVar0, LVar1, LVar2)
     IfLt(LVar0, 490)
-        Call(MakeItemEntity, ITEM_COIN, 540, 290, -180, ITEM_SPAWN_MODE_FALL, GF_KMR05_Tree1_Coin)
+        EVT_MAKE_ITEM_ENTITY(GEN_ITEM_2_PARAMS)
     Else
-        Call(MakeItemEntity, ITEM_COIN, 436, 300, -180, ITEM_SPAWN_MODE_FALL, GF_KMR05_Tree1_Coin)
+        EVT_MAKE_ITEM_ENTITY(GEN_ITEM_3_PARAMS)
     EndIf
     Set(AF_JAN01_TreeDrop_StarPiece, TRUE)
     Return
@@ -60,8 +60,8 @@ ShakeTreeConfig N(ShakeTree_Tree1) = {
 };
 
 BombTrigger N(BombPos_Tree1) = {
-    .pos = { 488.0f, 245.0f, -196.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_1_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_1_RAD,
 };
 
 EvtScript N(EVS_SetupFoliage) = {

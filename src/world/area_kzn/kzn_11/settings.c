@@ -1,8 +1,7 @@
 #include "kzn_11.h"
 
 EntryList N(Entrances) = {
-    [kzn_11_ENTRY_0]    { -810.0,   20.0,    0.0,   90.0 },
-    [kzn_11_ENTRY_1]    {  810.0,   20.0,    0.0,  270.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {

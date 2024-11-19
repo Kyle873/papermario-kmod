@@ -9,8 +9,9 @@
 NpcData N(NpcData_IntroNPCs)[] = {
     {
         .id = NPC_Luigi,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 90,
+        .pos = { GEN_NPC_LUIGI_VEC },
+        .yaw = GEN_NPC_LUIGI_DIR,
+        .territory = GEN_NPC_LUIGI_TERRITORY,
         .settings = &N(NpcSettings_Luigi_Intro),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
@@ -18,8 +19,9 @@ NpcData N(NpcData_IntroNPCs)[] = {
     },
     {
         .id = NPC_IntroToad1,
-        .pos = { -94.0f, 0.0f, -117.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_INTRO_TOAD1_VEC },
+        .yaw = GEN_NPC_INTRO_TOAD1_DIR,
+        .territory = GEN_NPC_INTRO_TOAD1_TERRITORY,
         .settings = &N(NpcSettings_Toad_Stationary_Intro),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
         .drops = NO_DROPS,
@@ -28,22 +30,9 @@ NpcData N(NpcData_IntroNPCs)[] = {
     },
     {
         .id = NPC_IntroToad2,
-        .pos = { 40.0f, 0.0f, -300.0f },
-        .yaw = 270,
-        .territory = {
-            .patrol = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .numPoints  = 2,
-                .points  = {
-                    { 40, 0, -300 },
-                    { -40, 0, -300 },
-                },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 10 },
-            }
-        },
+        .pos = { GEN_NPC_INTRO_TOAD2_VEC },
+        .yaw = GEN_NPC_INTRO_TOAD2_DIR,
+        .territory = GEN_NPC_INTRO_TOAD2_TERRITORY,
         .settings = &N(NpcSettings_Toad_Stationary_Intro),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
         .drops = NO_DROPS,
@@ -52,8 +41,9 @@ NpcData N(NpcData_IntroNPCs)[] = {
     },
     {
         .id = NPC_IntroToad3,
-        .pos = { -380.0f, 20.0f, -100.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_INTRO_TOAD3_VEC },
+        .yaw = GEN_NPC_INTRO_TOAD3_DIR,
+        .territory = GEN_NPC_INTRO_TOAD3_TERRITORY,
         .settings = &N(NpcSettings_Toad_Stationary_Intro),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
         .drops = NO_DROPS,

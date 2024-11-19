@@ -2,6 +2,7 @@
 /// @brief Jade Jungle - Deep Jungle 3
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

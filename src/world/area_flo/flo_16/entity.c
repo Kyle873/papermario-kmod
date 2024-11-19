@@ -1,8 +1,8 @@
 #include "flo_16.h"
 #include "entity.h"
 
-#define SUPER_BLOCK_MAPVAR MV_SuperBlock
-#define SUPER_BLOCK_GAMEFLAG GF_FLO16_SuperBlock
+#define SUPER_BLOCK_MAPVAR GEN_SUPER_BLOCK_1_VAR
+#define SUPER_BLOCK_GAMEFLAG GEN_SUPER_BLOCK_1_FLAG
 #include "world/common/entity/SuperBlock.inc.c"
 
 EvtScript N(EVS_TetherCameraToPlayer) = {
@@ -48,7 +48,7 @@ EvtScript N(EVS_MonitorCeilingPound) = {
         Call(GetPlayerPos, LVar0, LVar1, LVar2)
         Switch(LVar0)
             CaseRange(620, 660)
-                Call(MakeItemEntity, ITEM_STAR_PIECE, 640, 145, -100, ITEM_SPAWN_MODE_FALL_NEVER_VANISH, GF_FLO16_Item_StarPiece)
+                EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
                 Set(AF_FLO16_FoundHiddenStarPiece, TRUE)
         EndSwitch
     EndIf
@@ -59,9 +59,9 @@ EvtScript N(EVS_MonitorCeilingPound) = {
 EvtScript N(EVS_MakeEntities) = {
     Set(AF_FLO16_FoundHiddenStarPiece, FALSE)
     BindTrigger(Ref(N(EVS_MonitorCeilingPound)), TRIGGER_FLOOR_TOUCH, COLLIDER_o214, 1, 0)
-    EVT_MAKE_SUPER_BLOCK(350, 240, -100, 0)
-    Call(MakeEntity, Ref(Entity_ScriptSpring), 472, 100, -100, 0, MAKE_ENTITY_END)
-    Call(AssignScript, Ref(N(EVS_UseSpring)))
+    EVT_MAKE_SUPER_BLOCK(GEN_SUPER_BLOCK_1_PARAMS)
+    EVT_MAKE_ENTITY(ScriptSpring, GEN_SCRIPT_SPRING_1_PARAMS)
+    Call(AssignScript, Ref(GEN_SCRIPT_SPRING_1_SCRIPT))
     Return
     End
 };

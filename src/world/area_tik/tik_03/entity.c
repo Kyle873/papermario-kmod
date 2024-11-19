@@ -2,12 +2,12 @@
 #include "entity.h"
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_YellowBlock), 200, 50, -75, 0, ITEM_SNOWMAN_DOLL, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_TIK03_ItemBlock_SnowmanDoll)
-    Call(MakeEntity, Ref(Entity_YellowBlock), 140, 50, -75, 0, ITEM_COIN, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_TIK03_ItemBlock_CoinA)
-    Call(MakeEntity, Ref(Entity_YellowBlock), 260, 50, -75, 0, ITEM_COIN, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_TIK03_ItemBlock_CoinB)
+    EVT_MAKE_ENTITY(YellowBlock, GEN_YELLOW_BLOCK_1_PARAMS)
+    Call(AssignBlockFlag, GEN_YELLOW_BLOCK_1_FLAG)
+    EVT_MAKE_ENTITY(YellowBlock, GEN_YELLOW_BLOCK_2_PARAMS)
+    Call(AssignBlockFlag, GEN_YELLOW_BLOCK_2_FLAG)
+    EVT_MAKE_ENTITY(YellowBlock, GEN_YELLOW_BLOCK_3_PARAMS)
+    Call(AssignBlockFlag, GEN_YELLOW_BLOCK_3_FLAG)
     Return
     End
 };

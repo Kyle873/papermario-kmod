@@ -38,8 +38,9 @@ AnimID N(ExtraAnims_Koopatrol)[] = {
 NpcData N(NpcData_Characters)[] = {
     {
         .id = NPC_Bowser,
-        .pos = { 0.0f, -500.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_BOWSER_1_VEC },
+        .yaw = GEN_NPC_BOWSER_1_DIR,
+        .territory = GEN_NPC_BOWSER_1_TERRITORY,
         .settings = &N(NpcSettings_Bowser),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
@@ -48,8 +49,9 @@ NpcData N(NpcData_Characters)[] = {
     },
     {
         .id = NPC_Kammy,
-        .pos = { 0.0f, -500.0f, 0.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_KAMMY_1_VEC },
+        .yaw = GEN_NPC_KAMMY_1_DIR,
+        .territory = GEN_NPC_KAMMY_1_TERRITORY,
         .settings = &N(NpcSettings_Kammy),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
@@ -58,8 +60,9 @@ NpcData N(NpcData_Characters)[] = {
     },
     {
         .id = NPC_Koopatrol_03,
-        .pos = { 0.0f, -500.0f, 0.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_KOOPATROL_03_VEC },
+        .yaw = GEN_NPC_KOOPATROL_03_DIR,
+        .territory = GEN_NPC_KOOPATROL_03_TERRITORY,
         .settings = &N(NpcSettings_Koopatrol_Stationary),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
@@ -68,8 +71,9 @@ NpcData N(NpcData_Characters)[] = {
     },
     {
         .id = NPC_Koopatrol_04,
-        .pos = { 0.0f, -500.0f, 0.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_KOOPATROL_04_VEC },
+        .yaw = GEN_NPC_KOOPATROL_04_DIR,
+        .territory = GEN_NPC_KOOPATROL_04_TERRITORY,
         .settings = &N(NpcSettings_Koopatrol_Stationary),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,

@@ -63,18 +63,18 @@ EvtScript N(EVS_BindLockTrigger) = {
 
 EvtScript N(EVS_MakeEntities) = {
     IfEq(GF_TRD01_UnlockedDoor, FALSE)
-        Call(MakeEntity, Ref(Entity_Padlock), 315, 8, 0, -80, MAKE_ENTITY_END)
+        EVT_MAKE_ENTITY(Padlock, GEN_PADLOCK_1_PARAMS)
         Call(AssignScript, Ref(N(EVS_BindLockTrigger)))
         Set(MV_Padlock_EntityIndex, LVar0)
     EndIf
     IfLt(GB_StoryProgress, STORY_CH1_RAISED_SUBMERGED_STAIRS)
-        Call(MakeEntity, Ref(Entity_BlueSwitch), 0, 220, 255, 0, MAKE_ENTITY_END)
-        Call(AssignSwitchFlag, EVT_INDEX_OF_AREA_FLAG(AF_TRD01_RaiseStairs))
+        EVT_MAKE_ENTITY(BlueSwitch, GEN_BLUE_SWITCH_1_PARAMS)
+        Call(AssignSwitchFlag, EVT_INDEX_OF_AREA_FLAG(GEN_BLUE_SWITCH_1_FLAG))
     EndIf
-    Call(MakeItemEntity, ITEM_SMASH_CHARGE, -268, 656, -40, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_TRD01_Item_SmashCharge)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
     IfEq(GF_TRD01_Defeated_KoopaGuard, TRUE)
         IfEq(GF_TRD01_Item_FortressKey, FALSE)
-            Call(MakeItemEntity, ITEM_KOOPA_FORTRESS_KEY, 254, 0, 30, ITEM_SPAWN_MODE_KEY, GF_TRD01_Item_FortressKey)
+            EVT_MAKE_ITEM_ENTITY(GEN_ITEM_2_PARAMS)
         EndIf
     EndIf
     Return

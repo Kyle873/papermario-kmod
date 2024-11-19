@@ -2,6 +2,7 @@
 /// @brief Goomba Region - Jr. Troopa's Playground
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

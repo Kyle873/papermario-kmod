@@ -1,8 +1,7 @@
 #include "isk_19.h"
 
 EntryList N(Entrances) = {
-    [isk_19_ENTRY_0]    {  548.0, -910.0,  182.0,   21.0 },
-    [isk_19_ENTRY_1]    {  573.0, -910.0,   21.0,  186.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {

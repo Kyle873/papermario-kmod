@@ -2,12 +2,12 @@
 #include "entity.h"
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_SavePoint), 1400, 90, -875, 0, MAKE_ENTITY_END)
+    EVT_MAKE_ENTITY(SavePoint, GEN_SAVE_POINT_1_PARAMS)
     IfEq(GF_KPA11_Defeated_Guard, TRUE)
-        Call(MakeItemEntity, ITEM_BOWSER_CASTLE_KEY, 550, 30, -145, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_KPA11_Item_CastleKey2)
+        EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
     EndIf
-    Call(MakeEntity, Ref(Entity_YellowBlock), 1400, 90, -375, 0, ITEM_LIFE_SHROOM, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_KPA10_ItemBlock_LifeShroom)
+    EVT_MAKE_ENTITY(YellowBlock, GEN_YELLOW_BLOCK_1_PARAMS)
+    Call(AssignBlockFlag, GEN_YELLOW_BLOCK_1_FLAG)
     Return
     End
 };

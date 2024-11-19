@@ -51,8 +51,9 @@ EvtScript N(EVS_NpcInit_Igor) = {
 
 NpcData N(NpcData_Igor) = {
     .id = NPC_Igor,
-    .pos = { 43.0f, -200.0f, -9.0f },
-    .yaw = 90,
+    .pos = { GEN_NPC_IGOR_VEC },
+    .yaw = GEN_NPC_IGOR_DIR,
+    .territory = GEN_NPC_IGOR_TERRITORY,
     .init = &N(EVS_NpcInit_Igor),
     .settings = &N(NpcSettings_Boo),
     .flags = BASE_PASSIVE_FLAGS,

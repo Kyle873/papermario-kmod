@@ -35,20 +35,9 @@ EvtScript N(EVS_NpcInit_Koopatrol) = {
 
 NpcData N(NpcData_Koopatrol) = {
     .id = NPC_Koopatrol,
-    .pos = { 550.0f, 30.0f, -145.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 550, 30, -145 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 550, 30, -145 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_KOOPATROL_VEC },
+    .yaw = GEN_NPC_KOOPATROL_DIR,
+    .territory = GEN_NPC_KOOPATROL_TERRITORY,
     .init = &N(EVS_NpcInit_Koopatrol),
     .settings = &N(NpcSettings_Koopatrol_Wander),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_NO_DROPS,

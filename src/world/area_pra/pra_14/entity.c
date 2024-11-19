@@ -4,10 +4,10 @@
 #include "world/common/entity/Chest.inc.c"
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_MulticoinBlock), 445, 60, 80, 0, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_PRA14_MultiCoinBrickA)
-    Call(MakeEntity, Ref(Entity_MulticoinBlock), 445, 60, -80, 0, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_PRA14_MultiCoinBrickB)
+    EVT_MAKE_ENTITY(MulticoinBlock, GEN_MULTICOIN_BLOCK_1_PARAMS)
+    Call(AssignBlockFlag, GEN_MULTICOIN_BLOCK_1_FLAG)
+    EVT_MAKE_ENTITY(MulticoinBlock, GEN_MULTICOIN_BLOCK_2_PARAMS)
+    Call(AssignBlockFlag, GEN_MULTICOIN_BLOCK_2_FLAG)
     Return
     End
 };

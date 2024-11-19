@@ -5,20 +5,9 @@
 NpcData N(NpcData_Gulpit_01)[] = {
     {
         .id = NPC_Gulpit_01,
-        .pos = { -345.0f, 0.0f, 115.0f },
-        .yaw = 90,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { -345, 0, 115 },
-                .wanderSize = { 30 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { -345, 0, 115 },
-                .detectSize = { 250 },
-            }
-        },
+        .pos = { GEN_NPC_GULPIT_01_VEC },
+        .yaw = GEN_NPC_GULPIT_01_DIR,
+        .territory = GEN_NPC_GULPIT_01_TERRITORY,
         .settings = &N(NpcSettings_Gulpit),
         .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = GULPIT_DROPS,
@@ -32,20 +21,9 @@ NpcData N(NpcData_Gulpit_01)[] = {
 NpcData N(NpcData_Gulpit_02)[] = {
     {
         .id = NPC_Gulpit_02,
-        .pos = { 200.0f, 0.0f, 0.0f },
-        .yaw = 270,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 200, 0, 0 },
-                .wanderSize = { 30 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 200, 0, 0 },
-                .detectSize = { 250 },
-            }
-        },
+        .pos = { GEN_NPC_GULPIT_02_VEC },
+        .yaw = GEN_NPC_GULPIT_02_DIR,
+        .territory = GEN_NPC_GULPIT_02_TERRITORY,
         .settings = &N(NpcSettings_Gulpit),
         .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = GULPIT_DROPS,

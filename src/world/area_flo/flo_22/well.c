@@ -66,7 +66,7 @@ EvtScript N(EVS_OnInteract_Well) = {
             IfEq(GF_FLO22_ThrewBlueBerryDownWell, FALSE)
                 Call(ShowMessageAtWorldPos, MSG_CH6_00DD, 35, 35, 0)
                 Set(GF_FLO22_ThrewBlueBerryDownWell, TRUE)
-                Call(MakeItemEntity, ITEM_FLOWER_SAVER_B, -35, 0, 0, ITEM_SPAWN_MODE_KEY, GF_FLO22_Item_FlowerSaverB)
+                EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
                 Set(LVar7, LVar0)
                 Call(SetNpcFlagBits, NPC_Dummy, NPC_FLAG_INVISIBLE, TRUE)
                 Call(SetNpcFlagBits, NPC_Dummy, NPC_FLAG_HAS_SHADOW, FALSE)
@@ -124,7 +124,7 @@ EvtScript N(EVS_OnInteract_Well) = {
 EvtScript N(EVS_SetupWell) = {
     BindPadlock(Ref(N(EVS_OnInteract_Well)), TRIGGER_WALL_PRESS_A, COLLIDER_o5, Ref(N(BerryList)), 0, 1)
     IfEq(GF_FLO22_ThrewBlueBerryDownWell, TRUE)
-        Call(MakeItemEntity, ITEM_FLOWER_SAVER_B, -83, 0, 0, ITEM_SPAWN_MODE_KEY, GF_FLO22_Item_FlowerSaverB)
+        EVT_MAKE_ITEM_ENTITY(GEN_ITEM_2_PARAMS)
     EndIf
     Return
     End

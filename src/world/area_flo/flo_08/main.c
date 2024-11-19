@@ -20,14 +20,14 @@ EvtScript N(EVS_BindExitTriggers) = {
 };
 
 LavaReset N(SafeFloorColliders)[] = {
-    { .colliderID = COLLIDER_o158, .pos = { -540.0,    0.0,   50.0 }},
-    { .colliderID = COLLIDER_o132, .pos = {   60.0,    0.0,   50.0 }},
-    { .colliderID = COLLIDER_o223, .pos = {   60.0,    0.0,   50.0 }},
+    { .colliderID = COLLIDER_o158, .pos = { GEN_LAVA_RESET_O158_VEC }},
+    { .colliderID = COLLIDER_o132, .pos = { GEN_LAVA_RESET_O132_VEC }},
+    { .colliderID = COLLIDER_o223, .pos = { GEN_LAVA_RESET_O223_VEC }},
     { .colliderID = NO_COLLIDER }
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_FLOWER_FIELDS)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
     Call(MakeNpcs, FALSE, Ref(N(DefaultNPCs)))
@@ -45,10 +45,7 @@ EvtScript N(EVS_Main) = {
     Call(SetTexPanner, MODEL_o35, TEX_PANNER_1)
     Call(SetTexPanner, MODEL_o37, TEX_PANNER_1)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP(  140,    0,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    0,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Call(SetTexPanner, MODEL_o28, TEX_PANNER_2)
@@ -57,15 +54,12 @@ EvtScript N(EVS_Main) = {
     Call(SetTexPanner, MODEL_o36, TEX_PANNER_2)
     Call(SetTexPanner, MODEL_o38, TEX_PANNER_2)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_2)
-        TEX_PAN_PARAMS_STEP( -200,    0,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    0,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_2
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Call(ModifyColliderFlags, MODIFY_COLLIDER_FLAGS_SET_SURFACE, COLLIDER_o129, SURFACE_TYPE_FLOWERS)
-    EVT_FLOWER_SPAWN_REGION(140, -137, 340, -60, 0)
-    EVT_FLOWER_SPAWN_REGION(450, -137, 590, -60, 0)
+    GEN_FLOWER_SPAWN_REGION(GEN_FLOWER_VOLUME_1_MIN_XZ, GEN_FLOWER_VOLUME_1_MAX_XZ, GEN_FLOWER_VOLUME_1_MIN_Y)
+    GEN_FLOWER_SPAWN_REGION(GEN_FLOWER_VOLUME_2_MIN_XZ, GEN_FLOWER_VOLUME_2_MAX_XZ, GEN_FLOWER_VOLUME_2_MIN_Y)
     Exec(N(EVS_SetupFoliage))
     Call(ModifyColliderFlags, MODIFY_COLLIDER_FLAGS_SET_BITS, COLLIDER_deilitw, COLLIDER_FLAGS_UPPER_MASK)
     Call(ModifyColliderFlags, MODIFY_COLLIDER_FLAGS_SET_BITS, COLLIDER_deilite, COLLIDER_FLAGS_UPPER_MASK)

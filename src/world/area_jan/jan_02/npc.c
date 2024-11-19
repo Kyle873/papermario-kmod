@@ -391,8 +391,9 @@ AnimID N(ExtraAnims_Councillor)[] = {
 NpcData N(NpcData_Townsfolk)[] = {
     {
         .id = NPC_YoshiLeader,
-        .pos = { 323.0f, 30.0f, 412.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_YOSHI_LEADER_VEC },
+        .yaw = GEN_NPC_YOSHI_LEADER_DIR,
+        .territory = GEN_NPC_YOSHI_LEADER_TERRITORY,
         .init = &N(EVS_NpcInit_VillageLeader),
         .settings = &N(NpcSettings_Yoshi),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -402,8 +403,9 @@ NpcData N(NpcData_Townsfolk)[] = {
     },
     {
         .id = NPC_YoshiCouncillor,
-        .pos = { 172.0f, 30.0f, 418.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_YOSHI_COUNCILLOR_VEC },
+        .yaw = GEN_NPC_YOSHI_COUNCILLOR_DIR,
+        .territory = GEN_NPC_YOSHI_COUNCILLOR_TERRITORY,
         .init = &N(EVS_NpcInit_Councillor),
         .settings = &N(NpcSettings_Yoshi),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -414,22 +416,9 @@ NpcData N(NpcData_Townsfolk)[] = {
     },
     {
         .id = NPC_Yoshi_01,
-        .pos = { -520.0f, 0.0f, -270.0f },
-        .yaw = 90,
-        .territory = {
-            .patrol = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .numPoints  = 2,
-                .points  = {
-                    { -520, 0, -270 },
-                    { -420, 0, -270 },
-                },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { -520, 0, -270 },
-                .detectSize = { 100 },
-            }
-        },
+        .pos = { GEN_NPC_YOSHI_01_VEC },
+        .yaw = GEN_NPC_YOSHI_01_DIR,
+        .territory = GEN_NPC_YOSHI_01_TERRITORY,
         .init = &N(EVS_NpcInit_Yoshi_01),
         .settings = &N(NpcSettings_Yoshi_Patrol),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -439,23 +428,9 @@ NpcData N(NpcData_Townsfolk)[] = {
     },
     {
         .id = NPC_Yoshi_02,
-        .pos = { 180.0f, 0.0f, -520.0f },
-        .yaw = 270,
-        .territory = {
-            .patrol = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .numPoints  = 3,
-                .points  = {
-                    { 180, 0, -520 },
-                    { 10, 0, -520 },
-                    { 100, 0, -600 },
-                },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 5, 0, -554 },
-                .detectSize = { 100 },
-            }
-        },
+        .pos = { GEN_NPC_YOSHI_02_VEC },
+        .yaw = GEN_NPC_YOSHI_02_DIR,
+        .territory = GEN_NPC_YOSHI_02_TERRITORY,
         .init = &N(EVS_NpcInit_Yoshi_02),
         .settings = &N(NpcSettings_Yoshi_Patrol),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -465,22 +440,9 @@ NpcData N(NpcData_Townsfolk)[] = {
     },
     {
         .id = NPC_Yoshi_03,
-        .pos = { 600.0f, 0.0f, -150.0f },
-        .yaw = 270,
-        .territory = {
-            .patrol = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .numPoints  = 2,
-                .points  = {
-                    { 600, 0, -150 },
-                    { 485, 0, -220 },
-                },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 600, 0, -150 },
-                .detectSize = { 100 },
-            }
-        },
+        .pos = { GEN_NPC_YOSHI_03_VEC },
+        .yaw = GEN_NPC_YOSHI_03_DIR,
+        .territory = GEN_NPC_YOSHI_03_TERRITORY,
         .init = &N(EVS_NpcInit_Yoshi_03),
         .settings = &N(NpcSettings_Yoshi_Patrol),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -492,8 +454,9 @@ NpcData N(NpcData_Townsfolk)[] = {
 
 NpcData N(NpcData_ChuckQuizmo) = {
     .id = NPC_ChuckQuizmo,
-    .pos = { -150.0f, 15.0f, 300.0f },
-    .yaw = 90,
+    .pos = { GEN_NPC_CHUCK_QUIZMO_VEC },
+    .yaw = GEN_NPC_CHUCK_QUIZMO_DIR,
+    .territory = GEN_NPC_CHUCK_QUIZMO_TERRITORY,
     .initVarCount = 1,
     .initVar = { .bytes = { 0, QUIZ_AREA_JAN, QUIZ_COUNT_JAN, QUIZ_MAP_JAN_02 }},
     .settings = &N(NpcSettings_ChuckQuizmo),

@@ -2,14 +2,7 @@
 #include "nu/nusys.h"
 
 Vec3f N(TwinkFlightPath)[] = {
-    { -669.0,    98.0,  -34.0 },
-    { -669.0,    68.0,  -34.0 },
-    { -644.0,    14.0,  -23.0 },
-    { -564.0,     8.0,   40.0 },
-    { -324.0,   136.0,  175.0 },
-    {  -38.0,   118.0,    0.0 },
-    {  205.0,   111.0,    0.0 },
-    {  305.0,   101.0,    0.0 },
+    GEN_PATH_1_PATH
 };
 
 s32 N(Unused) = 0;
@@ -206,8 +199,9 @@ EvtScript N(EVS_NpcInit_Twink) = {
 
 NpcData N(NpcData_Twink) = {
     .id = NPC_Twink,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
+    .pos = { GEN_NPC_TWINK_VEC },
+    .yaw = GEN_NPC_TWINK_DIR,
+    .territory = GEN_NPC_TWINK_TERRITORY,
     .init = &N(EVS_NpcInit_Twink),
     .settings = &N(NpcSettings_StarSpirit),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_FLYING,

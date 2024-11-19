@@ -2,6 +2,7 @@
 /// @brief Jade Jungle - Village Cove
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

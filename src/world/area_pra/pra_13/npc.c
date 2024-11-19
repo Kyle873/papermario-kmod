@@ -221,8 +221,9 @@ EvtScript N(EVS_NpcInit_Duplighost_02) = {
 
 NpcData N(NpcData_FakeMario) = {
     .id = NPC_FakeMario,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 90,
+    .pos = { GEN_NPC_FAKE_MARIO_VEC },
+    .yaw = GEN_NPC_FAKE_MARIO_DIR,
+    .territory = GEN_NPC_FAKE_MARIO_TERRITORY,
     .init = &N(EVS_NpcInit_FakeMario),
     .settings = &N(NpcSettings_Player),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_HAS_NO_SPRITE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -233,8 +234,9 @@ NpcData N(NpcData_FakeMario) = {
 NpcData N(NpcData_Imposters)[] = {
     {
         .id = NPC_FakeBombette,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 90,
+        .pos = { GEN_NPC_FAKE_BOMBETTE_VEC },
+        .yaw = GEN_NPC_FAKE_BOMBETTE_DIR,
+        .territory = GEN_NPC_FAKE_BOMBETTE_TERRITORY,
         .init = &N(EVS_NpcInit_FakeBombette),
         .settings = &N(NpcSettings_Player),
         .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER | ENEMY_FLAG_NO_DROPS,
@@ -243,8 +245,9 @@ NpcData N(NpcData_Imposters)[] = {
     },
     {
         .id = NPC_Duplighost_01,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_DUPLIGHOST_01_VEC },
+        .yaw = GEN_NPC_DUPLIGHOST_01_DIR,
+        .territory = GEN_NPC_DUPLIGHOST_01_TERRITORY,
         .init = &N(EVS_NpcInit_Duplighost_01),
         .settings = &N(NpcSettings_Player),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER | ENEMY_FLAG_NO_DROPS,
@@ -253,8 +256,9 @@ NpcData N(NpcData_Imposters)[] = {
     },
     {
         .id = NPC_Duplighost_02,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 270,
+        .pos = { GEN_NPC_DUPLIGHOST_02_VEC },
+        .yaw = GEN_NPC_DUPLIGHOST_02_DIR,
+        .territory = GEN_NPC_DUPLIGHOST_02_TERRITORY,
         .init = &N(EVS_NpcInit_Duplighost_02),
         .settings = &N(NpcSettings_Player),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER | ENEMY_FLAG_NO_DROPS,

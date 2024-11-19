@@ -194,7 +194,7 @@ EvtScript N(EVS_PushStatue) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_CRYSTAL_PALACE)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_NO_LEAD(24, 24, 40)
     ExecWait(N(EVS_MakeEntities))

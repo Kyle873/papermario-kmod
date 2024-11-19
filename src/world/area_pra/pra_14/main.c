@@ -22,13 +22,13 @@ EvtScript N(EVS_EnterMap) = {
 };
 
 BombTrigger N(BombPos_WallA) = {
-    .pos = { 13.0f, 0.0f, 70.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_1_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_1_RAD,
 };
 
 BombTrigger N(BombPos_WallB) = {
-    .pos = { 13.0f, 0.0f, -70.0f },
-    .diameter = 0.0f
+    .pos = { GEN_BOMB_POS_2_VEC },
+    .diameter = 2.0f * GEN_BOMB_POS_2_RAD,
 };
 
 EvtScript N(EVS_BlastWallA) = {
@@ -50,7 +50,7 @@ EvtScript N(EVS_BlastWallB) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_CRYSTAL_PALACE)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_NO_LEAD(24, 24, 40)
     ExecWait(N(EVS_MakeEntities))

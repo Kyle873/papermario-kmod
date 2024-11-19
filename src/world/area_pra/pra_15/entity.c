@@ -1,7 +1,7 @@
 #include "pra_15.h"
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeItemEntity, ITEM_STAR_PIECE, 395, -60, 120, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_PRA15_Item_StarPiece)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
     Return
     End
 };

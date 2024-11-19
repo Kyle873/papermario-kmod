@@ -1,8 +1,8 @@
 #include "tik_12.h"
 #include "entity.h"
 
-#define SUPER_BLOCK_MAPVAR MV_SuperBlock
-#define SUPER_BLOCK_GAMEFLAG GF_TIK02_SuperBlock
+#define SUPER_BLOCK_MAPVAR GEN_SUPER_BLOCK_1_VAR
+#define SUPER_BLOCK_GAMEFLAG GEN_SUPER_BLOCK_1_FLAG
 #include "world/common/entity/SuperBlock.inc.c"
 
 EvtScript N(EVS_SmashBlockA) = {
@@ -18,14 +18,14 @@ EvtScript N(EVS_SmashBlockB) = {
 };
 
 EvtScript N(EVS_MakeEntities) = {
-    EVT_MAKE_SUPER_BLOCK(240, 0, -40, 0)
+    EVT_MAKE_SUPER_BLOCK(GEN_SUPER_BLOCK_1_PARAMS)
     IfEq(GF_TIK12_Hammer3BlockA, FALSE)
-        Call(MakeEntity, Ref(Entity_Hammer3Block), 140, -135, 55, 0, MAKE_ENTITY_END)
-        Call(AssignScript, Ref(N(EVS_SmashBlockA)))
+        EVT_MAKE_ENTITY(Hammer3Block, GEN_HAMMER3_BLOCK_1_PARAMS)
+        Call(AssignScript, Ref(GEN_HAMMER3_BLOCK_1_SCRIPT))
     EndIf
     IfEq(GF_TIK12_Hammer3BlockB, FALSE)
-        Call(MakeEntity, Ref(Entity_Hammer3Block), 140, -135, 105, 0, MAKE_ENTITY_END)
-        Call(AssignScript, Ref(N(EVS_SmashBlockB)))
+        EVT_MAKE_ENTITY(Hammer3Block, GEN_HAMMER3_BLOCK_2_PARAMS)
+        Call(AssignScript, Ref(GEN_HAMMER3_BLOCK_2_SCRIPT))
     EndIf
     Return
     End

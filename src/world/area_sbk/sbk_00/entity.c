@@ -2,10 +2,10 @@
 #include "entity.h"
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_YellowBlock), -230, 0, 155, 0, ITEM_FRIGHT_JAR, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_SBK00_ItemBlock_FrightJar)
-    Call(MakeEntity, Ref(Entity_YellowBlock), 160, 0, 205, 0, ITEM_COIN, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_SBK00_ItemBlock_Coin)
+    EVT_MAKE_ENTITY(YellowBlock, GEN_YELLOW_BLOCK_1_PARAMS)
+    Call(AssignBlockFlag, GEN_YELLOW_BLOCK_1_FLAG)
+    EVT_MAKE_ENTITY(YellowBlock, GEN_YELLOW_BLOCK_2_PARAMS)
+    Call(AssignBlockFlag, GEN_YELLOW_BLOCK_2_FLAG)
     Return
     End
 };

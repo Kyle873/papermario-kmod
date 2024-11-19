@@ -2,6 +2,7 @@
 /// @brief Toad Town Tunnels - Under the Toad Town Pond
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

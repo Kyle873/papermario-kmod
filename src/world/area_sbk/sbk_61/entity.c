@@ -2,8 +2,8 @@
 #include "entity.h"
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_HiddenRedBlock), 0, 90, 0, 180, ITEM_ATTACK_FX_C, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_SBK61_HiddenBadge_AttackFXC)
+    EVT_MAKE_ENTITY(HiddenRedBlock, GEN_HIDDEN_RED_BLOCK_1_PARAMS)
+    Call(AssignBlockFlag, GEN_HIDDEN_RED_BLOCK_1_FLAG)
     Return
     End
 };

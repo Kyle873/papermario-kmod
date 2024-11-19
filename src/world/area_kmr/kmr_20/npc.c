@@ -601,8 +601,9 @@ EvtScript N(EVS_NpcInit_Luigi_1) = {
 
 NpcData N(NpcData_Luigi_0) = {
     .id = NPC_Luigi_0,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 90,
+    .pos = { GEN_NPC_LUIGI_0_VEC },
+    .yaw = GEN_NPC_LUIGI_0_DIR,
+    .territory = GEN_NPC_LUIGI_0_TERRITORY,
     .init = &N(EVS_NpcInit_Luigi_0),
     .settings = &N(NpcSettings_Luigi),
     .flags = BASE_PASSIVE_FLAGS,
@@ -613,8 +614,9 @@ NpcData N(NpcData_Luigi_0) = {
 
 NpcData N(NpcData_Luigi_1) = {
     .id = NPC_Luigi_1,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 90,
+    .pos = { GEN_NPC_LUIGI_1_VEC },
+    .yaw = GEN_NPC_LUIGI_1_DIR,
+    .territory = GEN_NPC_LUIGI_1_TERRITORY,
     .init = &N(EVS_NpcInit_Luigi_1),
     .settings = &N(NpcSettings_Luigi),
     .flags = BASE_PASSIVE_FLAGS,
@@ -720,8 +722,9 @@ EvtScript N(EVS_NpcInit_ShyGuy) = {
 
 NpcData N(NpcData_ShyGuy) = {
     .id = NPC_ShyGuy,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
+    .pos = { GEN_NPC_SHY_GUY_VEC },
+    .yaw = GEN_NPC_SHY_GUY_DIR,
+    .territory = GEN_NPC_SHY_GUY_TERRITORY,
     .init = &N(EVS_NpcInit_ShyGuy),
     .settings = &N(NpcSettings_ShyGuy_Stationary),
     .flags = ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_SKIP_BATTLE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER | ENEMY_FLAG_IGNORE_TOUCH | ENEMY_FLAG_IGNORE_PARTNER,

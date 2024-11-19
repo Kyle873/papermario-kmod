@@ -3,65 +3,35 @@
 #include "world/common/enemy/Lakitu_Stationary.inc.c"
 
 Vec3f N(FlightPath_Lakitu_01_Search)[] = {
-    {  460.0,   200.0, -240.0 },
-    {  360.0,   150.0, -140.0 },
-    {  260.0,   100.0, -240.0 },
-    {  360.0,   100.0, -440.0 },
-    {  460.0,   100.0, -240.0 },
-    {  360.0,   100.0, -140.0 },
-    {  260.0,   100.0, -240.0 },
-    {  360.0,   100.0, -440.0 },
+    GEN_PATH_1_PATH
 };
 
 Vec3f N(FlightPath_Lakitu_02_Search)[] = {
-    { -100.0,   200.0,  -50.0 },
-    {    0.0,   150.0, -150.0 },
-    {  100.0,   100.0,  -50.0 },
-    {    0.0,   100.0,   50.0 },
-    { -100.0,   100.0,  -50.0 },
-    {    0.0,   100.0, -150.0 },
-    {  100.0,   100.0,  -50.0 },
-    {    0.0,   100.0,   50.0 },
+    GEN_PATH_2_PATH
 };
 
 Vec3f N(FlightPath_Lakitu_01_Gather)[] = {
-    {  360.0,   100.0, -440.0 },
-    {  350.0,   120.0, -220.0 },
-    {  300.0,   120.0, -164.0 },
-    {  160.0,   110.0, -180.0 },
+    GEN_PATH_3_PATH
 };
 
 Vec3f N(FlightPath_Lakitu_02_Gather)[] = {
-    {    0.0,   100.0,   50.0 },
-    {  200.0,   110.0,   29.0 },
-    {  231.0,   110.0,  -18.0 },
-    {  115.0,   100.0, -150.0 },
+    GEN_PATH_4_PATH
 };
 
 Vec3f N(FlightPath_Lakitu_01_Attack)[] = {
-    {  285.0,   120.0, -108.0 },
-    {  370.0,   100.0, -130.0 },
-    {  454.0,    60.0,  -20.0 },
+    GEN_PATH_5_PATH
 };
 
 Vec3f N(FlightPath_Lakitu_02_Attack)[] = {
-    {  263.0,   110.0,  -66.0 },
-    {  360.0,    90.0,   50.0 },
-    {  454.0,    50.0,   20.0 },
+    GEN_PATH_6_PATH
 };
 
 Vec3f N(FlightPath_Lakitu_01_Flee)[] = {
-    {  400.0,    30.0,  -40.0 },
-    {  300.0,    80.0,  -40.0 },
-    {  150.0,   200.0,  -40.0 },
-    {  100.0,   350.0,  -40.0 },
+    GEN_PATH_7_PATH
 };
 
 Vec3f N(FlightPath_Lakitu_02_Flee)[] = {
-    {  400.0,    30.0,   40.0 },
-    {  300.0,    80.0,   40.0 },
-    {  150.0,   200.0,   40.0 },
-    {  100.0,   350.0,   40.0 },
+    GEN_PATH_8_PATH
 };
 
 EvtScript N(EVS_PlayFlightSounds) = {
@@ -371,8 +341,9 @@ EvtScript N(EVS_NpcInit_Lakitu_02) = {
 NpcData N(NpcData_Lakitus)[] = {
     {
         .id = NPC_Lakitu_01,
-        .pos = { 553.0f, 60.0f, 52.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_LAKITU_01_VEC },
+        .yaw = GEN_NPC_LAKITU_01_DIR,
+        .territory = GEN_NPC_LAKITU_01_TERRITORY,
         .init = &N(EVS_NpcInit_Lakitu_01),
         .settings = &N(NpcSettings_Lakitu),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_NO_DELAY_AFTER_FLEE,
@@ -381,8 +352,9 @@ NpcData N(NpcData_Lakitus)[] = {
     },
     {
         .id = NPC_Lakitu_02,
-        .pos = { 553.0f, 60.0f, 52.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_LAKITU_02_VEC },
+        .yaw = GEN_NPC_LAKITU_02_DIR,
+        .territory = GEN_NPC_LAKITU_02_TERRITORY,
         .init = &N(EVS_NpcInit_Lakitu_02),
         .settings = &N(NpcSettings_Lakitu),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_NO_DELAY_AFTER_FLEE,

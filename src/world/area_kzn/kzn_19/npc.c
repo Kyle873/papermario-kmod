@@ -117,11 +117,7 @@ EvtScript N(EVS_NpcInit_Kolorado) = {
 };
 
 Vec3f N(FlightPath)[] = {
-    {  250.0,    40.0,  -35.0 },
-    {  410.0,    30.0,    0.0 },
-    {  460.0,    40.0,  -30.0 },
-    {  510.0,    50.0,  -72.0 },
-    {  540.0,    60.0, -115.0 },
+    GEN_PATH_1_PATH
 };
 
 EvtScript N(EVS_Misstar_Escape) = {
@@ -617,8 +613,9 @@ EvtScript N(EVS_NpcInit_LavaBud) = {
 
 NpcData N(NpcData_Kolorado) = {
     .id = NPC_Kolorado,
-    .pos = { 380.0f, 250.0f, -330.0f },
-    .yaw = 90,
+    .pos = { GEN_NPC_KOLORADO_VEC },
+    .yaw = GEN_NPC_KOLORADO_DIR,
+    .territory = GEN_NPC_KOLORADO_TERRITORY,
     .init = &N(EVS_NpcInit_Kolorado),
     .settings = &N(NpcSettings_Kolorado),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_RAYCAST_TO_INTERACT | ENEMY_FLAG_SKIP_BATTLE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -629,8 +626,9 @@ NpcData N(NpcData_Kolorado) = {
 
 NpcData N(NpcData_Misstar) = {
     .id = NPC_Misstar,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
+    .pos = { GEN_NPC_MISSTAR_VEC },
+    .yaw = GEN_NPC_MISSTAR_DIR,
+    .territory = GEN_NPC_MISSTAR_TERRITORY,
     .settings = &N(NpcSettings_StarSpirit),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
     .drops = NO_DROPS,
@@ -652,8 +650,9 @@ AnimID N(ExtraAnims_LavaBud)[] = {
 NpcData N(NpcData_LavaPiranha)[] = {
     {
         .id = NPC_LavaPiranhaHead,
-        .pos = { 400.0f, 25.0f, -30.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_LAVA_PIRANHA_HEAD_VEC },
+        .yaw = GEN_NPC_LAVA_PIRANHA_HEAD_DIR,
+        .territory = GEN_NPC_LAVA_PIRANHA_HEAD_TERRITORY,
         .init = &N(EVS_NpcInit_LavaPiranha),
         .settings = &N(NpcSettings_LavaPiranhaHead),
         .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE,
@@ -664,8 +663,9 @@ NpcData N(NpcData_LavaPiranha)[] = {
     },
     {
         .id = NPC_LavaBud_01,
-        .pos = { 400.0f, 25.0f, -30.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_LAVA_BUD_01_VEC },
+        .yaw = GEN_NPC_LAVA_BUD_01_DIR,
+        .territory = GEN_NPC_LAVA_BUD_01_TERRITORY,
         .init = &N(EVS_NpcInit_LavaBud),
         .settings = &N(NpcSettings_LavaPiranhaHead),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_NO_DELAY_AFTER_FLEE,
@@ -676,8 +676,9 @@ NpcData N(NpcData_LavaPiranha)[] = {
     },
     {
         .id = NPC_LavaBud_02,
-        .pos = { 400.0f, 25.0f, -30.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_LAVA_BUD_02_VEC },
+        .yaw = GEN_NPC_LAVA_BUD_02_DIR,
+        .territory = GEN_NPC_LAVA_BUD_02_TERRITORY,
         .init = &N(EVS_NpcInit_LavaBud),
         .settings = &N(NpcSettings_LavaPiranhaHead),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_NO_DELAY_AFTER_FLEE,

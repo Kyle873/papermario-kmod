@@ -51,20 +51,9 @@ API_CALLABLE(N(func_80240118_90CD58)) {
 NpcData N(NpcData_MontyMole_GroundAmbush)[] = {
     {
         .id = NPC_MontyMole_01,
-        .pos = { 880.0f, 70.0f, 67.0f },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = FALSE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 880, 70, 67 },
-                .wanderSize = { 50 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 880, 70, 67 },
-                .detectSize = { 120 },
-            }
-        },
+        .pos = { GEN_NPC_MONTY_MOLE_01_VEC },
+        .yaw = GEN_NPC_MONTY_MOLE_01_DIR,
+        .territory = GEN_NPC_MONTY_MOLE_01_TERRITORY,
         .settings = &N(NpcSettings_MontyMole_GroundAmbush),
         .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION,
         .drops = MONTY_MOLE_DROPS,
@@ -73,20 +62,9 @@ NpcData N(NpcData_MontyMole_GroundAmbush)[] = {
     },
     {
         .id = NPC_MontyMole_01_Hole,
-        .pos = { 880.0f, 70.0f, 67.0f },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 880, 70, 67 },
-                .wanderSize = { 0 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 0 },
-            }
-        },
+        .pos = { GEN_NPC_MONTY_MOLE_01_HOLE_VEC },
+        .yaw = GEN_NPC_MONTY_MOLE_01_HOLE_DIR,
+        .territory = GEN_NPC_MONTY_MOLE_01_HOLE_TERRITORY,
         .settings = &N(NpcSettings_MontyMole_GroundAmbush_Hole),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DISABLE_AI | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
@@ -97,20 +75,9 @@ NpcData N(NpcData_MontyMole_GroundAmbush)[] = {
 NpcData N(NpcData_MontyMole_WallAmbush)[] = {
     {
         .id = NPC_MontyMole_02,
-        .pos = { 1220.0f, -30.0f, 70.0f },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = FALSE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 1220, -30, 70 },
-                .wanderSize = { 50 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 1220, -30, 70 },
-                .detectSize = { 120 },
-            }
-        },
+        .pos = { GEN_NPC_MONTY_MOLE_02_VEC },
+        .yaw = GEN_NPC_MONTY_MOLE_02_DIR,
+        .territory = GEN_NPC_MONTY_MOLE_02_TERRITORY,
         .settings = &N(NpcSettings_MontyMole_WallAmbush),
         .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION,
         .drops = MONTY_MOLE_DROPS,
@@ -119,20 +86,9 @@ NpcData N(NpcData_MontyMole_WallAmbush)[] = {
     },
     {
         .id = NPC_MontyMole_02_Hole,
-        .pos = { 1220.0f, -30.0f, 70.0f },
-        .yaw = 0,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 1220, -30, 70 },
-                .wanderSize = { 0 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 0 },
-            }
-        },
+        .pos = { GEN_NPC_MONTY_MOLE_02_HOLE_VEC },
+        .yaw = GEN_NPC_MONTY_MOLE_02_HOLE_DIR,
+        .territory = GEN_NPC_MONTY_MOLE_02_HOLE_TERRITORY,
         .settings = &N(NpcSettings_MontyMole_WallAmbush_Hole),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DISABLE_AI | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
@@ -342,8 +298,9 @@ EvtScript N(EVS_NpcInit_Whacka_02) = {
 NpcData N(NpcData_Whacka)[] = {
     {
         .id = NPC_Whacka_01,
-        .pos = { 725.0f, -30.0f, 225.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_WHACKA_01_VEC },
+        .yaw = GEN_NPC_WHACKA_01_DIR,
+        .territory = GEN_NPC_WHACKA_01_TERRITORY,
         .init = &N(EVS_NpcInit_Whacka_01),
         .settings = &N(NpcSettings_Whacka),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -353,8 +310,9 @@ NpcData N(NpcData_Whacka)[] = {
     },
     {
         .id = NPC_Whacka_02,
-        .pos = { 725.0f, -30.0f, 225.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_WHACKA_02_VEC },
+        .yaw = GEN_NPC_WHACKA_02_DIR,
+        .territory = GEN_NPC_WHACKA_02_TERRITORY,
         .init = &N(EVS_NpcInit_Whacka_02),
         .settings = &N(NpcSettings_Whacka),
         .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_HAS_NO_SPRITE | ENEMY_FLAG_SKIP_BATTLE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER | ENEMY_FLAG_IGNORE_TOUCH | ENEMY_FLAG_IGNORE_JUMP,

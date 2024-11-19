@@ -61,7 +61,7 @@ EvtScript N(EVS_EnterMap) = {
 #include "../common/Flotsam.inc.c"
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_TOAD_TOWN_TUNNELS)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_TIK_09)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
     Call(MakeNpcs, TRUE, Ref(N(DefaultNPCs)))
@@ -78,28 +78,19 @@ EvtScript N(EVS_Main) = {
     Call(SetTexPanner, MODEL_o85, TEX_PANNER_1)
     Call(SetTexPanner, MODEL_o86, TEX_PANNER_1)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP(   70,  100,  100,  130)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     // waterfalls
     Call(SetTexPanner, MODEL_taki, TEX_PANNER_4)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_4)
-        TEX_PAN_PARAMS_STEP(  -50, -900,  -70,-1200)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_4
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     // water spreading
     Call(SetTexPanner, MODEL_takib, TEX_PANNER_5)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_5)
-        TEX_PAN_PARAMS_STEP(    0,-1400,-2600,  -60)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_5
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     // water merging and draining
@@ -108,10 +99,7 @@ EvtScript N(EVS_Main) = {
     Call(SetTexPanner, MODEL_o88, TEX_PANNER_6)
     Call(SetTexPanner, MODEL_o89, TEX_PANNER_6)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_6)
-        TEX_PAN_PARAMS_STEP(  200,  400,  250,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_6
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Call(SetRenderMode, MODEL_o90, RENDER_MODE_SURFACE_XLU_LAYER2)

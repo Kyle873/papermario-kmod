@@ -1,7 +1,7 @@
 #include "jan_11.h"
 
 EntryList N(Entrances) = {
-    [jan_11_ENTRY_0]    {  -90.0,    0.0,   61.0,   90.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {

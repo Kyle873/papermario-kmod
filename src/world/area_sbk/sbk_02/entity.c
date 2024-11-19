@@ -3,7 +3,7 @@
 
 EvtScript N(EVS_MakeEntities) = {
     IfGe(GB_StoryProgress, STORY_CH2_UNCOVERED_DRY_DRY_RUINS)
-        Call(MakeEntity, Ref(Entity_HeartBlock), -240, 60, -200, 0, 6, MAKE_ENTITY_END)
+        EVT_MAKE_ENTITY(HeartBlock, GEN_HEART_BLOCK_1_PARAMS)
     EndIf
     Return
     End

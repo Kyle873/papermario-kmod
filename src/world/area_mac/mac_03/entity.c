@@ -27,14 +27,14 @@ EvtScript N(EVS_MakeEntities) = {
     Call(GetDemoState, LVar0)
     IfEq(LVar0, DEMO_STATE_NONE)
         IfEq(GF_MAC03_BombedRock, FALSE)
-            Call(MakeEntity, Ref(Entity_BombableRock), -200, 0, 0, 0, MAKE_ENTITY_END)
-            Call(AssignScript, Ref(N(EVS_OnBlast_RailRock)))
+            EVT_MAKE_ENTITY(BombableRock, GEN_BOMBABLE_ROCK_1_PARAMS)
+            Call(AssignScript, Ref(GEN_BOMBABLE_ROCK_1_SCRIPT))
         EndIf
     EndIf
-    Call(MakeEntity, Ref(Entity_HiddenPanel), 525, 0, 175, 0, MODEL_o11, MAKE_ENTITY_END)
-    Call(AssignPanelFlag, GF_MAC03_HiddenPanel)
-    Call(MakeEntity, Ref(Entity_Signpost), 185, 20, -350, 0, MAKE_ENTITY_END)
-    Call(AssignScript, Ref(N(EVS_ReadSign_LilOInks)))
+    EVT_MAKE_ENTITY(HiddenPanel, GEN_HIDDEN_PANEL_1_PARAMS)
+    Call(AssignPanelFlag, GEN_HIDDEN_PANEL_1_FLAG)
+    EVT_MAKE_ENTITY(Signpost, GEN_SIGNPOST_1_PARAMS)
+    Call(AssignScript, Ref(GEN_SIGNPOST_1_SCRIPT))
     BindTrigger(Ref(N(EVS_OnInspect_StreetSign)), TRIGGER_WALL_PRESS_A, COLLIDER_sign, 1, 0)
     Return
     End

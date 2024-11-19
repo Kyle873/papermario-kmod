@@ -204,8 +204,9 @@ EvtScript N(EVS_NpcInit_KoopaBros) = {
 NpcData N(NpcData_KoopaBros)[] = {
     {
         .id = NPC_KoopaBros_01,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_KOOPA_BROS_01_VEC },
+        .yaw = GEN_NPC_KOOPA_BROS_01_DIR,
+        .territory = GEN_NPC_KOOPA_BROS_01_TERRITORY,
         .init = &N(EVS_NpcInit_KoopaBros),
         .settings = &N(NpcSettings_KoopaBros),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,
@@ -231,8 +232,9 @@ NpcData N(NpcData_KoopaBros)[] = {
     },
     {
         .id = NPC_KoopaBros_02,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 0,
+        .pos = { GEN_NPC_KOOPA_BROS_02_VEC },
+        .yaw = GEN_NPC_KOOPA_BROS_02_DIR,
+        .territory = GEN_NPC_KOOPA_BROS_02_TERRITORY,
         .init = &N(EVS_NpcInit_KoopaBros),
         .settings = &N(NpcSettings_KoopaBros),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_IGNORE_PLAYER_COLLISION,

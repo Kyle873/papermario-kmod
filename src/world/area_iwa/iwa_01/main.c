@@ -24,10 +24,7 @@ EvtScript N(EVS_StartTexPanners) = {
     Call(SetTexPanner, MODEL_o946, TEX_PANNER_1)
     Call(SetTexPanner, MODEL_o947, TEX_PANNER_1)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP(    0, -3000,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    0,     1,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,     0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     // foam and splashes
@@ -35,10 +32,7 @@ EvtScript N(EVS_StartTexPanners) = {
     Call(SetTexPanner, MODEL_o956, TEX_PANNER_C)
     Call(SetTexPanner, MODEL_o957, TEX_PANNER_C)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_C)
-        TEX_PAN_PARAMS_STEP(0x8000,    0,    0,    0)
-        TEX_PAN_PARAMS_FREQ(     4,    0,    0,    0)
-        TEX_PAN_PARAMS_INIT(     0,    0,    0,    0)
+        GEN_TEX_PANNER_C
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Return
@@ -55,7 +49,7 @@ EvtScript N(EVS_BindExitTriggers) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_MT_RUGGED)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     Call(N(SetupSlidingCheck))
     EVT_SETUP_CAMERA_DEFAULT(0, 0, 0)

@@ -12,8 +12,7 @@ const char STR_TIK_25[] = "tik_25";
 const char STR_TIK_23[] = "tik_23";
 
 EntryList N(Entrances) = {
-    [tik_24_ENTRY_0]    { -220.0,  -10.0,    0.0,   90.0 },
-    [tik_24_ENTRY_1]    {  320.0,  -10.0,    0.0,  270.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {

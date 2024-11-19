@@ -125,8 +125,9 @@ EvtScript N(EVS_NpcInit_Twink) = {
 
 NpcData N(NpcData_Twink) = {
     .id = NPC_Twink,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 90,
+    .pos = { GEN_NPC_TWINK_VEC },
+    .yaw = GEN_NPC_TWINK_DIR,
+    .territory = GEN_NPC_TWINK_TERRITORY,
     .init = &N(EVS_NpcInit_Twink),
     .settings = &N(NpcSettings_Twink),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -136,8 +137,9 @@ NpcData N(NpcData_Twink) = {
 
 NpcData N(NpcData_FlyingMagikoopa) = {
     .id = NPC_FlyingMagikoopa,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
+    .pos = { GEN_NPC_FLYING_MAGIKOOPA_VEC },
+    .yaw = GEN_NPC_FLYING_MAGIKOOPA_DIR,
+    .territory = GEN_NPC_FLYING_MAGIKOOPA_TERRITORY,
     .init = &N(EVS_NpcInit_FlyingMagikoopa),
     .settings = &N(NpcSettings_FlyingMagikoopa),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_NO_DROPS,
@@ -148,8 +150,9 @@ NpcData N(NpcData_FlyingMagikoopa) = {
 NpcData N(NpcData_Wishing)[] = {
     {
         .id = NPC_Toadette,
-        .pos = { 280.0f, -10.0f, -50.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_TOADETTE_VEC },
+        .yaw = GEN_NPC_TOADETTE_DIR,
+        .territory = GEN_NPC_TOADETTE_TERRITORY,
         .settings = &N(NpcSettings_Toad_Stationary),
         .flags = ENEMY_FLAG_PASSIVE,
         .drops = NO_DROPS,
@@ -157,8 +160,9 @@ NpcData N(NpcData_Wishing)[] = {
     },
     {
         .id = NPC_ToadKid,
-        .pos = { 330.0f, -10.0f, -40.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_TOAD_KID_VEC },
+        .yaw = GEN_NPC_TOAD_KID_DIR,
+        .territory = GEN_NPC_TOAD_KID_TERRITORY,
         .settings = &N(NpcSettings_Toad_Stationary),
         .flags = ENEMY_FLAG_PASSIVE,
         .drops = NO_DROPS,

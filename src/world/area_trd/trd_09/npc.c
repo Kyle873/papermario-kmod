@@ -546,20 +546,9 @@ EvtScript N(EVS_NpcInit_BillBlaster) = {
 NpcData N(NpcData_BillBlasters)[] = {
     {
         .id = NPC_BillBlaster_01,
-        .pos = { 1260.0f, 0.0f, -40.0f },
-        .yaw = 270,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 0, 0, 0 },
-                .wanderSize = { 0 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 0 },
-            }
-        },
+        .pos = { GEN_NPC_BILL_BLASTER_01_VEC },
+        .yaw = GEN_NPC_BILL_BLASTER_01_DIR,
+        .territory = GEN_NPC_BILL_BLASTER_01_TERRITORY,
         .init = &N(EVS_NpcInit_BillBlaster),
         .settings = &N(NpcSettings_BillBlaster),
         .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,
@@ -568,20 +557,9 @@ NpcData N(NpcData_BillBlasters)[] = {
     },
     {
         .id = NPC_BillBlaster_03,
-        .pos = { 1275.0f, 0.0f, 5.0f },
-        .yaw = 270,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 0, 0, 0 },
-                .wanderSize = { 0 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 0 },
-            }
-        },
+        .pos = { GEN_NPC_BILL_BLASTER_03_VEC },
+        .yaw = GEN_NPC_BILL_BLASTER_03_DIR,
+        .territory = GEN_NPC_BILL_BLASTER_03_TERRITORY,
         .settings = &N(NpcSettings_BillBlaster),
         .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,
         .drops = BILL_BLASTER_DROPS,
@@ -589,20 +567,9 @@ NpcData N(NpcData_BillBlasters)[] = {
     },
     {
         .id = NPC_BillBlaster_02,
-        .pos = { 1290.0f, 0.0f, 50.0f },
-        .yaw = 270,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 0, 0, 0 },
-                .wanderSize = { 0 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 0 },
-            }
-        },
+        .pos = { GEN_NPC_BILL_BLASTER_02_VEC },
+        .yaw = GEN_NPC_BILL_BLASTER_02_DIR,
+        .territory = GEN_NPC_BILL_BLASTER_02_TERRITORY,
         .settings = &N(NpcSettings_BillBlaster),
         .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,
         .drops = NO_DROPS,
@@ -693,20 +660,9 @@ EvtScript N(EVS_NpcInit_BulletBill_Demo) = {
 
 NpcData N(NpcData_BulletBill_Demo1) = {
     .id = NPC_BulletBill_Demo1,
-    .pos = { -100.0f, 11.0f, 50.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 0, 0, 0 },
-            .wanderSize = { 0 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 0, 0, 0 },
-            .detectSize = { 0 },
-        }
-    },
+    .pos = { GEN_NPC_BULLET_BILL_DEMO1_VEC },
+    .yaw = GEN_NPC_BULLET_BILL_DEMO1_DIR,
+    .territory = GEN_NPC_BULLET_BILL_DEMO1_TERRITORY,
     .init = &N(EVS_NpcInit_BulletBill_Demo),
     .initVarCount = 1,
     .initVar = { .value = 0 },
@@ -743,20 +699,9 @@ NpcData N(NpcData_BulletBill_Demo1) = {
 
 NpcData N(NpcData_BulletBill_Demo2) = {
     .id = NPC_BulletBill_Demo2,
-    .pos = { -150.0f, 11.0f, 5.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 0, 0, 0 },
-            .wanderSize = { 0 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 0, 0, 0 },
-            .detectSize = { 0 },
-        }
-    },
+    .pos = { GEN_NPC_BULLET_BILL_DEMO2_VEC },
+    .yaw = GEN_NPC_BULLET_BILL_DEMO2_DIR,
+    .territory = GEN_NPC_BULLET_BILL_DEMO2_TERRITORY,
     .init = &N(EVS_NpcInit_BulletBill_Demo),
     .initVarCount = 1,
     .initVar = { .value = 0 },
@@ -793,20 +738,9 @@ NpcData N(NpcData_BulletBill_Demo2) = {
 
 NpcData N(NpcData_BulletBill_Demo3) = {
     .id = NPC_BulletBill_Demo3,
-    .pos = { 120.0f, 11.0f, 50.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 0, 0, 0 },
-            .wanderSize = { 0 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 0, 0, 0 },
-            .detectSize = { 0 },
-        }
-    },
+    .pos = { GEN_NPC_BULLET_BILL_DEMO3_VEC },
+    .yaw = GEN_NPC_BULLET_BILL_DEMO3_DIR,
+    .territory = GEN_NPC_BULLET_BILL_DEMO3_TERRITORY,
     .init = &N(EVS_NpcInit_BulletBill_Demo),
     .initVarCount = 1,
     .initVar = { .value = 0 },
@@ -843,20 +777,9 @@ NpcData N(NpcData_BulletBill_Demo3) = {
 
 NpcData N(NpcData_BulletBill_Demo4) = {
     .id = NPC_BulletBill_Demo4,
-    .pos = { 330.0f, 11.0f, 5.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 0, 0, 0 },
-            .wanderSize = { 0 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 0, 0, 0 },
-            .detectSize = { 0 },
-        }
-    },
+    .pos = { GEN_NPC_BULLET_BILL_DEMO4_VEC },
+    .yaw = GEN_NPC_BULLET_BILL_DEMO4_DIR,
+    .territory = GEN_NPC_BULLET_BILL_DEMO4_TERRITORY,
     .init = &N(EVS_NpcInit_BulletBill_Demo),
     .initVarCount = 1,
     .initVar = { .value = 0 },
@@ -893,20 +816,9 @@ NpcData N(NpcData_BulletBill_Demo4) = {
 
 NpcData N(NpcData_BulletBill_Demo5) = {
     .id = NPC_BulletBill_Demo5,
-    .pos = { 380.0f, 11.0f, -40.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 0, 0, 0 },
-            .wanderSize = { 0 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 0, 0, 0 },
-            .detectSize = { 0 },
-        }
-    },
+    .pos = { GEN_NPC_BULLET_BILL_DEMO5_VEC },
+    .yaw = GEN_NPC_BULLET_BILL_DEMO5_DIR,
+    .territory = GEN_NPC_BULLET_BILL_DEMO5_TERRITORY,
     .init = &N(EVS_NpcInit_BulletBill_Demo),
     .initVarCount = 1,
     .initVar = { .value = 0 },

@@ -59,17 +59,7 @@ API_CALLABLE(N(PushPartnerTest)) {
 }
 
 EntryList N(Entrances) = {
-    [tst_04_ENTRY_0]    { -484.0,    0.0,    0.0,    0.0 },
-    [tst_04_ENTRY_1]    {  484.0,    0.0,    0.0,    0.0 },
-    [tst_04_ENTRY_2]    {    0.0,    0.0,    0.0,    0.0 },
-    [tst_04_ENTRY_3]    {    0.0,    0.0,    0.0,    0.0 },
-    [tst_04_ENTRY_4]    {    0.0,    0.0,    0.0,    0.0 },
-    [tst_04_ENTRY_5]    {    0.0,    0.0,    0.0,    0.0 },
-    [tst_04_ENTRY_6]    {    0.0,    0.0,    0.0,    0.0 },
-    [tst_04_ENTRY_7]    {    0.0,    0.0,    0.0,    0.0 },
-    [tst_04_ENTRY_8]    {    0.0,    0.0,    0.0,    0.0 },
-    [tst_04_ENTRY_9]    {    0.0,    0.0,    0.0,    0.0 },
-    [tst_04_ENTRY_A]    {  354.0,    0.0,  294.0,  117.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {
@@ -154,7 +144,7 @@ EvtScript N(EVS_UpdateSpinningWall) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_TESTING)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_DEFAULT(0, 0, 0)
     Call(MakeNpcs, FALSE, Ref(N(DefaultNPCs)))

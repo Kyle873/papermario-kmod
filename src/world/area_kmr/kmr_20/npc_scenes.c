@@ -24,8 +24,9 @@ EvtScript N(EVS_NpcInit_Luigi_Scenes) = {
 NpcData N(NpcData_Scenes)[] = {
     {
         .id = NPC_Scene_Parakarry,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 90,
+        .pos = { GEN_NPC_SCENE_PARAKARRY_VEC },
+        .yaw = GEN_NPC_SCENE_PARAKARRY_DIR,
+        .territory = GEN_NPC_SCENE_PARAKARRY_TERRITORY,
         .settings = &N(NpcSettings_Scenes),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
         .drops = NO_DROPS,
@@ -50,8 +51,9 @@ NpcData N(NpcData_Scenes)[] = {
     },
     {
         .id = NPC_Scene_Luigi,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 90,
+        .pos = { GEN_NPC_SCENE_LUIGI_VEC },
+        .yaw = GEN_NPC_SCENE_LUIGI_DIR,
+        .territory = GEN_NPC_SCENE_LUIGI_TERRITORY,
         .init = &N(EVS_NpcInit_Luigi_Scenes),
         .settings = &N(NpcSettings_Scenes),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_GRAVITY,

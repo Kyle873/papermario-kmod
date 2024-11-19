@@ -130,8 +130,9 @@ EvtScript N(EVS_NpcInit_Toadette_01) = {
 NpcData N(NpcData_TrainToad)[] = {
     {
         .id = NPC_TrainToad_01,
-        .pos = { -440.0f, 20.0f, 110.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_TRAIN_TOAD_01_VEC },
+        .yaw = GEN_NPC_TRAIN_TOAD_01_DIR,
+        .territory = GEN_NPC_TRAIN_TOAD_01_TERRITORY,
         .init = &N(EVS_NpcInit_TrainToad_01),
         .settings = &N(NpcSettings_TrainToad),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -141,8 +142,9 @@ NpcData N(NpcData_TrainToad)[] = {
     },
     {
         .id = NPC_TrainToad_02,
-        .pos = { -425.0f, 70.0f, -20.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_TRAIN_TOAD_02_VEC },
+        .yaw = GEN_NPC_TRAIN_TOAD_02_DIR,
+        .territory = GEN_NPC_TRAIN_TOAD_02_TERRITORY,
         .init = &N(EVS_NpcInit_TrainToad_02),
         .settings = &N(NpcSettings_TrainToad),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -153,8 +155,9 @@ NpcData N(NpcData_TrainToad)[] = {
 
 NpcData N(NpcData_Toad) = {
     .id = NPC_Toad,
-    .pos = { -254.0f, 20.0f, 165.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_TOAD_VEC },
+    .yaw = GEN_NPC_TOAD_DIR,
+    .territory = GEN_NPC_TOAD_TERRITORY,
     .init = &N(EVS_NpcInit_Toad),
     .settings = &N(NpcSettings_Toad_Stationary),
     .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -166,8 +169,9 @@ NpcData N(NpcData_Toad) = {
 NpcData N(NpcData_Toadette)[] = {
     {
         .id = NPC_Toadette_02,
-        .pos = { -562.0f, 0.0f, 384.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_TOADETTE_02_VEC },
+        .yaw = GEN_NPC_TOADETTE_02_DIR,
+        .territory = GEN_NPC_TOADETTE_02_TERRITORY,
         .init = &N(EVS_NpcInit_Toadette_02),
         .settings = &N(NpcSettings_Toad_Stationary),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -177,8 +181,9 @@ NpcData N(NpcData_Toadette)[] = {
     },
     {
         .id = NPC_Toadette_03,
-        .pos = { -582.0f, 0.0f, 406.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_TOADETTE_03_VEC },
+        .yaw = GEN_NPC_TOADETTE_03_DIR,
+        .territory = GEN_NPC_TOADETTE_03_TERRITORY,
         .init = &N(EVS_NpcInit_Toadette_02),
         .settings = &N(NpcSettings_Toad_Stationary),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -188,8 +193,9 @@ NpcData N(NpcData_Toadette)[] = {
     },
     {
         .id = NPC_Toadette_04,
-        .pos = { -524.0f, 0.0f, 411.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_TOADETTE_04_VEC },
+        .yaw = GEN_NPC_TOADETTE_04_DIR,
+        .territory = GEN_NPC_TOADETTE_04_TERRITORY,
         .init = &N(EVS_NpcInit_Toadette_02),
         .settings = &N(NpcSettings_Toad_Stationary),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -202,8 +208,9 @@ NpcData N(NpcData_Toadette)[] = {
 NpcData N(NpcData_Dryite)[] = {
     {
         .id = NPC_Dryite,
-        .pos = { -344.0f, 0.0f, 379.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_DRYITE_VEC },
+        .yaw = GEN_NPC_DRYITE_DIR,
+        .territory = GEN_NPC_DRYITE_TERRITORY,
         .init = &N(EVS_NpcInit_Dryite),
         .settings = &N(NpcSettings_Dryite),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -213,8 +220,9 @@ NpcData N(NpcData_Dryite)[] = {
     },
     {
         .id = NPC_Toadette_01,
-        .pos = { -760.0f, 0.0f, 160.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_TOADETTE_01_VEC },
+        .yaw = GEN_NPC_TOADETTE_01_DIR,
+        .territory = GEN_NPC_TOADETTE_01_TERRITORY,
         .init = &N(EVS_NpcInit_Toadette_01),
         .settings = &N(NpcSettings_Toad_Stationary),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,

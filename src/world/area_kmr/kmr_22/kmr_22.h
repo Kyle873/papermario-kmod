@@ -2,6 +2,7 @@
 /// @brief Goomba Region - Chapter Start
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

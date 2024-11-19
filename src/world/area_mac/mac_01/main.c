@@ -113,7 +113,7 @@ EvtScript N(EVS_EnterMap) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_TOAD_TOWN)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     Call(SetCamPerspective, CAM_DEFAULT, CAM_UPDATE_FROM_ZONE, 25, 90, 4096) // note: unusually large near clip dist: 90 vs 16
     Call(SetCamBGColor, CAM_DEFAULT, 0, 0, 0)
@@ -170,10 +170,7 @@ EvtScript N(EVS_Main) = {
     // merlon light shafts
     Call(SetTexPanner, MODEL_hikari, TEX_PANNER_3)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_3)
-        TEX_PAN_PARAMS_STEP(-100,    0, -200, -200)
-        TEX_PAN_PARAMS_FREQ(   1,    0,    1,    1)
-        TEX_PAN_PARAMS_INIT(   0,    0,    0,    0)
+        GEN_TEX_PANNER_3
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     BindTrigger(Ref(N(EVS_Merlon_GiveHint)), TRIGGER_WALL_PRESS_A, COLLIDER_o335, 1, 0)

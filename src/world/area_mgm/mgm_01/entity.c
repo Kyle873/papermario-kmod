@@ -11,8 +11,8 @@ EvtScript N(EVS_ReadSign_HowToPlay) = {
 };
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_Signpost), -55, -2, -80, 0, MAKE_ENTITY_END)
-    Call(AssignScript, Ref(N(EVS_ReadSign_HowToPlay)))
+    EVT_MAKE_ENTITY(Signpost, GEN_SIGNPOST_1_PARAMS)
+    Call(AssignScript, Ref(GEN_SIGNPOST_1_SCRIPT))
     Return
     End
 };

@@ -2,6 +2,7 @@
 /// @brief Dry Dry Desert - S3W2 Hidden AttackFX
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

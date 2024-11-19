@@ -2,9 +2,9 @@
 #include "entity.h"
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_SimpleSpring), 310, 0, 45, 0, 65, MAKE_ENTITY_END)
+    EVT_MAKE_ENTITY(SimpleSpring, GEN_SIMPLE_SPRING_1_PARAMS)
     Set(MV_SpringEntityIndex, LVar0)
-    Call(MakeEntity, Ref(Entity_SavePoint), 510, 60, 110, 0, MAKE_ENTITY_END)
+    EVT_MAKE_ENTITY(SavePoint, GEN_SAVE_POINT_1_PARAMS)
     Return
     End
 };

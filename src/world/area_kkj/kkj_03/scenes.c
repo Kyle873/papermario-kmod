@@ -82,10 +82,7 @@ EvtScript N(EVS_Scene_MeetingPeach) = {
 EvtScript N(EVS_TexPan_Clouds) = {
     Call(SetTexPanner, MODEL_o718, TEX_PANNER_2)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_2)
-        TEX_PAN_PARAMS_STEP( -200,    0,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    0,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_2
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Return

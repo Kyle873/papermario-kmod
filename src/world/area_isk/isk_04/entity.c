@@ -4,7 +4,7 @@
 
 EvtScript N(EVS_MakeEntities) = {
     IfEq(GF_ISK04_UnlockedDoor, FALSE)
-        Call(MakeEntity, Ref(Entity_Padlock), 600, -330, 100, 160, MAKE_ENTITY_END)
+        EVT_MAKE_ENTITY(Padlock, GEN_PADLOCK_1_PARAMS)
         Set(MV_RuinsLockEntityID, LVar0)
     EndIf
     PlayEffect(EFFECT_FLAME, FX_FLAME_RED, 504, -193, 43, Float(0.3), LVar0)

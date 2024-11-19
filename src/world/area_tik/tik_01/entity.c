@@ -62,8 +62,8 @@ EvtScript N(EVS_OnSwitchActivate) = {
 
 EvtScript N(EVS_MakeEntities) = {
     IfEq(GF_TIK01_Hammer2Block, FALSE)
-        Call(MakeEntity, Ref(Entity_Hammer2Block), -240, -10, 0, 0, MAKE_ENTITY_END)
-        Call(AssignScript, Ref(N(EVS_SmashBlock)))
+        EVT_MAKE_ENTITY(Hammer2Block, GEN_HAMMER2_BLOCK_1_PARAMS)
+        Call(AssignScript, Ref(GEN_HAMMER2_BLOCK_1_SCRIPT))
     Else
         Call(ModifyColliderFlags, MODIFY_COLLIDER_FLAGS_SET_BITS, COLLIDER_o64, COLLIDER_FLAGS_UPPER_MASK)
     EndIf
@@ -77,12 +77,9 @@ EvtScript N(EVS_MakeEntities) = {
             Call(N(SetEntityPosition), MV_Unk_01, 125, -10, 25)
         EndIf
     EndIf
-    Call(MakeEntity, Ref(Entity_BlueWarpPipe), 150, -10, -82, 0, tik_01_ENTRY_2,
-        Ref(N(EVS_GotoMap_kmr_02_3)), EVT_INDEX_OF_GAME_FLAG(GF_TIK01_WarpPipes), MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_BlueWarpPipe),  50, -10, -82, 0, tik_01_ENTRY_3,
-        Ref(N(EVS_GotoMap_nok_02_2)), EVT_INDEX_OF_GAME_FLAG(GF_TIK01_WarpPipes), MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_BlueWarpPipe), -50, -10, -82, 0, tik_01_ENTRY_4,
-        Ref(N(EVS_GotoMap_dro_01_2)), EVT_INDEX_OF_GAME_FLAG(GF_TIK01_WarpPipes), MAKE_ENTITY_END)
+    EVT_MAKE_ENTITY(BlueWarpPipe, GEN_BLUE_WARP_PIPE_1_PARAMS)
+    EVT_MAKE_ENTITY(BlueWarpPipe, GEN_BLUE_WARP_PIPE_2_PARAMS)
+    EVT_MAKE_ENTITY(BlueWarpPipe, GEN_BLUE_WARP_PIPE_3_PARAMS)
     Return
     End
 };

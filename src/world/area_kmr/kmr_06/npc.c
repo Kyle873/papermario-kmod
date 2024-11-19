@@ -5,20 +5,9 @@
 
 NpcData N(NpcData_SpikedGoomba) = {
     .id = NPC_SpikedGoomba,
-    .pos = { 160.0f, 0.0f, 30.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_RECT,
-            .centerPos  = { 160, 0, 30 },
-            .wanderSize = { 30, 20 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 160, 0, 30 },
-            .detectSize = { 300 },
-        }
-    },
+    .pos = { GEN_NPC_SPIKED_GOOMBA_VEC },
+    .yaw = GEN_NPC_SPIKED_GOOMBA_DIR,
+    .territory = GEN_NPC_SPIKED_GOOMBA_TERRITORY,
     .settings = &N(NpcSettings_SpikedGoomba_Wander),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
     .drops = SPIKED_GOOMBA_DROPS,
@@ -27,20 +16,9 @@ NpcData N(NpcData_SpikedGoomba) = {
 
 NpcData N(NpcData_Paragoomba) = {
     .id = NPC_Paragoomba,
-    .pos = { 525.0f, 60.0f, 15.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 525, 60, 15 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 525, 60, 15 },
-            .detectSize = { 300 },
-        }
-    },
+    .pos = { GEN_NPC_PARAGOOMBA_VEC },
+    .yaw = GEN_NPC_PARAGOOMBA_DIR,
+    .territory = GEN_NPC_PARAGOOMBA_TERRITORY,
     .settings = &N(NpcSettings_Paragoomba_Wander),
     .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = PARAGOOMBA_DROPS,

@@ -12,19 +12,11 @@ API_CALLABLE(N(ClearPeachDepressed)) {
 }
 
 Vec3f N(TwinkEnterPath)[] = {
-    {  520.0,    70.0,  -62.0 },
-    {  400.0,    57.0,   47.0 },
-    {  300.0,    50.0,   40.0 },
-    {  300.0,    50.0,  -10.0 },
-    {  320.0,    65.0,    0.0 },
+    GEN_PATH_7_PATH
 };
 
 Vec3f N(TwinkExitPath)[] = {
-    {  352.0,    50.0,   -2.0 },
-    {  300.0,    85.0,    0.0 },
-    {  350.0,   120.0,    0.0 },
-    {  400.0,   105.0,   -7.0 },
-    {  430.0,    90.0,  -15.0 },
+    GEN_PATH_8_PATH
 };
 
 EvtScript N(EVS_OpenDoor_Ch0) = {

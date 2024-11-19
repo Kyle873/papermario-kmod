@@ -89,20 +89,9 @@ EvtScript N(EVS_NpcInit_Goomba) = {
 
 NpcData N(NpcData_Goomba) = {
     .id = NPC_Goomba_Ambush,
-    .pos = { -33.0f, 30.0f, -25.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_RECT,
-            .centerPos  = { -33, 0, 30 },
-            .wanderSize = { 40, 20 },
-            .detectShape = SHAPE_RECT,
-            .detectPos  = { 200, 0, 0 },
-            .detectSize = { 400, 60 },
-        }
-    },
+    .pos = { GEN_NPC_GOOMBA_AMBUSH_VEC },
+    .yaw = GEN_NPC_GOOMBA_AMBUSH_DIR,
+    .territory = GEN_NPC_GOOMBA_AMBUSH_TERRITORY,
     .init = &N(EVS_NpcInit_Goomba),
     .settings = &N(NpcSettings_Goomba_Wander),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,

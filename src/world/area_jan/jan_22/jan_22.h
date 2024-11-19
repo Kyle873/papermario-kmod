@@ -2,6 +2,7 @@
 /// @brief Jade Jungle - Path to the Volcano
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

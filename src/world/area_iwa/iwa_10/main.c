@@ -39,7 +39,7 @@ API_CALLABLE(N(GetClockHandAngles)) {
 }
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_MT_RUGGED)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
 #if VERSION_PAL
@@ -69,10 +69,7 @@ EvtScript N(EVS_Main) = {
     Call(SetTexPanner, MODEL_o256, TEX_PANNER_2)
     Call(SetTexPanner, MODEL_o266, TEX_PANNER_2)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_2)
-        TEX_PAN_PARAMS_STEP(   0, -3000,    0,    0)
-        TEX_PAN_PARAMS_FREQ(   0,     1,    0,    0)
-        TEX_PAN_PARAMS_INIT(   0,     0,    0,    0)
+        GEN_TEX_PANNER_2
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     IfLt(GB_StoryProgress, STORY_CH2_SPOKE_WITH_PARAKARRY)

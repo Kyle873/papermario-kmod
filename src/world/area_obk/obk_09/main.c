@@ -31,7 +31,7 @@ EvtScript N(EVS_ExitDoors_obk_01_6) = EVT_EXIT_DOUBLE_DOOR_SET_SOUNDS(obk_09_ENT
     COLLIDER_tt2, MODEL_d2_2, MODEL_d2_1, DOOR_SOUNDS_CREAKY);
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_BOOS_MANSION)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
     Call(GetEntryID, LVar0)

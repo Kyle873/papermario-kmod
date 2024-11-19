@@ -2,6 +2,7 @@
 /// @brief Mt Rugged - Mt Rugged 4
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

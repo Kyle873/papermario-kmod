@@ -3,7 +3,7 @@
 #include "entity.h"
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeItemEntity, ITEM_TUBBA_CASTLE_KEY, -235, 25, -165, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_DGB16_Item_CastleKey1)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
     Return
     End
 };

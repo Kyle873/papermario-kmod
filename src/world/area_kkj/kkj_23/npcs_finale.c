@@ -6,10 +6,7 @@
 #include "world/common/npc/Peach.h"
 
 Vec3f N(FlyAwayPath)[] = {
-    {  250.0,    10.0, -240.0 },
-    {  220.0,     0.0, -260.0 },
-    {  205.0,    40.0, -280.0 },
-    {  170.0,   190.0, -300.0 },
+    GEN_PATH_1_PATH
 };
 
 API_CALLABLE(N(UpdatePropellerSoundPos)) {
@@ -170,8 +167,9 @@ EvtScript N(EVS_NpcInit_Peach) = {
 
 NpcData N(NpcData_Bowser_Body) = {
     .id = NPC_Bowser_Body,
-    .pos = { 0.0f, 0.0f, 0.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_BOWSER_BODY_VEC },
+    .yaw = GEN_NPC_BOWSER_BODY_DIR,
+    .territory = GEN_NPC_BOWSER_BODY_TERRITORY,
     .init = &N(EVS_NpcInit_Bowser_Body),
     .settings = &N(NpcSettings_Bowser),
     .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_KILL,
@@ -181,8 +179,9 @@ NpcData N(NpcData_Bowser_Body) = {
 
 NpcData N(NpcData_Bowser_Prop) = {
     .id = NPC_Bowser_Prop,
-    .pos = { 0.0f, 0.0f, 0.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_BOWSER_PROP_VEC },
+    .yaw = GEN_NPC_BOWSER_PROP_DIR,
+    .territory = GEN_NPC_BOWSER_PROP_TERRITORY,
     .init = &N(EVS_NpcInit_Bowser_Propeller),
     .settings = &N(NpcSettings_Dummy),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -192,8 +191,9 @@ NpcData N(NpcData_Bowser_Prop) = {
 
 NpcData N(NpcData_Peach) = {
     .id = NPC_Peach,
-    .pos = { 0.0f, 0.0f, 0.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_PEACH_VEC },
+    .yaw = GEN_NPC_PEACH_DIR,
+    .territory = GEN_NPC_PEACH_TERRITORY,
     .init = &N(EVS_NpcInit_Peach),
     .settings = &N(NpcSettings_Dummy),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_USE_PLAYER_SPRITE,

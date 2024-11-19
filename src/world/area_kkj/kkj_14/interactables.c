@@ -222,19 +222,13 @@ EvtScript N(EVS_TexPan_Fireplace) = {
     // embers
     Call(SetTexPanner, MODEL_o42, TEX_PANNER_5)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_5)
-        TEX_PAN_PARAMS_STEP(-110,   50,    0,    0)
-        TEX_PAN_PARAMS_FREQ(   1,    1,    0,    0)
-        TEX_PAN_PARAMS_INIT(   0,    0,    0,    0)
+        GEN_TEX_PANNER_5
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     // fire glow
     Call(SetTexPanner, MODEL_o157, TEX_PANNER_A)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_A)
-        TEX_PAN_PARAMS_STEP(   0,    0,   40,  130)
-        TEX_PAN_PARAMS_FREQ(   0,    0,    1,    1)
-        TEX_PAN_PARAMS_INIT(   0,    0,    0,    0)
+        GEN_TEX_PANNER_A
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Return

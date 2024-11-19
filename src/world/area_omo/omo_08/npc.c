@@ -100,8 +100,9 @@ EvtScript N(EVS_NpcInit_BoxedShyGuy) = {
 NpcData N(NpcData_Toads)[] = {
     {
         .id = NPC_Conductor,
-        .pos = { -145.0f, 50.0f, -110.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_CONDUCTOR_VEC },
+        .yaw = GEN_NPC_CONDUCTOR_DIR,
+        .territory = GEN_NPC_CONDUCTOR_TERRITORY,
         .init = &N(EVS_NpcInit_Conductor),
         .settings = &N(NpcSettings_TrainToad),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -111,8 +112,9 @@ NpcData N(NpcData_Toads)[] = {
     },
     {
         .id = NPC_TrainToad,
-        .pos = { -250.0f, 0.0f, 50.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_TRAIN_TOAD_VEC },
+        .yaw = GEN_NPC_TRAIN_TOAD_DIR,
+        .territory = GEN_NPC_TRAIN_TOAD_TERRITORY,
         .init = &N(EVS_NpcInit_TrainToad),
         .settings = &N(NpcSettings_TrainToad),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -124,20 +126,9 @@ NpcData N(NpcData_Toads)[] = {
 
 NpcData N(NpcData_ShyGuy_01) = {
     .id = NPC_ShyGuy_01,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -15, 0, 365 },
-            .wanderSize = { 100 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -15, 0, 365 },
-            .detectSize = { 120 },
-        }
-    },
+    .pos = { GEN_NPC_SHY_GUY_01_VEC },
+    .yaw = GEN_NPC_SHY_GUY_01_DIR,
+    .territory = GEN_NPC_SHY_GUY_01_TERRITORY,
     .init = &N(EVS_NpcInit_BoxedShyGuy),
     .settings = &N(NpcSettings_ShyGuy_Wander),
     .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,
@@ -147,20 +138,9 @@ NpcData N(NpcData_ShyGuy_01) = {
 
 NpcData N(NpcData_ShyGuy_02) = {
     .id = NPC_ShyGuy_02,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 64, 0, 275 },
-            .wanderSize = { 100 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 64, 0, 275 },
-            .detectSize = { 120 },
-        }
-    },
+    .pos = { GEN_NPC_SHY_GUY_02_VEC },
+    .yaw = GEN_NPC_SHY_GUY_02_DIR,
+    .territory = GEN_NPC_SHY_GUY_02_TERRITORY,
     .init = &N(EVS_NpcInit_BoxedShyGuy),
     .settings = &N(NpcSettings_ShyGuy_Wander),
     .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,
@@ -170,20 +150,9 @@ NpcData N(NpcData_ShyGuy_02) = {
 
 NpcData N(NpcData_ShyGuy_03) = {
     .id = NPC_ShyGuy_03,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 145, 0, 365 },
-            .wanderSize = { 100 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 145, 0, 365 },
-            .detectSize = { 120 },
-        }
-    },
+    .pos = { GEN_NPC_SHY_GUY_03_VEC },
+    .yaw = GEN_NPC_SHY_GUY_03_DIR,
+    .territory = GEN_NPC_SHY_GUY_03_TERRITORY,
     .init = &N(EVS_NpcInit_BoxedShyGuy),
     .settings = &N(NpcSettings_ShyGuy_Wander),
     .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,
@@ -193,20 +162,9 @@ NpcData N(NpcData_ShyGuy_03) = {
 
 NpcData N(NpcData_ShyGuy_04) = {
     .id = NPC_ShyGuy_04,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 224, 0, 275 },
-            .wanderSize = { 100 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 224, 0, 275 },
-            .detectSize = { 120 },
-        }
-    },
+    .pos = { GEN_NPC_SHY_GUY_04_VEC },
+    .yaw = GEN_NPC_SHY_GUY_04_DIR,
+    .territory = GEN_NPC_SHY_GUY_04_TERRITORY,
     .init = &N(EVS_NpcInit_BoxedShyGuy),
     .settings = &N(NpcSettings_ShyGuy_Wander),
     .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,

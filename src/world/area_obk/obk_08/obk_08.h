@@ -2,6 +2,7 @@
 /// @brief Boo's Mansion - Record Room
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

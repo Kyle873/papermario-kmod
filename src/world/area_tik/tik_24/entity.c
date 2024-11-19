@@ -10,22 +10,22 @@ EvtScript N(EVS_OnSmashBlock) = {
 
 EvtScript N(EVS_MakeEntities) = {
     IfEq(GF_TIK24_Hammer3Block, FALSE)
-        Call(MakeEntity, Ref(Entity_Hammer3Block), -240, -10, 0, 0, MAKE_ENTITY_END)
-        Call(AssignScript, Ref(N(EVS_OnSmashBlock)))
+        EVT_MAKE_ENTITY(Hammer3Block, GEN_HAMMER3_BLOCK_1_PARAMS)
+        Call(AssignScript, Ref(GEN_HAMMER3_BLOCK_1_SCRIPT))
     Else
         Call(ModifyColliderFlags, MODIFY_COLLIDER_FLAGS_SET_BITS, COLLIDER_o44, COLLIDER_FLAGS_UPPER_MASK)
     EndIf
     Call(ModifyColliderFlags, MODIFY_COLLIDER_FLAGS_SET_BITS, COLLIDER_o45, COLLIDER_FLAGS_UPPER_MASK)
-    Call(MakeEntity, Ref(Entity_HiddenYellowBlock), 50, 80, -75, 0, ITEM_LIFE_SHROOM, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_TIK24_HiddenItem_LifeShroom)
-    Call(MakeEntity, Ref(Entity_YellowBlock), -50, 80, -75, 0, ITEM_COIN, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_TIK24_ItemBlock_CoinA)
-    Call(MakeEntity, Ref(Entity_YellowBlock), 150, 80, -75, 0, ITEM_COIN, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_TIK24_ItemBlock_CoinB)
-    Call(MakeEntity, Ref(Entity_BrickBlock), -100, 80, -75, 0, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_BrickBlock), 0, 80, -75, 0, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_BrickBlock), 100, 80, -75, 0, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_BrickBlock), 200, 80, -75, 0, MAKE_ENTITY_END)
+    EVT_MAKE_ENTITY(HiddenYellowBlock, GEN_HIDDEN_YELLOW_BLOCK_1_PARAMS)
+    Call(AssignBlockFlag, GEN_HIDDEN_YELLOW_BLOCK_1_FLAG)
+    EVT_MAKE_ENTITY(YellowBlock, GEN_YELLOW_BLOCK_1_PARAMS)
+    Call(AssignBlockFlag, GEN_YELLOW_BLOCK_1_FLAG)
+    EVT_MAKE_ENTITY(YellowBlock, GEN_YELLOW_BLOCK_2_PARAMS)
+    Call(AssignBlockFlag, GEN_YELLOW_BLOCK_2_FLAG)
+    EVT_MAKE_ENTITY(BrickBlock, GEN_BRICK_BLOCK_1_PARAMS)
+    EVT_MAKE_ENTITY(BrickBlock, GEN_BRICK_BLOCK_2_PARAMS)
+    EVT_MAKE_ENTITY(BrickBlock, GEN_BRICK_BLOCK_3_PARAMS)
+    EVT_MAKE_ENTITY(BrickBlock, GEN_BRICK_BLOCK_4_PARAMS)
     Return
     End
 };

@@ -80,7 +80,7 @@ EvtScript N(EVS_SummonGateBlock) = {
     PlayEffect(EFFECT_GATHER_ENERGY_PINK, 1, 326, 150, 261, 1, 60)
     Wait(3 * DT)
     PlayEffect(EFFECT_GATHER_ENERGY_PINK, 1, 326, 150, 261, 1, 60)
-    Call(MakeEntity, Ref(Entity_Hammer1Block), 326, 120, 261, 148, MAKE_ENTITY_END)
+    EVT_MAKE_ENTITY(Hammer1Block, GEN_HAMMER1_BLOCK_1_PARAMS)
     Set(LVarA, LVar0)
     Call(AssignScript, Ref(N(EVS_OnSmash_GateBlock)))
     Call(N(AnimateBlockScale))
@@ -124,8 +124,8 @@ EvtScript N(EVS_MakeEntities) = {
     Switch(GB_StoryProgress)
         CaseLt(STORY_CH0_GATE_CRUSHED)
         CaseLt(STORY_CH0_SMASHED_GATE_BLOCK)
-            Call(MakeEntity, Ref(Entity_Hammer1BlockWideX), 326, 0, 261, 270, MAKE_ENTITY_END)
-            Call(AssignScript, Ref(N(EVS_OnSmash_GateBlock)))
+            EVT_MAKE_ENTITY(Hammer1BlockWideX, GEN_HAMMER1_BLOCK_WIDE_X_1_PARAMS)
+            Call(AssignScript, Ref(GEN_HAMMER1_BLOCK_WIDE_X_1_SCRIPT))
         CaseLt(STORY_CH0_TWINK_GAVE_LUCKY_STAR)
             Call(ModifyColliderFlags, MODIFY_COLLIDER_FLAGS_SET_BITS, COLLIDER_tt2, COLLIDER_FLAGS_UPPER_MASK)
     EndSwitch
@@ -137,10 +137,10 @@ EvtScript N(EVS_MakeEntities) = {
             EndIf
         EndIf
     EndIf
-    Call(MakeEntity, Ref(Entity_BlueWarpPipe), 0, 0, 355, 0, kmr_02_ENTRY_3, Ref(N(EVS_GotoMap_tik_01_2)), EVT_INDEX_OF_GAME_FLAG(GF_KMR02_WarpPipe), MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_SavePoint), 250, 60, 75, -15, MAKE_ENTITY_END)
+    EVT_MAKE_ENTITY(BlueWarpPipe, GEN_BLUE_WARP_PIPE_1_PARAMS)
+    EVT_MAKE_ENTITY(SavePoint, GEN_SAVE_POINT_1_PARAMS)
     IfGe(GB_StoryProgress, STORY_CH0_TWINK_GAVE_LUCKY_STAR)
-        Call(MakeItemEntity, ITEM_SHOOTING_STAR, 510, 0, -340, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_KMR02_Item_ShootingStar)
+        EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
     EndIf
     Return
     End

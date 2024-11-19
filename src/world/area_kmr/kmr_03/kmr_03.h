@@ -2,6 +2,7 @@
 /// @brief Goomba Region - Bottom of the Cliff
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

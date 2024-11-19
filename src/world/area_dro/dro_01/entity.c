@@ -14,7 +14,7 @@ EvtScript N(EVS_WarpPipeExit) = {
 };
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_SavePoint), -211, 60, -50, 30, MAKE_ENTITY_END)
+    EVT_MAKE_ENTITY(SavePoint, GEN_SAVE_POINT_1_PARAMS)
     IfEq(GF_DRO01_WarpPipe, FALSE)
         IfEq(GF_TIK01_WarpPipes, TRUE)
             Call(GetEntryID, LVar0)
@@ -23,9 +23,7 @@ EvtScript N(EVS_MakeEntities) = {
             EndIf
         EndIf
     EndIf
-    Call(MakeEntity, Ref(Entity_BlueWarpPipe), 430, 0, -120, 0,
-        dro_01_ENTRY_2, Ref(N(EVS_WarpPipeExit)),
-        EVT_INDEX_OF_GAME_FLAG(GF_DRO01_WarpPipe), MAKE_ENTITY_END)
+    EVT_MAKE_ENTITY(BlueWarpPipe, GEN_BLUE_WARP_PIPE_1_PARAMS)
     Return
     End
 };

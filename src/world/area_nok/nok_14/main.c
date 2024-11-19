@@ -36,39 +36,26 @@ EvtScript N(EVS_SetupTexPan) = {
     Call(SetTexPanner, MODEL_hana3, TEX_PANNER_0)
     Call(SetTexPanner, MODEL_hana4, TEX_PANNER_0)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_0)
-        TEX_PAN_PARAMS_MAX(0x8000)
-        TEX_PAN_PARAMS_STEP(0x4000,    0,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    12,    0,    0,    0)
-        TEX_PAN_PARAMS_INIT(     0,    0,    0,    0)
+        GEN_TEX_PANNER_0
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     // water
     Call(SetTexPanner, MODEL_suimen1, TEX_PANNER_1)
     Call(SetTexPanner, MODEL_suimen2, TEX_PANNER_1)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP( -100,    0,  600,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    0,    1,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Call(SetTexPanner, MODEL_kabemizu1, TEX_PANNER_2)
     Call(SetTexPanner, MODEL_kabemizu2, TEX_PANNER_2)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_2)
-        TEX_PAN_PARAMS_STEP( -100,    0,  400,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    0,    1,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_2
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     // waterfall
     Call(SetTexPanner, MODEL_taki1, TEX_PANNER_3)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_3)
-        TEX_PAN_PARAMS_STEP(    0, -1000,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    0,     1,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,     0,    0,    0)
+        GEN_TEX_PANNER_3
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Return
@@ -94,7 +81,7 @@ EvtScript N(EVS_UpdateEnounterStages) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_PLEASANT_PATH)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_DEFAULT(0, 0, 0)
     Call(MakeNpcs, FALSE, Ref(N(DefaultNPCs)))

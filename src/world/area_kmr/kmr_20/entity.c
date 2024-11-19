@@ -120,23 +120,23 @@ EvtScript N(EVS_BreakBlock_Brick) = {
 };
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_ScriptSpring), -150, -80, -50, 0, MAKE_ENTITY_END)
-    Call(AssignScript, Ref(N(EVS_UseSpring_Basement)))
+    EVT_MAKE_ENTITY(ScriptSpring, GEN_SCRIPT_SPRING_1_PARAMS)
+    Call(AssignScript, Ref(GEN_SCRIPT_SPRING_1_SCRIPT))
     Call(SetEntityCullMode, 1)
     Switch(GB_StoryProgress)
         CaseLt(STORY_CH1_STAR_SPRIT_DEPARTED)
         CaseLt(STORY_CH2_STAR_SPRIT_DEPARTED)
-            Call(MakeEntity, Ref(Entity_BombableRock), 300, 0, 150, 0, MAKE_ENTITY_END)
-            Call(AssignScript, Ref(N(EVS_BlastRock)))
+            EVT_MAKE_ENTITY(BombableRock, GEN_BOMBABLE_ROCK_1_PARAMS)
+            Call(AssignScript, Ref(GEN_BOMBABLE_ROCK_1_SCRIPT))
         CaseLt(STORY_CH3_STAR_SPIRIT_RESCUED)
         CaseLt(STORY_CH4_STAR_SPRIT_DEPARTED)
         CaseLt(STORY_CH5_STAR_SPRIT_DEPARTED)
         CaseLt(STORY_CH6_STAR_SPIRIT_RESCUED)
-            Call(MakeEntity, Ref(Entity_Hammer3Block), 300, 0, 150, 55, MAKE_ENTITY_END)
-            Call(AssignScript, Ref(N(EVS_SmashBlock)))
+            EVT_MAKE_ENTITY(Hammer3Block, GEN_HAMMER3_BLOCK_1_PARAMS)
+            Call(AssignScript, Ref(GEN_HAMMER3_BLOCK_1_SCRIPT))
         CaseLt(STORY_CH7_STAR_SPRIT_DEPARTED)
-            Call(MakeEntity, Ref(Entity_BrickBlock), 300, 90, 150, 55, MAKE_ENTITY_END)
-            Call(AssignScript, Ref(N(EVS_BreakBlock_Brick)))
+            EVT_MAKE_ENTITY(BrickBlock, GEN_BRICK_BLOCK_1_PARAMS)
+            Call(AssignScript, Ref(GEN_BRICK_BLOCK_1_SCRIPT))
         CaseLt(STORY_EPILOGUE)
     EndSwitch
     Return

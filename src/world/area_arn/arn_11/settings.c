@@ -1,7 +1,7 @@
 #include "arn_11.h"
 
 EntryList N(Entrances) = {
-    [arn_11_ENTRY_0]    { -165.0,    0.0,    0.0,   90.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {

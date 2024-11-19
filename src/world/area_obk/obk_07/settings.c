@@ -1,7 +1,7 @@
 #include "obk_07.h"
 
 EntryList N(Entrances) = {
-    [obk_07_ENTRY_0]    {   68.0,    0.0,  235.0,    0.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {

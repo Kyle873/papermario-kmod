@@ -10,15 +10,11 @@ EvtScript N(EVS_NpcInit_TwinkEndCh4) = {
 };
 
 Vec3f N(FlightPath_TwinkArrive)[] = {
-    {  -70.0,   106.0,    0.0 },
-    {  -50.0,    30.0,    0.0 },
-    {    0.0,     0.0,    0.0 },
+    GEN_PATH_1_PATH
 };
 
 Vec3f N(FlightPath_TwinkDepart)[] = {
-    {    0.0,     0.0,    0.0 },
-    {  -50.0,    30.0,    0.0 },
-    {  -70.0,   106.0,    0.0 },
+    GEN_PATH_2_PATH
 };
 
 EvtScript N(EVS_NpcIdle_TwinkStartCh4) = {

@@ -3,8 +3,8 @@
 
 EvtScript N(EVS_MakeEntities) = {
     IfEq(GF_KPA16_ShutOffLava, FALSE)
-        Call(MakeEntity, Ref(Entity_BlueSwitch), 470, 230, -145, 0, MAKE_ENTITY_END)
-        Call(AssignSwitchFlag, EVT_INDEX_OF_AREA_FLAG(AF_KPA16_HitSwitch))
+        EVT_MAKE_ENTITY(BlueSwitch, GEN_BLUE_SWITCH_1_PARAMS)
+        Call(AssignSwitchFlag, EVT_INDEX_OF_AREA_FLAG(GEN_BLUE_SWITCH_1_FLAG))
     EndIf
     Return
     End

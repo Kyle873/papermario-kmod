@@ -6,7 +6,7 @@ s32 N(map_init)(void) {
 }
 
 EntryList N(Entrances) = {
-    [end_00_ENTRY_0]    {    0.0,    0.0,    0.0,    0.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {

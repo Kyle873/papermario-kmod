@@ -280,20 +280,9 @@ NpcSettings N(NpcSettings_Buzzar) = {
 
 NpcData N(NpcData_Cleft) = {
     .id = NPC_Cleft,
-    .pos = { -412.0f, -250.0f, 143.0f },
-    .yaw = 0,
-    .territory = {
-        .wander = {
-            .isFlying = FALSE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -412, -250, 143 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_RECT,
-            .detectPos  = { -355, -250, 105 },
-            .detectSize = { 175, 195 },
-        }
-    },
+    .pos = { GEN_NPC_CLEFT_VEC },
+    .yaw = GEN_NPC_CLEFT_DIR,
+    .territory = GEN_NPC_CLEFT_TERRITORY,
     .settings = &N(NpcSettings_Cleft),
     .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_FLYING,
     .drops = CLEFT_DROPS,
@@ -303,8 +292,9 @@ NpcData N(NpcData_Cleft) = {
 
 NpcData N(NpcData_Buzzar) = {
     .id = NPC_Buzzar,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
+    .pos = { GEN_NPC_BUZZAR_VEC },
+    .yaw = GEN_NPC_BUZZAR_DIR,
+    .territory = GEN_NPC_BUZZAR_TERRITORY,
     .settings = &N(NpcSettings_Buzzar),
     .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_NO_DROPS,
     .drops = {

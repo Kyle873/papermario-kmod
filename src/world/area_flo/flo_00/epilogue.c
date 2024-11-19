@@ -9,10 +9,7 @@ NpcSettings N(NpcSettings_Lakilester_Epilogue) = {
 #include "world/common/npc/Parakarry.inc.c"
 
 Vec3f N(D_80245E88_CA3DA8)[] = {
-    { 266.0f,  20.0f, 322.0f },
-    { 310.0f,  30.0f, 312.0f },
-    { 346.0f,  90.0f, 300.0f },
-    { 400.0f, 200.0f, 287.0f },
+    GEN_PATH_1_PATH
 };
 
 EvtScript N(EVS_Scene_Epilogue) = {
@@ -78,8 +75,9 @@ EvtScript N(EVS_NpcInit_Parakarry_Epilogue) = {
 NpcData N(NpcData_Lakilester_Epilogue)[] = {
     {
         .id = NPC_Lakilester_Epilogue,
-        .pos = { 144.0f, 0.0f, 374.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_LAKILESTER_EPILOGUE_VEC },
+        .yaw = GEN_NPC_LAKILESTER_EPILOGUE_DIR,
+        .territory = GEN_NPC_LAKILESTER_EPILOGUE_TERRITORY,
         .init = &N(EVS_NpcInit_Lakilester_Epilogue),
         .settings = &N(NpcSettings_Lakilester_Epilogue),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_FLYING,
@@ -105,8 +103,9 @@ NpcData N(NpcData_Lakilester_Epilogue)[] = {
     },
     {
         .id = NPC_Lakilulu_Epilogue,
-        .pos = { 198.0f, 0.0f, 363.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_LAKILULU_EPILOGUE_VEC },
+        .yaw = GEN_NPC_LAKILULU_EPILOGUE_DIR,
+        .territory = GEN_NPC_LAKILULU_EPILOGUE_TERRITORY,
         .init = &N(EVS_NpcInit_Lakilulu_Epilogue),
         .settings = &N(NpcSettings_Lakilester_Epilogue),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_FLYING,
@@ -132,8 +131,9 @@ NpcData N(NpcData_Lakilester_Epilogue)[] = {
     },
     {
         .id = NPC_Parakarry_Epilogue,
-        .pos = { 266.0f, 0.0f, 322.0f },
-        .yaw = 0,
+        .pos = { GEN_NPC_PARAKARRY_EPILOGUE_VEC },
+        .yaw = GEN_NPC_PARAKARRY_EPILOGUE_DIR,
+        .territory = GEN_NPC_PARAKARRY_EPILOGUE_TERRITORY,
         .init = &N(EVS_NpcInit_Parakarry_Epilogue),
         .settings = &N(NpcSettings_Parakarry),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_FLYING,

@@ -37,14 +37,14 @@ EvtScript N(EVS_UnlockPrompt_FrontDoor) = {
 
 EvtScript N(EVS_MakeEntities) = {
     IfEq(GF_KPA62_UnlockedFrontDoor, FALSE)
-        Call(MakeEntity, Ref(Entity_Padlock), -200, 10, -207, 0, MAKE_ENTITY_END)
+        EVT_MAKE_ENTITY(Padlock, GEN_PADLOCK_1_PARAMS)
         Set(MV_PadLockEntityID, LVar0)
         BindPadlock(Ref(N(EVS_UnlockPrompt_FrontDoor)), TRIGGER_WALL_PRESS_A, EVT_ENTITY_INDEX(0), Ref(N(KeyList_FrontDoor)), 0, 1)
     Else
         BindTrigger(Ref(N(EVS_ExitDoor_kpa_70_0)), TRIGGER_WALL_PRESS_A, COLLIDER_deilittn, 1, 0)
     EndIf
-    Call(MakeEntity, Ref(Entity_RedBlock), -532, 145, -59, 0, ITEM_DEEP_FOCUS_C, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_KPA62_BadgeBlock_DeepFocus3)
+    EVT_MAKE_ENTITY(RedBlock, GEN_RED_BLOCK_1_PARAMS)
+    Call(AssignBlockFlag, GEN_RED_BLOCK_1_FLAG)
     Return
     End
 };

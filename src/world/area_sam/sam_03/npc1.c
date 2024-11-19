@@ -147,8 +147,9 @@ EvtScript N(EVS_NpcInit_JrTroopaHitbox) = {
 NpcData N(NpcData_JrTroopa)[] = {
     {
         .id = NPC_JrTroopa,
-        .pos = { 261.0f, 0.0f, -76.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_JR_TROOPA_VEC },
+        .yaw = GEN_NPC_JR_TROOPA_DIR,
+        .territory = GEN_NPC_JR_TROOPA_TERRITORY,
         .init = &N(EVS_NpcInit_JrTroopa),
         .settings = &N(NpcSettings_JrTroopa),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -158,8 +159,9 @@ NpcData N(NpcData_JrTroopa)[] = {
     },
     {
         .id = NPC_JrTroopa_Hitbox,
-        .pos = { 261.0f, 0.0f, -76.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_JR_TROOPA_HITBOX_VEC },
+        .yaw = GEN_NPC_JR_TROOPA_HITBOX_DIR,
+        .territory = GEN_NPC_JR_TROOPA_HITBOX_TERRITORY,
         .init = &N(EVS_NpcInit_JrTroopaHitbox),
         .settings = &N(NpcSettings_JrTroopa),
         .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_SKIP_BATTLE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER | ENEMY_FLAG_IGNORE_TOUCH | ENEMY_FLAG_IGNORE_SPIN,

@@ -54,7 +54,7 @@ EvtScript N(EVS_Main) = {
     IfEq(GB_StoryProgress, STORY_CH5_TRADED_VASE_FOR_SEED)
         Set(GB_StoryProgress, STORY_CH5_RETURNED_TO_TOAD_TOWN)
     EndIf
-    Set(GB_WorldLocation, LOCATION_TOAD_TOWN)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
     Set(AF_MAC_16, FALSE)
@@ -94,10 +94,7 @@ EvtScript N(EVS_Main) = {
     EndSwitch
     Call(SetTexPanner, MODEL_hori, TEX_PANNER_1)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP(  100,   40,  200,  -40)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Exec(N(EVS_SetupRooms))

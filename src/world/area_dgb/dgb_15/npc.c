@@ -164,27 +164,9 @@ EvtScript N(EVS_NpcInit_Tubba) = {
 
 NpcData N(NpcData_Tubba) = {
     .id = NPC_Tubba,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
-    .territory = {
-        .patrol = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .numPoints  = 7,
-            .points  = {
-                { -500, 0, 200 },
-                { -700, 0, 200 },
-                { -900, 0, 200 },
-                { -1000, 0, 200 },
-                { -800, 0, 200 },
-                { -600, 0, 200 },
-                { -400, 0, 200 },
-            },
-            .detectShape = SHAPE_RECT,
-            .detectPos  = { -500, 0, 200 },
-            .detectSize = { 1000, 250 },
-        }
-    },
+    .pos = { GEN_NPC_TUBBA_VEC },
+    .yaw = GEN_NPC_TUBBA_DIR,
+    .territory = GEN_NPC_TUBBA_TERRITORY,
     .init = &N(EVS_NpcInit_Tubba),
     .settings = &N(NpcSettings_TubbaBlubba),
     .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_NO_DROPS,

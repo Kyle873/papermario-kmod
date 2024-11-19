@@ -2,6 +2,7 @@
 /// @brief Bowser's Castle - Hall to Guard Door 1
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

@@ -14,9 +14,9 @@ EvtScript N(EVS_OpenChest_BooWeight) = {
 };
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_Chest), 170, 0, -160, 0, 0, MAKE_ENTITY_END)
-    Call(AssignChestFlag, GF_OBK07_Chest_Weight)
-    Call(AssignScript, Ref(N(EVS_OpenChest_BooWeight)))
+    EVT_MAKE_ENTITY(Chest, GEN_CHEST_1_PARAMS)
+    Call(AssignChestFlag, GEN_CHEST_1_FLAG)
+    Call(AssignScript, Ref(GEN_CHEST_1_SCRIPT))
     Return
     End
 };

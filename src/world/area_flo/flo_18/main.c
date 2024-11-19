@@ -17,14 +17,14 @@ EvtScript N(EVS_BindExitTriggers) = {
 };
 
 LavaReset N(SafeFloorColliders)[] = {
-    { .colliderID = COLLIDER_o138, .pos = { -200.0,    0.0,  120.0 }},
-    { .colliderID = COLLIDER_o140, .pos = {    0.0,    0.0,  120.0 }},
-    { .colliderID = COLLIDER_o142, .pos = {  170.0,    0.0,  120.0 }},
+    { .colliderID = COLLIDER_o138, .pos = { GEN_LAVA_RESET_O138_VEC }},
+    { .colliderID = COLLIDER_o140, .pos = { GEN_LAVA_RESET_O140_VEC }},
+    { .colliderID = COLLIDER_o142, .pos = { GEN_LAVA_RESET_O142_VEC }},
     { .colliderID = NO_COLLIDER }
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_FLOWER_FIELDS)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
     Call(MakeNpcs, FALSE, Ref(N(DefaultNPCs)))
@@ -42,10 +42,7 @@ EvtScript N(EVS_Main) = {
     Call(SetTexPanner, MODEL_o58, TEX_PANNER_1)
     Call(SetTexPanner, MODEL_o60, TEX_PANNER_1)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP( -140,    0,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    0,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Call(SetTexPanner, MODEL_o49, TEX_PANNER_2)
@@ -54,10 +51,7 @@ EvtScript N(EVS_Main) = {
     Call(SetTexPanner, MODEL_o57, TEX_PANNER_2)
     Call(SetTexPanner, MODEL_o59, TEX_PANNER_2)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_2)
-        TEX_PAN_PARAMS_STEP( -200,    0,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    0,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_2
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Call(GetEntryID, LVar0)

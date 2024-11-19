@@ -40,11 +40,11 @@ EvtScript N(EVS_OpenLockedDoor) = {
 
 EvtScript N(EVS_MakeEntities) = {
     IfEq(GF_DGB03_UnlockedThirdFloor, FALSE)
-        Call(MakeEntity, Ref(Entity_Padlock), -355, 218, 75, 80, MAKE_ENTITY_END)
+        EVT_MAKE_ENTITY(Padlock, GEN_PADLOCK_1_PARAMS)
         Call(AssignScript, Ref(N(EVS_OpenLockedDoor)))
         Set(MV_PadlockEntityID, LVar0)
     EndIf
-    Call(MakeItemEntity, ITEM_STAR_PIECE, 0, 75, 100, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_DGB03_Item_StarPiece)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
     Return
     End
 };

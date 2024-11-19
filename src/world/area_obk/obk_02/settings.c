@@ -1,9 +1,7 @@
 #include "obk_02.h"
 
 EntryList N(Entrances) = {
-    [obk_02_ENTRY_0]    {   67.0,    0.0,  235.0,    0.0 },
-    [obk_02_ENTRY_1]    {    0.0, -210.0,  235.0,    0.0 },
-    [obk_02_ENTRY_2]    {  220.0, -210.0,   65.0,  270.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {

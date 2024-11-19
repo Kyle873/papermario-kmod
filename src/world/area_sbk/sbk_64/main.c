@@ -4,10 +4,7 @@ extern EvtScript N(EVS_Main);
 extern EvtScript N(EVS_MakeEntities);
 
 EntryList N(Entrances) = {
-    [sbk_64_ENTRY_0]    { -475.0,    0.0,    0.0,   90.0 },
-    [sbk_64_ENTRY_1]    {  475.0,    0.0,    0.0,  270.0 },
-    [sbk_64_ENTRY_2]    {    0.0,    0.0, -475.0,  180.0 },
-    [sbk_64_ENTRY_3]    {    0.0,    0.0,  475.0,    0.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {
@@ -33,7 +30,7 @@ EvtScript N(EVS_BindExitTriggers) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_DRY_DRY_DESERT)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     IfEq(GB_StoryProgress, STORY_CH2_GOT_PULSE_STONE)
         Call(DisablePulseStone, FALSE)

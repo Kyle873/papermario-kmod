@@ -2,15 +2,15 @@
 #include "entity.h"
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_MulticoinBlock), 0, 60, -100, 0, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_SBK25_MultiCoinBrickA)
-    Call(MakeEntity, Ref(Entity_MulticoinBlock), 120, 60, 185, 0, MAKE_ENTITY_END)
-    Call(AssignBlockFlag, GF_SBK25_MultiCoinBrickB)
-    Call(MakeEntity, Ref(Entity_BrickBlock), -300, 60, -80, 0, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_BrickBlock), -240, 60, 230, 0, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_BrickBlock), -75, 60, 295, 0, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_BrickBlock), -75, 60, -360, 0, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_BrickBlock), 270, 60, -150, 0, MAKE_ENTITY_END)
+    EVT_MAKE_ENTITY(MulticoinBlock, GEN_MULTICOIN_BLOCK_1_PARAMS)
+    Call(AssignBlockFlag, GEN_MULTICOIN_BLOCK_1_FLAG)
+    EVT_MAKE_ENTITY(MulticoinBlock, GEN_MULTICOIN_BLOCK_2_PARAMS)
+    Call(AssignBlockFlag, GEN_MULTICOIN_BLOCK_2_FLAG)
+    EVT_MAKE_ENTITY(BrickBlock, GEN_BRICK_BLOCK_1_PARAMS)
+    EVT_MAKE_ENTITY(BrickBlock, GEN_BRICK_BLOCK_2_PARAMS)
+    EVT_MAKE_ENTITY(BrickBlock, GEN_BRICK_BLOCK_3_PARAMS)
+    EVT_MAKE_ENTITY(BrickBlock, GEN_BRICK_BLOCK_4_PARAMS)
+    EVT_MAKE_ENTITY(BrickBlock, GEN_BRICK_BLOCK_5_PARAMS)
     Return
     End
 };

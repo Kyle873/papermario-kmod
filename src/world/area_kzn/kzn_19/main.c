@@ -102,55 +102,35 @@ EvtScript N(EVS_SetupTexPan) = {
     // lava surfaces
     Call(SetTexPanner, MODEL_yougan1_1, TEX_PANNER_2)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_2)
-        TEX_PAN_PARAMS_STEP(  200,    0,  400, -100)
-        TEX_PAN_PARAMS_FREQ(    1,    0,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_2
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     // leaking lava
     Call(SetTexPanner, MODEL_toro, TEX_PANNER_5)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_5)
-        TEX_PAN_PARAMS_STEP(  300, -500,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    1,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_5
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     // lava bubbles
     Call(SetTexPanner, MODEL_poko, TEX_PANNER_D)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_D)
-        TEX_PAN_PARAMS_MAX(0x40000)
-        TEX_PAN_PARAMS_STEP(0x8000,  0,    0,    0)
-        TEX_PAN_PARAMS_FREQ(   6,    0,    0,    0)
-        TEX_PAN_PARAMS_INIT(   0,    0,    0,    0)
+        GEN_TEX_PANNER_D
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Call(SetTexPanner, MODEL_poko1, TEX_PANNER_E)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_E)
-        TEX_PAN_PARAMS_MAX(0x40000)
-        TEX_PAN_PARAMS_STEP(0x8000,  0,    0,    0)
-        TEX_PAN_PARAMS_FREQ(   4,    0,    0,    0)
-        TEX_PAN_PARAMS_INIT(   0,    0,    0,    0)
+        GEN_TEX_PANNER_E
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     // smoke
     Call(SetTexPanner, MODEL_kem1, TEX_PANNER_3)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_3)
-        TEX_PAN_PARAMS_STEP( -200,    0,  600, -400)
-        TEX_PAN_PARAMS_FREQ(    1,    0,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_3
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Call(SetTexPanner, MODEL_kem2, TEX_PANNER_4)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_4)
-        TEX_PAN_PARAMS_STEP( 500,    0,    0, -400)
-        TEX_PAN_PARAMS_FREQ(   1,    0,    0,    1)
-        TEX_PAN_PARAMS_INIT(   0,    0,    0,    0)
+        GEN_TEX_PANNER_4
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Return
@@ -188,7 +168,7 @@ EvtScript N(EVS_UpdateLavaWaves) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_MT_LAVALAVA)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_KZN_19)
     EVT_SETUP_CAMERA_DEFAULT(0, 0, 0)
     Call(GetEntryID, LVar0)

@@ -240,8 +240,9 @@ EvtScript N(EVS_NpcInit_Kalmar) = {
 NpcData N(NpcData_CrystalKing_01)[] = {
     {
         .id = NPC_CrystalKing_01,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 90,
+        .pos = { GEN_NPC_CRYSTAL_KING_01_VEC },
+        .yaw = GEN_NPC_CRYSTAL_KING_01_DIR,
+        .territory = GEN_NPC_CRYSTAL_KING_01_TERRITORY,
         .init = &N(EVS_NpcInit_CrystalKing_Aux),
         .settings = &N(NpcSettings_CrystalKing),
         .flags = ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -250,8 +251,9 @@ NpcData N(NpcData_CrystalKing_01)[] = {
     },
     {
         .id = NPC_CrystalKing_02,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 90,
+        .pos = { GEN_NPC_CRYSTAL_KING_02_VEC },
+        .yaw = GEN_NPC_CRYSTAL_KING_02_DIR,
+        .territory = GEN_NPC_CRYSTAL_KING_02_TERRITORY,
         .settings = &N(NpcSettings_CrystalKing),
         .flags = ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
         .drops = NO_DROPS,
@@ -259,8 +261,9 @@ NpcData N(NpcData_CrystalKing_01)[] = {
     },
     {
         .id = NPC_Kalmar,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 90,
+        .pos = { GEN_NPC_KALMAR_VEC },
+        .yaw = GEN_NPC_KALMAR_DIR,
+        .territory = GEN_NPC_KALMAR_TERRITORY,
         .init = &N(EVS_NpcInit_Kalmar),
         .settings = &N(NpcSettings_StarSpirit),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -269,8 +272,9 @@ NpcData N(NpcData_CrystalKing_01)[] = {
     },
     {
         .id = NPC_CrystalKing_03,
-        .pos = { NPC_DISPOSE_LOCATION },
-        .yaw = 90,
+        .pos = { GEN_NPC_CRYSTAL_KING_03_VEC },
+        .yaw = GEN_NPC_CRYSTAL_KING_03_DIR,
+        .territory = GEN_NPC_CRYSTAL_KING_03_TERRITORY,
         .init = &N(EVS_NpcInit_CrystalKing),
         .settings = &N(NpcSettings_CrystalKing),
         .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_HAS_NO_SPRITE | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,

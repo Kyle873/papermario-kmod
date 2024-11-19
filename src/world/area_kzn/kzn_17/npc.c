@@ -25,11 +25,7 @@ EVT_LETTER_PROMPT(Kolorado2, NPC_Kolorado,
 EVT_LETTER_REWARD(Kolorado);
 
 Vec3f N(KoloradoThrownPath)[] = {
-    {  447.0,     0.0,   39.0 },
-    {  432.0,     5.0,   47.0 },
-    {  427.0,    20.0,   55.0 },
-    {  432.0,     5.0,   62.0 },
-    {  447.0,     0.0,   70.0 },
+    GEN_PATH_1_PATH
 };
 
 EvtScript N(EVS_Kolorado_TrompPanic) = {
@@ -135,8 +131,9 @@ EvtScript N(EVS_NpcInit_Kolorado) = {
 
 NpcData N(NpcData_Kolorado) = {
     .id = NPC_Kolorado,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 90,
+    .pos = { GEN_NPC_KOLORADO_VEC },
+    .yaw = GEN_NPC_KOLORADO_DIR,
+    .territory = GEN_NPC_KOLORADO_TERRITORY,
     .init = &N(EVS_NpcInit_Kolorado),
     .settings = &N(NpcSettings_Kolorado),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_RAYCAST_TO_INTERACT | ENEMY_FLAG_SKIP_BATTLE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -148,20 +145,9 @@ NpcData N(NpcData_Kolorado) = {
 NpcData N(NpcData_Piranha)[] = {
     {
         .id = NPC_Piranha,
-        .pos = { -325.0f, 0.0f, 150.0f },
-        .yaw = 270,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { -325, 0, 150 },
-                .wanderSize = { 30 },
-                .detectShape = SHAPE_RECT,
-                .detectPos  = { -390, 0, 130 },
-                .detectSize = { 270, 130 },
-            }
-        },
+        .pos = { GEN_NPC_PIRANHA_VEC },
+        .yaw = GEN_NPC_PIRANHA_DIR,
+        .territory = GEN_NPC_PIRANHA_TERRITORY,
         .settings = &N(NpcSettings_PutridPiranha),
         .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = PUTRID_PIRANHA_DROPS,
@@ -173,20 +159,9 @@ NpcData N(NpcData_Piranha)[] = {
 
 NpcData N(NpcData_SpikeTop) = {
     .id = NPC_SpikeTop,
-    .pos = { -450.0f, 0.0f, 100.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = FALSE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -450, 0, 100 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_RECT,
-            .detectPos  = { -450, 0, 100 },
-            .detectSize = { 270, 130 },
-        }
-    },
+    .pos = { GEN_NPC_SPIKE_TOP_VEC },
+    .yaw = GEN_NPC_SPIKE_TOP_DIR,
+    .territory = GEN_NPC_SPIKE_TOP_TERRITORY,
     .settings = &N(NpcSettings_SpikeTop),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = SPIKE_TOP_DROPS,

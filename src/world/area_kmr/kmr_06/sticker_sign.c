@@ -239,7 +239,7 @@ EvtScript N(EVS_OnInspect_StickerSign) = {
                 Call(N(SetStickerGravity), Float(0.6))
                 Call(N(JumpStickerTo), 362, 0, 40, 23)
                 Call(N(DeleteSticker))
-                Call(MakeItemEntity, ITEM_MUSHROOM, 362, 0, 40, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_KMR06_Item_Mushroom)
+                EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
             EndThread
             Wait(10)
         EndIf

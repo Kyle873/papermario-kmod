@@ -2,6 +2,7 @@
 /// @brief Peach's Castle Grounds - Ruined Castle Grounds
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

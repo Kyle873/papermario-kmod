@@ -50,11 +50,11 @@ EvtScript N(EVS_OpenChest) = {
 };
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_Chest), 0, 0, 0, 0, 0, MAKE_ENTITY_END)
-    Call(AssignChestFlag, GF_OBK02_Chest_Trap)
-    Call(AssignScript, Ref(N(EVS_OpenChest)))
-    Call(MakeEntity, Ref(Entity_HiddenPanel), 100, -210, 0, 0, MODEL_yuka_b1, MAKE_ENTITY_END)
-    Call(AssignPanelFlag, GF_OBK02_HiddenPanel)
+    EVT_MAKE_ENTITY(Chest, GEN_CHEST_1_PARAMS)
+    Call(AssignChestFlag, GEN_CHEST_1_FLAG)
+    Call(AssignScript, Ref(GEN_CHEST_1_SCRIPT))
+    EVT_MAKE_ENTITY(HiddenPanel, GEN_HIDDEN_PANEL_1_PARAMS)
+    Call(AssignPanelFlag, GEN_HIDDEN_PANEL_1_FLAG)
     Return
     End
 };

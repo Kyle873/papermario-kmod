@@ -5,7 +5,7 @@
 EvtScript N(EVS_MakeEntities) = {
     PlayEffect(EFFECT_FLAME, FX_FLAME_RED, 486, -845, 130, Float(0.3), LVar0)
     PlayEffect(EFFECT_FLAME, FX_FLAME_RED, 499, -845, 42, Float(0.3), LVar0)
-    Call(MakeEntity, Ref(Entity_SavePoint), 560, -850, 100, -10, MAKE_ENTITY_END)
+    EVT_MAKE_ENTITY(SavePoint, GEN_SAVE_POINT_1_PARAMS)
     Return
     End
 };

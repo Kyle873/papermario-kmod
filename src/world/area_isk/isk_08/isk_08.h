@@ -2,6 +2,7 @@
 /// @brief Dry Dry Ruins - Descending Stairs 2
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

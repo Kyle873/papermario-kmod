@@ -210,20 +210,9 @@ EvtScript N(EVS_NpcInit_GoombaBros_Blue) = {
 NpcData N(NpcData_GoombaBros_Red)[] = {
     {
         .id = NPC_GoombaBros_Red,
-        .pos = { 526.0f, 80.0f, 0.0f },
-        .yaw = 270,
-        .territory = {
-            .wander = {
-                .isFlying = FALSE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 0, 0, 0 },
-                .wanderSize = { 0 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 0 },
-            }
-        },
+        .pos = { GEN_NPC_GOOMBA_BROS_RED_VEC },
+        .yaw = GEN_NPC_GOOMBA_BROS_RED_DIR,
+        .territory = GEN_NPC_GOOMBA_BROS_RED_TERRITORY,
         .init = &N(EVS_NpcInit_GoombaBros_Red),
         .settings = &N(NpcSettings_GoombaBros_Guard),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_NO_DROPS,
@@ -232,20 +221,9 @@ NpcData N(NpcData_GoombaBros_Red)[] = {
     },
     {
         .id = NPC_GoombaBros_Blue,
-        .pos = { 498.0f, 80.0f, -10.0f },
-        .yaw = 270,
-        .territory = {
-            .wander = {
-                .isFlying = FALSE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 0, 0, 0 },
-                .wanderSize = { 0 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 0 },
-            }
-        },
+        .pos = { GEN_NPC_GOOMBA_BROS_BLUE_VEC },
+        .yaw = GEN_NPC_GOOMBA_BROS_BLUE_DIR,
+        .territory = GEN_NPC_GOOMBA_BROS_BLUE_TERRITORY,
         .init = &N(EVS_NpcInit_GoombaBros_Blue),
         .settings = &N(NpcSettings_GoombaBros_Guard),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_NO_DROPS,

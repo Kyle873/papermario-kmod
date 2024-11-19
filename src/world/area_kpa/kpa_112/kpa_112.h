@@ -2,6 +2,7 @@
 /// @brief Bowser's Castle - Hidden Passage 1
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

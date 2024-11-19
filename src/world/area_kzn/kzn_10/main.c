@@ -24,10 +24,7 @@ EvtScript N(EVS_StartTexPanners) = {
     // smoke
     Call(SetTexPanner, MODEL_kem1, TEX_PANNER_3)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_3)
-        TEX_PAN_PARAMS_STEP( -200,    0,  600, -400)
-        TEX_PAN_PARAMS_FREQ(    1,    0,    1,    1)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_3
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Return
@@ -35,7 +32,7 @@ EvtScript N(EVS_StartTexPanners) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_MT_LAVALAVA)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_KZN_10)
     EVT_SETUP_CAMERA_DEFAULT(0, 0, 0)
     Thread

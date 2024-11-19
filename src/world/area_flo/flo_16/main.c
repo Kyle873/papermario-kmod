@@ -19,13 +19,13 @@ EvtScript N(EVS_BindExitTriggers) = {
 };
 
 LavaReset N(SafeFloorColliders)[] = {
-    { .colliderID = COLLIDER_o190, .pos = { -310.0,    0.0,    0.0 }},
-    { .colliderID = COLLIDER_o191, .pos = {  305.0,  100.0,    0.0 }},
+    { .colliderID = COLLIDER_o190, .pos = { GEN_LAVA_RESET_O190_VEC }},
+    { .colliderID = COLLIDER_o191, .pos = { GEN_LAVA_RESET_O191_VEC }},
     { .colliderID = NO_COLLIDER }
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_FLOWER_FIELDS)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_DEFAULT(0, 0, 0)
     Call(MakeNpcs, FALSE, Ref(N(DefaultNPCs)))
@@ -44,10 +44,7 @@ EvtScript N(EVS_Main) = {
     Call(SetTexPanner, MODEL_o139, TEX_PANNER_1)
     Call(SetTexPanner, MODEL_o143, TEX_PANNER_1)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP(  140,    0,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    0,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     // vines scrolling right
@@ -55,10 +52,7 @@ EvtScript N(EVS_Main) = {
     Call(SetTexPanner, MODEL_o138, TEX_PANNER_2)
     Call(SetTexPanner, MODEL_o140, TEX_PANNER_2)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_2)
-        TEX_PAN_PARAMS_STEP( -200,    0,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    0,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_2
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Exec(N(EVS_SetupPillarPuzzle))

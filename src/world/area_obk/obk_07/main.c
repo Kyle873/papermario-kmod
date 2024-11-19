@@ -16,7 +16,7 @@ EvtScript N(EVS_ExitDoors_obk_01_3) = EVT_EXIT_SPLIT_SINGLE_DOOR(obk_07_ENTRY_0,
     COLLIDER_tt1, MODEL_door_1, MODEL_door1b, DOOR_SWING_OUT);
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_BOOS_MANSION)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
     Call(MakeNpcs, FALSE, Ref(N(DefaultNPCs)))
@@ -28,18 +28,12 @@ EvtScript N(EVS_Main) = {
     Exec(N(EVS_SetupMusic))
     Call(SetTexPanner, MODEL_ma, TEX_PANNER_2)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_2)
-        TEX_PAN_PARAMS_STEP(   0,    0,  300,  100)
-        TEX_PAN_PARAMS_FREQ(   0,    0,    1,    1)
-        TEX_PAN_PARAMS_INIT(   0,    0,    0,    0)
+        GEN_TEX_PANNER_2
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Call(SetTexPanner, MODEL_m2, TEX_PANNER_0)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_0)
-        TEX_PAN_PARAMS_STEP( 300,  100,    0,    0)
-        TEX_PAN_PARAMS_FREQ(   1,    1,    0,    0)
-        TEX_PAN_PARAMS_INIT(   0,    0,    0,    0)
+        GEN_TEX_PANNER_0
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Return

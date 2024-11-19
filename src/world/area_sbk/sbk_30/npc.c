@@ -286,8 +286,9 @@ EvtScript N(EVS_NpcInit_Archeologist_02) = {
 NpcData N(NpcData_Archeologist_02)[] = {
     {
         .id = NPC_Kolorado,
-        .pos = { 200.0f, 0.0f, -100.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_KOLORADO_VEC },
+        .yaw = GEN_NPC_KOLORADO_DIR,
+        .territory = GEN_NPC_KOLORADO_TERRITORY,
         .init = &N(EVS_NpcInit_Kolorado),
         .settings = &N(NpcSettings_Kolorado),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -297,20 +298,9 @@ NpcData N(NpcData_Archeologist_02)[] = {
     },
     {
         .id = NPC_Archeologist_01,
-        .pos = { 238.0f, 0.0f, -112.0f },
-        .yaw = 270,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 0, 0, 0 },
-                .wanderSize = { 100 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 0 },
-            }
-        },
+        .pos = { GEN_NPC_ARCHEOLOGIST_01_VEC },
+        .yaw = GEN_NPC_ARCHEOLOGIST_01_DIR,
+        .territory = GEN_NPC_ARCHEOLOGIST_01_TERRITORY,
         .init = &N(EVS_NpcInit_Archeologist_01),
         .settings = &N(NpcSettings_Archeologist_01),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -320,20 +310,9 @@ NpcData N(NpcData_Archeologist_02)[] = {
     },
     {
         .id = NPC_Archeologist_02,
-        .pos = { 170.0f, 0.0f, -190.0f },
-        .yaw = 90,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 0, 0, 0 },
-                .wanderSize = { 100 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, 0 },
-                .detectSize = { 0 },
-            }
-        },
+        .pos = { GEN_NPC_ARCHEOLOGIST_02_VEC },
+        .yaw = GEN_NPC_ARCHEOLOGIST_02_DIR,
+        .territory = GEN_NPC_ARCHEOLOGIST_02_TERRITORY,
         .init = &N(EVS_NpcInit_Archeologist_02),
         .settings = &N(NpcSettings_Archeologist_01),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,

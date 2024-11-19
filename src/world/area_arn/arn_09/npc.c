@@ -47,8 +47,9 @@ EvtScript N(EVS_NpcInit_TubbasHeart) = {
 
 NpcData N(NpcData_TubbasHeart) = {
     .id = NPC_TubbasHeart,
-    .pos = { 0.0f, 25.0f, 0.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_TUBBAS_HEART_VEC },
+    .yaw = GEN_NPC_TUBBAS_HEART_DIR,
+    .territory = GEN_NPC_TUBBAS_HEART_TERRITORY,
     .init = &N(EVS_NpcInit_TubbasHeart),
     .settings = &N(NpcSettings_TubbasHeart),
     .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_KILL,

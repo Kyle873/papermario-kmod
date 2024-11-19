@@ -30,20 +30,9 @@ EvtScript N(EVS_NpcInit_ToadGuard) = {
 NpcData N(NpcData_Toads)[] = {
     {
         .id = NPC_Toad,
-        .pos = { 0.0f, 0.0f, -100.0f },
-        .yaw = 270,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 0, 0, -100 },
-                .wanderSize = { 50 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 0, 0, -100 },
-                .detectSize = { 50 },
-            }
-        },
+        .pos = { GEN_NPC_TOAD_VEC },
+        .yaw = GEN_NPC_TOAD_DIR,
+        .territory = GEN_NPC_TOAD_TERRITORY,
         .init = &N(EVS_NpcInit_Toad),
         .settings = &N(NpcSettings_Toad_Wander),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -52,8 +41,9 @@ NpcData N(NpcData_Toads)[] = {
     },
     {
         .id = NPC_ToadGuard,
-        .pos = { 1175.0f, 110.0f, 60.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_TOAD_GUARD_VEC },
+        .yaw = GEN_NPC_TOAD_GUARD_DIR,
+        .territory = GEN_NPC_TOAD_GUARD_TERRITORY,
         .init = &N(EVS_NpcInit_ToadGuard),
         .settings = &N(NpcSettings_Toad_Stationary),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,

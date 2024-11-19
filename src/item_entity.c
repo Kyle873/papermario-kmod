@@ -1717,7 +1717,7 @@ void update_item_entity_collectable(ItemEntity* item) {
             }
 
             if (item->spawnType != ITEM_SPAWN_MODE_TOSS_FADE1) {
-                physData->timeLeft = 180;
+                physData->timeLeft = 180 * 10;
                 physData->useSimplePhysics = FALSE;
             } else {
                 if (!(item->flags & ITEM_ENTITY_FLAG_400000)) {
@@ -1731,7 +1731,7 @@ void update_item_entity_collectable(ItemEntity* item) {
             }
 
             if (item->spawnType == ITEM_SPAWN_MODE_ITEM_BLOCK_SPAWN_ALWAYS) {
-                physData->timeLeft = 60;
+                physData->timeLeft = 60 * 10;
                 physData->useSimplePhysics = FALSE;
                 physData->velX = 0.0f;
                 physData->velZ = 0.0f;

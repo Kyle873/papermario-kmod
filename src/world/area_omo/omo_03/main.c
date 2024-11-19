@@ -44,7 +44,7 @@ EvtScript N(EVS_Main) = {
     IfLt(GB_StoryProgress, STORY_CH4_ENTERED_THE_TOY_BOX)
         Set(GB_StoryProgress, STORY_CH4_ENTERED_THE_TOY_BOX)
     EndIf
-    Set(GB_WorldLocation, LOCATION_SHY_GUYS_TOYBOX)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
 #if VERSION_PAL

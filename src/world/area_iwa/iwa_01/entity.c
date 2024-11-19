@@ -2,13 +2,13 @@
 #include "entity.h"
 
 EvtScript N(EVS_MakeEntities) = {
-    Call(MakeEntity, Ref(Entity_SavePoint), -650, 123, 375, 0, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_ArrowSign), -503, 63, 225, 0, 90, MAKE_ENTITY_END)
-    Call(MakeEntity, Ref(Entity_ArrowSign), 825, 170, 115, 0, 90, MAKE_ENTITY_END)
-    Call(MakeItemEntity, ITEM_QUAKE_HAMMER, 160, 125, 125, ITEM_SPAWN_MODE_FIXED_NEVER_VANISH, GF_IWA01_Item_QuakeHammer)
-    Call(MakeItemEntity, ITEM_LETTER_TO_MERLON, 410, 140, 135, ITEM_SPAWN_MODE_KEY, GF_IWA01_Item_Letter01)
-    Call(MakeEntity, Ref(Entity_HiddenPanel), 45, 10, 60, 0, MODEL_cam2b, MAKE_ENTITY_END)
-    Call(AssignPanelFlag, GF_IWA01_HiddenPanel)
+    EVT_MAKE_ENTITY(SavePoint, GEN_SAVE_POINT_1_PARAMS)
+    EVT_MAKE_ENTITY(ArrowSign, GEN_ARROW_SIGN_1_PARAMS)
+    EVT_MAKE_ENTITY(ArrowSign, GEN_ARROW_SIGN_2_PARAMS)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_1_PARAMS)
+    EVT_MAKE_ITEM_ENTITY(GEN_ITEM_2_PARAMS)
+    EVT_MAKE_ENTITY(HiddenPanel, GEN_HIDDEN_PANEL_1_PARAMS)
+    Call(AssignPanelFlag, GEN_HIDDEN_PANEL_1_FLAG)
     Return
     End
 };

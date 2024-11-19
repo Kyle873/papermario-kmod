@@ -24,13 +24,7 @@ API_CALLABLE(N(LoadPartyImage)) {
 }
 
 Vec3f N(YoshiKidsRunPath)[] = {
-    { -350.0,     0.0,   15.0 },
-    { -220.0,    25.0,   15.0 },
-    { -110.0,     0.0,   30.0 },
-    {  -50.0,     0.0,  130.0 },
-    {   50.0,     0.0,  110.0 },
-    {  160.0,    25.0,  160.0 },
-    {  255.0,     0.0,  285.0 },
+    GEN_PATH_4_PATH
 };
 
 EvtScript N(EVS_Scene_Epilogue) = {

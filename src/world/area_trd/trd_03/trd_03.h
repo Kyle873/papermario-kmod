@@ -2,6 +2,7 @@
 /// @brief Koopa Bros Fortress - Central Hall
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

@@ -7,7 +7,7 @@ extern EvtScript N(EVS_MonitorFriendlyFire);
 extern NpcGroupList N(DefaultNPCs);
 
 EntryList N(Entrances) = {
-    [kgr_02_ENTRY_0]    { -175.0,   10.0,    0.0,   90.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {
@@ -28,7 +28,7 @@ EvtScript N(EVS_BindExitTriggers) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_TOAD_TOWN)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
     Call(MakeNpcs, FALSE, Ref(N(DefaultNPCs)))

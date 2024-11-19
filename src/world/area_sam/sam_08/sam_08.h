@@ -2,6 +2,7 @@
 /// @brief Mt Shiver - Shiver Mountain Hills
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

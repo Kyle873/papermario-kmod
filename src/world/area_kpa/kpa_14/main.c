@@ -68,17 +68,11 @@ EvtScript N(EVS_EnterMap) = {
 
 EvtScript N(EVS_TexPan_Lava) = {
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_0)
-        TEX_PAN_PARAMS_STEP(-1000,    0,-2000,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    0,    1,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_0
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP( -400,    0, -800,    0)
-        TEX_PAN_PARAMS_FREQ(    1,    0,    1,    0)
-        TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Call(SetTexPanner, MODEL_o631, TEX_PANNER_1)
@@ -92,14 +86,14 @@ EvtScript N(EVS_TexPan_Lava) = {
 };
 
 LavaReset N(SafeFloorColliders)[] = {
-    { .colliderID = COLLIDER_o202, .pos = {  110.0,   30.0, -135.0 }},
-    { .colliderID = COLLIDER_o201, .pos = {  345.0,   30.0, -135.0 }},
-    { .colliderID = COLLIDER_o196, .pos = {  550.0,   30.0, -135.0 }},
-    { .colliderID = COLLIDER_o197, .pos = {  800.0,   30.0, -135.0 }},
-    { .colliderID = COLLIDER_o195, .pos = { 1045.0,   30.0, -135.0 }},
-    { .colliderID = COLLIDER_o198, .pos = { 1400.0,   30.0, -135.0 }},
-    { .colliderID = COLLIDER_o200, .pos = { 1590.0,   30.0,  -90.0 }},
-    { .colliderID = COLLIDER_o199, .pos = { 1940.0,   30.0, -135.0 }},
+    { .colliderID = COLLIDER_o202, .pos = { GEN_LAVA_RESET_O202_VEC }},
+    { .colliderID = COLLIDER_o201, .pos = { GEN_LAVA_RESET_O201_VEC }},
+    { .colliderID = COLLIDER_o196, .pos = { GEN_LAVA_RESET_O196_VEC }},
+    { .colliderID = COLLIDER_o197, .pos = { GEN_LAVA_RESET_O197_VEC }},
+    { .colliderID = COLLIDER_o195, .pos = { GEN_LAVA_RESET_O195_VEC }},
+    { .colliderID = COLLIDER_o198, .pos = { GEN_LAVA_RESET_O198_VEC }},
+    { .colliderID = COLLIDER_o200, .pos = { GEN_LAVA_RESET_O200_VEC }},
+    { .colliderID = COLLIDER_o199, .pos = { GEN_LAVA_RESET_O199_VEC }},
     { .colliderID = NO_COLLIDER }
 };
 
@@ -212,7 +206,7 @@ EvtScript N(EVS_SetupLavaFall) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_BOWSERS_CASTLE)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_DEFAULT(0, 0, 0)
     ExecWait(N(EVS_MakeEntities))

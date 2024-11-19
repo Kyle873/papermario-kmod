@@ -2,6 +2,7 @@
 /// @brief Jade Jungle - Upper Great Tree Interior
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

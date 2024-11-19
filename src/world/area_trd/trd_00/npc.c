@@ -307,8 +307,9 @@ EvtScript N(EVS_NpcInit_Eldstar) = {
 
 NpcData N(NpcData_KoopaBros) = {
     .id = NPC_KoopaBros,
-    .pos = { -469.0f, 0.0f, 101.0f },
-    .yaw = 0,
+    .pos = { GEN_NPC_KOOPA_BROS_VEC },
+    .yaw = GEN_NPC_KOOPA_BROS_DIR,
+    .territory = GEN_NPC_KOOPA_BROS_TERRITORY,
     .init = &N(EVS_NpcInit_KoopaBros),
     .settings = &N(NpcSettings_KoopaBros),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_FLYING,
@@ -335,20 +336,9 @@ NpcData N(NpcData_KoopaBros) = {
 
 NpcData N(NpcData_Eldstar) = {
     .id = NPC_Eldstar,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 0,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { NPC_DISPOSE_LOCATION },
-            .wanderSize = { 100 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { NPC_DISPOSE_LOCATION },
-            .detectSize = { 500 },
-        }
-    },
+    .pos = { GEN_NPC_ELDSTAR_VEC },
+    .yaw = GEN_NPC_ELDSTAR_DIR,
+    .territory = GEN_NPC_ELDSTAR_TERRITORY,
     .init = &N(EVS_NpcInit_Eldstar),
     .settings = &N(NpcSettings_StarSpirit),
     .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_FLYING,

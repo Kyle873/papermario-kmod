@@ -5,8 +5,7 @@ extern EvtScript N(EVS_StartTongueWiggle);
 extern EvtScript N(EVS_MonitorFriendlyFire);
 
 EntryList N(Entrances) = {
-    [kgr_01_ENTRY_0]    {   -4.0,    8.0,    0.0,   90.0 },
-    [kgr_01_ENTRY_1]    {   80.0,    0.0,   10.0,  270.0 },
+    GEN_ENTRY_LIST
 };
 
 MapSettings N(settings) = {
@@ -29,7 +28,7 @@ EvtScript N(EVS_BindExitTriggers) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_TOAD_TOWN)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_NO_LEAD(0, 0, 0)
     Call(HidePlayerShadow, TRUE)

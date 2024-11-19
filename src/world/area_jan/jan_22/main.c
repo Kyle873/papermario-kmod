@@ -15,10 +15,10 @@ EvtScript N(EVS_BindExitTriggers) = {
 };
 
 LavaReset N(SafeFloorColliders)[] = {
-    { .colliderID = COLLIDER_o170, .pos = {  750.0,    0.0,   50.0 }},
-    { .colliderID = COLLIDER_o70,  .pos = {  750.0,    0.0,   50.0 }},
-    { .colliderID = COLLIDER_o119, .pos = {  960.0,    0.0,   50.0 }},
-    { .colliderID = COLLIDER_o276, .pos = {  960.0,    0.0,   50.0 }},
+    { .colliderID = COLLIDER_o170, .pos = { GEN_LAVA_RESET_O170_VEC }},
+    { .colliderID = COLLIDER_o70, .pos = { GEN_LAVA_RESET_O70_VEC }},
+    { .colliderID = COLLIDER_o119, .pos = { GEN_LAVA_RESET_O119_VEC }},
+    { .colliderID = COLLIDER_o276, .pos = { GEN_LAVA_RESET_O276_VEC }},
     { .colliderID = NO_COLLIDER }
 };
 
@@ -54,7 +54,7 @@ EvtScript N(D_8024202C_B861AC) = {
 };
 
 EvtScript N(EVS_Main) = {
-    Set(GB_WorldLocation, LOCATION_JADE_JUNGLE)
+    Set(GB_WorldLocation, GEN_MAP_LOCATION)
     Call(SetSpriteShading, SHADING_NONE)
     EVT_SETUP_CAMERA_DEFAULT(0, 0, 0)
     Call(ModifyColliderFlags, MODIFY_COLLIDER_FLAGS_SET_BITS, COLLIDER_o304, COLLIDER_FLAGS_UPPER_MASK)
@@ -79,37 +79,25 @@ EvtScript N(EVS_Main) = {
     Call(SetTexPanner, MODEL_o269, TEX_PANNER_1)
     Call(SetTexPanner, MODEL_o261, TEX_PANNER_1)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_1)
-        TEX_PAN_PARAMS_STEP(    0,  -300,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    0,     1,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,     0,    0,    0)
+        GEN_TEX_PANNER_1
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Call(SetTexPanner, MODEL_o275, TEX_PANNER_2)
     Call(SetTexPanner, MODEL_o274, TEX_PANNER_2)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_2)
-        TEX_PAN_PARAMS_STEP(    0,  -300,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    0,     1,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,     0,    0,    0)
+        GEN_TEX_PANNER_2
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Call(SetTexPanner, MODEL_o263, TEX_PANNER_3)
     Call(SetTexPanner, MODEL_o271, TEX_PANNER_3)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_3)
-        TEX_PAN_PARAMS_STEP(    0,  -170,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    0,     1,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,     0,    0,    0)
+        GEN_TEX_PANNER_3
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Call(SetTexPanner, MODEL_o267, TEX_PANNER_4)
     Call(SetTexPanner, MODEL_o272, TEX_PANNER_4)
     Thread
-        TEX_PAN_PARAMS_ID(TEX_PANNER_4)
-        TEX_PAN_PARAMS_STEP(    0,  -300,    0,    0)
-        TEX_PAN_PARAMS_FREQ(    0,     1,    0,    0)
-        TEX_PAN_PARAMS_INIT(    0,     0,    0,    0)
+        GEN_TEX_PANNER_4
         Exec(N(EVS_UpdateTexturePan))
     EndThread
     Call(ModifyColliderFlags, MODIFY_COLLIDER_FLAGS_SET_BITS, COLLIDER_deilitw, COLLIDER_FLAGS_UPPER_MASK)

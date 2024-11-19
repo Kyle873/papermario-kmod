@@ -213,8 +213,9 @@ AnimID N(ExtraAnims_YoshiKid)[] = {
 NpcData N(NpcData_Yoshis)[] = {
     {
         .id = NPC_YoshiLeader,
-        .pos = { 70.0f, 0.0f, -30.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_YOSHI_LEADER_VEC },
+        .yaw = GEN_NPC_YOSHI_LEADER_DIR,
+        .territory = GEN_NPC_YOSHI_LEADER_TERRITORY,
         .init = &N(EVS_NpcInit_LeaderYoshi),
         .settings = &N(NpcSettings_Yoshi),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -225,8 +226,9 @@ NpcData N(NpcData_Yoshis)[] = {
     },
     {
         .id = NPC_Yoshi,
-        .pos = { 70.0f, 0.0f, 400.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_YOSHI_VEC },
+        .yaw = GEN_NPC_YOSHI_DIR,
+        .territory = GEN_NPC_YOSHI_TERRITORY,
         .init = &N(EVS_NpcInit_Yoshi),
         .settings = &N(NpcSettings_Yoshi),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -237,8 +239,9 @@ NpcData N(NpcData_Yoshis)[] = {
     },
     {
         .id = NPC_YoshiKid,
-        .pos = { 160.0f, 0.0f, 540.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_YOSHI_KID_VEC },
+        .yaw = GEN_NPC_YOSHI_KID_DIR,
+        .territory = GEN_NPC_YOSHI_KID_TERRITORY,
         .init = &N(EVS_NpcInit_YoshiKid),
         .settings = &N(NpcSettings_YoshiKid),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -273,8 +276,9 @@ AnimID N(ExtraAnims_Penguin)[] = {
 NpcData N(NpcData_Penguins)[] = {
     {
         .id = NPC_MayorPenguin,
-        .pos = { 150.0f, 0.0f, 105.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_MAYOR_PENGUIN_VEC },
+        .yaw = GEN_NPC_MAYOR_PENGUIN_DIR,
+        .territory = GEN_NPC_MAYOR_PENGUIN_TERRITORY,
         .init = &N(EVS_NpcInit_MayorPenguin),
         .settings = &N(NpcSettings_Penguin),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -285,8 +289,9 @@ NpcData N(NpcData_Penguins)[] = {
     },
     {
         .id = NPC_MayorPenguinWife,
-        .pos = { 200.0f, 0.0f, 105.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_MAYOR_PENGUIN_WIFE_VEC },
+        .yaw = GEN_NPC_MAYOR_PENGUIN_WIFE_DIR,
+        .territory = GEN_NPC_MAYOR_PENGUIN_WIFE_TERRITORY,
         .init = &N(EVS_NpcInit_MayorPenguinWife),
         .settings = &N(NpcSettings_Penguin),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -297,8 +302,9 @@ NpcData N(NpcData_Penguins)[] = {
     },
     {
         .id = NPC_Penguin_01,
-        .pos = { 115.0f, 0.0f, 540.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_PENGUIN_01_VEC },
+        .yaw = GEN_NPC_PENGUIN_01_DIR,
+        .territory = GEN_NPC_PENGUIN_01_TERRITORY,
         .init = &N(EVS_NpcInit_Penguin_01),
         .settings = &N(NpcSettings_Penguin),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -308,8 +314,9 @@ NpcData N(NpcData_Penguins)[] = {
     },
     {
         .id = NPC_Penguin_02,
-        .pos = { 208.0f, 0.0f, 540.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_PENGUIN_02_VEC },
+        .yaw = GEN_NPC_PENGUIN_02_DIR,
+        .territory = GEN_NPC_PENGUIN_02_TERRITORY,
         .init = &N(EVS_NpcInit_Penguin_02),
         .settings = &N(NpcSettings_Penguin),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
@@ -336,8 +343,9 @@ AnimID N(ExtraAnims_Mouser)[] = {
 NpcData N(NpcData_Mousers)[] = {
     {
         .id = NPC_Moustafa,
-        .pos = { -60.0f, 0.0f, -20.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_MOUSTAFA_VEC },
+        .yaw = GEN_NPC_MOUSTAFA_DIR,
+        .territory = GEN_NPC_MOUSTAFA_TERRITORY,
         .init = &N(EVS_NpcInit_Moustafa),
         .settings = &N(NpcSettings_Mouser),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -348,8 +356,9 @@ NpcData N(NpcData_Mousers)[] = {
     },
     {
         .id = NPC_Mouser,
-        .pos = { -100.0f, 0.0f, -50.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_MOUSER_VEC },
+        .yaw = GEN_NPC_MOUSER_DIR,
+        .territory = GEN_NPC_MOUSER_TERRITORY,
         .init = &N(EVS_NpcInit_Mouser),
         .settings = &N(NpcSettings_Mouser),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -369,8 +378,9 @@ AnimID N(ExtraAnims_Boos)[] = {
 NpcData N(NpcData_Boos)[] = {
     {
         .id = NPC_Boo_01,
-        .pos = { 270.0f, 20.0f, 175.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_BOO_01_VEC },
+        .yaw = GEN_NPC_BOO_01_DIR,
+        .territory = GEN_NPC_BOO_01_TERRITORY,
         .init = &N(EVS_NpcInit_Boo_01),
         .settings = &N(NpcSettings_Boo),
         .flags = COMMON_PASSIVE_FLAGS,
@@ -380,8 +390,9 @@ NpcData N(NpcData_Boos)[] = {
     },
     {
         .id = NPC_Boo_02,
-        .pos = { 320.0f, 20.0f, 200.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_BOO_02_VEC },
+        .yaw = GEN_NPC_BOO_02_DIR,
+        .territory = GEN_NPC_BOO_02_TERRITORY,
         .init = &N(EVS_NpcInit_Boo_02),
         .settings = &N(NpcSettings_Boo),
         .flags = COMMON_PASSIVE_FLAGS,
@@ -408,8 +419,9 @@ AnimID N(ExtraAnims_ToadGuard)[] = {
 NpcData N(NpcData_Toads)[] = {
     {
         .id = NPC_Toad,
-        .pos = { -25.0f, 0.0f, 200.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_TOAD_VEC },
+        .yaw = GEN_NPC_TOAD_DIR,
+        .territory = GEN_NPC_TOAD_TERRITORY,
         .init = &N(EVS_NpcInit_Toad),
         .settings = &N(NpcSettings_Toad_Stationary),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -419,8 +431,9 @@ NpcData N(NpcData_Toads)[] = {
     },
     {
         .id = NPC_ToadGuard_01,
-        .pos = { -50.0f, 0.0f, -200.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_TOAD_GUARD_01_VEC },
+        .yaw = GEN_NPC_TOAD_GUARD_01_DIR,
+        .territory = GEN_NPC_TOAD_GUARD_01_TERRITORY,
         .init = &N(EVS_NpcInit_ToadGuard_01),
         .settings = &N(NpcSettings_Toad_Stationary),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
@@ -430,8 +443,9 @@ NpcData N(NpcData_Toads)[] = {
     },
     {
         .id = NPC_ToadGuard_02,
-        .pos = { 560.0f, 20.0f, 100.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_TOAD_GUARD_02_VEC },
+        .yaw = GEN_NPC_TOAD_GUARD_02_DIR,
+        .territory = GEN_NPC_TOAD_GUARD_02_TERRITORY,
         .init = &N(EVS_NpcInit_ToadGuard_02),
         .settings = &N(NpcSettings_Toad_Stationary),
         .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,

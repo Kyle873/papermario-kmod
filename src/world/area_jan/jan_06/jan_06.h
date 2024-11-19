@@ -2,6 +2,7 @@
 /// @brief Jade Jungle - NE Jungle (Raven Statue)
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

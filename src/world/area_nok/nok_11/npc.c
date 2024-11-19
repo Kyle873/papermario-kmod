@@ -459,20 +459,9 @@ EvtScript N(EVS_NpcDefeat_KentCKoopa_02) = {
 
 NpcData N(NpcData_KoopaTroopa) = {
     .id = NPC_KoopaTroopa,
-    .pos = { -350.0f, 0.0f, -30.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_RECT,
-            .centerPos  = { -350, 0, -30 },
-            .wanderSize = { 50, 20 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -350, 0, -30 },
-            .detectSize = { 250 },
-        }
-    },
+    .pos = { GEN_NPC_KOOPA_TROOPA_VEC },
+    .yaw = GEN_NPC_KOOPA_TROOPA_DIR,
+    .territory = GEN_NPC_KOOPA_TROOPA_TERRITORY,
     .settings = &N(NpcSettings_KoopaTroopa_Wander),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
     .drops = KOOPA_TROOPA_NOK_DROPS,
@@ -481,20 +470,9 @@ NpcData N(NpcData_KoopaTroopa) = {
 
 NpcData N(NpcData_Paragoomba) = {
     .id = NPC_Paragoomba,
-    .pos = { 0.0f, 60.0f, -30.0f },
-    .yaw = 0,
-    .territory = {
-        .wander = {
-            .isFlying = FALSE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_RECT,
-            .centerPos  = { 0, 60, -30 },
-            .wanderSize = { 50, 20 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 0, 60, -30 },
-            .detectSize = { 250 },
-        }
-    },
+    .pos = { GEN_NPC_PARAGOOMBA_VEC },
+    .yaw = GEN_NPC_PARAGOOMBA_DIR,
+    .territory = GEN_NPC_PARAGOOMBA_TERRITORY,
     .settings = &N(NpcSettings_Paragoomba_Wander),
     .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION,
     .drops = PARAGOOMBA_DROPS,
@@ -503,20 +481,9 @@ NpcData N(NpcData_Paragoomba) = {
 
 NpcData N(NpcData_SpikedGoomba) = {
     .id = NPC_SpikedGoomba,
-    .pos = { 430.0f, 0.0f, -27.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_RECT,
-            .centerPos  = { 430, 0, -27 },
-            .wanderSize = { 50, 20 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 430, 0, -27 },
-            .detectSize = { 250 },
-        }
-    },
+    .pos = { GEN_NPC_SPIKED_GOOMBA_VEC },
+    .yaw = GEN_NPC_SPIKED_GOOMBA_DIR,
+    .territory = GEN_NPC_SPIKED_GOOMBA_TERRITORY,
     .settings = &N(NpcSettings_SpikedGoomba_Wander),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
     .drops = SPIKED_GOOMBA_DROPS,
@@ -543,8 +510,9 @@ EvtScript N(EVS_NpcInit_JrTroopa_02) = {
 NpcData N(NpcData_JrTroopa)[] = {
     {
         .id = NPC_JrTroopa_01,
-        .pos = { -170.0f, 0.0f, -155.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_JR_TROOPA_01_VEC },
+        .yaw = GEN_NPC_JR_TROOPA_01_DIR,
+        .territory = GEN_NPC_JR_TROOPA_01_TERRITORY,
         .init = &N(EVS_NpcInit_JrTroopa_01),
         .settings = &N(NpcSettings_JrTroopa),
         .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -554,8 +522,9 @@ NpcData N(NpcData_JrTroopa)[] = {
     },
     {
         .id = NPC_JrTroopa_02,
-        .pos = { -170.0f, 0.0f, -155.0f },
-        .yaw = 90,
+        .pos = { GEN_NPC_JR_TROOPA_02_VEC },
+        .yaw = GEN_NPC_JR_TROOPA_02_DIR,
+        .territory = GEN_NPC_JR_TROOPA_02_TERRITORY,
         .init = &N(EVS_NpcInit_JrTroopa_02),
         .settings = &N(NpcSettings_JrTroopa),
         .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_ENABLE_HIT_SCRIPT | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_SKIP_BATTLE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER | ENEMY_FLAG_NO_DROPS | ENEMY_FLAG_IGNORE_TOUCH | ENEMY_FLAG_IGNORE_SPIN,
@@ -591,8 +560,9 @@ EvtScript N(EVS_NpcInit_KentCKoopa_02) = {
 NpcData N(NpcData_KentCKoopa)[] = {
     {
         .id = NPC_KentCKoopa_01,
-        .pos = { -164.0f, 0.0f, -37.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_KENT_C_KOOPA_01_VEC },
+        .yaw = GEN_NPC_KENT_C_KOOPA_01_DIR,
+        .territory = GEN_NPC_KENT_C_KOOPA_01_TERRITORY,
         .init = &N(EVS_NpcInit_KentCKoopa_01),
         .settings = &N(NpcSettings_KentCKoopa),
         .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_HAS_NO_SPRITE | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_SKIP_BATTLE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_NO_DROPS,
@@ -601,8 +571,9 @@ NpcData N(NpcData_KentCKoopa)[] = {
     },
     {
         .id = NPC_KentCKoopa_02,
-        .pos = { -164.0f, 0.0f, -37.0f },
-        .yaw = 270,
+        .pos = { GEN_NPC_KENT_C_KOOPA_02_VEC },
+        .yaw = GEN_NPC_KENT_C_KOOPA_02_DIR,
+        .territory = GEN_NPC_KENT_C_KOOPA_02_TERRITORY,
         .init = &N(EVS_NpcInit_KentCKoopa_02),
         .settings = &N(NpcSettings_KentCKoopa),
         .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_SKIP_BATTLE | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER | ENEMY_FLAG_NO_DROPS,

@@ -44,20 +44,9 @@ NpcData N(NpcData_Conductor) = {
 NpcData N(NpcData_SpyGuy)[] = {
     {
         .id = NPC_SpyGuy,
-        .pos = { -305.0f, 0.0f, 135.0f },
-        .yaw = 270,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { -305, 0, 135 },
-                .wanderSize = { 30 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { -305, 0, 135 },
-                .detectSize = { 250 },
-            }
-        },
+        .pos = { GEN_NPC_SPY_GUY_VEC },
+        .yaw = GEN_NPC_SPY_GUY_DIR,
+        .territory = GEN_NPC_SPY_GUY_TERRITORY,
         .settings = &N(NpcSettings_SpyGuy),
         .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = SPY_GUY_DROPS,
@@ -71,20 +60,9 @@ NpcData N(NpcData_SpyGuy)[] = {
 
 NpcData N(NpcData_PyroGuy) = {
     .id = NPC_PyroGuy,
-    .pos = { 354.0f, 10.0f, -113.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { 354, 10, -113 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 354, 10, -113 },
-            .detectSize = { 250 },
-        }
-    },
+    .pos = { GEN_NPC_PYRO_GUY_VEC },
+    .yaw = GEN_NPC_PYRO_GUY_DIR,
+    .territory = GEN_NPC_PYRO_GUY_TERRITORY,
     .settings = &N(NpcSettings_PyroGuy),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = PYRO_GUY_DROPS,
@@ -94,20 +72,9 @@ NpcData N(NpcData_PyroGuy) = {
 
 NpcData N(NpcData_GrooveGuy) = {
     .id = NPC_GrooveGuy,
-    .pos = { -150.0f, 10.0f, -125.0f },
-    .yaw = 90,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -150, 10, -125 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -150, 10, -125 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_GROOVE_GUY_VEC },
+    .yaw = GEN_NPC_GROOVE_GUY_DIR,
+    .territory = GEN_NPC_GROOVE_GUY_TERRITORY,
     .settings = &N(NpcSettings_GrooveGuy),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = GROOVE_GUY_DROPS_B,

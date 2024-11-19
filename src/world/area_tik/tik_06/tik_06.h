@@ -2,6 +2,7 @@
 /// @brief Toad Town Tunnels - Sewer Entrance (B1)
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

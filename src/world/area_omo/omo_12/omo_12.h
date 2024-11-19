@@ -2,6 +2,7 @@
 /// @brief Shy Guy's Toybox - RED Lantern Ghost
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 

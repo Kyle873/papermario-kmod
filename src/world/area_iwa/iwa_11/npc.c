@@ -20,8 +20,9 @@ EvtScript N(EVS_NpcInit_TrainToad) = {
 
 NpcData N(NpcData_TrainToad) = {
     .id = NPC_TrainToad,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 90,
+    .pos = { GEN_NPC_TRAIN_TOAD_VEC },
+    .yaw = GEN_NPC_TRAIN_TOAD_DIR,
+    .territory = GEN_NPC_TRAIN_TOAD_TERRITORY,
     .init = &N(EVS_NpcInit_TrainToad),
     .settings = &N(NpcSettings_TrainToad),
     .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,

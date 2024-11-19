@@ -12,20 +12,9 @@ EvtScript N(EVS_NpcInit_FrostClubba) = {
 NpcData N(NpcData_FrostClubba)[] = {
     {
         .id = NPC_FrostClubba,
-        .pos = { 175.0f, 0.0f, 75.0f },
-        .yaw = 90,
-        .territory = {
-            .wander = {
-                .isFlying = TRUE,
-                .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-                .wanderShape = SHAPE_CYLINDER,
-                .centerPos  = { 175, 0, 75 },
-                .wanderSize = { 30 },
-                .detectShape = SHAPE_CYLINDER,
-                .detectPos  = { 175, 0, 75 },
-                .detectSize = { 200 },
-            }
-        },
+        .pos = { GEN_NPC_FROST_CLUBBA_VEC },
+        .yaw = GEN_NPC_FROST_CLUBBA_DIR,
+        .territory = GEN_NPC_FROST_CLUBBA_TERRITORY,
         .init = &N(EVS_NpcInit_FrostClubba),
         .settings = &N(NpcSettings_FrostClubba_Wander),
         .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,

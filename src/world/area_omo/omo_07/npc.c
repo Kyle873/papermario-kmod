@@ -342,26 +342,9 @@ EvtScript N(EVS_NpcInit_Kammy) = {
 
 NpcData N(NpcData_ShyGuy) = {
     .id = NPC_ShyGuy_01,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
-    .territory = {
-        .patrol = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .numPoints  = 6,
-            .points  = {
-                { 30, 0, 50 },
-                { 50, 0, 100 },
-                { 100, 0, 100 },
-                { 120, 0, 50 },
-                { 100, 0, 0 },
-                { 50, 0, 0 },
-            },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 75, 0, 50 },
-            .detectSize = { 100 },
-        }
-    },
+    .pos = { GEN_NPC_SHY_GUY_01_VEC },
+    .yaw = GEN_NPC_SHY_GUY_01_DIR,
+    .territory = GEN_NPC_SHY_GUY_01_TERRITORY,
     .init = &N(EVS_NpcInit_ShyGuy),
     .settings = &N(NpcSettings_ShyGuy_Patrol),
     .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,
@@ -371,26 +354,9 @@ NpcData N(NpcData_ShyGuy) = {
 
 NpcData N(NpcData_ShyGuy_02) = {
     .id = NPC_ShyGuy_02,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
-    .territory = {
-        .patrol = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .numPoints  = 6,
-            .points  = {
-                { 30, 0, 50 },
-                { 50, 0, 100 },
-                { 100, 0, 100 },
-                { 120, 0, 50 },
-                { 100, 0, 0 },
-                { 50, 0, 0 },
-            },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 75, 0, 50 },
-            .detectSize = { 100 },
-        }
-    },
+    .pos = { GEN_NPC_SHY_GUY_02_VEC },
+    .yaw = GEN_NPC_SHY_GUY_02_DIR,
+    .territory = GEN_NPC_SHY_GUY_02_TERRITORY,
     .init = &N(EVS_NpcInit_ShyGuy),
     .settings = &N(NpcSettings_ShyGuy_Patrol),
     .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,
@@ -400,26 +366,9 @@ NpcData N(NpcData_ShyGuy_02) = {
 
 NpcData N(NpcData_ShyGuy_03) = {
     .id = NPC_ShyGuy_03,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
-    .territory = {
-        .patrol = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .numPoints  = 6,
-            .points  = {
-                { 30, 0, 50 },
-                { 50, 0, 100 },
-                { 100, 0, 100 },
-                { 120, 0, 50 },
-                { 100, 0, 0 },
-                { 50, 0, 0 },
-            },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 75, 0, 50 },
-            .detectSize = { 100 },
-        }
-    },
+    .pos = { GEN_NPC_SHY_GUY_03_VEC },
+    .yaw = GEN_NPC_SHY_GUY_03_DIR,
+    .territory = GEN_NPC_SHY_GUY_03_TERRITORY,
     .init = &N(EVS_NpcInit_ShyGuy),
     .settings = &N(NpcSettings_ShyGuy_Patrol),
     .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,
@@ -429,26 +378,9 @@ NpcData N(NpcData_ShyGuy_03) = {
 
 NpcData N(NpcData_ShyGuy_04) = {
     .id = NPC_ShyGuy_04,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 270,
-    .territory = {
-        .patrol = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .numPoints  = 6,
-            .points  = {
-                { 30, 0, 50 },
-                { 50, 0, 100 },
-                { 100, 0, 100 },
-                { 120, 0, 50 },
-                { 100, 0, 0 },
-                { 50, 0, 0 },
-            },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { 75, 0, 50 },
-            .detectSize = { 100 },
-        }
-    },
+    .pos = { GEN_NPC_SHY_GUY_04_VEC },
+    .yaw = GEN_NPC_SHY_GUY_04_DIR,
+    .territory = GEN_NPC_SHY_GUY_04_TERRITORY,
     .init = &N(EVS_NpcInit_ShyGuy),
     .settings = &N(NpcSettings_ShyGuy_Patrol),
     .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_ACTIVE_WHILE_OFFSCREEN,
@@ -458,8 +390,9 @@ NpcData N(NpcData_ShyGuy_04) = {
 
 NpcData N(NpcData_Fuzzy) = {
     .id = NPC_Fuzzy,
-    .pos = { 1050.0f, 0.0f, 0.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_FUZZY_VEC },
+    .yaw = GEN_NPC_FUZZY_DIR,
+    .territory = GEN_NPC_FUZZY_TERRITORY,
     .init = &N(EVS_NpcInit_Fuzzy),
     .settings = &N(NpcSettings_Fuzzy),
     .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -486,8 +419,9 @@ NpcData N(NpcData_Fuzzy) = {
 
 NpcData N(NpcData_HammerBros) = {
     .id = NPC_HammerBros,
-    .pos = { 1050.0f, 0.0f, 0.0f },
-    .yaw = 270,
+    .pos = { GEN_NPC_HAMMER_BROS_VEC },
+    .yaw = GEN_NPC_HAMMER_BROS_DIR,
+    .territory = GEN_NPC_HAMMER_BROS_TERRITORY,
     .init = &N(EVS_NpcInit_HammerBros),
     .settings = &N(NpcSettings_HammerBros),
     .flags = ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
@@ -514,20 +448,9 @@ NpcData N(NpcData_HammerBros) = {
 
 NpcData N(NpcData_SkyGuy_01) = {
     .id = NPC_SkyGuy_01,
-    .pos = { -650.0f, 140.0f, -105.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -650, 140, -105 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -650, 140, -105 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_SKY_GUY_01_VEC },
+    .yaw = GEN_NPC_SKY_GUY_01_DIR,
+    .territory = GEN_NPC_SKY_GUY_01_TERRITORY,
     .settings = &N(NpcSettings_SkyGuy),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = SKY_GUY_DROPS,
@@ -537,20 +460,9 @@ NpcData N(NpcData_SkyGuy_01) = {
 
 NpcData N(NpcData_SkyGuy_02) = {
     .id = NPC_SkyGuy_02,
-    .pos = { -550.0f, 60.0f, 70.0f },
-    .yaw = 270,
-    .territory = {
-        .wander = {
-            .isFlying = TRUE,
-            .moveSpeedOverride = NO_OVERRIDE_MOVEMENT_SPEED,
-            .wanderShape = SHAPE_CYLINDER,
-            .centerPos  = { -550, 60, 70 },
-            .wanderSize = { 30 },
-            .detectShape = SHAPE_CYLINDER,
-            .detectPos  = { -550, 60, 70 },
-            .detectSize = { 200 },
-        }
-    },
+    .pos = { GEN_NPC_SKY_GUY_02_VEC },
+    .yaw = GEN_NPC_SKY_GUY_02_DIR,
+    .territory = GEN_NPC_SKY_GUY_02_TERRITORY,
     .settings = &N(NpcSettings_SkyGuy),
     .flags = ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
     .drops = SKY_GUY_DROPS,
@@ -570,8 +482,9 @@ AnimID N(ExtraAnims_Kammy)[] = {
 
 NpcData N(NpcData_Kammy) = {
     .id = NPC_Kammy,
-    .pos = { NPC_DISPOSE_LOCATION },
-    .yaw = 90,
+    .pos = { GEN_NPC_KAMMY_VEC },
+    .yaw = GEN_NPC_KAMMY_DIR,
+    .territory = GEN_NPC_KAMMY_TERRITORY,
     .init = &N(EVS_NpcInit_Kammy),
     .settings = &N(NpcSettings_Kammy_Flying),
     .flags = ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
