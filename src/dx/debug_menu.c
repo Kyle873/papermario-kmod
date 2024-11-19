@@ -456,8 +456,8 @@ void dx_debug_menu_main() {
     }
     ArrowAnimOffset = cos_deg(DebugArrowPhase);
 
-    dx_debug_update_header();
-    dx_debug_update_footer();
+    dx_debug_update_banner_header();
+    dx_debug_update_banner_footer();
 
     // check input for menu open/close
     if (DebugMenuState == DBM_NONE) {
@@ -1917,7 +1917,7 @@ b32 dx_debug_is_cheat_enabled(DebugCheat cheat) {
 // ----------------------------------------------------------------------------
 // banner info
 
-void dx_debug_update_header() {
+void dx_debug_update_banner_header() {
     char fmtBuf[128];
     s32 story = evt_get_variable(NULL, GB_StoryProgress) & 0xFF;
 
@@ -1927,7 +1927,7 @@ void dx_debug_update_header() {
     }
 }
 
-void dx_debug_update_footer() {
+void dx_debug_update_banner_footer() {
     char fmtBuf[128];
     s32 effect;
 
