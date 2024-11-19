@@ -330,6 +330,11 @@ void pause_items_draw_contents(MenuPanel* menu, s32 baseX, s32 baseY, s32 width,
     draw_msg(msg, msgX, msgY, opacity1, MSG_PAL_WHITE, DRAW_MSG_STYLE_MENU);
     */
 
+    msg = pause_get_menu_msg(gPauseItemsCurrentTab == 0 ? PAUSE_MSG_KEY_ITEMS : PAUSE_MSG_CONSUMABLES);
+    msgX = baseX + 8;
+    msgY = baseY + 17;
+    draw_msg(msg, msgX, msgY, 255, MSG_PAL_WHITE, DRAW_MSG_STYLE_MENU);
+
     if (gPauseMenuCurrentTab == 3) {
          if (gPauseItemsLevel == 0) {
              pause_set_cursor_pos(WIN_PAUSE_ITEMS, baseX + 12, baseY + 26 + gPauseItemsCurrentTab * 32);
