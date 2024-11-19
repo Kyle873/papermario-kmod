@@ -780,11 +780,11 @@ void btl_state_update_celebration(void) {
                 x = player->curPos.x + 0.0f;
                 y = player->curPos.y + 35.0f;
                 z = player->curPos.z;
-                fx_recover(0, x, y, z, playerData->curHP);
+                // fx_recover(0, x, y, z, playerData->curHP);
                 x = player->curPos.x + 20.0f;
                 y = player->curPos.y + 25.0f;
                 z = player->curPos.z;
-                fx_recover(1, x, y, z, playerData->curFP);
+                // fx_recover(1, x, y, z, playerData->curFP);
                 playerData->starPower = playerData->maxStarPower * SP_PER_BAR;
             }
 
