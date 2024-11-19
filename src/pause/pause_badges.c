@@ -1098,6 +1098,7 @@ void pause_badges_handle_input(MenuPanel* panel) {
     if (gPausePressedButtons & BUTTON_B) {
         sfx_play_sound(SOUND_MENU_BACK);
         gPauseMenuCurrentTab = 0;
+        enforce_hpfp_limits();
     }
 
     if (gPausePressedButtons & BUTTON_L) {
