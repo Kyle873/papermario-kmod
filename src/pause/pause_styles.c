@@ -56,8 +56,8 @@ WindowStyleCustom gPauseWS_1 = {
     .unk_1C = { 0, 0, 0, 0},
     .opaqueCombineMode = gsDPSetCombineMode(PM_CC_WINDOW_2, PM_CC_WINDOW_1),
     .transparentCombineMode = gsDPSetCombineMode(PM_CC_WINDOW_3, PM_CC_WINDOW_1),
-    .color1 = { 226, 225, 216, 255 },
-    .color2 = { 217, 208, 201, 0 },
+    .color1 = { 226 / 2, 225 / 2, 216 / 2, 255 },
+    .color2 = { 217 / 2, 208 / 2, 201 / 2, 0 },
 };
 WindowStyleCustom gPauseWS_2 = {
     .background = {

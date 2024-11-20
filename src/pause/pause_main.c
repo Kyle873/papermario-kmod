@@ -502,7 +502,7 @@ void pause_textbox_draw_contents(MenuPanel* menu, s32 baseX, s32 baseY, s32 widt
 
     gDPPipeSync(gMainGfxPos++);
     gDPSetScissor(gMainGfxPos++, G_SC_NON_INTERLACE, baseX + 1, baseY + 1, baseX + width - 1, baseY + height - 1);
-    draw_msg(msgID, baseX + 10, baseY - gPauseDescTextOffset, 255, MSG_PAL_STANDARD, 0);
+    draw_msg(msgID, baseX + 10, baseY - gPauseDescTextOffset, 255, MSG_PAL_WHITE, 0);
     if (gPauseShownDescIconScript != 0) {
         gDPSetScissor(gMainGfxPos++, G_SC_NON_INTERLACE, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
         hud_element_set_render_pos(gPauseCommonIconIDs[3], baseX - 4, baseY + 16);
