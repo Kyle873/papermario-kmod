@@ -130,10 +130,10 @@ void pause_items_draw_contents(MenuPanel* menu, s32 baseX, s32 baseY, s32 width,
     s32 cursorOffsetX, cursorOffsetY;
 
     style = DRAW_MSG_STYLE_MENU;
-    palette = MSG_PAL_STANDARD;
+    palette = MSG_PAL_WHITE;
     currentItemColumn = gPauseItemsSelectedIndex / gPauseItemsPages[gPauseItemsCurrentPage].numCols;
     currentItemRow = gPauseItemsSelectedIndex % gPauseItemsPages[gPauseItemsCurrentPage].numCols;
-    draw_box(DRAW_FLAG_NO_CLIP, &gPauseWS_18, baseX + 68, baseY, 0, width - 68, height, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, 0);
+    // draw_box(DRAW_FLAG_NO_CLIP, &gPauseWS_18, baseX + 68, baseY, 0, width - 68, height, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, 0);
 
     x1 = baseX + 1;
     y1 = baseY + 7;
@@ -203,7 +203,7 @@ void pause_items_draw_contents(MenuPanel* menu, s32 baseX, s32 baseY, s32 width,
 
                 if (i == 0) {
                     style = DRAW_MSG_STYLE_MENU;
-                    palette = MSG_PAL_STANDARD;
+                    palette = MSG_PAL_WHITE;
 
                     if (isSelected) {
                         style = DRAW_MSG_STYLE_MENU | DRAW_MSG_STYLE_DROP_SHADOW;
@@ -233,8 +233,10 @@ void pause_items_draw_contents(MenuPanel* menu, s32 baseX, s32 baseY, s32 width,
                     hud_element_clear_flags(itemIcon, HUD_ELEMENT_FLAG_DROP_SHADOW);
                     hud_element_set_flags(itemIcon, HUD_ELEMENT_FLAG_FILTER_TEX);
                     if (isNone) {
-                        itemIcon = gPauseItemsIconIDs[19];
+                        hud_element_set_flags(itemIcon, HUD_ELEMENT_FLAG_DISABLED);
                     } else {
+                        hud_element_clear_flags(itemIcon, HUD_ELEMENT_FLAG_DISABLED);
+
                         if (isSelected) {
                             hud_element_set_flags(itemIcon, HUD_ELEMENT_FLAG_DROP_SHADOW);
                             gPauseCurrentDescIconScript = gItemHudScripts[gItemTable[itemID].hudElemID].enabled;
